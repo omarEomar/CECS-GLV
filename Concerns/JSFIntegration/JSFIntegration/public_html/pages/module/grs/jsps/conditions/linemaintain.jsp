@@ -1,0 +1,73 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ taglib uri="http://myfaces.apache.org/tomahawk" prefix="t"%>
+<%@ taglib uri="http://java.sun.com/jsf/core" prefix="f"%>
+<%@ taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
+<%@ taglib uri="http://jakarta.apache.org/struts/tags-tiles" prefix="tiles"%>
+<%@ taglib uri="https://ajax4jsf.dev.java.net/ajax" prefix="a4j"%>
+<%@ taglib uri="http://beshara.net/projects/jsf-comp/clientvalidators"  prefix="c2"%>
+
+<f:view locale="#{shared_util.locale}">
+    <f:loadBundle basename="com.beshara.csc.sharedutils.presentation.msgresources.global" var="globalResources"/>
+    <f:loadBundle basename="com.beshara.csc.gn.grs.presentation.resources.grs" var="resourcesBundle"/>
+    <f:loadBundle basename="com.beshara.csc.sharedutils.presentation.msgresources.globalexceptions" var="globalexceptions"/>
+    <h:form id="myForm" binding="#{conditionLineDetailBean.frm}">
+     <t:aliasBean alias="#{pageBeanName}" value="#{conditionsMaintainBean}">
+        <t:aliasBean alias="#{detailBeanName}" value="#{conditionLineDetailBean}">
+        
+            
+             
+            
+      
+        
+         <t:saveState value="#{pageBeanName.pageDTO}" />
+             <t:saveState value="#{pageBeanName.nextNavigationCase}" />
+             <t:saveState value="#{pageBeanName.previousNavigationCase}"  />
+             <t:saveState value="#{pageBeanName.finishNavigationCase}" />
+             <t:saveState value="#{pageBeanName.currentNavigationCase}" />
+             <t:saveState value="#{pageBeanName.currentStep}" />
+             <t:saveState value="#{pageBeanName.maintainMode}" />
+             <t:saveState value="#{pageBeanName.renderSave}" />
+             <t:saveState value="#{pageBeanName.renderFinish}" />
+             
+             <t:saveState value="#{detailBeanName.joinConditions}"/>
+             <t:saveState value="#{detailBeanName.availableDetails}"/>
+             <t:saveState value="#{detailBeanName.currentDetails}" />
+             <t:saveState value="#{detailBeanName.currentDisplayDetails}"/>
+             <t:saveState value="#{detailBeanName.selectedCurrentDetails}"/>
+             <t:saveState value="#{detailBeanName.currentDataTable}"/>
+             <t:saveState value="#{detailBeanName.linesDTODetails}" />
+             <t:saveState value="#{detailBeanName.lineValueslist}" />    
+             <t:saveState value="#{detailBeanName.selectedRadio}" />    
+             
+             <t:saveState value="#{conditionListBean.viewInCenter}"/>
+             
+          <tiles:insert definition="conditionsLineDetails.page" flush="false">
+            
+             <t:messages/>
+             <%-- t:saveState value="#{detailBeanName.condition}"/--%>
+             
+             
+             
+              
+             
+              
+
+          </tiles:insert>
+          
+          </t:aliasBean>
+          </t:aliasBean>
+          <c2:scriptGenerator form="myForm"/>
+          </h:form>
+          
+<script type="text/javascript"> 
+    foucsAddbuttonOnList();
+    function foucsAddbuttonOnList(){        
+        if(document.getElementById('addButton') != null){            
+            document.getElementById('addButton').focus();
+        }
+    }
+</script>
+
+</f:view>
+          
+          

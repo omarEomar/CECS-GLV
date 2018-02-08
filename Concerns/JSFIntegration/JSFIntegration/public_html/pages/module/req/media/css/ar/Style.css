@@ -1,0 +1,348 @@
+.mastertextbox
+{
+color: #000000; font-family: Tahoma; font-size: 11pt; width: 130px; height: 25px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+.mastertextboxmedium
+{
+color: #000000; font-family: Tahoma; font-size: 11pt; width: 200px; height: 25px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+.mastertextboxlarge
+{
+color: #000000; font-family: Tahoma; font-size: 11pt; width: 280px; height: 25px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+.mastertextboxsmall
+{
+color: #000000; font-family: Tahoma; font-size: 11pt; width: 60px; height: 25px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+.subject
+{
+color: #BD8B38; font-family: Verdana; font-size: 9pt; font-weight: bold; 
+               padding-left: 8px}
+a.linksubject
+{
+color: #BD8B38; font-family: Verdana; font-size: 9pt; font-weight: bold; text-decoration:none 
+}
+.textboxmedium
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 200px; height: 18px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+.standardTable_Header
+{
+border-bottom:1px solid #FFFFFF; color: #FFFFFF; font-family: Tahoma; font-size: 8pt; font-weight: 600; 
+               height: 24; background-color: #094079; background-image: 
+               url('../../images/gheadgrid.jpg'); background-repeat: repeat-x; border-left-width:1px; border-right-width:1px; border-top-width:1px;text-decoration:none}			   
+.msg
+{
+font-family: Tahoma; font-size: 8pt; color: #EB8E3B; font-weight: 600; padding-top:4px; padding-bottom:4px; border: 0; width: 300px; height: 25px;text-align: center;vertical-align: middle;}
+.errMsg
+{
+font-family: Tahoma; font-size: 8pt; color: Red;  padding-top:0px; padding-bottom:0px;border: 0; width: 300px; height: 0px;text-align: center;vertical-align: middle;/* modified by sherif.omar 4,4,25*/}
+.lable01
+{
+color: #0B2B4A; font-family: Tahoma; font-size: 8pt; padding-top: 3px; 
+               padding-bottom: 3px}            
+.number
+{
+font-family: Tahoma; font-size: 8pt; color: Gray; font-weight: 600; padding-bottom:4px}
+.DropdownboxMedium2
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 200; height: 18; 
+               border: 1px solid #CCD0D6;}
+ gpaging
+{
+border:1px solid #CCD4DB; background-color: #EAEEF2}
+a.paging
+{
+font-family: Tahoma; color: #001F3E; font-size: 8pt; text-decoration:none 
+}
+a:hover.paging
+{
+font-family: Tahoma; color: #001F3E; font-size: 8pt; text-decoration:none 
+}
+cssButtonAdd
+{
+color: #00274E; width: 52px; height: 52px; border: 1px solid #AF853E;  background-image: url('../images/addmain.jpg'); 
+               background-color: #EFB34F; font-family:Tahoma; font-size:8pt}
+               cssButtonDelete
+{
+color: #00274E; width: 32px; height: 14px; border: 1px solid #AF853E;  background-image: url('../images/delete.gif'); 
+               background-color: #EFB34F; font-family:Tahoma; font-size:8pt}
+               .iconEditInput
+{
+    border:0px none; BACKGROUND-IMAGE: url('../images/edit.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+.gicobar
+{
+border-left:1px solid #0D447D; border-right:1px solid #0D447D; border-bottom:1px solid #0D447D; background-color: #A6BACD; background-image: 
+               url('../images/gbarico.jpg'); background-repeat: repeat-x}
+.texticon
+{
+font-family: Verdana; color: #002245; font-size: 8pt; font-weight: bold}
+
+.iconShowDetail
+{
+    border:0px none; BACKGROUND-IMAGE: url('../images/showdetails.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+.standardTable_RowHighlighted
+{
+color: #032548; height: 24; font-family: Tahoma; font-size: 8pt; 
+              border-left-width: 1px; border-right-width: 1px; 
+              border-top-width: 1px; border-bottom: 1px solid #FFFFFF; 
+              background-color: #F2CB8A}
+			   
+.iconDetails
+{
+    border:0px none; BACKGROUND-IMAGE: url('../../images/icon_details_number.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+
+
+.iconCircle
+{
+    border:0px none; BACKGROUND-IMAGE: url('../../images/circle.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+.iconCircleGreen
+{
+    border:0px none; BACKGROUND-IMAGE: url('../../images/DataGrid_Icon_green_flag.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+.iconOk
+{
+    border:0px none; BACKGROUND-IMAGE: url('../../../../app/media/images/DataGrid_Icon_ok.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+.iconNot
+{
+    border:0px none; BACKGROUND-IMAGE: url('../../../../app/media/images/DataGrid_Icon_not.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+.texticon
+{
+font-family: Verdana; color: #002245; font-size: 8pt; font-weight: bold}
+.row04
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; height: 24px; vertical-align:middle;
+  }
+.iconEdit
+{
+    border:0px none; BACKGROUND-IMAGE: url('../images/edit2.gif');
+    WIDTH: 18px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent;
+    text-align: center;
+}
+.iconEditForTree
+{
+    border:0px none; BACKGROUND-IMAGE: url('../images/edit.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent;
+    text-align: center;
+}
+.divSearch
+{
+ position:absolute;top:0px;left=150px;width:650px;visibility=hidden;
+ z-index:100;
+}
+.divMsg
+{
+    position:absolute;top:90px;left=150px;width:500px;visibility=hidden;
+     z-index:100;
+}
+.divDetails
+{
+    position:absolute;top:150px;left=50px;width:450px;visibility=hidden;
+}
+
+.sttb
+{
+width: 0px;
+}
+.JSCookMenuDisabled
+{
+ 
+    color: #cccccc;
+}
+.JSCookMenuEnabled
+{
+ 
+    color: #000000;
+}
+
+
+.Step-finish {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #A5B8C7;
+
+
+
+
+}
+.Step-current {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #001A34;
+	font-weight: bold;
+}
+.Setps-Next {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #CCCCCC;
+}
+.lookupDivTitle{
+    color:#0B2B4A;  font-family:Tahoma; font-size:9pt;  font-weight:bold;
+}
+.JSCookMenuDisabled
+{
+ 
+    color: #B9852E;
+}
+.JSCookMenuEnabled
+{
+ 
+    color: #002245;
+}
+.logo {
+    background-image: url('../../images/logo1.jpg');    background-repeat: no-repeat;   background-position: left top;  height:48px;width:100%;
+    color: #002952; font-family: Simplified Arabic; font-size: 14pt;    font-weight: 700;   padding-top: 4px;   padding-bottom: 4px;
+    vertical-align:middle;  text-align: center;
+}
+.delDivScroll {
+    height: 150px; width: 450px; overflow: auto;direction: rtl;
+}
+
+Step-finish {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #A5B8C7;
+
+
+
+
+}
+.Step-current {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #001A34;
+	font-weight: bold;
+}
+.Setps-Next {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #CCCCCC;
+}
+
+.dataTableScroll {
+    height: 270px; width: 100%; overflow: auto;direction: rtl;
+}
+.divMainContentMany
+{
+    height:185px;
+    overflow:auto;
+
+}
+/* This class moved to app\media\css\ar\Style.css */
+/*
+.divMainContent
+{
+    height:245px;;
+    overflow-y:auto;
+}
+*/
+.divContent1Fixed
+{
+ width:100%;
+ height:290px;
+ overflow:auto;
+}
+
+.divContent1Dynamic
+{
+    width:100%;
+    height: 100%;
+}
+.dataTable{
+    height: 85px; 
+    width:100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.msgReq{
+    position:absolute;
+    visibility:hidden;
+    z-index:100;
+    top:150px;
+    left:250px;
+    width:500px;
+}
+.divIframeReq
+{
+    position:absolute;
+    top:0; 
+    left:100; 
+    width:990px; 
+    height:580px; 
+    transparent:true; 
+    filter:alpha(opacity=30); 
+    opacity:0.30; 
+    visibility=hidden;
+    z-index:98;
+}
+.texterea
+{
+    color: #000000; font-family: Tahoma; font-size: 8pt; width: 80%;  
+               border: 1px solid #CCD0D6; background-color: #FFFFFF
+
+}
+.divCustom
+{
+    position:absolute;top:100px;left=220px;width:650px;visibility=hidden;
+    z-index:100;
+}
+.dataTableAprrovalContent {
+    height: 280px;
+    width: 100%; 
+    overflow-y: auto;
+    direction: rtl;
+}
+.reqTreeDiv
+{
+ position:absolute;top:0px;left=150px;width:650px;visibility=hidden;
+ z-index:100;
+}

@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+/*---------------------------------------------------------------------------------------*/
+body {
+    direction: rtl;
+    width: 610px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #707070;
+    font-size: 14px;
+    text-align: right;
+    background-color: #ffffff;
+}
+
+iframe {
+    width: 630px !important;
+}
+/*----------------------------- Main Conatiner ------------------------------------*/
+.main_container {
+    width: 600px;
+    height: auto;
+    margin: 5px auto;
+    background-color: #ffffff;
+}
+/*----------------------------- top_part ------------------------------------*/
+.report_header {
+    width: 600px;
+    height: 85px;
+    margin: 0px auto;
+    background-color: #ffffff;
+    background-image: url('../../images/report_header.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.header_data {
+    width: 460px;
+    height: 18px;
+    margin: 0px auto;
+    position: absolute;
+    bottom: 1px;
+    right: 80px;
+}
+
+.header_data p {
+    color: #000000;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.middle_part {
+    width: 600px;
+    height: auto;
+    min-height: 550px;
+}
+
+.report_contents {
+    width: 550px;
+    height: auto;
+    /*margin:20px 25px;*/
+}
+
+.report_title {
+    color: #D43A53;
+    display: block;
+    font-family: arial;
+    font-size: 22px;
+    font-weight: bold;
+    height: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #FFFFFF;
+    border-bottom: double #cccccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 580px;
+}
+
+.reoprt_body {
+    width: 600px;
+    float: right;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    min-height: 350px;
+}
+
+table {
+    border-radius: 6px;
+    border: 1px solid #CDDFF3;
+}
+
+.row01, .row02 {
+    color: #000000;
+    font-family: Arial;
+    font-size: 14px;
+    height: 50px;
+    padding-right: 5px;
+}
+
+.row01 {
+    background-color: #CDDFF3;
+}
+
+.row02 {
+    background-color: #DDEDFD;
+}
+
+.td_key, .td_value {
+    font-family: Arial;
+    font-size: 11pt;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.td_key {
+    color: #000000;
+    font-weight: bold;
+}
+
+.td_value {
+    color: #002d71;
+    font-weight: normal;
+}
+
+.td_width120 {
+    width: 120px;
+}
+
+.cond_txt {
+    font-weight: bold;
+    font-size: 13pt;
+    font-style: italic;
+}
+
+.sector_title {
+    padding-right: 5px;
+    color: #002d71;
+    font-weight: bold;
+    font-size: 13pt;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.list1 {
+    list-style: none;
+    float: right;
+    margin-right: 30px;
+}
+
+.list1 > li {
+    line-height: 25px;
+    color: #002d71;
+    padding-right: 20px;
+    background: url('../../images/snap01.png')no-repeat right center;
+}
+/*---------------------- footer----------------------------------------*/
+.footer {
+    clear: both;
+    width: 600px;
+    /*height:80px;*/
+
+    line-height: 30px;
+    text-align: center;
+}
+
+.pageNO {
+    font-size: 12px;
+    color: #000000;
+}
+
+.copyrights {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #0067a5;
+    color: #ffffff;
+    text-align: center;
+    font-size: 11px;
+}
+
+input, textarea {
+    border: none;
+    box-shadow: none;
+    background-color: transparent !important;
+}
+/*-----------------------------9-9-2015 by hooma ---------------*/
+.print_btn {
+    background-color: #1571a6 !important;
+    background-image: url("../../images/print_icon16px.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-right: -75px;
+    padding: 3px 3px 3px 16px;
+    position: relative;
+    text-align: right;
+    top: 7px;
+    z-index: 99;
+}
+
+.print_btn:hover {
+    background-color: #14B1E4 !important;
+}
+@media print {
+    .print_btn {
+        display: none;
+    }
+}
+
+/*-----------------------------B.Horse Team 2/12/2015 ---------------*/
+.group_title {
+    background-color: #ffffff;
+    font-weight: bold;
+    color: #002d71;
+    padding-right: 9px;
+    line-height: 25px;
+    margin: 0;
+}
+
+.signature {
+    display: block;
+    width: 237px;
+    margin: 15px 350px 15px 0;
+    text-align: center;
+}
+
+.signature_att {
+    width: 237px;
+    text-align: center;
+    display: block;
+    color: black;
+    font-weight: bold;
+}
+
+.signature_iden {
+    margin: 5px 0;
+    display: block;
+}
+/** black.horse team condlines popup @10/12/2015 story_Id :CSC-8127 */
+.footer_rep {
+    clear: both;
+    width: 600px;
+    line-height: 30px;
+    text-align: center;
+}

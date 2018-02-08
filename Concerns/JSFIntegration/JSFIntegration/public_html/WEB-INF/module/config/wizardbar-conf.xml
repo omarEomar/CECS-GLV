@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wizards>
+  <wizard configurationId="conditionId">
+    <step order="1" mapKey="conditionmantian" status="0" navigateStatus="1" bundle="com.beshara.csc.gn.grs.presentation.resources.wizardbar" bundleKey="conditionBaseName" controlType="0"
+          action="conditionsMaintainBean.navigate" navigationCase="condition_Main_Data" stepBeanName="conditionsBaseLineBeanFirst" mandatory="true"/>
+    <step order="2" mapKey="conditionbaseLines" status="0" navigateStatus="1" bundle="com.beshara.csc.gn.grs.presentation.resources.wizardbar" bundleKey="conditionBaseLine" controlType="0"
+          action="conditionsMaintainBean.navigate" navigationCase="conditionLine_Maintain_Details" stepBeanName="conditionLineDetailBean"/>
+  </wizard>
+ <wizard configurationId="decisionadd">
+        <step order="1" mapKey="decisionadd" status="0" navigateStatus="1" bundle="com.beshara.csc.nl.reg.presentation.resources.wizardbar" bundleKey="decisionadd_adddecision" controlType="0" action="decisionMaintainBean.navigate" navigationCase="decisionmaindata" stepBeanName="decisionMainDataMaintainBean" mandatory="true" jsValidation="return vaildateIssuanceYearWithDecitionDate();"/>
+        <step order="2" mapKey="employeesadd" status="0" navigateStatus="0" bundle="com.beshara.csc.nl.reg.presentation.resources.wizardbar" bundleKey="decisionadd_addemployee" controlType="0" action="decisionMaintainBean.navigate" navigationCase="decisionemployeesmaintain" stepBeanName="decisionEmployeesMaintainBean" mandatory="true"/>    
+        <step order="3" mapKey="referencesadd" status="0" navigateStatus="0" bundle="com.beshara.csc.nl.reg.presentation.resources.wizardbar" bundleKey="decisionadd_addreference" controlType="0" action="decisionMaintainBean.navigate" navigationCase="decisionreferencesmaintain" stepBeanName="decisionReferencesMaintainBean" mandatory="true"/>
+        <step order="4" mapKey="decMaterialsKey" status="0" navigateStatus="0" bundle="com.beshara.csc.nl.reg.presentation.resources.wizardbar" bundleKey="decisionadd_materials" controlType="0" action="decisionMaintainBean.navigate" navigationCase="decMaterialsMaintain" stepBeanName="decisionMaterialsMaintainBean"/>
+</wizard>
+    
+    <wizard configurationId="regulationadd">
+        <step order="1" mapKey="regulationadd" status="0" navigateStatus="1" bundle="com.beshara.csc.nl.reg.presentation.resources.wizardbar" bundleKey="regulationadd_addregulation" controlType="0" action="regulationMaintainBean.navigate" navigationCase="regulationmaindata" stepBeanName="regulationMainDataMaintainBean" mandatory="true" jsValidation="return vaildateIssuanceYearWithRegDate();"/>
+        <step order="2" mapKey="subjectsadd" status="0" navigateStatus="0" bundle="com.beshara.csc.nl.reg.presentation.resources.wizardbar" bundleKey="regulationadd_addsubject" controlType="0" action="regulationMaintainBean.navigate" navigationCase="regulationsubjectsmaintain" stepBeanName="regulationSubjectsMaintainBean" mandatory="true"/>
+        <step order="3" mapKey="referencesadd" status="0" navigateStatus="0" bundle="com.beshara.csc.nl.reg.presentation.resources.wizardbar" bundleKey="regulationadd_addreference" controlType="0" action="regulationMaintainBean.navigate" navigationCase="regulationreferencesmaintain" stepBeanName="regulationReferencesMaintainBean"/>
+        <step order="4" mapKey="publishadd" status="0" navigateStatus="0" bundle="com.beshara.csc.nl.reg.presentation.resources.wizardbar" bundleKey="regulationadd_addpublish" controlType="0" action="regulationMaintainBean.navigate" navigationCase="regulationpublishmaintain" stepBeanName="regulationPublishMaintainBean"/>
+        <step order="5" mapKey="ministriesadd" status="0" navigateStatus="0" bundle="com.beshara.csc.nl.reg.presentation.resources.wizardbar" bundleKey="regulationadd_addministry" controlType="0" action="regulationMaintainBean.navigate" navigationCase="regulationministriesmaintain" stepBeanName="regulationMinistriesMaintainBean"/>
+        <step order="6" mapKey="modulesadd" status="0" navigateStatus="0" bundle="com.beshara.csc.nl.reg.presentation.resources.wizardbar" bundleKey="regulationadd_addmodule" controlType="0" action="regulationMaintainBean.navigate" navigationCase="regulationmodulesmaintain" stepBeanName="regulationModulesMaintainBean"/>
+        <step order="7" mapKey="attachadd" status="0" navigateStatus="0" bundle="com.beshara.csc.nl.reg.presentation.resources.wizardbar" bundleKey="regulationadd_addattach" controlType="0" action="regulationMaintainBean.navigate" navigationCase="regulationattachmaintain" stepBeanName="regulationAttachmentsMaintain"/>
+        <step order="8" mapKey="regMaterialsKey" status="0" navigateStatus="0" bundle="com.beshara.csc.nl.reg.presentation.resources.wizardbar" bundleKey="regulationadd_materials" controlType="0" action="regulationMaintainBean.navigate" navigationCase="regMaterialsMaintain" stepBeanName="regulationMaterialsMaintainBean"/>
+    </wizard>
+</wizards>

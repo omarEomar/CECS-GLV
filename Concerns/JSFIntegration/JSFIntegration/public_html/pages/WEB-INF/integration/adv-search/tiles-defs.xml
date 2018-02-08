@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration//EN" "http://jakarta.apache.org/struts/dtds/tiles-config.dtd">
+<tiles-definitions>
+    <definition name="advanceEmployeessearch.page" extends="lookuplistdiv">
+        <put name="lovDiv" value="/module/jsps/shared/employeesearch/lovdiv.jsp"></put>
+        <put name="titlepage" value="Employee_Search_Title"></put>
+        <put name="showdatatableContent" value="true"></put>
+        <put name="content" value="/module/jsps/shared/employeesearch/employeeaddcontent.jsp"></put>
+        <put name="content1" value="/module/jsps/shared/employeesearch/employeeadd_cnt1.jsp"></put>
+        <put name="navigation" value="/module/jsps/shared/employeesearch/tabsnavigation.jsp"></put>
+    </definition>
+    <definition name="advanceEmployeeresultssearch.page" extends="lookuplistdiv">
+        <put name="titlepage" value="Employee_Search_Title"></put>
+        <put name="content" value="/module/jsps/shared/employeesearch/employeeaddcontent.jsp"></put>
+        <put name="navigation" value="/module/jsps/shared/employeesearch/resultNavigation.jsp"></put>
+        <put name="paging" value="/module/jsps/shared/employeesearch/pagenator.jsp"></put>
+        <put name="customDiv1" value="/module/jsps/shared/employeesearch/employeeNotFoundCustomdiv1.jsp"></put>
+    </definition>
+</tiles-definitions>

@@ -1,0 +1,203 @@
+.BesharaThemeMainFolderLeft,.BesharaThemeMainItemLeft,
+.BesharaThemeMainFolderText,.BesharaThemeMainItemText,
+.BesharaThemeMainFolderRight,.BesharaThemeMainItemRight
+/*M B 3amer*/{
+	background-color:	inherit;
+        font-size: 0px;
+}
+
+
+#operationMenu{
+    background: url("../../../../images/operation-bar.png") repeat scroll -478px -7px rgba(0, 0, 0, 0);
+    border: 0 none;
+    cursor: pointer;
+    height: 31px;
+    width: 68px;
+}
+
+#viewMenu{
+    background: url("../../../../images/operation-bar.png") repeat scroll -413px -7px rgba(0, 0, 0, 0);
+    border: 0 none;
+    cursor: pointer;
+    height: 31px;
+    width: 63px;
+}
+
+#orderMenu{
+    background: url("../../../../images/operation-bar.png") repeat scroll -148px -7px rgba(0, 0, 0, 0);
+    border: 0 none;
+    cursor: pointer;
+    height: 31px;
+    width: 62px;
+}
+
+#options{
+    background: url("../../../../images/operation-bar.png") repeat scroll -68px -7px rgba(0, 0, 0, 0);
+    border: 0 none;
+    cursor: pointer;
+    height: 27px;
+    width: 70px;
+}
+#DecisionsMenu {
+    background: url("../../../../images/operation-bar.png") repeat scroll -287px -7px rgba(0, 0, 0, 0);
+    border: 0 none;
+    cursor: pointer;
+    height: 24px;
+    width: 62px;
+}
+
+.BesharaThemeSubMenuTable
+{
+	overflow:	visible;                
+}
+
+
+/* horizontal main menu */
+/* Removed by Sherif.Omar we no longer need border for ManiItem button */
+/*.BesharaThemeMainItem
+{
+	padding:	0px;
+	border:		0px solid #3169C6 ;
+}*/
+/*td.BesharaThemeMainItemHover,td.BesharaThemeMainItemActive
+{
+       padding:	0px;
+       background-image:  url('images/glinkmenu1_over.jpg'); background-repeat: no-repeat;
+}*/
+td.BesharaThemeMainFolderText,td.BesharaThemeMainItemText
+{
+	padding-top:	2px;
+	padding-bottom:	2px;
+	padding-left:	5px;
+	padding-right:	5px;
+	border-top:	1px solid #3169C6;
+	border-bottom:	1px solid #3169C6;
+     	background-color:	inherit;
+	white-space:	nowrap;
+}
+tr.BesharaThemeMainItem td.BesharaThemeMainFolderLeft,
+tr.BesharaThemeMainItem td.BesharaThemeMainItemLeft
+{
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	1px;
+	padding-right:	2px;
+	white-space:	nowrap;
+	border:		0;
+	background-color:	inherit;
+}
+tr.BesharaThemeMainItem td.BesharaThemeMainFolderText,
+tr.BesharaThemeMainItem td.BesharaThemeMainItemText
+{
+	padding-top:	0px;
+	padding-bottom:	0px;
+	padding-left:	0px;
+	padding-right:	0px;
+	border:		0;
+	background-color:	inherit;
+}
+tr.BesharaThemeMainItem td.BesharaThemeMainItemRight,
+tr.BesharaThemeMainItem td.BesharaThemeMainFolderRight
+{
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	0px;
+	padding-right:	1px;
+	border:		0;
+	background-color:	inherit;
+}
+.BesharaThemeMenuItemText
+{
+        /*for menu Item Text 
+        Modified by sherif.omar
+        	
+	border-top:	1px solid #0B335C;
+	border-bottom:	1px solid #0B335C;    
+        border-left:	1px solid #0B335C;
+        border-right:	1px solid #0B335C;*/
+        white-space:	nowrap;
+        width: 80px;        	
+        
+}
+/*by sherif.omar to add enable and disable menu item */
+/*updated by M.Elsaied*/
+.BesharaThemeSubMenu-disabled 
+{
+       position:	absolute;
+	visibility:	hidden;
+	/*
+	   Netscape/Mozilla renders borders by increasing
+	   their z-index.  The following line is necessary
+	   to cover any borders underneath
+	*/
+	z-index:97;
+	padding:	0;
+	overflow:	visible;
+        color: #000000;
+        background-color: #000000;
+	text-align: right;
+	border: 1px solid #0B335C;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin: 10px;	
+}
+
+/* menu splits */
+
+.BesharaThemeMenuSplit
+{
+	margin:		0px;
+	height:		1px;
+	overflow:	hidden;
+        background
+	background-color:	inherit;
+	border-top:	1px solid #1571A6;
+}
+
+/*****************SubMenu***************/
+.BesharaThemeSubMenu
+{
+	position:	absolute;
+	visibility:	hidden;
+	z-index:101;	
+	padding:	0;
+	overflow:	visible;
+	color: #002245;
+	background-color:   #ffffff;
+	margin: 1px;
+	padding-right:0px;
+	text-align: right;
+	border: 5px solid #2779b2;
+        border-radius: 0px 5px 5px;
+        box-shadow: 0 0 5px #000000;
+        padding-top:5px;
+        padding-bottom:5px;
+        width: 130px;
+}
+.BesharaThemeMenuItem{
+        font-family: Tahoma;
+	font-size: 12px;
+	color: #002245;
+	background-color: #ffffff;
+        width: 150px;
+	margin: 10px;
+	padding-right:5px;
+	text-align: right;
+	border: 0px solid #0B335C; 
+        border-bottom: 1px solid #e0e5e8; 
+        padding-top:2px; padding-bottom:2px;
+}
+.BesharaThemeMenuItemHover,.BesharaThemeMenuItemActive{
+        font-family: Tahoma;
+	font-size: 12px;
+	color: #ffffff;
+	background-color: #2779b2;
+        width: 150px;
+	margin: 10px;
+	padding-right:5px;
+	text-align: right;
+	border: 0px solid #0B335C; 
+        border-bottom: 1px solid #e0e5e8; 
+        padding-top:2px; padding-bottom:2px;	
+}

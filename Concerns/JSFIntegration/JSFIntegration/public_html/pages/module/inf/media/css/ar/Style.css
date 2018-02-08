@@ -1,0 +1,253 @@
+/*controls [inputText]*/
+.textboxmedium
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 200px; height: 18px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+/*controls [dataTable header]*/
+.standardTable_Header
+{
+border-bottom:1px solid #FFFFFF; color: #FFFFFF; font-family: Tahoma; font-size: 8pt; font-weight: 600; 
+               height: 24; background-color: #094079; background-image: 
+               url('../../images/gheadgrid.jpg'); background-repeat: repeat-x; border-left-width:1px; border-right-width:1px; border-top-width:1px;text-decoration:none}
+/*controls [label inform messages]*/
+.msg
+{
+font-family: Tahoma; font-size: 8pt; color: #EB8E3B; font-weight: 600; padding-top:4px; padding-bottom:4px; border: 0; width: 300px; height: 25px;text-align: center;vertical-align: middle;}
+/*controls [label error messages]*/
+.errMsg
+{
+font-family: Tahoma; font-size: 8pt; color: Red;  padding-top:0px; padding-bottom:0px;border: 0; height: 0px;text-align: center;vertical-align: middle;/* modified by sherif.omar 4,4,25*/}
+/*controls [text label]*/
+.lable01
+{
+color: #0B2B4A; font-family: Tahoma; font-size: 8pt; padding-top: 3px; 
+               padding-bottom: 3px}      
+/*controls [not used]*/
+.number
+{
+font-family: Tahoma; font-size: 8pt; color: #800000; font-weight: 600; padding-bottom:4px}
+/*controls [not used]*/
+.DropdownboxMedium   
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 200; height: 18; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+/*controls []*/
+.col1
+{
+   width: 130px;
+   vertical-align: top;
+}
+/*controls []*/
+.col2
+{  
+   vertical-align: top;
+}
+/*controls []*/
+.divSearch
+{
+    position:absolute;top:0px;left=150px;width:650px;visibility=hidden;
+    z-index:100;
+}
+/*controls []*/
+.divDetails
+{
+    position:absolute;top:150px;left=50px;width:450px;visibility=hidden;
+}
+/*controls []*/
+.JSCookMenuDisabled
+{
+    color: #B9852E;
+}
+/*controls []*/
+.JSCookMenuEnabled
+{
+    color: #002245;
+}
+/*controls []*/
+.delDivScroll {
+    height: 140px; width: 450px; overflow: auto;direction: rtl;
+}
+/*controls []*/
+.DropdownboxMedium2
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 200; height: 18; 
+               border: 1px solid #CCD0D6;}
+/*controls []*/
+.divMainContentMany
+{
+    height:148px;
+
+}
+/*controls []*/
+/* This class moved to app\media\css\ar\Style.css */
+/*
+.divMainContent
+{
+    height:250px;;
+    overflow-y:auto;
+}
+*/
+/*controls []*/
+.divContent1Fixed
+{
+    width:100%;
+    height:240px;
+    overflow:auto;
+}
+/*controls []*/
+.divContent1Dynamic
+{
+    width:100%;
+    height: 100%;
+}
+
+.divCondition{
+    position:absolute;top:10px;left=80px;width:650px;visibility=hidden;
+    z-index:100;
+}
+.divCustomTreeEdit
+{
+    height: 170px; width: 600px; overflow-Y: auto;direction: rtl;   
+}
+/* the promotion div payroll step 3 */
+.divpromotion
+{
+    position:absolute;top:70px;left=80px;width:900px;height:600px;visibility=hidden;
+    z-index:100;
+}
+/*controls []*/
+.dataTableManyToMany{
+    height: 50px; width: 100%; overflow: auto;direction: rtl;
+}
+.Column1{
+    width: 10%
+}
+.Column2{
+    width: 40%;
+}
+.rowTop{
+    vertical-align: top;
+}
+.rowheight{
+   height: 6px;
+}
+
+/*overrided for the first step in rewards use csase*/
+.delDivScrollRewardType {
+    height: 80px; width: 450px; overflow: auto;direction: rtl;
+}
+
+.divContent1FixedRewardType
+{
+    width:100%;
+    height:100px;
+    overflow:auto;
+}
+
+.divMainContentManyRewardType
+{
+    height:80px;
+
+}
+.EditDivEOSExecute
+{
+    position:absolute;top:45px;left:80px;width:650px;visibility=hidden;
+    z-index:100;
+}
+
+.divMainContentRequest
+{
+    height:252px;;
+    overflow-y:auto;
+}
+
+.textarealarge_request_add_notes_inTextArea_Add
+{
+    color: #000000; 
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 100%;
+    height: 100px; 
+    border: 1px solid #CCD0D6; 
+    background-color: #FFFFFF;
+    overflow: auto;
+}
+/* start Style class for tabs || Added by Khalid Mohie*/
+td.activeTab {
+    background-image: url('../../images/tabs/tabs_active.gif');
+    font-family: "simplified Arabic", "traditional Arabic", "arabic Transparent";
+    font-size:16px;
+    background-repeat: repeat-x;
+    color: #3070AD;
+    height: 24px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-top-color: #FFFFFF;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+td.inactiveTab {
+   background-image: url('../../images/tabs/tabs_active.gif');
+    font-family: "simplified Arabic", "traditional Arabic", "arabic Transparent";
+    font-size:16px;
+    background-repeat: repeat-x;
+    color: #3070AD;
+    height: 24px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-style: solid; 
+    border-left-style: solid;
+    border-top-color: #FFFFFF;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+}
+/* End Style class for tabs || Added by Khalid Mohie*/
+
+/*style class for DataTable of Lov Div || Added by Khalid Mohie*/
+.lovDivScroll {
+    height: 100px; width: 450px; overflow: auto;direction: rtl;
+}
+.centerCol{
+    text-align: center;
+    width: 100%;
+}
+/*added by nora for hr-700 issue 19
+*/
+.request_content1
+{
+    width:100%;
+    height:300px;
+    overflow-y:auto
+}
+.infGrpCountryCnt{
+    height: 170px; width: 100%; overflow: auto;direction: rtl;
+}
+.customLovDiv
+{
+    position:absolute;top:0px;left=180px;width:650px;visibility=hidden;
+    z-index:100;
+}
+.infGrpCountryCnt2{
+    height: 245px; width: 100%; overflow: auto;direction: rtl;
+}
+.delDivStyle
+{
+    position:absolute;top:0px;left:280px;width:500px;visibility:hidden;
+    z-index:100;
+}

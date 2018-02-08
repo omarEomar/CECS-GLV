@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="windows-1256" ?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee">
+    <listener>
+        <listener-class>com.beshara.common.web.util.Log4jContextListener</listener-class>
+    </listener>
+    <!-- register session manager -->
+    <listener>
+        <listener-class>com.beshara.common.web.shared.SessionManager</listener-class>
+    </listener>
+    <!-- Start of WebContextFilter -->
+    <context-param>
+        <param-name>com.beshara.common.web.context.HAS_WEB_CONTEXT_FACTORY</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <filter>
+        <filter-name>WebContextFilter</filter-name>
+        <filter-class>com.beshara.common.web.context.WebContextFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>WebContextFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>WebContextFilter</filter-name>
+        <servlet-name>Faces Servlet</servlet-name>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>WebContextFilter</filter-name>
+        <servlet-name>DownloadServlet</servlet-name>
+    </filter-mapping>        
+    <!-- End of WebContextFilter -->    
+    <filter>
+        <filter-name>ContextPathWriterFilter</filter-name>
+        <filter-class>com.beshara.common.web.shared.ContextPathWriterFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ContextPathWriterFilter</filter-name>
+        <url-pattern>/ContextPathWriter/*</url-pattern>
+    </filter-mapping>
+    <!-- Web filter -->
+    <filter>
+        <filter-name>WebFilterManager</filter-name>
+        <filter-class>com.beshara.common.web.filter.WebFilterManager</filter-class>
+        <init-param>
+            <param-name>FACTORY_FILE</param-name>
+            <param-value>/WEB-INF/module/config/security/factory.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>FILTERS_FILE</param-name>
+            <param-value>/WEB-INF/module/config/security/filter.xml</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>WebFilterManager</filter-name>
+        <servlet-name>Faces Servlet</servlet-name>
+    </filter-mapping>
+    <!-- End of Web filter -->
+    <description>Empty web.xml file for Web Application</description>
+    <context-param>
+        <param-name>javax.faces.CONFIG_FILES</param-name>
+        <param-value>/WEB-INF/app/config/faces-config-app.xml,/WEB-INF/module/config/faces-config.xml,/WEB-INF/module/config/security/faces-config-sec.xml</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>/WEB-INF/module/config/struts-config.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.jsf</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>35</session-timeout>
+    </session-config>
+    <mime-mapping>
+        <extension>html</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>txt</extension>
+        <mime-type>text/plain</mime-type>
+    </mime-mapping>
+    <!--  This parameter refer to tiles defination configuration file 
+  -->
+    <context-param>
+        <param-name>tiles-definitions</param-name>
+        <param-value>/WEB-INF/app/config/tiles-defs-app.xml,/WEB-INF/module/config/tiles-defs.xml</param-value>
+    </context-param>
+    <!--  End of tiles defination part 
+  -->
+    <!--  This part define myfaces filter and mapped it 
+  -->
+    <!--<filter>
+  <filter-name>extensionsFilter</filter-name>
+  <filter-class>org.apache.myfaces.webapp.filter.ExtensionsFilter</filter-class>
+  <init-param>
+   <description>Set the size limit for uploaded files. Format: 10 - 10 bytes 10k - 10 KB 10m - 10 MB 1g - 1 GB</description>
+   <param-name>uploadMaxFileSize</param-name>
+   <param-value>100m</param-value>
+  </init-param>
+  <init-param>
+   <description>Set the threshold size - files below this limit are stored in memory, files above this limit are stored on disk. Format: 10 - 10 bytes 10k - 10 KB 10m - 10 MB 1g - 1 GB</description>
+   <param-name>uploadThresholdSize</param-name>
+   <param-value>100k</param-value>
+  </init-param>
+ </filter>-->
+    <!--  End of myfaces filter 
+  -->
+    <filter>
+        <filter-name>ApplicationFilter</filter-name>
+        <filter-class>com.beshara.jsfbase.csc.util.ApplicationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ApplicationFilter</filter-name>
+        <servlet-name>Faces Servlet</servlet-name>
+    </filter-mapping>
+    <filter>
+        <display-name>Ajax4jsf Filter</display-name>
+        <filter-name>ajax4jsf</filter-name>
+        <filter-class>org.ajax4jsf.Filter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ajax4jsf</filter-name>
+        <servlet-name>Faces Servlet</servlet-name>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+    </filter-mapping>
+    <!--  Jsf/MyFaces parameters -->
+    <context-param>
+        <description>State saving method: "client" or "server" (= default) See JSF Specification 2.5.3</description>
+        <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+        <param-value>client</param-value>
+    </context-param>
+    <context-param>
+        <description>This parameter tells MyFaces if javascript code should be allowed in the
+            rendered HTML output.
+            If javascript is allowed, command_link anchors will have javascript code
+            that submits the corresponding form.
+            If javascript is not allowed, the state saving info and nested parameters
+            will be added as url parameters.
+            Default: "true"</description>
+        <param-name>org.apache.myfaces.ALLOW_JAVASCRIPT</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.apache.myfaces.DETECT_JAVASCRIPT</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <description>If true, rendered HTML code will be formatted, so that it is "human readable".
+            i.e. additional line separators and whitespace will be written, that do not
+            influence the HTML code.
+            Default: "true"</description>
+        <param-name>org.apache.myfaces.PRETTY_HTML</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <!--<context-param>
+  <description>If true, a javascript function will be rendered that is able to restore the former vertical scroll on every request. Convenient feature if you have pages with long lists and you do not want the browser page to always jump to the top if you trigger a link or button action that stays on the same page. Default: "false"</description>
+  <param-name>org.apache.myfaces.AUTO_SCROLL</param-name>
+  <param-value>true</param-value>
+ </context-param>-->
+    <context-param>
+        <description>Validate managed beans, navigation rules and ensure that forms are not nested.</description>
+        <param-name>org.apache.myfaces.VALIDATE</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <!--  End of Jsf/MyFaces parameters -->
+    <listener>
+        <listener-class>com.beshara.jsfbase.csc.util.SessionListen</listener-class>
+    </listener>
+    <context-param>
+        <description>A very common problem in configuring MyFaces-web-applications is that the Extensions-Filter is not configured at all or improperly configured. This parameter will check for a properly configured Extensions-Filter if it is needed by the web-app. In most cases this check will work just fine, there might be cases where an internal forward will bypass the Extensions-Filter and the check will not work. If this is the case, you can disable the check by setting this parameter to false.</description>
+        <param-name>org.apache.myfaces.CHECK_EXTENSIONS_FILTER</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <description>Change the url-pattern from the ExtensionsFilter Default is "/faces/myFacesExtensionResource" Note: The filter-mapping for ExtensionsFilter, the url-pattern is this value + "/*", else there comes a exception</description>
+        <param-name>org.apache.myfaces.RESOURCE_VIRTUAL_PATH</param-name>
+        <param-value>/faces/extensionResource</param-value>
+    </context-param>
+    <filter>
+        <filter-name>extensionsFilter</filter-name>
+        <filter-class>org.apache.myfaces.webapp.filter.ExtensionsFilter</filter-class>
+        <init-param>
+            <description>Set the size limit for uploaded files. Format: 10 - 10 bytes 10k - 10 KB 10m - 10 MB 1g - 1 GB</description>
+            <param-name>uploadMaxFileSize</param-name>
+            <param-value>100m</param-value>
+        </init-param>
+        <init-param>
+            <description>Set the threshold size - files below this limit are stored in memory, files above this limit are stored on disk. Format: 10 - 10 bytes 10k - 10 KB 10m - 10 MB 1g - 1 GB</description>
+            <param-name>uploadThresholdSize</param-name>
+            <param-value>100k</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>extensionsFilter</filter-name>
+        <url-pattern>*.jsf</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>extensionsFilter</filter-name>
+        <url-pattern>/faces/*</url-pattern>
+    </filter-mapping>
+    <!--  Welcome Files
+  -->
+    <welcome-file-list>
+        <welcome-file>index.jsf</welcome-file>
+    </welcome-file-list>
+    <!--  Handle Error Codes (System Exceptions, 500, 404, 505,...)-->
+    <servlet>
+        <servlet-name>ErrorServlet</servlet-name>
+        <servlet-class>com.beshara.jsfbase.csc.util.ErrorHandlingServlet</servlet-class>
+        <init-param>
+            <param-name>errorPage</param-name>
+            <param-value>/errorpage.jsf</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ErrorServlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>400</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>401</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>405</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>406</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>407</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>408</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>409</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>410</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>411</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>412</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>413</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>414</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>415</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>416</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>417</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>501</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>502</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>503</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>504</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <error-page>
+        <error-code>505</error-code>
+        <location>/faces/*</location>
+    </error-page>
+    <!--  End Of Handle Error Codes (System Exceptions, 500, 404, 505,...) -->
+    <context-param>
+        <description>xml configuration file of table header content</description>
+        <param-name>tableHeaderDef</param-name>
+        <param-value>/WEB-INF/module/config/table-header.xml</param-value>
+    </context-param>
+    <!-- Start of SSO Parameters -->
+    <context-param>
+        <param-name>com.beshara.sso.CLIENT_INFO</param-name>
+        <param-value>/WEB-INF/module/config/security/client.properties</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.beshara.sso.PAGES_PATH</param-name>
+        <param-value>/security/sso/</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.beshara.sso.PAGES_EXTENSION</param-name>
+        <param-value>jsf</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.beshara.sso.INDEX_PAGE_PATH</param-name>
+        <param-value>/index.jsf</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.beshara.sso.USING_EX_AUTH</param-name>
+        <param-value>true</param-value>
+    </context-param>        	
+    <!-- End of SSO Parameters -->
+    <servlet>
+        <servlet-name>DownloadServlet</servlet-name>
+        <servlet-class>com.beshara.jsfbase.csc.util.fileupload.DownloadServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DownloadServlet</servlet-name>
+        <url-pattern>/downloadservlet/*</url-pattern>
+    </servlet-mapping>
+</web-app>

@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration//EN" "http://jakarta.apache.org/struts/dtds/tiles-config.dtd">
+<tiles-definitions>
+ <!-- we assume that our pages structure will contains only (title, header, content, footer) -->
+ <definition name="main.layout" path="/WEB-INF/app/tiles/enhanced_application_mainlayout.jsp">
+  <put name="content1" value="/WEB-INF/app/tiles/content1-1.jsp"></put>
+  <put name="search" value="/WEB-INF/app/tiles/content1.jsp"></put>
+  <put name="msg" value="/WEB-INF/app/tiles/msg.jsp"></put>
+  <put name="content" value="content2-1.jsp"></put>
+  <put name="title" value="module_div_title"></put>
+  <put name="titlepage" value="Title Page"></put>
+  <put name="titleAddDiv" value="Add"></put>
+  <put name="titleEditDiv" value="Edit"></put>
+  <put name="titleDelDiv" value="DelAlert"></put>
+  <put name="titleDelConDiv" value="DelAlertCon"></put>
+  <put name="steps" value="/WEB-INF/app/tiles/tempstep.jsp"></put>
+  <put name="bar" value="/WEB-INF/app/tiles/tempbar.jsp"></put>
+  <put name="paging" value="/WEB-INF/app/tiles/temppaging.jsp"></put>
+  <put name="treeadd" value="/WEB-INF/app/tiles/treeadd.jsp"></put>
+  <put name="treeedit" value="/WEB-INF/app/tiles/treeedit.jsp"></put>
+  <put name="lookupadd" value="/WEB-INF/app/tiles/adddiv.jsp"></put>
+  <put name="lookupedit" value="/WEB-INF/app/tiles/editdiv.jsp"></put>
+  <put name="delalert" value="/WEB-INF/app/tiles/delalertdiv.jsp"></put>
+  <put name="delalerttree" value="/WEB-INF/app/tiles/treedelalertdiv.jsp"></put>
+  <put name="delconfirm" value="/WEB-INF/app/tiles/delconfirmdiv.jsp"></put>
+  <put name="treedivdetails" value="/WEB-INF/app/tiles/treedivdetails.jsp"></put>
+  <put name="showTreeDivDetails" value="false"></put>
+  <put name="showLookupAdd" value="false"></put>
+  <put name="showLookupEdit" value="flse"></put>
+  <put name="showDelAlert" value="false"></put>
+  <put name="showDelAlertTree" value="false"></put>
+  <put name="showDelConfirm" value="false"></put>
+  <put name="showTreeAdd" value="false"></put>
+  <put name="showTreeEdit" value="false"></put>
+  <put name="showSearch" value="false"></put>
+  <put name="showContent1" value="false"></put>
+  <put name="showsteps" value="false"></put>
+  <put name="showbar" value="false"></put>
+  <put name="showpaging" value="false"></put>
+  <put name="showCompletedConfirmDiv" value="false"></put>
+  <put name="completedConfirmDivTile" value="/WEB-INF/app/tiles/completedConfirmDiv.jsp"></put>
+  <put name="pageId" value=""></put>
+  <put name="wizardId" value=""></put>
+  <put name="divTreeDetails" value=""></put>
+  <put name="pageType" value=""></put>
+  <put name="showtreeContent" value="false"></put>
+  <put name="showdatatableContent" value="false"></put>
+  <put name="navigation" value=""></put>
+  <put name="showNavigation" value="false"></put>
+  <put name="masterdetaildiv" value="/WEB-INF/app/tiles/masterdetaildiv.jsp"></put>
+  <put name="showMasterDetail" value="false"></put>
+  <put name="commondata" value="/WEB-INF/app/tiles/commondata.jsp"></put>
+  <put name="showCommonData" value="false"></put>
+  <put name="manyToMany" value="false"></put>
+  <!--Tree Div Attributes -->
+  <put name="treediv" value="/WEB-INF/app/tiles/treediv.jsp"></put>
+  <put name="showTreediv" value="false"></put>
+  <!-- -->
+  <put name="resourcesBundlePath" value="com.beshara.csc.gn.grs.presentation.resources.grs"></put>
+  <put name="wait" value="/WEB-INF/app/tiles/pleasewait.jsp"></put>
+  <put name="divwait" value="/WEB-INF/app/tiles/divwait.jsp"></put>
+  <put name="showCustomDiv1" value="false"></put>
+  <put name="customDiv1" value=""></put>
+  <put name="stylePath" value="/module/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/js/module.js"></put>
+  <put name="actualResourcesBundlePath"
+       value=""></put>
+  <!--added for request module -->
+  <put name="msgReq" value="/module/req/jsps/request/masreq.jsp"></put>
+ </definition>
+ <definition name="mainpage" path="/WEB-INF/app/tiles/mainpage.jsp">
+  <put name="title" value="Main Page"></put>
+  <put name="header" value="/WEB-INF/app/tiles/header.jsp"></put>
+  <put name="footer" value="/WEB-INF/app/tiles/footer.jsp"></put>
+  <put name="tree" value="/WEB-INF/app/tiles/tree.jsp"></put>
+  <put name="body" value="/WEB-INF/app/tiles/body.jsp"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.gn.grs.presentation.resources.grs"></put>
+ </definition>
+ <definition name="errpage" extends="main.layout">
+  <put name="showContent1" value="true"></put>
+  <put name="showsteps" value="false"></put>
+  <put name="showbar" value="false"></put>
+  <put name="showpaging" value="false"></put>
+  <put name="titlepage" value="errorPageTitle"></put>
+ </definition>
+ <definition name="lookuplistdiv" extends="main.layout">
+  <put name="showdatatableContent" value="true"></put>
+  <put name="showSearch" value="true"></put>
+  <put name="showsteps" value="false"></put>
+  <put name="showContent1" value="false"></put>
+  <put name="showbar" value="true"></put>
+  <put name="showpaging" value="true"></put>
+  <put name="searchQuery" value=""></put>
+  <put name="showLookupAdd" value="true"></put>
+  <put name="showLookupEdit" value="true"></put>
+  <put name="showDelAlert" value="true"></put>
+  <put name="showDelConfirm" value="true"></put>
+  <put name="titlepage" value=""></put>
+  <put name="pageId" value=""></put>
+  <put name="searchAction" value=""></put>
+  <put name="searchType" value=""></put>
+  <put name="showdatatableContent" value="true"></put>
+  <put name="pageType" value="0"></put>
+  <put name="content" value="/WEB-INF/app/tiles/lookuplist.jsp"></put>
+  <put name="showCommonData" value="true"></put>
+ </definition>
+ <definition name="addedit.page" extends="main.layout">
+  <put name="showContent1" value="true"></put>
+  <put name="titlepage" value=""></put>
+  <put name="pageId" value=""></put>
+  <put name="pageType" value=""></put>
+  <put name="showCommonData" value="true"></put>
+ </definition>
+ <definition name="tree.page" extends="main.layout">
+  <put name="showSearch" value="true"></put>
+  <put name="showbar" value="true"></put>
+  <put name="showtreeContent" value="true"></put>
+  <put name="titlepage" value=""></put>
+  <put name="content" value="treelist.jsp"></put>
+  <put name="searchAction" value=""></put>
+  <put name="searchType" value=""></put>
+  <put name="searchQuery" value=""></put>
+  <put name="pageId" value=""></put>
+  <put name="showDelAlertTree" value="true"></put>
+  <put name="showTreeAdd" value="true"></put>
+  <put name="showTreeEdit" value="true"></put>
+  <put name="showTreeDivDetails" value="true"></put>
+  <put name="divTreeDetails" value="divTreeDetails"></put>
+  <put name="pageType" value="1"></put>
+  <put name="code" value=""></put>
+  <put name="name" value=""></put>
+  <put name="parent" value=""></put>
+  <put name="leaf" value=""></put>
+  <put name="showDelConfirm" value="true"></put>
+  <put name="showCommonData" value="true"></put>
+ </definition>
+ <definition name="manytomanylist" extends="main.layout">
+  <put name="showSearch" value="false"></put>
+  <put name="showsteps" value="false"></put>
+  <put name="showContent1" value="false"></put>
+  <put name="showbar" value="true"></put>
+  <put name="showpaging" value="true"></put>
+  <put name="showDelAlert" value="true"></put>
+  <put name="showDelConfirm" value="true"></put>
+  <put name="pageType" value="0"></put>
+  <put name="titlepage" value=""></put>
+  <put name="pageId" value=""></put>
+  <put name="showdatatableContent" value="true"></put>
+  <put name="search" value=""></put>
+  <put name="showCommonData" value="true"></put>
+ </definition>
+ <definition name="manytomanymaintain" extends="main.layout">
+  <put name="lookupadd" value="/WEB-INF/app/tiles/manytomany/adddiv.jsp"></put>
+  <put name="search" value="/WEB-INF/app/tiles/manytomany/content1.jsp"></put>
+  <put name="delalert" value="/WEB-INF/app/tiles/manytomany/delalertdiv.jsp"></put>
+  <put name="delconfirm" value="/WEB-INF/app/tiles/manytomany/delconfirmdiv.jsp"></put>
+  <put name="bar" value="/WEB-INF/app/tiles/manytomany/tempbar.jsp"></put>
+  <put name="paging" value="/WEB-INF/app/tiles/manytomany/temppaging.jsp"></put>
+  <put name="content1" value="/WEB-INF/app/tiles/manytomany/content1-1.jsp"></put>
+  <put name="navigation" value="/WEB-INF/app/tiles/manytomany/navigation.jsp"></put>
+  <put name="commondata" value="/WEB-INF/app/tiles/manytomany/commondata.jsp"></put>
+  <put name="showCommonData" value="true"></put>
+  <put name="showNavigation" value="true"></put>
+  <put name="showLookupAdd" value="true"></put>
+  <put name="showLookupEdit" value="false"></put>
+  <put name="showDelAlert" value="true"></put>
+  <put name="showDelConfirm" value="true"></put>
+  <put name="titlepage" value=""></put>
+  <put name="showsteps" value="true"></put>
+  <put name="showsearch" value="true"></put>
+  <put name="wizardId" value=""></put>
+  <put name="showContent1" value="true"></put>
+  <put name="showbar" value="true"></put>
+  <put name="pageId" value=""></put>
+  <put name="showdatatableContent" value="true"></put>
+  <put name="showpaging" value="true"></put>
+  <put name="showSearch" value="true"></put>
+  <put name="pageType" value="0"></put>
+  <put name="manyToMany" value="true"></put>
+ </definition>
+ <definition name="masterdetailpage" extends="main.layout">
+  <put name="titleAddDiv" value="Add_Div_Minor_Title"></put>
+  <put name="titleEditDiv" value="Edit_Div_Minor_Title"></put>
+  <put name="showSearch" value="true"></put>
+  <put name="showsteps" value="false"></put>
+  <put name="showContent1" value="false"></put>
+  <put name="showbar" value="true"></put>
+  <put name="showpaging" value="true"></put>
+  <put name="titlepage" value=""></put>
+  <put name="pageId" value=""></put>
+  <put name="searchAction" value=""></put>
+  <put name="searchType" value=""></put>
+  <put name="searchQuery" value=""></put>
+  <put name="pageType" value="0"></put>
+  <put name="showMasterDetail" value="true"></put>
+  <put name="showCommonData" value="true"></put>
+ </definition>
+ <!-- Start conditions-->
+ <definition name="conditions.page" extends="manytomanymaintain">
+  <put name="resourcesBundlePath" value="com.beshara.csc.gn.grs.presentation.resources.grs"></put>
+  <put name="pageId" value=""></put>
+  <put name="titlepage" value=""></put>
+  <put name="wizardId" value="conditionId"></put>
+  <put name="navigation" value="/module/grs/jsps/conditions/navigation.jsp"></put>
+  <put name="stylePath" value="/module/grs/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/grs/js/module.js"></put>
+ </definition>
+ <definition name="conditionsBaseFirst.page" extends="conditions.page">
+  <put name="titleAddDiv" value="conditionMainTile"></put>
+  <put name="titleEditDiv" value="conditionMainTile"></put>
+  <put name="titlepage" value="conditions"></put>
+  <put name="showContent1" value="true"></put>
+  <put name="showbar" value="false"></put>
+  <put name="showLookupAdd" value="false"></put>
+  <put name="showLookupEdit" value="false"></put>
+  <put name="showDelAlert" value="false"></put>
+  <put name="showDelConfirm" value="false"></put>
+  <put name="showdatatableContent" value="false"></put>
+  <put name="showpaging" value="false"></put>
+  <put name="showSearch" value="false"></put>
+  <put name="showdatatableContent" value="false"></put>
+  <put name="content1" value="/module/grs/jsps/conditions/conditionmaindatamantiancontent1.jsp"></put>
+ </definition>
+ <definition name="conditionsLineDetails.page" extends="conditions.page">
+  <put name="pageId" value="conditionsLineDetails"></put>
+  <put name="navigation" value="/WEB-INF/app/tiles/manytomany/navigation.jsp"></put>
+  <put name="delalert" value="/module/grs/jsps/conditions/grscondelalertdiv.jsp"></put>
+  <put name="showContent1" value="true"></put>
+  <put name="showbar" value="true"></put>
+  <put name="titlepage" value="conditions"></put>
+  <put name="showLookupAdd" value="true"></put>
+  <put name="showLookupEdit" value="false"></put>
+  <put name="showDelAlert" value="true"></put>
+  <put name="showDelConfirm" value="true"></put>
+  <put name="showdatatableContent" value="true"></put>
+  <put name="showpaging" value="true"></put>
+  <put name="showSearch" value="false"></put>
+  <put name="titleAddDiv" value="linedetails"></put>
+  <put name="lookupadd" value="/module/grs/jsps/conditions/showlinedetails.jsp"></put>
+  <put name="content1" value="/module/grs/jsps/conditions/linemaintaincontent1.jsp"></put>
+  <put name="content" value="/module/grs/jsps/conditions/linemaintaincontent.jsp"></put>
+ </definition>
+ <definition name="conditionlist.page" extends="manytomanylist">
+  <put name="stylePath" value="/module/grs/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/grs/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.gn.grs.presentation.resources.grs"></put>
+  <put name="titlepage" value="conditions"></put>
+  <put name="pageId" value="conditionlistpage"></put>
+  <put name="showSearch" value="true"></put>
+  <put name="search" value="/module/grs/jsps/conditions/conditionsearch.jsp"></put>
+  <put name="content" value="/module/grs/jsps/conditions/conditionlistcontent.jsp"></put>
+ </definition>
+ <definition name="conditionLineSub.page" extends="lookuplistdiv">
+  <put name="stylePath" value="/module/grs/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/grs/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.gn.grs.presentation.resources.grs"></put>
+  <put name="showSearch" value="false"></put>
+  <put name="showdatatableContent" value="true"></put>
+  <put name="showsteps" value="false"></put>
+  <put name="showContent1" value="false"></put>
+  <put name="showbar" value="false"></put>
+  <put name="showpaging" value="true"></put>
+  <put name="searchQuery" value=""></put>
+  <put name="showLookupAdd" value="false"></put>
+  <put name="showLookupEdit" value="false"></put>
+  <put name="showDelAlert" value="false"></put>
+  <put name="showDelConfirm" value="false"></put>
+  <put name="titlepage" value="conditions"></put>
+  <put name="pageId" value=""></put>
+  <put name="searchAction" value=""></put>
+  <put name="searchType" value=""></put>
+  <put name="pageType" value="0"></put>
+  <put name="content" value="/module/grs/jsps/conditions/conditionlinesubcontent.jsp"></put>
+  <put name="showContent1" value="true"></put>
+  <put name="content1" value="/module/grs/jsps/conditions/conditionlinesubcontent1.jsp"></put>
+  <put name="navigation" value="/module/jsps/conditions/conditionlinesubnavigation.jsp"></put>
+ </definition>
+ <!-- End conditions-->
+ <!-- decisions -->
+ <definition name="decisionlist.page" extends="manytomanylist">
+  <put name="stylePath" value="/module/reg/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/reg/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+  <put name="titlepage" value="decisions_list_title"></put>
+  <put name="pageId" value="decisionlistpage"></put>
+  <put name="showSearch" value="true"></put>
+  <put name="search" value="/module/reg/jsps/decision/decisionsearch.jsp"></put>
+  <put name="delalert" value="/module/reg/jsps/decision/decisiondelalert.jsp"></put>
+  <put name="delconfirm" value="/module/reg/jsps/decision/decisiondelconfirm.jsp"></put>
+  <put name="content" value="/module/reg/jsps/decision/decisioncontent.jsp"></put>
+ </definition>
+ <definition name="decisionadd.page" extends="manytomanymaintain">
+  <put name="stylePath" value="/module/reg/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/reg/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+  <put name="wizardId" value="decisionadd"></put>
+ </definition>
+ <definition name="decisionmaindatamaintain.page" extends="decisionadd.page">
+  <put name="showContent1" value="true"></put>
+  <put name="showbar" value="false"></put>
+  <put name="showLookupAdd" value="false"></put>
+  <put name="showLookupEdit" value="false"></put>
+  <put name="showDelAlert" value="false"></put>
+  <put name="showDelConfirm" value="false"></put>
+  <put name="showpaging" value="false"></put>
+  <put name="showSearch" value="false"></put>
+  <put name="showdatatableContent" value="false"></put>
+  <put name="content1" value="/module/reg/jsps/decision/decisionmaindatamaintaincontent1.jsp"></put>
+ </definition>
+ <definition name="decisionreferencesmaintain.page" extends="decisionadd.page">
+  <put name="titleAddDiv" value="decisionadd_addreference"></put>
+  <put name="titlepage" value="decision_refernce"></put>
+  <put name="pageId" value="decisionreferencesmaintainpage"></put>
+  <put name="showLookupAdd" value="true"></put>
+  <put name="lookupadd" value="/module/reg/jsps/decision/adddecisionreferencediv.jsp"></put>
+  <put name="delalert" value="/module/reg/jsps/decision/adddecisionreferencedelalert.jsp"></put>
+  <put name="content1" value="/module/reg/jsps/decision/adddecisionreferencecontent1.jsp"></put>
+  <put name="content" value="/module/reg/jsps/decision/adddecisionreferencecontent.jsp"></put>
+ </definition>
+ <definition name="cancelDecisionDetails.page" extends="manytomanylist">
+  <put name="stylePath" value="/module/reg/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/reg/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+  <put name="titlepage" value="updated_decision_details"></put>
+  <put name="showContent1" value="true"></put>
+  <put name="showbar" value="false"></put>
+  <put name="showpaging" value="false"></put>
+  <put name="showCustomDiv1" value="true"></put>
+  <put name="customDiv1" value="/module/reg/jsps/decision/photo.jsp"></put>
+  <put name="content1" value="/module/reg/jsps/decision/cancelDecisionDetailscontent1.jsp"></put>
+  <put name="navigation" value="/module/jsps/decision/cancelDecisionDetailNavigation.jsp"></put>
+ </definition>
+ <definition name="decisionemployeesmaintain.page" extends="decisionadd.page">
+  <put name="titlepage" value="decision employees"></put>
+  <put name="pageId" value="decisionemployeesmaintainpage"></put>
+  <put name="showLookupAdd" value="true"></put>
+  <put name="showbar" value="true"></put>
+  <put name="showContent1" value="false"></put>
+  <put name="titleDelConDiv" value="emp_del_confirm_message"></put>
+  <put name="titleAddDiv" value="modules_title"></put>
+  <put name="lookupadd" value="/module/reg/jsps/decision/addregulationmodulesdiv.jsp"></put>
+  <put name="delalert" value="/module/reg/jsps/decision/decisionemployeesmaintaindelalert.jsp"></put>
+  <put name="content1" value="/module/reg/jsps/decision/decisionemployeesmaintaincontent1.jsp"></put>
+  <put name="content" value="/module/reg/jsps/decision/decisionemployeesmaintaincontent.jsp"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+  <put name="delconfirm" value="/module/reg/jsps/decision/employeesdelconfirm.jsp"></put>
+ </definition>
+ <definition name="selectdecisionemployee.page" extends="main.layout">
+  <put name="stylePath" value="/module/reg/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/reg/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+  <put name="showContent1" value="true"></put>
+  <put name="showdatatableContent" value="true"></put>
+  <put name="manyToMany" value="true"></put>
+  <put name="showCustomDiv1" value="true"></put>
+  <put name="titlepage" value="select_decision_employees_emp_search"></put>
+  <put name="customDiv1" value="/module/reg/jsps/decision/selectdecisionemployeecustomDiv1.jsp"></put>
+  <put name="content" value="/module/reg/jsps/decision/selectdecisionemployeecontent.jsp"></put>
+  <put name="content1" value="/module/reg/jsps/decision/selectdecisionemployeecontent1.jsp"></put>
+ </definition>
+ <definition name="decisionemployeesmaintaincancel.page" extends="decisionadd.page">
+  <put name="titlepage" value="decision_cancellation"></put>
+  <put name="pageId" value="decisionemployeesmaintaincancelpage"></put>
+  <!--<put name="showLookupAdd" value="true"></put>-->
+  <put name="showContent1" value="false"></put>
+  <put name="showbar" value="false"></put>
+  <put name="content" value="/module/reg/jsps/decision/decisionemployeesmaintaincancelcontent.jsp"></put>
+  <!--put name="titleAddDiv" value="employees_of_canceled_decision"></put>
+  <put name="lookupadd" value="/module/reg/jsps/decision/addemployeefromcanceleddecisiondiv.jsp"></put-->
+ </definition>
+ 
+ <definition name="decMaterialsMaintain.page" extends="decisionadd.page">
+       <put name="pageId" value="decisionSubjectsmaintainpage"></put>
+       <put name="content" value="/module/reg/jsps/decision/materials/content.jsp"></put>
+       <put name="content1" value="/module/reg/jsps/decision/materials/conten1.jsp"></put>
+       <put name="lookupadd" value="/module/reg/jsps/decision/materials/adddiv.jsp"></put>
+       <put name="lookupedit" value="/module/reg/jsps/decision/materials/editdiv.jsp"></put>
+       <put name="delalert" value="/module/reg/jsps/decision/materials/deleteDiv.jsp"></put>
+       <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+       <put name="titleAddDiv" value="Material_add_title"></put>
+       <put name="titleEditDiv" value="Material_edit_title"></put>
+       <put name="delconfirm" value="/module/reg/jsps/decision/materials/deleteconfirm.jsp"></put>
+       <put name="titleDelConDiv" value="material_decision_can't_be_deleted"></put> 
+ </definition>
+ <definition name="relatedDecisionMaterials.page" extends="lookuplistdiv">
+   <put name="stylePath" value="/module/reg/media/css/ar/Style.css"/>
+   <put name="pageId" value="relatedDecisionMaterialsPage"></put>
+   <put name="titlepage" value="linkRelatedDecisionMaterials"></put>
+   <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+   <put name="content" value="/module/reg/jsps/decision/materials/relatedMaterials/content.jsp"></put>
+   <put name="content1" value="/module/reg/jsps/decision/materials/relatedMaterials/content1.jsp"></put>
+   <put name="search" value="/module/reg/jsps/decision/materials/relatedMaterials/searchDiv.jsp"></put>
+   <put name="wizardId" value="decisionadd"></put>
+ </definition>
+ 
+ <!--decisions-->
+ <!-- regulations -->
+ <definition name="regulationlist.page" extends="manytomanylist">
+ <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+  <put name="stylePath" value="/module/reg/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/reg/js/module.js"></put>        
+  <put name="titlepage" value="regulations_list_title"></put>
+  <put name="pageId" value="regulationlistpage"></put>
+  <put name="showSearch" value="true"></put>
+  <put name="search" value="/module/reg/jsps/regulation/regulationsearch.jsp"></put>
+  <put name="showCustomDiv1" value="true"></put>
+  <!--<put name="customDiv1" value="/module/reg/jsps/regulation/regulationcanceldiv.jsp"></put>-->
+  <put name="customDiv1" value="/module/reg/jsps/regulation/cancelregulationdiv.jsp"></put>
+  <put name="delalert" value="/module/reg/jsps/regulation/regulationlistdelalert.jsp"></put>
+  <put name="delconfirm" value="/module/reg/jsps/regulation/regulationlistdelconfirm.jsp"></put>
+  <put name="content" value="/module/reg/jsps/regulation/regulationlistcontent.jsp"></put>
+ </definition>
+ <definition name="regulationadd.page" extends="manytomanymaintain">
+ <put name="stylePath" value="/module/reg/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/reg/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+  <put name="wizardId" value="regulationadd"></put>
+ </definition>
+ <definition name="regulationmaindatamaintain.page" extends="regulationadd.page">
+  <put name="lookupadd" value="/module/reg/jsps/regulation/regulationparentselectiondiv.jsp"></put>
+  <put name="content1" value="/module/reg/jsps/regulation/regulationmaindatamaintaincontent1.jsp"></put>
+  <put name="showContent1" value="true"></put>
+  <put name="showbar" value="false"></put>
+  <put name="showLookupAdd" value="true"></put>
+  <put name="showLookupEdit" value="false"></put>
+  <put name="showDelAlert" value="false"></put>
+  <put name="showDelConfirm" value="false"></put>
+  <put name="showpaging" value="false"></put>
+  <put name="showSearch" value="false"></put>
+  <put name="showdatatableContent" value="false"></put>
+  <put name="titleAddDiv" value="regulation_parent"></put>
+ </definition>
+ <definition name="regulationreferencesmaintain.page" extends="regulationadd.page">
+  <put name="titleAddDiv" value="regulation_References_title"></put>
+  <put name="titlepage" value="reg refernce"></put>
+  <put name="pageId" value="regulationreferencesmaintainpage"></put>
+  <put name="showLookupAdd" value="true"></put>
+  <put name="lookupadd" value="/module/reg/jsps/regulation/addregulationreferencediv.jsp"></put>
+  <put name="content1" value="/module/reg/jsps/regulation/regulationreferencesmaintaincontent1.jsp"></put>
+  <put name="delalert" value="/module/reg/jsps/regulation/regulationreferencesmaintaindelalert.jsp"></put>
+  <put name="delconfirm" value="/module/reg/jsps/regulation/regulationreferencesmaintaindelconfirm.jsp"></put>
+  <put name="content" value="/module/reg/jsps/regulation/regulationreferencesmaintaincontent.jsp"></put>
+ </definition>
+ <definition name="regulationsubjectsmaintain.page" extends="regulationadd.page">
+  <put name="pageId" value="regulationsubjectsmaintainpage"></put>
+  <put name="lookupadd" value="/module/reg/jsps/regulation/addregulationsubjectsdiv.jsp"></put>
+  <put name="content1" value="/module/reg/jsps/regulation/regulationsubjectsmaintaincontent1.jsp"></put>
+  <put name="content" value="/module/reg/jsps/regulation/regulationsubjectsmaintaincontent.jsp"></put>
+  <put name="titleAddDiv" value="regulation_subjects_add_new"></put>
+ </definition>
+ <definition name="regulationpublishmaintain.page" extends="regulationadd.page">
+  <put name="pageId" value="regulationpublishmaintainpage"></put>
+  <put name="lookupadd" value="/module/reg/jsps/regulation/addregulationpublishdiv.jsp"></put>
+  <put name="content" value="/module/reg/jsps/regulation/regulationpublishmaintaincontent.jsp"></put>
+  <put name="content1" value="/module/reg/jsps/regulation/regulationpublishmaintaincontent1.jsp"></put>
+  <put name="titleAddDiv" value="regulation_publish_title"></put>
+  <put name="titlepage" value="regulation_master_title"></put>
+ </definition>
+ <definition name="regulationpublishmaintainedit.page" extends="regulationadd.page">
+  <put name="pageId" value="regulationpublishmaintaineditpage"></put>
+  <put name="lookupadd" value="/module/reg/jsps/regulation/addregulationpublishdiv.jsp"></put>
+  <put name="titleAddDiv" value="regulation_publish_title"></put>
+  <put name="showCustomDiv1" value="true"></put>
+  <put name="customDiv1" value="/module/reg/jsps/regulation/editregulationpublishdiv.jsp"></put>
+  <put name="titlepage" value="edit_regulation_master_title"></put>
+  <put name="content" value="/module/reg/jsps/regulation/regulationpublishmaintaineditcontent.jsp"></put>
+  <put name="content1" value="/module/reg/jsps/regulation/regulationpublishmaintaineditcontent1.jsp"></put>
+ </definition>
+ <definition name="regulationmodulesmaintain.page" extends="regulationadd.page">
+  <put name="pageId" value="regulationmodulesmaintainpage"></put>
+  <put name="wizardId" value="regulationadd"></put>
+  <put name="lookupadd" value="/module/reg/jsps/regulation/addregulationmodulesdiv.jsp"></put>
+  <put name="titleAddDiv" value="regulation_modules_title"></put>
+  <put name="delalert" value="/module/reg/jsps/regulation/delregulationmodulesdiv.jsp"></put>
+  <put name="content" value="/module/reg/jsps/regulation/regulationmodulesmaintaincontent.jsp"></put>
+  <put name="content1" value="/module/reg/jsps/regulation/regulationmodulesmaintaincontent1.jsp"></put>
+  <put name="lookupedit" value="/module/reg/jsps/regulation/regulationmodulesactualdata_editdiv.jsp"/>
+  <put name="titleEditDiv" value="blank"/>
+ </definition>
+<definition name="regulationministriesmaintain.page" extends="regulationadd.page">
+  <put name="titleAddDiv" value="regulation_ministries_reg_gehat"></put>  
+  <put name="titlepage" value="reg ministries"></put>
+  <put name="pageId" value="regulationministriesmaintainpage"></put>
+  <put name="showLookupAdd" value="true"></put>
+  <put name="lookupadd" value="/module/reg/jsps/regulation/addregulationministriesdiv.jsp"></put>
+  <put name="content1" value="/module/reg/jsps/regulation/regulationministriesmaintaincontent1.jsp"></put>
+ <put name="content" value="/module/reg/jsps/regulation/regulationministriesmaintaincontent.jsp"></put>
+ </definition>
+ 
+ 
+  <definition name="regulationattachmentmaintain.page" extends="regulationadd.page">
+      <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+      <put name="pageId" value="regulationpublishmaintainpage"></put>
+      <put name="lookupadd" value="/module/reg/jsps/regulation/regulationattachmentmaintain_adddiv.jsp"></put>
+      <put name="lookupedit" value="/module/reg/jsps/regulation/regulationattachmentmaintain_editdiv.jsp"></put>
+      <put name="content" value="/module/reg/jsps/regulation/regulationattachmentmaintaincontent.jsp"></put>
+      <put name="content1" value="/module/reg/jsps/regulation/regulationattachmentmaintaincontent1.jsp"></put>
+      <put name="titleAddDiv" value="addTable"></put>
+      <put name="titleEditDiv" value="editTable"></put>
+      <put name="delalert" value="/module/reg/jsps/regulation/regulationattachmentmaintain_delalert.jsp"></put>
+      <put name="navigation" value="/module/reg/jsps/regulation/regulationattachmentmaintain_nav.jsp"></put>
+       <put name="delconfirm" value="/module/reg/jsps/regulation/regulationattachmentmaintain_delconfirm.jsp"></put>
+       <put name="titleDelConDiv" value="table_can't_no_be_deleted"></put>
+ </definition>
+
+ <definition name="regulationaddcolumns.page" extends="lookuplistdiv">
+      <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+      <put name="stylePath" value="/module/reg/media/css/ar/Style.css"></put>
+      <put name="titleAddDiv" value="customAddColumn"></put>
+      <put name="titleEditDiv" value="customEditColumn"></put>
+      <put name="lookupadd" value="/module/reg/jsps/regulation/regulationaddcolumnsmaintain_adddiv.jsp"></put>
+      <put name="lookupedit" value="/module/reg/jsps/regulation/regulationaddcolumnsmaintain_editdiv.jsp"></put>
+      <put name="delalert" value="/module/reg/jsps/regulation/regulationaddcolumnsmaintain_delalert.jsp"></put>
+      <put name="navigation" value="/module/reg/jsps/regulation/regulationaddcolumnsmaintain_nav.jsp"></put>
+      <!--put name="lookupedit" value="/module/jsps/type/typeedit.jsp"></put-->
+      <put name="titlepage" value="addcolumn_Title"></put>
+      <put name="pageId" value="addcolumnpage"></put>
+      <put name="searchAction" value="regulationAddColumns.search"></put>
+      <put name="searchType" value="regulationAddColumns.searchType"></put>
+      <put name="searchQuery" value="regulationAddColumns.searchQuery"></put>
+      <put name="content" value="/module/reg/jsps/regulation/regulationaddcolumnsmaintaincontent.jsp"></put>
+      <put name="content1" value="/module/reg/jsps/regulation/regulationaddcolumnsmaintaincontent1.jsp"></put>
+      <put name="wizardId" value="regulationadd"></put>
+      <put name="delconfirm" value="/module/reg/jsps/regulation/columnsdelconfirmdiv.jsp"></put>
+      <put name="titleDelConDiv" value="column_no_be_deleted"></put>
+      
+ </definition>
+ 
+ 
+  <definition name="regulationrecordsmaintain.page" extends="manytomanymaintain">
+  <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+  <put name="stylePath" value="/module/reg/media/css/ar/Style.css"></put>
+  <put name="content" value="/module/reg/jsps/regulation/recordlist_cnt.jsp"></put>
+  <put name="navigation" value="/module/reg/jsps/regulation/recordnavigation.jsp"></put>
+  <put name="titlepage" value="record_title_page"></put>
+  <put name="titleEditDiv" value="record_edit_title"></put>
+  <put name="lookupedit" value="/module/reg/jsps/regulation/recordeditdiv.jsp"></put>
+  <put name="wizardId" value="regulationadd"></put>
+  <put name="content1" value="/module/reg/jsps/regulation/recordlist_cnt1.jsp"></put>
+  <put name="msg" value="/module/reg/jsps/regulation/record_confirm_msg.jsp"></put>
+ </definition>
+ <definition name="regMaterialsMaintain.page" extends="regulationadd.page">
+      <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+       <put name="pageId" value="regulationregSubjectsmaintainpage"></put>
+       <put name="content" value="/module/reg/jsps/regulation/materials/content.jsp"></put>
+       <put name="content1" value="/module/reg/jsps/regulation/materials/conten1.jsp"></put>
+       <put name="lookupadd" value="/module/reg/jsps/regulation/materials/adddiv.jsp"></put>
+       <put name="lookupedit" value="/module/reg/jsps/regulation/materials/editdiv.jsp"></put>
+       <put name="delalert" value="/module/reg/jsps/regulation/materials/deleteDiv.jsp"></put>
+       <put name="titleAddDiv" value="Material_add_title"></put>
+       <put name="titleEditDiv" value="Material_edit_title"></put>
+       <put name="delconfirm" value="/module/reg/jsps/regulation/materials/deleteconfirm.jsp"></put>
+       <put name="titleDelConDiv" value="material_reg_can't_be_deleted"></put>
+ </definition>
+ 
+ <definition name="relatedMaterials.page" extends="lookuplistdiv">
+   <put name="pageId" value="relatedMaterialsPage"></put>
+   <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.presentation.resources.reg"></put>
+   <put name="stylePath" value="/module/reg/media/css/ar/Style.css"></put>
+   <put name="titlepage" value="linkRelatedMaterials"></put>
+   <put name="content" value="/module/reg/jsps/regulation/materials/relatedMaterials/content.jsp"></put>
+   <put name="content1" value="/module/reg/jsps/regulation/materials/relatedMaterials/content1.jsp"></put>
+   <put name="search" value="/module/reg/jsps/regulation/materials/relatedMaterials/regSearchDiv.jsp"></put>
+   <put name="wizardId" value="regulationadd"></put>
+ </definition>
+ 
+ <!-- regulations -->
+ 
+  
+<!-- start of employee and result search pages tiles  added by Nora 8-1-2009 -->
+
+<definition name="employeessearch.page" extends="lookuplistdiv">
+  <put name="lovDiv" value="/module/jsps/shared/employeesearch/lovdiv.jsp"></put>
+  <put name="titlepage" value="Employee_Search_Title"></put>
+  <put name="showdatatableContent" value="true"></put>
+  <put name="content" value="/module/jsps/shared/employeesearch/employeeaddcontent.jsp"></put>
+   <put name="content1" value="/module/jsps/shared/employeesearch/employeeadd_cnt1.jsp"></put>
+ </definition>
+ 
+  <definition name="employeeresultssearch.page" extends="lookuplistdiv">
+  <put name="titlepage" value="Employee_Search_Title"></put>
+  <put name="content" value="/module/jsps/shared/employeesearch/employeeaddcontent.jsp"></put>
+ </definition>
+<!-- End of employee and result search pages tiles -->
+
+<!-- ### Inf section started by sherif.omar 09-03-2009  -->
+
+    <!-- ************************** start gendertypes   by Nora 25-02-2009  *********************************-->
+
+ <definition name="gendertypeslist.page" extends="lookuplistdiv">
+ <put name="integration" value="true"></put>
+  <put name="actualResourcesBundlePath"
+       value="com.beshara.csc.sap.presentation.resources.sap"></put>
+       
+ <put name="stylePath" value="/module/inf/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/inf/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.inf.presentation.resources.inf"></put>
+    <put name="titlepage" value="gender_types_title"></put>
+    <put name="titleAddDiv" value="gender_types_add_title"></put>
+    <put name="titleEditDiv" value="gender_types_edit_title"></put>
+    <put name="searchAction" value="genderTypesListBean.search"></put>
+    <put name="searchType" value="genderTypesListBean.searchType"></put>
+    <put name="searchQuery" value="genderTypesListBean.searchQuery"></put>
+ </definition>
+
+<definition name="handicapstatuslist.page" extends="lookuplistdiv">
+<put name="integration" value="true"></put>
+  <put name="actualResourcesBundlePath"
+       value="com.beshara.csc.sap.presentation.resources.sap"></put>
+       
+<put name="stylePath" value="/module/inf/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/inf/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.inf.presentation.resources.inf"></put>
+  <put name="titlepage" value="handicap_status_title"></put>
+    <put name="titleAddDiv" value="handicap_status_add_title"></put>
+    <put name="titleEditDiv" value="handicap_status_edit_title"></put>
+    <put name="searchAction" value="handicapStatusListBean.search"></put>
+    <put name="searchType" value="handicapStatusListBean.searchType"></put>
+    <put name="searchQuery" value="handicapStatusListBean.searchQuery"></put>
+    <put name="content" value="/module/inf/jsps/maindata/handicapstatus/list_cnt.jsp"></put>
+    <put name="lookupadd" value="/module/inf/jsps/maindata/handicapstatus/adddiv.jsp"></put>
+    <put name="lookupedit" value="/module/inf/jsps/maindata/handicapstatus/editdiv.jsp"></put>
+ </definition>
+ 
+ <definition name="maritalstatuslist.page" extends="lookuplistdiv">
+ <put name="integration" value="true"></put>
+  <put name="actualResourcesBundlePath"
+       value="com.beshara.csc.sap.presentation.resources.sap"></put>
+       
+ <put name="stylePath" value="/module/inf/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/inf/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.inf.presentation.resources.inf"></put>
+    <put name="titlepage" value="marital_status_title"></put>
+    <put name="titleAddDiv" value="marital_status_add_title"></put>
+    <put name="titleEditDiv" value="marital_status_edit_title"></put>
+    <put name="searchAction" value="maritalStatusListBean.search"></put>
+    <put name="searchType" value="maritalStatusListBean.searchType"></put>
+    <put name="searchQuery" value="maritalStatusListBean.searchQuery"></put>
+ </definition>
+ 
+ 
+ 
+ 
+ 
+
+ <!-- ************************** start gendertypes   by Nora 25-02-2009  *********************************-->
+ <!-- start prepartion for use-case05  tiles-def -->
+ <definition name="groupcountrieslist.page" extends="lookuplistdiv">
+ <put name="integration" value="true"></put>
+  <put name="actualResourcesBundlePath"
+       value="com.beshara.csc.sap.presentation.resources.sap"></put>
+       
+ <put name="stylePath" value="/module/inf/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/inf/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.inf.presentation.resources.inf"></put>
+    <put name="titlepage" value="Country_Title"></put>
+    <put name="titleAddDiv" value="Add_Div_Country_Title"></put>
+    <put name="titleEditDiv" value="nationality_name"></put>
+    <put name="titleLovDiv" value="Add_Div_Country_Title"></put>
+    <put name="searchAction" value="groupCountriesListBean.search"></put>
+    <put name="searchType" value="groupCountriesListBean.searchType"></put>
+    <put name="searchQuery" value="groupCountriesListBean.searchQuery"></put>
+    <put name="lookupedit" value="/module/inf/jsps/maindata/groupcountries/nationalitydiv.jsp"></put>
+    <put name="content" value="/module/inf/jsps/maindata/groupcountries/list_cnt.jsp"></put>
+    <put name="content1" value="/module/inf/jsps/maindata/groupcountries/list_cnt1.jsp"></put>
+    <put name="delalert" value="/module/inf/jsps/maindata/groupcountries/delalertdiv.jsp"></put>
+    <put name="delconfirm" value="/module/inf/jsps/maindata/groupcountries/delconfirmdiv.jsp"></put>
+    <put name="lovDiv" value="/module/inf/jsps/maindata/groupcountries/lovdiv.jsp"></put>
+ </definition>
+ <!-- End prepartion for use-case05 tiles-def -->
+ 
+ <!-- start prepartion for use-case09 master tiles-def -->
+ <definition name="countrylist.page" extends="masterdetailpage">
+ <put name="integration" value="true"></put>
+  <put name="actualResourcesBundlePath"
+       value="com.beshara.csc.sap.presentation.resources.sap"></put>
+       
+ <put name="stylePath" value="/module/inf/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/inf/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.inf.presentation.resources.inf"></put>
+    <put name="titleAddDiv" value="Add_Div_Country_Title"></put>
+    <put name="titleEditDiv" value="Edit_Div_Country_Title"></put>
+    <put name="titlepage" value="Country__Cities_Title"></put>
+    <put name="searchAction" value="countriesListBean.search"></put>
+    <put name="searchType" value="countriesListBean.searchType"></put>
+    <put name="searchQuery" value="countriesListBean.searchQuery"></put>
+    <put name="content" value="/module/inf/jsps/maindata/countrycities/countrylist_cnt.jsp"></put>
+    <put name="lookupadd" value="/module/inf/jsps/maindata/countrycities/addcountrydiv.jsp"></put>
+    <put name="lookupedit" value="/module/inf/jsps/maindata/countrycities/editcountrydiv.jsp"></put>
+    <put name="masterdetaildiv" value="/module/inf/jsps/maindata/countrycities/countrydetaildiv.jsp"></put>
+ </definition>
+ <!-- End prepartion for use-case09 tiles-def -->
+ 
+ <!-- start prepartion for use-case09 details tiles-def -->
+ <definition name="citieslist.page" extends="masterdetailpage">
+ <put name="integration" value="true"></put>
+  <put name="actualResourcesBundlePath"
+       value="com.beshara.csc.sap.presentation.resources.sap"></put>
+       
+ <put name="stylePath" value="/module/inf/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/inf/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.inf.presentation.resources.inf"></put>
+    <put name="titleAddDiv" value="city_add_title"></put>
+    <put name="titleEditDiv" value="city_edit_title"></put>
+    <put name="titlepage" value="cities"></put>
+    <put name="searchAction" value="citiesListBean.search"></put>
+    <put name="searchType" value="citiesListBean.searchType"></put>
+    <put name="searchQuery" value="citiesListBean.searchQuery"></put>
+    <put name="content1" value="/module/inf/jsps/maindata/countrycities/citieslist_cnt1.jsp"></put>
+    <put name="content" value="/module/inf/jsps/maindata/countrycities/cititieslist_cnt.jsp"></put>
+    <put name="lookupadd" value="/module/inf/jsps/maindata/countrycities/addcitydiv.jsp"></put>
+    <put name="lookupedit" value="/module/inf/jsps/maindata/countrycities/editcitydiv.jsp"></put>
+ </definition>
+ <!-- End prepartion for use-case09 tiles-def -->
+   <!-- ************************** start 006_INF_GroupsCat,UC_007_INF_CountryCat   by Nora 26-02-2009  *********************************-->
+ <definition name="groupcategorylist.page" extends="lookuplistdiv">
+ <put name="integration" value="true"></put>
+  <put name="actualResourcesBundlePath"
+       value="com.beshara.csc.sap.presentation.resources.sap"></put>
+       
+ <put name="stylePath" value="/module/inf/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/inf/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.inf.presentation.resources.inf"></put>
+  <put name="titlepage" value="group_category_list_title"></put>
+  <put name="titleAddDiv" value="group_category_add_title"></put>
+  <put name="titleEditDiv" value="group_category_edit_title"></put>
+  <put name="searchAction" value="groupCategoryListBean.search"></put>
+  <put name="searchType" value="groupCategoryListBean.searchType"></put>
+  <put name="searchQuery" value="groupCategoryListBean.searchQuery"></put>
+ </definition>
+ <definition name="countrygrouplist.page" extends="lookuplistdiv">
+ <put name="integration" value="true"></put>
+  <put name="actualResourcesBundlePath" value="com.beshara.csc.sap.presentation.resources.sap"></put>
+  <put name="stylePath" value="/module/inf/media/css/ar/Style.css"></put>
+  <put name="jsPaht" value="/module/inf/js/module.js"></put>
+  <put name="titlepage" value="country_group_list_title"></put>
+  <put name="titleAddDiv" value="country_group_add_title"></put>
+  <put name="titleEditDiv" value="country_group_edit_title"></put>
+  <put name="pageId" value="minorspecspage"></put>
+  <put name="searchAction" value="countryGroupListBean.search"></put>
+  <put name="searchType" value="countryGroupListBean.searchType"></put>
+  <put name="searchQuery" value="countryGroupListBean.searchQuery"></put>
+  <put name="content1" value="/module/inf/jsps/maindata/countrygroup/list_cnt1.jsp"></put>
+ </definition>
+  <!-- ************************** End 006_INF_GroupsCat,UC_007_INF_CountryCat   by Nora 26-02-2009  *********************************-->
+
+<!-- ### Inf section End by sherif.omar 09-03-2009  -->
+
+<!-- Start of request module -->
+ <definition name="maintainrequestlist.page" extends="lookuplistdiv">
+  <put name="resourcesBundlePath" value="com.beshara.csc.gn.req.presentation.resources.req"></put>
+  <put name="titlepage" value="requestTitle"></put>
+  <put name="titleAddDiv" value="requestAddTitle"></put>
+  <put name="titleEditDiv" value="requestEditTitle"></put>
+  <put name="search" value="/module/req/jsps/request/requestsearch.jsp"></put>
+  <put name="showsteps" value="false"></put>
+  <put name="pageId" value="maintainrequestlistpage"></put>
+  <put name="delalert" value="/module/req/jsps/request/requestdelalert.jsp"></put>
+  <put name="delconfirm" value="/module/req/jsps/request/requestdelconfirm.jsp"></put>
+  <put name="content" value="/module/req/jsps/request/requestlist_cnt.jsp"></put>
+ </definition>
+ 
+  <definition name="requestadd.page" extends="addedit.page">
+  <put name="stylePath" value="/module/req/media/css/ar/Style.css"/>
+  <put name="jsPaht" value="/module/req/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.gn.req.presentation.resources.req"></put>
+  <put name="titlepage" value="requestAddTitle"></put>
+  <put name="showMsgReq" value="true"></put>
+  <put name="showRequestDiv" value="true"></put>
+  <put name="customDiv1" value="/module/req/jsps/request/requestdivlist.jsp"></put>
+  <put name="treeadd" value="/module/req/jsps/request/msgreq.jsp"></put>
+  <put name="content1" value="/module/req/jsps/request/requestadd-cnt1.jsp"></put>
+  <put name="titleAddDiv" value="successaddreq"></put>
+  <put name="lookupadd" value="/module/req/jsps/request/confirmmsg.jsp"></put>
+  <put name="treediv" value="/module/req/jsps/request/treediv.jsp"></put> 
+  <put name="lovDiv" value="/module/req/jsps/request/lovdiv.jsp"></put>
+ </definition>
+ <definition name="requestedit.page" extends="requestadd.page">
+  <put name="stylePath" value="/module/req/media/css/ar/Style.css"/>
+  <put name="jsPaht" value="/module/req/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.gn.req.presentation.resources.req"></put>
+  <put name="content1" value="/module/req/jsps/request/requestedit_cnt1.jsp"></put>
+ </definition>
+ 
+ <definition name="requestconfirmation.page" extends="lookuplistdiv">
+  <put name="stylePath" value="/module/req/media/css/ar/Style.css"/>
+  <put name="jsPaht" value="/module/req/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.gn.req.presentation.resources.req"></put>
+  <put name="pageId" value="approvallist"></put>
+  <put name="titlepage" value="approvallist"></put>
+  <put name="showContent1" value="true"></put>
+  <put name="showLookupAdd" value="false"></put>
+  <put name="showLookupEdit" value="false"></put>
+  <put name="showSearch" value="false"></put>
+  <put name="showDelAlert" value="false"></put>
+  <put name="showDelConfirm" value="false"></put>
+  <put name="showTransferStatus" value="true"></put>
+  <put name="delconfirm" value="/module/req/jsps/approval/delconfirmdivlocal.jsp"></put>
+  <put name="showConfirmApproveDiv" value="true"></put>
+  <put name="delalert" value="/module/req/jsps/approval/reqconfirmdelete.jsp"></put>
+  <put name="showRejectionReasonDiv" value="true"></put>
+  <put name="customDiv1" value="/module/req/jsps/approval/reqrejectionresoan.jsp"></put>
+  <put name="titleAddDiv" value="Add"></put>
+  <put name="titleDelDiv" value="confirmGruop_div_title"></put>
+  <put name="titleDelConDiv" value="transferResults"></put>
+  <put name="content" value="/module/req/jsps/approval/approvallist_cnt.jsp"></put>
+  <put name="content1" value="/module/req/jsps/approval/approvallist_cnt1.jsp"></put>
+ </definition>
+ 
+ <definition name="viewrequestapp.page" extends="addedit.page">
+  <put name="stylePath" value="/module/req/media/css/ar/Style.css"/>
+  <put name="jsPaht" value="/module/req/js/module.js"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.gn.req.presentation.resources.req"></put>
+  <put name="titlepage" value="viewreq"></put>
+  <put name="content1" value="/module/req/jsps/approval/viewrequest_cnt1.jsp"></put>
+ </definition>
+ 
+  <!--- Start of moudule map -->
+ <definition name="mapped_data.page" extends="lookuplistdiv">
+    <put name="stylePath" value="/module/map/media/css/ar/Style.css"/>
+    <put name="jsPaht" value="/module/map/js/module.js"></put>
+    <put name="resourcesBundlePath" value="com.beshara.csc.gn.map.presentation.resources.map"></put>
+    <put name="titlepage" value="module_div_title"></put>
+    <put name="showLookupAdd" value="true"></put>
+    <put name="titleAddDiv" value="anEmptyTitle"></put>
+    <put name="pageId" value=""></put>
+    <put name="showdatatableContent" value="false"></put>
+    <put name="showbar" value="false"></put>
+    <put name="showSearch" value="true"></put>
+    <put name="lookupadd" value="/module/map/jsps/map/mapped_lookup_div.jsp"></put>
+    <put name="delconfirm" value="/module/map/jsps/map/mapdelconfirmdiv.jsp"></put>
+    <put name="content1" value="/module/map/jsps/map/maplist_cnt1.jsp"></put>
+    <put name="showContent1" value="true"></put>
+    <put name="searchAction" value="mappedDataBean.search"></put>
+    <put name="searchType" value="mappedDataBean.searchType"></put>
+    <put name="searchQuery" value="mappedDataBean.searchQuery"></put>
+    <put name="showsteps" value="false"></put>
+    <put name="showpaging" value="false"></put>
+    <put name="showLookupEdit" value="false"></put>
+    <put name="showDelAlert" value="true"></put>
+    <put name="showDelConfirm" value="true"></put>
+    <put name="search" value="/module/map/jsps/map/searchDiv.jsp"></put>
+    <put name="actualResourcesBundlePath" value="com.beshara.csc.nl.qul.presentation.resources.qualifications"></put>
+  </definition>
+  <!--- End of moudule map -->
+
+<!-- #########START######## GOV EMP DATA REVISION ###########SHEKA########## -->
+ <definition name="govEmpDataRevisionBase.page" extends="addedit.page">
+  <put name="titlepage" value="Gov_emp_data_revision_title"></put>
+  <put name="wizardbarid" value="GovEmpDataRevisionWizBarID"></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.hr.emp.presentation.resources.emp"></put>  
+ </definition> 
+  <definition name="govempfirststep.page" extends="govEmpDataRevisionBase.page">
+  <put name="content1" value="/module/jsps/shared/governmentalemployeedatarevision/firststep_cnt1.jsp"></put>
+   <put name="lovEmp" value="/module/jsps/shared/governmentalemployeedatarevision/emplovdiv.jsp"></put>
+ </definition> 
+ <definition name="govempsecondstep.page" extends="govEmpDataRevisionBase.page">
+    <put name="content1" value="/module/jsps/shared/governmentalemployeedatarevision/secondstep_cnt1.jsp"></put>
+ </definition> 
+  <definition name="govempthirdstep.page" extends="govEmpDataRevisionBase.page">
+    <put name="content1" value="/module/jsps/shared/governmentalemployeedatarevision/thirdstep_cnt1.jsp"></put>
+ </definition> 
+ <definition name="govempforthstep.page" extends="govEmpDataRevisionBase.page">
+    <put name="content1" value="/module/jsps/shared/governmentalemployeedatarevision/forthstep_cnt1.jsp"></put>
+    <put name="content" value="/module/jsps/shared/governmentalemployeedatarevision/forthstep_cnt.jsp"></put>
+ </definition> 
+ <definition name="govempfifthstep.page" extends="govEmpDataRevisionBase.page">
+    <put name="content1" value="/module/jsps/shared/governmentalemployeedatarevision/fifthstep_cnt1.jsp"></put>
+    <put name="customDiv1" value="/module/jsps/shared/governmentalemployeedatarevision/fifthstep_customdiv1.jsp"></put>
+ </definition> 
+ <definition name="govempsixthstep.page" extends="govEmpDataRevisionBase.page">
+    <put name="content1" value="/module/jsps/shared/governmentalemployeedatarevision/sixthstep_cnt1.jsp"></put>
+ </definition> 
+ <definition name="govempseventhstep.page" extends="govEmpDataRevisionBase.page">
+ </definition> 
+ <definition name="govempeighthstep.page" extends="govEmpDataRevisionBase.page">
+ </definition>
+<!-- #########END######## GOV EMP DATA REVISION ############SHEKA########### -->  
+</tiles-definitions>
+

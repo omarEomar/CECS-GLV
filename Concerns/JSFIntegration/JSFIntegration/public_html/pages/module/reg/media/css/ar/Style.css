@@ -1,0 +1,506 @@
+.divContent1Fixed
+{
+    width:100%;
+    height:290px;
+    overflow:auto;
+}
+.divContent1Dynamic
+{
+    width:100%;
+
+    height: 100%;
+}
+.textboxmedium
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 200px; height: 18px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+.msg
+{
+font-family: Tahoma; font-size: 8pt; color: #EB8E3B; font-weight: 600; padding-top:4px; padding-bottom:4px; border: 0; width: 300px; height: 25px;text-align: center;vertical-align: middle;}
+.errMsg
+{
+font-family: Tahoma; font-size: 8pt; color: Red;  padding-top:0px; padding-bottom:0px;border: 0; height: 0px;text-align: center;vertical-align: middle;/* modified by sherif.omar 4,4,25*/}
+.regErrMsg
+{
+font-family: Tahoma; font-size: 8pt; color: #FF0000; font-weight: 600; padding-top:4px; padding-bottom:4px; border: 0; width: 300px; height: 25px;text-align: center;vertical-align: middle;}
+.lable01
+{
+color: #0B2B4A; font-family: Tahoma; font-size: 8pt; padding-top: 3px; 
+               padding-bottom: 3px}            
+.number
+{
+font-family: Tahoma; font-size: 8pt; color: #800000; font-weight: 600; padding-bottom:4px}
+.col1
+{
+   width: 130px;
+   vertical-align: top;
+}
+.col2
+{
+   
+   vertical-align: top;
+}
+.divSearch
+{
+    position:absolute;top:0px;left=150px;width:650px;visibility=hidden;
+    z-index:100;
+}
+
+.regulationDivSearch
+{
+    position:absolute; top:0px; left=150px; visibility=hidden; width:650px;
+    z-index:100;
+}
+.divDetails
+{
+    position:absolute;top:150px;left=50px;width:450px;visibility=hidden;
+}
+.JSCookMenuDisabled
+{
+ 
+    color: #B9852E;
+}
+.JSCookMenuEnabled
+{
+ 
+    color: #002245;
+}
+.delDivScroll {
+    height: 150px; width: 450px; overflow: auto;direction: rtl;
+}
+.regulationDelDivScroll {
+    height: 100px; width: 100%; overflow: auto;direction: rtl;
+}
+.DropdownboxMedium2
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 200; height: 18; 
+               border: 1px solid #CCD0D6;}
+
+.ManyToManySearchButton
+{
+
+border:0px none; BACKGROUND-IMAGE: url('../../images/op_icons/btn_map_search.gif');
+  WIDTH: 68px;
+  CURSOR: hand;
+  BACKGROUND-REPEAT: no-repeat;
+  HEIGHT: 20px;
+  BACKGROUND-COLOR: transparent;
+  text-align: center;
+   
+}
+.ManyToManyCancelSearchButton
+{
+
+border:0px none; BACKGROUND-IMAGE: url('../../images/op_icons/btn_map_cancel_search.gif');
+  WIDTH: 85px;
+  CURSOR: hand;
+  BACKGROUND-REPEAT: no-repeat;
+  HEIGHT: 20px;
+  BACKGROUND-COLOR: transparent;
+  text-align: center;
+   
+}
+.subjectsAddDiv
+{
+    position:absolute;top:10px;left:150px;width:650px; visibility:hidden;z-index: 100;
+}
+.divSearchContent1Fixed
+{
+    width:100%;
+    height:120px;
+    overflow:auto;
+}
+.divMainContentMany
+{
+    height:185px;
+    overflow:auto;
+}
+/* This class moved to app\media\css\ar\Style.css */
+/*
+.divMainContent
+{
+    height:245px;;
+    overflow:auto;
+}
+*/
+
+
+.divREGSearchMainContentMany
+{
+    width:100%;
+    height:170px;
+    overflow:auto;
+}
+.delDivSearchScroll {
+    height: 150px; width: 100%; overflow: auto;direction: rtl;
+}
+.publishEditDiv
+{
+    position:absolute;top:20px;left:80px;width:650px; visibility:hidden;z-index: 100;
+}
+.cancelDecisionDetailsDiv
+{
+    position:absolute;top:0px;left:80px;width:650px; visibility:hidden;z-index: 100;
+}
+
+.fileUploadComponent
+{
+    position: relative; top: 0px; left:0px; width:282px; height:18px; z-index:2; filter:alpha(opacity: 0);
+}
+.fileUploadFakeButton
+{
+    position: absolute; top:1px; left:5px; width:78px; height:18px; z-index:1; color:#00274E; border:1px solid #AF853E; background-color:#EFB34F; font-family:Tahoma; font-size:8pt;
+}
+.fileUploadFakeInputText
+{
+    position: absolute; top:1px; left:85px; width: 200px; height: 18px; z-index:3; color: #000000; font-family: Tahoma; font-size: 8pt; border: 1px solid #CCD0D6; background-color: #FFFFFF;
+}
+.divDECEmployeesMainContent
+{
+    height:230px;
+    overflow-y:auto;
+}
+
+.descionCancelDivScroll {
+    height: 120px; width: 100%; overflow: auto;direction: rtl;
+}
+.regulationDelDivScrollParent {
+    height: 100px; width: 100%; overflow: auto;direction: rtl;
+}
+.regulationReferenceAddDivScroll {
+    height: 100px; width: 100%; overflow: hidden;direction: rtl;
+}
+.customDeleteDiv
+{
+    position:absolute;top:3px;left=150px;width:630px;visibility=hidden;
+    z-index:100;
+}
+.moduleDiv
+{
+    position:absolute;
+    top:20px;
+    left:90px;
+    width:800px;
+    visibility:hidden;
+    z-index:100;
+}
+.Column1{
+    width: 10%
+}
+.Column2{
+    width: 40%;
+}
+.regTiTleTextBox
+{
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 730px;
+    height: 18px;
+    border: 1px solid #CCD0D6;
+    background-color: #FFFFFF;
+}
+.regTiTleTextBoxInHeader
+{
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 768px;
+    height: 18px;
+    border: 1px solid #CCD0D6;
+    background-color: #FFFFFF;
+}
+.regTiTleTextBoxInMinistriesHeader
+{
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 650px;
+    height: 18px;
+    border: 1px solid #CCD0D6;
+    background-color: #FFFFFF;
+}
+.regTiTleTextBoxInPublishHeader
+{
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 668px;
+    height: 18px;
+    border: 1px solid #CCD0D6;
+    background-color: #FFFFFF;
+}
+.regParentTiTleTextBox
+{
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 658px;
+    height: 18px;
+    border: 1px solid #CCD0D6;
+    background-color: #FFFFFF;
+}
+.regTiTleTextBoxInSearch
+{
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 473px;
+    height: 18px;
+    border: 1px solid #CCD0D6;
+    background-color: #FFFFFF;
+}
+.textboxsmall2
+{
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 80px;
+    height: 18px;
+    border: 1px solid #CCD0D6;
+    background-color: #FFFFFF;
+}
+.dataTableValidationMsg{
+    height:1px;border:0;BACKGROUND-COLOR:transparent; font-family: Tahoma;font-size: 1px;color: Red;font-weight: 200px;width:200px;
+}
+
+.DecisionCopyMassage
+{
+    color: #002952;
+    font-family: Simplified Arabic;
+    font-size: 11pt;
+    font-weight: 700;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.divMainContentManyWithContent1ThreeRows
+{
+    height:150px;
+    overflow-y:auto;
+}
+/* start Style class for tabs added by nora*/
+td.activeTab {
+    background-image: url('../../images/tabs/tabs_active.gif');
+    font-family: "simplified Arabic", "traditional Arabic", "arabic Transparent";
+    font-size:16px;
+    background-repeat: repeat-x;
+    color: #3070AD;
+    height: 24px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-top-color: #FFFFFF;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+td.inactiveTab {
+   background-image: url('../../images/tabs/tabs_active.gif');
+    font-family: "simplified Arabic", "traditional Arabic", "arabic Transparent";
+    font-size:16px;
+    background-repeat: repeat-x;
+    color: #3070AD;
+    height: 24px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-top-color: #FFFFFF;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+}
+/* End Style class for tabs added by nora*/
+.textboxDecisionSearch
+{
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 520px;
+    height: 18px;
+    border: 1px solid #CCD0D6;
+    background-color: #FFFFFF;
+}
+.divMainContentManyWithContent1ThreeRowsSmall
+{
+    height:145px;
+    overflow-y:auto;
+}
+.regulationMainDataTextArea
+{
+    width:730px;
+    height:70px
+}
+.colStaticSize1
+{
+   width:8%
+}
+.colStaticSize2
+{
+   width:35%
+}
+.colStaticSize3
+{
+   width:16%
+}
+.regTiTleTextBoxDecision
+{
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 745px;
+    height: 18px;
+    border: 1px solid #CCD0D6;
+    background-color: #FFFFFF;
+}
+.decisionMainDataTextArea
+{
+    width:745px;
+    height:107px
+}
+.decisionDropdownboxMedium2
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 280; height: 18; 
+               border: 1px solid #CCD0D6;
+}
+.decisiontextboxmedium
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 280px; height: 18px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF
+}
+
+.desTiTleTextBoxInHeader
+{
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 850px;
+    height: 18px;
+    border: 1px solid #CCD0D6;
+    background-color: #FFFFFF;
+}
+.textboxDecisionSearch2
+{
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 480px;
+    height: 18px;
+    border: 1px solid #CCD0D6;
+    background-color: #FFFFFF;
+}
+.textbox2
+{
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 150px;
+    height: 18px;
+    border: 1px solid #CCD0D6;
+    background-color: #FFFFFF;
+}
+.divMainContentManyWithContent1ThreeRowsSmall2
+{
+    height:163px;
+    overflow-y:auto;
+}
+
+.relatedSysdivSearch
+{
+  position:absolute;top:70px;left=50px;width:850px;visibility=hidden;
+    z-index:100;
+}
+.relatedSysDivScroll {
+    height: 150px; width: 800px; overflow: auto;direction: rtl;
+}
+.divMainContentManyWithContent1ThreeRowsSmall3
+{
+    height:155px;
+    overflow-y:auto;
+}
+.divREGMainContentManyAddColumns
+{
+    height:265px;
+    overflow-y:auto;
+}
+.divMainContentRecordsTab
+{
+    height:185px;
+    width: 970px;
+    overflow:auto;
+}
+.materialDivSearch
+{
+    position:absolute;top:0px;left=210px;width:650px;visibility=hidden;
+    z-index:100;
+}
+.divContent1Dynamic2
+{
+    width:100%;
+    height:500px;
+    overflow:auto;
+}
+.relatedMaterialsSearchDivScroll {
+    height: 100px; width: 450px; overflow: auto;direction: rtl;
+}
+.borderedTable {
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #CCC;
+    border-right-color: #CCC;
+    border-bottom-color: #CCC;
+    border-left-color: #CCC;
+}
+.noDataMsgFreeWidth
+{
+    font-family: Tahoma;
+    font-size: 8pt; 
+    color: #EB8E3B;
+    font-weight: 600;
+    padding-top:4px; 
+    padding-bottom:4px;
+    border: 0;
+    height: 25px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+.subjectErrMsg
+{
+
+font-family: Tahoma; font-size: 8pt; color: Red; font-weight: 600; padding-top:4px; padding-bottom:4px; border: 0; width: 300px; height: 25px;text-align: center;vertical-align: middle;}
+
+.divMainContentManyWithContent1ThreeRowsSmall4
+{
+    height:135px;
+    overflow-y:auto;
+}
+.fake_disabled{
+    background-color: #dddddd ;
+    display: block;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #ffffff inset;
+    color: #175179;
+}

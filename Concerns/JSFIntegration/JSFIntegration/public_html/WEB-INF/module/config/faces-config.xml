@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+<faces-config xmlns="http://java.sun.com/JSF/Configuration">
+        <!-- This part define the view handler to be able to use tiles in the application -->
+        <application>
+                <message-bundle>com.beshara.csc.gn.grs.presentation.resources.grs</message-bundle>
+        </application>
+        <!-- _________________________________ Strat condition  Section _________________________________ -->
+        <managed-bean>
+                <managed-bean-name>conditionsMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.gn.grs.presentation.backingbean.conditions.ConditionsMaintainBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>conditionsBaseLineBeanFirst</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.gn.grs.presentation.backingbean.conditions.conditionsBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>conditionLineDetailBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.gn.grs.presentation.backingbean.conditions.ConditionLineDetailBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>masterEntityKey</property-name>
+                        <value>#{conditionsMaintainBean.pageDTO.code}</value>
+                </managed-property>
+                <managed-property>
+                        <property-name>currentDetails</property-name>
+                        <value>#{conditionsMaintainBean.pageDTO.conditionDetailsDTOList}</value>
+                </managed-property>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>conditionListBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.gn.grs.presentation.backingbean.conditions.ConditionListBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>conditionLineSub</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.gn.grs.presentation.backingbean.conditions.ConditionLineSub</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        <navigation-rule>
+                <from-view-id>*</from-view-id>
+                <navigation-case>
+                        <from-outcome>condition_Main_Data</from-outcome>
+                        <to-view-id>/module/grs/jsps/conditions/conditionmaindatamantian.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>conditionLine_Maintain_Details</from-outcome>
+                        <to-view-id>/module/grs/jsps/conditions/linemaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>condition_line_sub</from-outcome>
+                        <to-view-id>/module/grs/jsps/conditions/conditionlinesub.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>condition_list</from-outcome>
+                        <to-view-id>/module/grs/jsps/conditions/conditionslist.jsp</to-view-id>
+                </navigation-case>
+        </navigation-rule>
+        <!-- _________________________________ End condition  Section _________________________________ -->
+        
+        <!-- _________________________________ Strat decision  Section _________________________________ -->
+        <managed-bean>
+                <managed-bean-name>decisionListBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.decision.DecisionListBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>decisionMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.decision.DecisionMaintainBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>decisionMainDataMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.decision.details.DecisionMainDataMaintain</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>masterEntityKey</property-name>
+                        <value>#{decisionMaintainBean.pageDTO.code}</value>
+                </managed-property>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>decisionReferencesMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.decision.details.DecisionReferencesMaintain</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>masterEntityKey</property-name>
+                        <value>#{decisionMaintainBean.pageDTO.code}</value>
+                </managed-property>
+                <managed-property>
+                        <property-name>currentDetails</property-name>
+                        <value>#{decisionMaintainBean.pageDTO.decisionRefrencesDTOList}</value>
+                </managed-property>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>decisionEmployeesMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.decision.details.DecisionEmployeesMaintain</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>masterEntityKey</property-name>
+                        <value>#{decisionMaintainBean.pageDTO.code}</value>
+                </managed-property>
+                <managed-property>
+                        <property-name>currentDetails</property-name>
+                        <value>#{decisionMaintainBean.pageDTO.empDecisionsDTOList}</value>
+                </managed-property>
+                <managed-property>
+                        <property-name>cancelDecisionMode</property-name>
+                        <value>#{decisionMaintainBean.cancelDecisionMode}</value>
+                </managed-property>
+        </managed-bean>
+        
+        
+          <managed-bean>
+                <managed-bean-name>decisionMaterialsMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.decision.details.DecisionMaterialsMaintain</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>masterEntityKey</property-name>
+                        <value>#{decisionMaintainBean.pageDTO.code}</value>
+                </managed-property>
+                <managed-property>
+                        <property-name>currentDetails</property-name>
+                        <value>#{decisionMaintainBean.pageDTO.regDecisionMaterialsDTOList}</value>
+                </managed-property>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>relatedDecisionMaterialsBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.decision.details.RelatedMaterials</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        
+        
+        <navigation-rule>
+            <navigation-case>
+                        <from-outcome>decisionlist</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/decisionlist.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>decisionmaindata</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/decisionmaindatamaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>decisionmaindataedit</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/decisionmaindatamaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>decisionmaindatacancel</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/decisionmaindatamaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>decisionmaindatacanceledit</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/decisionmaindatamaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>decisionemployeesmaintain</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/decisionemployeesmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>decisionemployeesmaintainedit</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/decisionemployeesmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>decisionemployeesmaintaincancel</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/decisionemployeesmaintaincancel.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>decisionemployeesmaintaincanceledit</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/decisionemployeesmaintaincancel.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>decisionreferencesmaintain</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/decisionreferencesmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>decisionreferencesmaintainedit</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/decisionreferencesmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>decisionreferencesmaintaincancel</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/decisionreferencesmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>decisionreferencesmaintaincanceledit</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/decisionreferencesmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>cancelDecisionDetails</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/cancelDecisionDetails.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>selectdecisionemployee</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/selectdecisionemployee.jsp</to-view-id>
+                </navigation-case>
+                
+                
+                <navigation-case>
+                        <from-outcome>decMaterialsMaintain</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/materials/mainMaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>relatedDecisionMaterials</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/materials/relatedMaterials/main.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>decMaterialsMaintainedit</from-outcome>
+                        <to-view-id>/module/reg/jsps/decision/materials/mainMaintain.jsp</to-view-id>
+                </navigation-case>
+                
+                
+        </navigation-rule>
+        <!-- shared -->
+        <managed-bean>
+                <managed-bean-name>RegConfig</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.util.RegConfig</managed-bean-class>
+                <managed-bean-scope>application</managed-bean-scope>
+                <managed-property>
+                        <property-name>regulationUploadedImagesPath</property-name>
+                        <property-class>java.lang.String</property-class>
+                        <value>module/uploadedImages/regulation/</value>
+                </managed-property>
+                <managed-property>
+                        <property-name>decisionUploadedImagesPath</property-name>
+                        <property-class>java.lang.String</property-class>
+                        <value>module/uploadedImages/decision/</value>
+                </managed-property>
+        </managed-bean>
+        
+        <!-- _________________________________ End decision  Section _________________________________ -->
+        <!-- Strat regulations -->
+        <managed-bean>
+                <managed-bean-name>regulationListBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.regulation.RegulationListBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>regulationMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.regulation.RegulationMaintainBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>regulationMainDataMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.regulation.details.RegulationMainDataMaintain</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>masterEntityKey</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.code}</value>
+                </managed-property>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>regulationSubjectsMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.regulation.details.RegulationSubjectsMaintain</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>masterEntityKey</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.code}</value>
+                </managed-property>
+                <managed-property>
+                        <property-name>currentDetails</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.subjectsDTOList}</value>
+                </managed-property>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>regulationPublishMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.regulation.details.RegulationPublishMaintain</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>masterEntityKey</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.code}</value>
+                </managed-property>
+                <managed-property>
+                        <property-name>currentDetails</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.publishDTOList}</value>
+                </managed-property>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>regulationModulesMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.regulation.details.RegulationModulesMaintain</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>masterEntityKey</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.code}</value>
+                </managed-property>
+                <managed-property>
+                        <property-name>moduleRelations</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.moduleRelationsDTOList}</value>
+                </managed-property>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>regulationReferencesMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.regulation.details.RegulationReferencesMaintain</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>masterEntityKey</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.code}</value>
+                </managed-property>
+                <managed-property>
+                        <property-name>currentDetails</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.referencesDTOList}</value>
+                </managed-property>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>regulationMinistriesMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.regulation.details.RegulationMinistriesMaintain</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>masterEntityKey</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.code}</value>
+                </managed-property>
+                <managed-property>
+                        <property-name>currentDetails</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.ministriesDTOList}</value>
+                </managed-property>
+        </managed-bean>
+        
+         <managed-bean>
+                <managed-bean-name>regulationAttachmentsMaintain</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.regulation.details.RegulationAttachmentsMaintain</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>masterEntityKey</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.code}</value>
+                </managed-property>
+                <managed-property>
+                        <property-name>currentDetails</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.regDedignTablesDTOList}</value>
+                </managed-property>
+        </managed-bean>
+        
+        <managed-bean>
+                <managed-bean-name>regulationMaterialsMaintainBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.regulation.details.RegulationMaterialsMaintain</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>masterEntityKey</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.code}</value>
+                </managed-property>
+                <managed-property>
+                        <property-name>currentDetails</property-name>
+                        <value>#{regulationMaintainBean.pageDTO.regRegulationMaterialsDTOList}</value>
+                </managed-property>
+        </managed-bean>
+        
+        <managed-bean>
+                <managed-bean-name>regulationAddColumns</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.regulation.details.RegulationAddColumns</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>       
+        <managed-bean>
+                <managed-bean-name>masterDetailBaseBean</managed-bean-name>
+                <managed-bean-class> com.beshara.jsfbase.csc.backingbean.MasterDetailBaseBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean> 
+           <managed-bean>
+                <managed-bean-name>regulationRecordsBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.regulation.details.RecordsBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        
+           
+           
+           <managed-bean>
+                <managed-bean-name>relatedMaterialsBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.nl.reg.presentation.backingbean.regulation.details.RelatedMaterials</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        
+        <!-- ________________________________________ Navigation Rule Section _________________________________ -->
+        <navigation-rule>
+                <from-view-id>*</from-view-id>
+                <!-- regulations -->
+                <navigation-case>
+                        <from-outcome>regulationlist</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationlist.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>regulationmaindata</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationmaindatamaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>regulationmaindataedit</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationmaindatamaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>regulationsubjectsmaintain</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationsubjectsmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>regulationsubjectsmaintainedit</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationsubjectsmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>regulationpublishmaintain</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationpublishmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>regulationpublishmaintainedit</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationpublishmaintainedit.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>regulationreferencesmaintain</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationreferencesmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>regulationreferencesmaintainedit</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationreferencesmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>regulationministriesmaintain</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationministriesmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>regulationministriesmaintainedit</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationministriesmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>regulationmodulesmaintain</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationmodulesmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>regulationmodulesmaintainedit</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationmodulesmaintain.jsp</to-view-id>
+                </navigation-case>
+                
+                      <navigation-case>
+                        <from-outcome>regulationattachmaintain</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationattachmentmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>regulationattachmaintainedit</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationattachmentmaintain.jsp</to-view-id>
+                </navigation-case> 
+                <navigation-case>
+                        <from-outcome>regulationaddcolumn</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/regulationaddcolumnsmaintain.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>RECORD_LIST</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/recordlist.jsp</to-view-id>
+                </navigation-case>
+                
+                <navigation-case>
+                        <from-outcome>regMaterialsMaintain</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/materials/mainMaintain.jsp</to-view-id>
+                </navigation-case>  
+                
+                 <navigation-case>
+                        <from-outcome>regMaterialsMaintainedit</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/materials/mainMaintain.jsp</to-view-id>
+                </navigation-case> 
+                <navigation-case>
+                        <from-outcome>relatedMaterials</from-outcome>
+                        <to-view-id>/module/reg/jsps/regulation/materials/relatedMaterials/main.jsp</to-view-id>
+                </navigation-case> 
+            </navigation-rule>
+            <!-- End regulations -->
+            
+            <!-- Start Inf Section by sherif.omar 09-03-2009 -->
+            
+            
+<!-- start prepartion for use-case09 list bean -->
+    <managed-bean>
+          <managed-bean-name>countriesListBean</managed-bean-name>
+          <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.countrycities.CountriesListBean</managed-bean-class>
+          <managed-bean-scope>request</managed-bean-scope>
+     </managed-bean>   
+     <!-- End prepartion for use-case09 list bean -->
+     
+       <!-- start prepartion for use-case05 list bean -->
+    <managed-bean>
+          <managed-bean-name>groupCountriesListBean</managed-bean-name>
+          <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.groupcountries.GroupCountriesListBean</managed-bean-class>
+          <managed-bean-scope>request</managed-bean-scope>
+     </managed-bean>
+     
+     <!-- End prepartion for use-case05 list bean -->
+     
+     
+     
+     <!-- start prepartion for use-case09 list bean -->
+    <managed-bean>
+          <managed-bean-name>citiesListBean</managed-bean-name>
+          <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.countrycities.CitiesListBean</managed-bean-class>
+          <managed-bean-scope>request</managed-bean-scope>
+     </managed-bean>
+     
+     <!-- End prepartion for use-case09 list bean -->
+     
+    
+     <!-- ************************** start gendertypes   by Nora 25-02-2009  *********************************-->
+     <managed-bean>
+          <managed-bean-name>genderTypesListBean</managed-bean-name>
+          <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.gendertypes.ListBean</managed-bean-class>
+          <managed-bean-scope>request</managed-bean-scope>
+     </managed-bean>
+     
+     <!-- ************************** End gendertypes   by Nora 25-02-2009  *********************************-->
+
+<!-- ************************** start handicapStatus   by Nora 25-02-2009  *********************************-->
+     <managed-bean>
+          <managed-bean-name>handicapStatusListBean</managed-bean-name>
+          <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.handicapstatus.ListBean</managed-bean-class>
+          <managed-bean-scope>request</managed-bean-scope>
+     </managed-bean>
+ <!-- ************************** End handicapStatus   by Nora 25-02-2009  *********************************-->
+
+<!-- ************************** start maritalstatus   by Nora 25-02-2009  *********************************-->
+     <managed-bean>
+          <managed-bean-name>maritalStatusListBean</managed-bean-name>
+          <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.maritalstatus.ListBean</managed-bean-class>
+          <managed-bean-scope>request</managed-bean-scope>
+     </managed-bean>
+ <!-- ************************** End maritalstatus   by Nora 25-02-2009  *********************************-->
+ 
+  <!-- ************************** start 006_INF_GroupsCat,UC_007_INF_CountryCat   by Nora 26-02-2009  *********************************-->
+ <managed-bean>
+          <managed-bean-name>groupCategoryListBean</managed-bean-name>
+          <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.groupscategories.ListBean</managed-bean-class>
+          <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+ <managed-bean>
+          <managed-bean-name>countryGroupListBean</managed-bean-name>
+          <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.countrygroup.ListBean</managed-bean-class>
+          <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+     
+     
+<!-- ************************** end Group Category  by Nora 26-02-2009  *********************************-->
+
+<!-- ************************** start config  use-case09  by Nora 3-03-2009  *********************************-->
+  <navigation-rule>
+                <from-view-id>*</from-view-id>
+                <navigation-case>
+                        <from-outcome>Cities_Page</from-outcome>
+                        <to-view-id>/module/inf/jsps/maindata/countrycities/citieslist.jsp</to-view-id>
+                </navigation-case>
+              <navigation-case>
+                <from-outcome>Counrty_Page</from-outcome>
+                <to-view-id>/module/inf/jsps/maindata/countrycities/countrylist.jsp</to-view-id>
+             </navigation-case>
+ </navigation-rule>
+ <!-- ************************** End config  use-case09  by Nora 3-03-2009  *********************************-->
+<!-- End Inf Section by sherif.omar 09-03-2009 -->
+                      
+    <!-- Start of  Request Module --> 
+        <managed-bean>
+                <managed-bean-name>requestDataList</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.gn.req.presentation.backingbean.request.RequestListBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>requestEditBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.gn.req.presentation.backingbean.request.RequestEditBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        
+        
+        <managed-bean>
+                <managed-bean-name>requestAddBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.gn.req.presentation.backingbean.request.RequestAddBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>requestViewDetailBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.gn.req.presentation.backingbean.request.RequestViewDetailBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        <managed-bean>
+                <managed-bean-name>requestViewDataBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.gn.req.presentation.backingbean.request.RequestViewDataBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        
+        <managed-bean>
+                <managed-bean-name>RequestApprovalsListBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.gn.req.presentation.backingbean.approval.RequestApprovalsListBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        
+        <managed-bean>
+                <managed-bean-name>requestListBean</managed-bean-name>
+                <managed-bean-class> com.beshara.csc.gn.req.presentation.backingbean.request.RequestListBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        <!-- ______________________________________________Start of Tree Div Bean added by nora___________________________________________ --> 
+        <managed-bean>
+                <managed-bean-name>treeDivReqBean</managed-bean-name>
+                <managed-bean-class> com.beshara.csc.gn.req.presentation.backingbean.request.TreeDivBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        
+ <navigation-rule >
+        <from-view-id>*</from-view-id>
+                 <navigation-case>
+                        <from-outcome>Add_Request</from-outcome>
+                        <to-view-id>/module/req/jsps/request/requestadd.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>requestDatalist</from-outcome>
+                        <to-view-id>/module/req/jsps/request/requestlist.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>Edit_Request</from-outcome>
+                        <to-view-id>/module/req/jsps/request/requestedit.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>view_request</from-outcome>
+                        <to-view-id>/module/req/jsps/approval/viewrequest.jsp</to-view-id>
+                </navigation-case>
+                <navigation-case>
+                        <from-outcome>approvallist</from-outcome>
+                        <to-view-id>/module/req/jsps/approval/approvallist.jsp</to-view-id>
+                </navigation-case>
+                
+               </navigation-rule>
+        <!-- End of  Request Module --> 
+         
+        
+             <!-- ______________________________________________Start of MAp Bean added by nora___________________________________________ --> 
+        
+          <managed-bean>
+                <managed-bean-name>mapped_Data_div</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.gn.map.presentation.backingbean.mappeddata.MappedDataBackBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        
+        <managed-bean>
+                <managed-bean-name>mappedDataBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.gn.map.presentation.backingbean.mappeddata.MappedDataBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+                <managed-property>
+                        <property-name>divBackBean</property-name>
+                        <property-class>com.beshara.csc.gn.map.presentation.backingbean.mappeddata.MappedDataBackBean</property-class>
+                        <value>#{mapped_Data_div}</value>
+                </managed-property>
+        </managed-bean>    
+
+<!-- #########START######## GOV EMP DATA REVISION ###########SHEKA########## -->
+    <managed-bean>
+        <managed-bean-name>govEmpMaintainBean</managed-bean-name>
+            <managed-bean-class>com.beshara.csc.hr.emp.presentation.backingbean.governmentalemployeedatarevision.GovEmpMaintainBean</managed-bean-class>
+            <managed-bean-scope>request</managed-bean-scope>
+            <managed-property>
+                <property-name>bundleName</property-name>
+                <property-class>java.lang.String</property-class>
+                <value>com.beshara.csc.hr.emp.presentation.resources.emp</value>
+            </managed-property>
+            <managed-property>
+                <property-name>statusMsgKey</property-name>
+                <property-class>java.lang.String</property-class>
+                <value>employee_not_hired_query</value>
+            </managed-property>
+            <managed-property>
+                <description>pass the suitable status list for ur module to retrieve the emplov div data ad u want isA(EMP >> Employment block, EOS >> END_SERVICE)</description>
+                <property-name>empHireStatusList</property-name>
+                <property-class>java.util.ArrayList</property-class>                
+                <list-entries>
+                    <value-class>java.lang.Long</value-class>
+                    <value>#{managedConstantsBean.empStatusEmployment}</value>
+                    <value>#{managedConstantsBean.empStatusDelegation}</value>
+                    <value>#{managedConstantsBean.empStatusDelegationOutTo}</value>
+                    <value>#{managedConstantsBean.empStatusDelegationOutFrom}</value>                        
+                    <value>#{managedConstantsBean.empStatusGrant}</value>
+                    <value>#{managedConstantsBean.empStatusLoaning}</value>
+                    <value>#{managedConstantsBean.empStatusMission}</value>
+                    <value>#{managedConstantsBean.empStatusPrisonerLost}</value>
+                    <value>#{managedConstantsBean.empStatusVacation}</value>
+                </list-entries>
+            </managed-property>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>govEmpFirstStepBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.hr.emp.presentation.backingbean.governmentalemployeedatarevision.FirstStepBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>govEmpSecondStepBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.hr.emp.presentation.backingbean.governmentalemployeedatarevision.SecondStepBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>govEmpThirdStepBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.hr.emp.presentation.backingbean.governmentalemployeedatarevision.ThirdStepBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>govEmpForthStepBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.hr.emp.presentation.backingbean.governmentalemployeedatarevision.ForthStepBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>govEmpFifthStepBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.hr.emp.presentation.backingbean.governmentalemployeedatarevision.FifthStepBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>govEmpSixthStepBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.hr.emp.presentation.backingbean.governmentalemployeedatarevision.SixthStepBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>govEmpSeventhStepBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.hr.emp.presentation.backingbean.governmentalemployeedatarevision.SeventhStepBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>govEmpEighthStepBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.hr.emp.presentation.backingbean.governmentalemployeedatarevision.EighthStepBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
+    <navigation-rule >
+        <from-view-id>*</from-view-id>
+            <navigation-case>
+                <from-outcome>govempfirststep</from-outcome>
+                <to-view-id>/module/jsps/shared/governmentalemployeedatarevision/firststep.jsp</to-view-id>
+            </navigation-case>
+            <navigation-case>
+                <from-outcome>govempfirststep_redirect</from-outcome>
+                <to-view-id>/module/jsps/shared/governmentalemployeedatarevision/firststep.jsp</to-view-id>
+                <redirect/>
+            </navigation-case>
+            <navigation-case>
+                <from-outcome>govempsecondstep</from-outcome>
+                <to-view-id>/module/jsps/shared/governmentalemployeedatarevision/secondstep.jsp</to-view-id>
+            </navigation-case>
+            <navigation-case>
+                <from-outcome>govempthirdstep</from-outcome>
+                <to-view-id>/module/jsps/shared/governmentalemployeedatarevision/thirdstep.jsp</to-view-id>
+            </navigation-case>
+            <navigation-case>
+                <from-outcome>govempforthstep</from-outcome>
+                <to-view-id>/module/jsps/shared/governmentalemployeedatarevision/forthstep.jsp</to-view-id>
+            </navigation-case>
+            <navigation-case>
+                <from-outcome>govempfifthstep</from-outcome>
+                <to-view-id>/module/jsps/shared/governmentalemployeedatarevision/fifthstep.jsp</to-view-id>
+            </navigation-case>
+            <navigation-case>
+                <from-outcome>govempsixthstep</from-outcome>
+                <to-view-id>/module/jsps/shared/governmentalemployeedatarevision/sixthstep.jsp</to-view-id>
+            </navigation-case>
+            <navigation-case>
+                <from-outcome>govempseventhstep</from-outcome>
+                <to-view-id>/module/jsps/shared/governmentalemployeedatarevision/seventhstep.jsp</to-view-id>
+            </navigation-case>
+            <navigation-case>
+                <from-outcome>govempeighthstep</from-outcome>
+                <to-view-id>/module/jsps/shared/governmentalemployeedatarevision/eighthstep.jsp</to-view-id>
+            </navigation-case>
+      </navigation-rule>
+<!-- #########END######## GOV EMP DATA REVISION ############SHEKA########### -->
+</faces-config>

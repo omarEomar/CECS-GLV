@@ -1,0 +1,30 @@
+/*
+* Copyright Beshara |  http://www.BesharaGroup.com
+* ------------------------------------------------------------------
+*
+* CSC System
+*
+*/
+
+/******************************************************************
+	Main CSS file for the application
+******************************************************************/
+
+table
+{
+  width:100%;
+  border-width:0;
+}
+.table
+{
+  width:176px;
+  border-width:0;
+}
+.col1
+{
+    width: 25%;
+}
+.col2
+{
+    width: 75%;
+}

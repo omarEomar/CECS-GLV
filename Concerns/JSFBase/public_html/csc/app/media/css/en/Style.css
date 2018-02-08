@@ -1,0 +1,1314 @@
+/**********************************************Start of Identical common classes************************************************/
+form
+{
+    margin-bottom: 0;
+}
+body
+{
+scrollbar-face-color: #12518F;
+scrollbar-darkshadow-color: #002952;
+scrollbar-3dlight-color: #002952;
+scrollbar-arrow-color: #001529;
+scrollbar-highlight-color: #FFFFFF;
+scrollbar-shadow-color: #002952;
+scrollbar-track-color: #498AC8;
+}
+.tableHeaderAddButton
+{
+   border:0px none; BACKGROUND-IMAGE: url('../../images/menu_images/Add_Bar.jpg');
+   width: 65px;
+   height: 29px;
+   
+   CURSOR: hand;
+   BACKGROUND-REPEAT: no-repeat;
+   
+   BACKGROUND-COLOR: transparent;
+   text-align: center;
+}
+.tableHeaderEditButton
+{
+   border:0px none; BACKGROUND-IMAGE: url('../../images/menu_images/Edit_Bar.jpg');
+   width: 67px;
+   height: 29px;
+   CURSOR: hand;
+   BACKGROUND-REPEAT: no-repeat;
+   
+   BACKGROUND-COLOR: transparent;
+   text-align: center;
+}
+.tableHeaderDeleteButton
+{
+   border:0px none; BACKGROUND-IMAGE: url('../../images/menu_images/Delete_Bar.jpg');
+   WIDTH: 67px;
+   CURSOR: hand;
+   BACKGROUND-REPEAT: no-repeat;
+   HEIGHT: 29px;
+   BACKGROUND-COLOR: transparent;
+   text-align: center;
+}
+.tableHeaderSearchButton
+{
+   border:0px none; BACKGROUND-IMAGE: url('../../images/menu_images/Search_Bar.jpg');
+   WIDTH: 68px;
+   CURSOR: hand;
+   BACKGROUND-REPEAT: no-repeat;
+   HEIGHT: 29px;
+   BACKGROUND-COLOR: transparent;
+   text-align: center;
+}
+.tableHeaderCancelSearchButton
+{
+   border:0px none; BACKGROUND-IMAGE: url('../../images/menu_images/CancelDelete_Bar.jpg');
+   WIDTH: 90px;
+   CURSOR: hand;
+   BACKGROUND-REPEAT: no-repeat;
+   HEIGHT: 29px;
+   BACKGROUND-COLOR: transparent;
+   text-align: center;
+}
+.gmainbar { background-image: url('../../images/gmainbar.jpg'); background-repeat: repeat-x;vertical-align:top;height:29px;}
+.bottomgxdiv
+{
+background-image: url('../../images/div/divgxbottom.jpg'); background-repeat:repeat-x}
+.topgxdiv
+{
+background-image: url('../../images/div/divgxtop.jpg'); background-repeat:repeat-x; color:#1E3F5C; font-family:Times New Roman; font-size:13pt; font-weight:bold; padding-right:4px;}
+.gtopbox
+{
+background-image: url('../../images/g-top.gif'); background-position-y: bottom}
+.gbottombox
+{
+background-image: url('../../images/g-bottom.gif'); background-position-y: top}
+.gleftbox
+{
+background-image: url('../../images/g-l.gif'); background-repeat: repeat-y}
+.grightbox
+{
+background-image: url('../../images/g-r.gif'); background-repeat: repeat-y}
+.divcontent
+{
+font-family: Tahoma; font-size: 8pt; border-left: 1px solid #90ABC5; 
+               border-right: 1px solid #90ABC5; border-top-width: 1px; 
+               border-bottom-width: 1px; background-image: 
+               url('../../images/div/icodivsea.jpg'); background-repeat: 
+               no-repeat; background-position: left top; padding-right:10px; padding-top:20px}
+.divcontent1
+{
+font-family: Tahoma; font-size: 8pt; border-left: 1px solid #90ABC5; 
+               border-right: 1px solid #90ABC5; border-top-width: 1px; 
+               border-bottom-width: 1px; background-color:#FFFFFF;}
+.divtext
+{
+font-family: Tahoma; color: #002144; font-size: 8pt; padding-top: 4px; 
+               padding-bottom: 4px}
+.gfooter
+{
+color: #FFFFFF; font-family: Tahoma; font-size: 8pt; font-weight: 600; 
+               padding-top: 10px; background-color: #012C57; 
+               background-image: url('../../images/gfooter.jpg'); 
+               background-repeat: repeat-x}
+.gtree2
+{
+font-family: Tahoma; font-size: 8pt; color: #FFFFFF; background-color: #1B5E9F; 
+               background-image: url('../../images/gtree.jpg'); 
+               background-repeat: repeat-y; background-position: right top}
+.DateWelcome
+{
+color: #002952; font-family: Tahoma; font-size: 8pt; padding-right: 10px; 
+               background-color: #EAEEF2; height:24}
+.Pass
+{
+border-bottom:1px solid #EEF2F6; color: #002952; font-family: Tahoma; font-size: 8pt; padding-right: 10px; 
+               height:20; border-left-width:1px; border-right-width:1px; border-top-width:1px; padding-bottom:3px; padding-left:10px}
+/*.gbody
+{
+background-color: #FFFFFF; background-image: url('../../images/gbody.jpg'); 
+               background-repeat: repeat-y; background-position: right top}*/    
+a.link
+{  
+color: #002952; font-family: Tahoma; font-size: 8pt; text-decoration:none underline
+}
+a:hover.link
+{  
+color: #002952; font-family: Tahoma; font-size: 8pt; text-decoration:none
+}
+.TitlePage
+{
+color: #002952; font-family: Simplified Arabic; font-size: 14pt; font-weight: 700; 
+               padding-top: 4px; padding-bottom: 4px;}
+.paddingbox
+{
+font-family: Tahoma; font-size: 8pt; color: #000000; 
+              }
+a:hover.linksubject
+{
+color: #6A4F20; font-family: Verdana; font-size: 9pt; font-weight: bold; text-decoration:none 
+}
+.row01
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; height: 24px; 
+               border-left-width: 1px; border-right-width: 1px; 
+               border-top-width: 1px; border-bottom: 1px solid #FFFFFF; 
+               background-color: #E8E8EE;  padding-right:0px}
+.row02
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; height: 24px; 
+               border-left-width: 1px; border-right-width: 1px; 
+               border-top-width: 1px; border-bottom: 1px solid #FFFFFF; 
+               background-color: #F3F3F8; padding-right:0px;}
+.row03      
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; height: 24px; vertical-align:middle; width: 13%;
+  }
+.radio1
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; height: 24px; vertical-align:middle;
+  }
+.textbox
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 130px; height: 18px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+.textboxlarge
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 280px; height: 18px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+.textboxsmall
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 60px; height: 18px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+.paddingbutton
+{
+padding-right: 10px}
+.cssButtonSmall
+{
+color: #00274E; width: 60px; height: 18px; border: 1px solid #AF853E; 
+               background-color: #EFB34F; font-family:Tahoma; font-size:8pt}
+.cssButtonMedium
+{
+color: #00274E; width: 130px; height: 18px; border: 1px solid #AF853E; 
+               background-color: #EFB34F; font-family:Tahoma; font-size:8pt}
+.linetree
+{
+#2E5A82
+}
+a.treelink
+{
+font-family: Tahoma; font-size: 8pt; color: #FFFFFF; text-decoration: none}
+a:hover.treelink
+{
+font-family: Tahoma; font-size: 8pt; color: #002C58; text-decoration: none; background-color:#FEB63C}
+.standardTable_Header2
+{
+ color: #FFFFFF; font-family: Tahoma; font-size: 8pt; font-weight: 600;vertical-align:middle;
+height:24; text-decoration:none}
+.standardTable_Header3
+{
+ color: #FFFFFF; font-family: Tahoma; font-size: 8pt; font-weight: 600;vertical-align:middle;
+height:24; text-decoration:none;text-align: center;}
+.standardTable_HeaderNoRap
+{
+ color: #FFFFFF; font-family: Tahoma; font-size: 8pt; font-weight: 600;vertical-align:middle;
+height:24; text-decoration:none}
+a.standardTable_Header2
+{
+color: #FFFFFF; font-family: Tahoma; font-size: 8pt; font-weight: 600; text-decoration:none;
+}
+a:hover.standardTable_Header2
+{
+color: #FFFFFF; font-family: Tahoma; font-size: 8pt; font-weight: 600; text-decoration:none;
+}
+.standardTable_Row1
+{
+color: #002A54; height: 24; font-family: Tahoma; font-size: 8pt; 
+               /*border-left-width: 1px; border-right-width: 1px; 
+               border-top-width: 1px; border-bottom: 1px solid #FFFFFF; By sherif.omar */
+               background-color: #C8DFF4}
+.standardTable_Row2
+{
+color: #002A54; height: 24; font-family: Tahoma; font-size: 8pt; 
+               border-left-width: 1px; border-right-width: 1px; 
+               border-top-width: 1px; border-bottom: 1px solid #FFFFFF;
+               background-color: #D9ECFE}
+.grid-footer
+{
+border-top-color:#55799A;
+border-top-width:1px;
+border-top-style:solid;
+
+border-bottom-color:#0D447D;
+border-bottom-width:4px;
+border-bottom-style:solid;
+
+border-left-color:#55799A;
+border-left-width:1px;
+border-left-style:solid;
+
+border-right-color:#55799A;
+border-right-width:1px;
+border-right-style:solid;
+}
+.standardTable_ColumnCentered {
+   text-align: center
+}
+.standardTable_Column
+{
+	padding-left:5px;
+	padding-right:5px;
+}
+.groundtab
+{
+font-family: Tahoma; font-size: 8pt; color: #000000; border: 1px solid #D4D7DE;padding-bottom:5px; padding-top:5px;padding-right: 5px;padding-left: 5px;
+               background-color: #EEF0F5}
+			   
+.selecttab
+{
+color: #05305A; font-family: Verdana; font-size: 10pt; font-weight: bold; 
+               height: 22}
+.unselecttab
+{
+border-right:1px solid #05284A; border-bottom:1px solid #05284A; color: #FFFFFF; font-family: Verdana; font-size:20pt; font-weight: bold; 
+               height: 22; border-top-width:1px; background-color:#134E88
+}
+.paddingtab
+{
+font-family: Tahoma; color: #000000; font-size: 8pt; padding: 10px}
+.lable02
+{
+color: #FF0000; font-family: Tahoma; font-size: 8pt; padding-top: 3px; 
+               padding-bottom: 3px}
+table.tabbedPane {
+  font-family: Tahoma; font-size: 8pt; color: #000000; border: 1px solid #D4D7DE;padding-bottom:5px; padding-top:5px;
+               background-color: #EEF0F5
+}
+td.activeTab {
+   color: #05305A; font-family: Verdana; font-size: 10pt; font-weight: bold; 
+               height: 22
+}
+td.activeTab input {
+   color: #05305A; font-family: Verdana; font-size: 10pt; font-weight: bold; 
+               height: 22
+}
+td.inactiveTab {
+    border-right:1px solid #05284A; border-bottom:1px solid #05284A; color: #FFFFFF; font-family: Verdana; font-size:10pt; font-weight: bold; 
+               height: 22; border-top-width:1px; background-color:#134E88
+}
+td.inactiveTab input {
+   border-right:1px solid #05284A; border-bottom:1px solid #05284A; color: #FFFFFF; font-family: Verdana; font-size:10pt; font-weight: bold; 
+               height: 22; border-top-width:1px; background-color:#134E88
+}
+td.tabContent {
+   font-family: Tahoma; font-size: 8pt; color: #000000; border: 1px solid #D4D7DE;padding-bottom:5px; padding-top:5px;
+               background-color: #EEF0F5}
+.treepage-link
+{
+font-family: Verdana; font-size: 10pt; color: #083866; text-decoration: none; 
+               font-weight: normal}
+a.treepage-link
+{
+font-family: Verdana; font-size: 10pt; color: #083866; text-decoration: none; 
+               font-weight: bold}
+a:hover.treepage-link
+{
+font-family: Verdana; font-size: 10pt; color: #FFFFFF; text-decoration: none; 
+               font-weight: bold; background-color:#EFB34F}
+.iconAddta
+{
+    border:0px none; BACKGROUND-IMAGE: url('../images/addta.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+.iconAddgrammar
+{
+    border:0px none; BACKGROUND-IMAGE: url('../images/Addgrammar.gif');
+    WIDTH: 20px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+.scroller
+{
+border:1px solid #CCD4DB; background-color: #EAEEF2; color: #001F3E;text-decoration: none;font-family: Tahoma; text-align: center;}
+a.scroller
+{
+color: #001F3E;text-decoration: none;font-family: Tahoma; text-align: center;}
+a:hover.scroller
+{
+color: #001F3E;text-decoration: none;font-family: Tahoma; text-align: center;}
+
+.textpage
+{
+font-family: Tahoma; color: #001F3E; font-size: 8pt; color: #001F3E; text-align: center;}
+.paging
+{
+font-family: Tahoma; color: #001F3E; font-size: 8pt; text-decoration:none underline;
+}
+.gtabmain
+{
+color: #684407; font-family: Verdana; font-size: 10pt; font-weight: bold; 
+               padding-right: 10px; background-image: 
+               url('../images/gtabs.jpg'); background-repeat: repeat-x}
+.gopentab
+{
+font-family: Tahoma; font-size: 8pt; padding: 10px; background-color: #EAEEF2}
+.gtabs
+{
+color: #FFFFFF; font-family: Verdana; font-size: 10pt; font-weight: bold; padding-right: 10px;
+background-image: url('../images/gtabsblue.jpg'); background-repeat: repeat-x;text-decoration: none;}
+.gtabs2
+{
+color: #FFFFFF; font-family: Verdana; font-size: 10pt; font-weight: bold; padding-right: 10px;
+text-decoration: none;}
+
+.editpanel
+{
+color: #FFFFFF; font-family: Verdana; font-size: 10pt; font-weight: bold; padding-right: 10px;
+background-image: url('../images/geditpanel.jpg'); background-repeat: repeat-x}
+
+.curved
+{
+background-image: url('../images/tabright2.gif'); background-repeat: no-repeat; 
+               background-position-x: left}
+
+.curvedGreen
+{
+background-image: url('../images/rightedit.gif'); background-repeat: no-repeat; 
+               background-position-x: left
+}
+.ggreyhead
+{
+border-bottom:1px solid #FFFFFF; color: #FFFFFF; font-family: Tahoma; font-size: 8pt; font-weight: 600; 
+               height: 10; background-color: #6F7A85; background-image: 
+               url('../images/ggrey.jpg'); background-repeat: repeat-x; border-left-width:1px; border-right-width:1px; border-top-width:1px}
+.ggreyrid1
+{
+color: #002A54; height: 10; font-family: Tahoma; font-size: 8pt; 
+               border-left-width: 1px; border-right-width: 1px; 
+               border-top-width: 1px; border-bottom: 1px solid #FFFFFF; 
+               background-color: #DFE3E7}
+.ggreyrid2
+{
+color: #002A54; height: 15; font-family: Tahoma; font-size: 8pt; 
+               border-left-width: 1px; border-right-width: 1px; 
+               border-top-width: 1px; border-bottom: 1px solid #FFFFFF; 
+               background-color: #C4CAD2}
+.greyfooter
+{
+background-color: #9099A2}
+
+.textTree
+{
+font-family: Verdana; font-size: 10pt; color: #083866; text-decoration: none; background-color: #EFB34F;
+               font-weight: normal;border: 0;font-weight: bold;cursor: hand;
+}
+.searchBy
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; ;padding-bottom:5px; padding-top:5px; width:13%;font-weight: 600 ;
+}
+.blocker {
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%; 
+    background-color:#DDDDDD; 
+    transparent:true; 
+    filter:alpha(opacity:60); 
+    opacity:0.1; 
+    visibility:hidden;
+}
+.mandatoryAsterisk {
+   color:#FF0000;    font-size: 8pt; padding-left: 5px; padding-right: 5px;
+}
+.error {
+   color:#ff0000;    font-family:Tahoma;    font-size:8pt;    height:24px;     padding-bottom:5px;     padding-top:5px;     padding-right:5px;
+}
+.noOfRecords{
+    font-family:Tahoma;    font-size:8pt;    color:#993366;
+}
+.logo
+{
+background-image: url('../../images/logo1.jpg'); background-repeat: no-repeat; background-position: left top; height:48px;width:100%;
+color: #002952; font-family: Simplified Arabic; font-size: 14pt; font-weight: 700; padding-top: 4px; padding-bottom: 4px;vertical-align:middle;text-align: center;}
+.sucessMsg
+{
+font-family: Tahoma; font-size: 8pt; color: black;  padding-top:0px; padding-bottom:0px;border: 0; width: 300px; height: 0px;text-align: center;vertical-align: middle;/* modified by sherif.omar 4,4,25*/}
+.deleteTreeCol1
+{
+    width: 20%;    
+    text-align:center; 
+}
+.deleteTreeCol2
+{
+    width: 80%;
+    text-align:center;
+}
+.pannel_small_title {
+	font-family: "simplified Arabic", "traditional Arabic", "arabic Transparent";
+	font-size: 14px;
+	color: #000066;
+	font-weight: bold;
+	text-align: right;
+}
+.homepage_listed_items {
+	font-family: tahoma;
+	font-size: 12px;
+	color: #8CAAC9;
+	text-align: right;
+}
+/*.pannel_large_title {
+	font-family: "simplified Arabic", "traditional Arabic", "arabic Transparent";
+	font-size: 18px;
+	color: #000066;
+	font-weight: bold;
+	text-align: right;
+	background-image: url("../../images/module_hp_pannel09.jpg");
+	background-repeat:no-repeat;
+	background-position:right;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-top-color: #BFD2E3;
+	padding-right: 10px;
+}*/
+.search_info_message {
+	font-family: tahoma;
+	font-size: 11px;
+	color: #373737;        
+	background-image: url("../../images/div/icon_search_info.jpg");
+	background-repeat: no-repeat;
+	background-color: #FAFAFA;
+	margin: 2px;
+	border: 1px solid #DDDDDD;
+	text-align: right;
+	padding-top: 2px;
+	padding-right: 20px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	height: 30px;
+	vertical-align: middle;
+	background-position: right;
+}
+.JSCookMenuEnabled
+{ 
+    color: #002245;
+}
+.JSCookMenuDisabled
+{ 
+    color: #B9852E;
+}
+.number
+{
+font-family: Tahoma; font-size: 8pt; color: #800000; font-weight: 600; padding-bottom:4px}
+.lable01
+{
+color: #0B2B4A; font-family: Tahoma; font-size: 8pt; padding-top: 3px; 
+               padding-bottom: 3px}
+/********************************************** End of Identical common classes ************************************************/
+
+/***************************************************Start of common classes*****************************************************/
+/*Identical in [QUl-ATT-EMP-JOB-MAP-ORG-REG-REQ]*/
+/*Modified in []*/
+/*Missing in [GRS]*/
+.divContent1Fixed
+{
+    width:100%;
+    height:240px;
+    overflow:auto;
+}
+/*Identical in [MAP-REQ-JOB-ORG-QUl-REG-ATT-EMP]*/
+/*Modified in []*/
+/*Missing in [GRS-]*/
+.divContent1Dynamic
+{
+    width:100%;
+    height: 100%;
+}
+/*Identical in [GRS-MAP-REQ-JOB-ORG-QUl-ATT-EMP]*/
+/*Modified in []*/
+/*Missing in [REG-]*/
+.standardTable_Header
+{
+border-bottom:1px solid #FFFFFF; color: #FFFFFF; font-family: Tahoma; font-size: 8pt; font-weight: 600; 
+               height: 24; background-color: #094079; background-image: 
+               url('../../images/gheadgrid.jpg'); background-repeat: repeat-x; border-left-width:1px; border-right-width:1px; border-top-width:1px;text-decoration:none}
+/*Identical in [MAP-REQ-JOB-ORG-QUl-]*/
+/*Modified in []*/
+/*Missing in [GRS-REG-ATT-EMP]*/
+.standardTable_RowHighlighted
+{
+color: #032548; height: 24; font-family: Tahoma; font-size: 8pt; 
+              border-left-width: 1px; border-right-width: 1px; 
+              border-top-width: 1px; border-bottom: 1px solid #FFFFFF; 
+              background-color: #F2CB8A}
+/*Identical in [REQ-ORG-QUl-]*/
+/*Modified in []*/
+/*Missing in [GRS-MAP-JOB-REG-ATT-EMP]*/
+.divMsg
+{
+    position:absolute;top:90px;left:150px;width:500px;visibility:hidden;
+     z-index:100;
+}
+/*Identical in [GRS-REQ-JOB-QUl-REG-ATT-EMP]*/
+/*Modified in []*/
+/*Missing in [MAP-ORG-]*/
+.DropdownboxMedium2
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 200; height: 18; 
+               border: 1px solid #CCD0D6;}
+/*Identical in [MAP-JOB-ORG-REQ]*/
+/*Modified in []*/
+/*Missing in [QUl-REG-GRS-ATT-EMP-]*/
+.mastertextbox
+{
+color: #000000; font-family: Tahoma; font-size: 11pt; width: 130px; height: 25px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+/*Identical in [MAP-JOB-ORG-]*/
+/*Modified in []*/
+/*Missing in [GRS-QUl-REG-ATT-EMP-REQ]*/
+.mastertextboxmedium
+{
+color: #000000; font-family: Tahoma; font-size: 11pt; width: 200px; height: 25px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+/*Identical in [JOB-MAP-ORG-]*/
+/*Modified in []*/
+/*Missing in [GRS-QUl-REG-ATT-EMP-REQ]*/
+.mastertextboxlarge
+{
+color: #000000; font-family: Tahoma; font-size: 11pt; width: 280px; height: 25px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+/*Identical in [JOB-MAP-ORG-]*/
+/*Modified in []*/
+/*Missing in [GRS-QUl-REG-ATT-EMP-REQ]*/
+.mastertextboxsmall
+{
+color: #000000; font-family: Tahoma; font-size: 11pt; width: 60px; height: 25px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+/*Identical in [JOB-MAP-ORG-]*/
+/*Modified in []*/
+/*Missing in [GRS-QUl-REG-ATT-EMP-REQ]*/
+.subject
+{
+color: #BD8B38; font-family: Verdana; font-size: 9pt; font-weight: bold; 
+               padding-left: 8px}
+/*Identical in [JOB-]*/
+/*Modified in []*/
+/*Missing in [GRS-MAP-QUl-ORG-REG-ATT-EMP-REQ]*/
+.msgnoheight{
+font-family: Tahoma; font-size: 8pt; color: #EB8E3B; font-weight: 600; padding-top:4px; padding-bottom:4px; border: 0; width: 330px; height: 0px;text-align: center;vertical-align: middle;}
+/*Identical in [MAP-JOB-ORG-REQ]*/
+/*Modified in []*/
+/*Missing in [REG-QUl-GRS-ATT-EMP-]*/
+.gpaging
+{
+border:1px solid #CCD4DB; background-color: #EAEEF2}
+/*Identical in [GRS-MAP-JOB-ORG-ATT-EMP-REQ]*/
+/*Modified in []*/
+/*Missing in [REG-QUl-]*/
+.cssButtonAdd
+{
+color: #00274E; width: 52px; height: 52px; border: 1px solid #AF853E;  background-image: url('../images/addmain.jpg'); 
+               background-color: #EFB34F; font-family:Tahoma; font-size:8pt}
+/*Identical in [MAP-JOB-ORG-REQ]*/
+/*Modified in []*/
+/*Missing in [REG-QUl-GRS-ATT-EMP-]*/
+.cssButtonDelete
+{
+color: #00274E; width: 32px; height: 14px; border: 1px solid #AF853E;  background-image: url('../images/delete.gif'); 
+               background-color: #EFB34F; font-family:Tahoma; font-size:8pt}
+/*Identical in [MAP-JOB-ORG-REQ]*/
+/*Modified in []*/
+/*Missing in [REG-QUl-GRS-ATT-EMP-]*/
+.iconEditInput
+{
+    border:0px none; BACKGROUND-IMAGE: url('../images/edit.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+/*Identical in [MAP-JOB-ORG-REQ]*/
+/*Modified in []*/
+/*Missing in [REG-QUl-GRS-ATT-EMP-]*/
+.gicobar
+{
+border-left:1px solid #0D447D; border-right:1px solid #0D447D; border-bottom:1px solid #0D447D; background-color: #A6BACD; background-image: 
+               url('../images/gbarico.jpg'); background-repeat: repeat-x}
+/*Identical in [MAP-JOB-ORG-REQ]*/
+/*Modified in []*/
+/*Missing in [QUl-REG-GRS-ATT-EMP-]*/
+.texticon
+{
+font-family: Verdana; color: #002245; font-size: 8pt; font-weight: bold}
+/*Identical in [MAP-JOB-ORG-REQ]*/
+/*Modified in []*/
+/*Missing in [QUl-REG-GRS-ATT-EMP-]*/
+.iconShowDetail
+{
+    border:0px none; BACKGROUND-IMAGE: url('../images/showdetails.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+/*Identical in [MAP-JOB-ORG-REQ]*/
+/*Modified in []*/
+/*Missing in [GRS-REG-ATT-EMP-QUl-]*/
+.iconCircle
+{
+    border:0px none; BACKGROUND-IMAGE: url('../images/circle.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+/*Identical in [MAP-JOB-ORG-REQ]*/
+/*Modified in []*/
+/*Missing in [REG-QUl-GRS-ATT-EMP-]*/
+.row04
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; height: 24px; vertical-align:middle;
+  }
+/*Identical in [MAP-JOB-ORG-REQ]*/
+/*Modified in []*/
+/*Missing in [REG-QUl-GRS-ATT-EMP-]*/
+.iconEdit
+{
+    border:0px none; BACKGROUND-IMAGE: url('../images/edit2.gif');
+    WIDTH: 18px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent;
+    text-align: center;
+}
+/*Identical in [MAP-JOB-ORG-REQ]*/
+/*Modified in []*/
+/*Missing in [REG-QUl-GRS-ATT-EMP-]*/
+.iconEditForTree
+{
+    border:0px none; BACKGROUND-IMAGE: url('../images/edit.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent;
+    text-align: center;
+}
+/*Identical in [MAP-JOB-ORG-REQ]*/
+/*Modified in []*/
+/*Missing in [REG-QUl-GRS-ATT-EMP-]*/
+.lookupDivTitle{
+    color:#0B2B4A;font-family:Tahoma;font-size:9pt;font-weight:bold;
+}
+/*Identical in [JOB-ORG-REG-REQ]*/
+/*Modified in []*/
+/*Missing in [MAP-QUl-GRS-ATT-EMP-]*/
+.ManyToManySearchButton
+{
+
+border:0px none; BACKGROUND-IMAGE: url('../../images/op_icons/btn_map_search.gif');
+  WIDTH: 68px;
+  CURSOR: hand;
+  BACKGROUND-REPEAT: no-repeat;
+  HEIGHT: 20px;
+  BACKGROUND-COLOR: transparent;
+  text-align: center;
+   
+}
+/*Identical in [JOB-ORG-REG-REQ]*/
+/*Modified in []*/
+/*Missing in [MAP-QUl-GRS-ATT-EMP-]*/
+.ManyToManyCancelSearchButton
+{
+
+border:0px none; BACKGROUND-IMAGE: url('../../images/op_icons/btn_map_cancel_search.gif');
+  WIDTH: 85px;
+  CURSOR: hand;
+  BACKGROUND-REPEAT: no-repeat;
+  HEIGHT: 20px;
+  BACKGROUND-COLOR: transparent;
+  text-align: center;
+   
+}
+/*Identical in [JOB-ORG-REQ-GRS]*/
+/*Modified in []*/
+/*Missing in [MAP-REG-QUl-ATT-EMP-]*/
+.Step-finish {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #A5B8C7;
+}
+/*Identical in [JOB-ORG--REQ-GRS]*/
+/*Modified in []*/
+/*Missing in [MAP-REG-QUl-ATT-EMP]*/
+.Step-current {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #001A34;
+	font-weight: bold;
+}
+/*Identical in [JOB-ORG--REQ-GRS]*/
+/*Modified in []*/
+/*Missing in [MAP-REG-QUl-ATT-EMP]*/
+.Setps-Next {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #CCCCCC;
+}
+/*Identical in [JOB-ORG--REQ-GRS]*/
+/*Modified in []*/
+/*Missing in [MAP-REG-QUl-ATT-EMP]*/
+.Step-current_button {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #001A34;
+	font-weight: bold;
+	background-image: url(../../images/steps/steps-current.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	
+	text-align: right;
+	height: 20px;
+        background-color: #FFFFFF;
+border: 1px none #FFFFFF;
+}
+/*Identical in [JOB-ORG--REQ-GRS]*/
+/*Modified in []*/
+/*Missing in [MAP-REG-QUl-ATT-EMP]*/
+.Setps-Next_button {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #CCCCCC;
+	background-image: url(../../images/steps/steps-next.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	
+	text-align: right;
+		height: 20px;
+                background-color: #FFFFFF;
+border: 1px none #FFFFFF;
+}
+/*Identical in [JOB-ORG--REQ-GRS]*/
+/*Modified in []*/
+/*Missing in [MAP-REG-QUl-ATT-EMP]*/
+.Step-finish_button {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #A5B8C7;
+	background-image: url(../../images/steps/steps-finished.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	
+	text-align: right;
+		height: 20px;
+                background-color: #FFFFFF;
+border: 1px none #FFFFFF;
+}
+/*Identical in []*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-ORG-REG-QUl-GRS-ATT-EMP-REQ]*/
+/*from A.Abdelfatah*/
+.errMsgNoHeight
+{
+font-family: Tahoma; font-size: 8pt; color: Red;
+}
+/*Identical in [ORG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-REG-QUl-GRS-ATT-EMP-REQ]*/
+.greyText{
+    color: Gray;height: 10; font-family: Tahoma; font-size: 8pt; 
+}
+/*Identical in [ORG-MAP-JOB-QUl-REQ]*/
+/*Modified in []*/
+/*Missing in [REG-GRS-ATT-EMP-]*/
+a.paging
+{
+font-family: Tahoma; color: #001F3E; font-size: 8pt; text-decoration:none 
+}
+/*Identical in [ORG-MAP-JOB-REQ]*/
+/*Modified in []*/
+/*Missing in [REG-QUl-GRS-ATT-EMP-]*/
+a:hover.paging
+{
+font-family: Tahoma; color: #001F3E; font-size: 8pt; text-decoration:none 
+}
+/*Identical in [ORG-REQ]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-REG-QUl-GRS-ATT-EMP-]*/
+.iconCircleGreen
+{
+    border:0px none; BACKGROUND-IMAGE: url('../../images/DataGrid_Icon_green_flag.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+/*Identical in [ORG]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-REG-QUl-GRS-ATT-EMP-REQ-]*/
+.iconkuwait
+{
+    border:0px none; BACKGROUND-IMAGE: url('../../images/goverbemental_logo.jpg');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+/*Identical in [REQ-ORG]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-REG-QUl-GRS-ATT-EMP-]*/
+.sttb
+{
+width: 0px;
+}
+/*Identical in [ORG]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-REG-QUl-GRS-ATT-EMP-REQ-]*/
+.col3
+{
+     width: 15%;
+}
+/*Identical in [ORG]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-REG-QUl-REQ-GRS-ATT-EMP-]*/
+.tableHeaderCloseButton
+{
+   border:0px none; BACKGROUND-IMAGE: url('../../images/menu_images/closeButton.jpg');
+   width: 67px;
+   height: 29px;
+   CURSOR: hand;
+   BACKGROUND-REPEAT: no-repeat;
+   
+   BACKGROUND-COLOR: transparent;
+   text-align: center;
+}
+/*Identical in [ORG]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-REG-QUl-REQ-GRS-ATT-EMP-]*/
+.group_title {
+	font-family: tahoma;
+	font-size: 11px;
+	color: #002144;
+	text-align: right;
+	padding-top: 0px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+}
+/*Identical in [ORG]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-REG-QUl-REQ-GRS-ATT-EMP-]*/
+.coln1
+{
+     width: 20%;
+   
+}
+/*Identical in [ORG]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-REG-QUl-REQ-GRS-ATT-EMP-]*/
+.coln2
+{
+     width: 70%;   
+}
+/*Identical in [REQ]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-REG-QUl-ORG-GRS-ATT-EMP-]*/			   
+.iconDetails
+{
+    border:0px none; BACKGROUND-IMAGE: url('../../images/icon_details_number.gif');
+    WIDTH: 41px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: transparent
+}
+/*Identical in [REQ]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-REG-QUl-ORG-GRS-ATT-EMP-]*/
+.dataTableScroll {
+    height: 165px; width: 100%; overflow: auto;direction: rtl;
+}
+/*Identical in [MAP-]*/
+/*Modified in []*/
+/*Missing in [JOB-REG-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.MapSearchButton
+{
+
+border:0px none; BACKGROUND-IMAGE: url('../../images/op_icons/btn_map_search.gif');
+   WIDTH: 68px;
+   CURSOR: hand;
+   BACKGROUND-REPEAT: no-repeat;
+   HEIGHT: 20px;
+   BACKGROUND-COLOR: transparent;
+   text-align: center;
+    
+}
+/*Identical in [MAP-]*/
+/*Modified in []*/
+/*Missing in [JOB-REG-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.MapCancelSearchButton
+{
+
+border:0px none; BACKGROUND-IMAGE: url('../../images/op_icons/btn_map_cancel_search.gif');
+   WIDTH: 85px;
+   CURSOR: hand;
+   BACKGROUND-REPEAT: no-repeat;
+   HEIGHT: 20px;
+   BACKGROUND-COLOR: transparent;
+   text-align: center;
+    
+}
+/*Identical in [MAP-]*/
+/*Modified in []*/
+/*Missing in [JOB-REG-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.progress
+{
+    BACKGROUND-IMAGE: url('../../images/op_icons/ProgressBar.gif');
+    width:150px;
+    height: 10px;
+    BACKGROUND-REPEAT: no-repeat;
+    
+}
+/*Identical in [MAP-]*/
+/*Modified in []*/
+/*Missing in [JOB-REG-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.removeButtonSmall
+{
+
+               
+    border:0px none; BACKGROUND-IMAGE: url('../../images/op_icons/btn_map_delete.gif');
+    WIDTH: 100px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 19px;
+    BACKGROUND-COLOR: transparent
+               
+               }
+/*Identical in [MAP-]*/
+/*Modified in []*/
+/*Missing in [JOB-REG-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.addButtonSmall
+{
+ 
+               
+    border:0px none; BACKGROUND-IMAGE: url('../../images/op_icons/btn_map_add.gif');
+    WIDTH: 75px;
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 19px;
+    BACKGROUND-COLOR: transparent
+               
+               }
+/*Identical in [MAP-]*/
+/*Modified in []*/
+/*Missing in [JOB-REG-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.iconDetail
+{
+    border:0px none; BACKGROUND-IMAGE: url('../images/green-circle.gif');
+    WIDTH: 14px; 
+    CURSOR: hand; 
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 14px;
+    BACKGROUND-COLOR: transparent
+}
+/*Identical in [MAP-]*/
+/*Modified in []*/
+/*Missing in [JOB-REG-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.iconString
+{
+
+    color: #000000; font-family: Tahoma; font-size: 8pt; height: 24px;         
+    text-align:right; 
+    padding-left:0px; padding-right:0px;
+    right: auto;         
+    width: 100%;
+    border:0px none; 
+    CURSOR: hand;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: transparent;
+}              
+/*Identical in [MAP-]*/
+/*Modified in []*/
+/*Missing in [JOB-REG-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.noDatamsg
+{
+font-family: Tahoma; font-size: 8pt; color: #EB8E3B; font-weight: 600; padding-top:4px; padding-bottom:4px; border: 0; width: 800px; height: 25px;text-align: center;vertical-align: middle;}
+
+.map_scroller
+{
+border:1px solid #C4CAD2; background-color: #DFE3E7; color: #001F3E;text-decoration: none;font-family: Tahoma; text-align: center;}     
+/*Identical in [MAP-]*/
+/*Modified in []*/
+/*Missing in [JOB-REG-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.divIframe
+{
+    position:absolute;
+    top:0; 
+    left:0; 
+    width:823px; 
+    height:409px; 
+    transparent:true; 
+    filter:alpha(opacity:30); 
+    opacity:0.30; 
+    visibility:hidden;
+    z-index:98;
+}
+/*Identical in [MAP-]*/
+/*Modified in []*/
+/*Missing in [JOB-REG-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.mapped_info_message {
+	font-family: tahoma;
+	font-size: 11px;
+	color: #373737;        
+	background-image: url("../../images/div/icon_search_info.jpg");
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	text-align: right;
+	vertical-align: middle;
+	background-position: right;
+}
+/*Identical in [REG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.regErrMsg
+{
+font-family: Tahoma; font-size: 8pt; color: #FF0000; font-weight: 600; padding-top:4px; padding-bottom:4px; border: 0; width: 300px; height: 25px;text-align: center;vertical-align: middle;}
+/*Identical in [REG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.regulationDivSearch
+{
+    position:absolute; top:0px; left:80px; visibility:hidden; width:650px;
+    z-index:100;
+}
+/*Identical in [REG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.regulationDelDivScroll {
+    height: 100px; width: 100%; overflow: auto;direction: rtl;
+}
+/*Identical in [REG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.subjectsAddDiv
+{
+    position:absolute;top:10px;left:80px;width:650px; visibility:hidden;z-index: 100;
+}
+/*Identical in [REG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.divSearchContent1Fixed
+{
+    width:100%;
+    height:120px;
+    overflow:auto;
+}
+/*Identical in [REG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.divREGMainContentMany
+{
+    height:156px;
+    overflow-y:auto;
+}
+/*Identical in [REG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.divREGSearchMainContentMany
+{
+    width:100%;
+    height:170px;
+    overflow:auto;
+}
+/*Identical in [REG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.delDivSearchScroll {
+    height: 150px; width: 100%; overflow: auto;direction: rtl;
+}
+/*Identical in [REG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.publishEditDiv
+{
+    position:absolute;top:20px;left:80px;width:650px; visibility:hidden;z-index: 100;
+}
+/*Identical in [REG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.cancelDecisionDetailsDiv
+{
+    position:absolute;top:0px;left:80px;width:650px; visibility:hidden;z-index: 100;
+}
+/*Identical in [REG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.fileUploadComponent
+{
+    position: relative; top: 0px; left:0px; width:282px; height:18px; z-index:2; filter:alpha(opacity: 0);
+}
+/*Identical in [REG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.fileUploadFakeButton
+{
+    position: absolute; top:1px; left:5px; width:78px; height:18px; z-index:1; color:#00274E; border:1px solid #AF853E; background-color:#EFB34F; font-family:Tahoma; font-size:8pt;
+}
+/*Identical in [REG-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-QUl-ORG-GRS-ATT-EMP-REQ]*/
+.fileUploadFakeInputText
+{
+    position: absolute; top:1px; left:85px; width: 200px; height: 18px; z-index:3; color: #000000; font-family: Tahoma; font-size: 8pt; border: 1px solid #CCD0D6; background-color: #FFFFFF;
+}
+/*Identical in [GRS-]*/
+/*Modified in []*/
+/*Missing in [MAP-JOB-REG-QUl-ORG-ATT-EMP-REQ]*/
+.textarealarge {
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 280px; height: 60px; 
+border: 1px solid #CCD0D6; background-color: #FFFFFF;overflow: auto;}
+/*************************************************** End of missing classes *****************************************************/
+
+div#tipDiv
+{
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    background: url("../../images/tooltip_background.gif") #ffffff;
+    background-color: #FFFFFF;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    border: 1px solid #B2C9DF;
+    width: 160px;
+    padding: 4px;
+    color: #000;
+    font-size: 11px;
+    line-height: 1.2 ;
+    font-family: tahoma;
+}
+div.tp1
+{
+    font-size: 12px;
+    color: #336;
+    padding-top: 4px;
+}
+
+.divIframeWating
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 823px;
+    height: 409px; 
+    transparent: true;
+    filter: alpha(opacity:30);
+    opacity: 0.30;
+    visibility : hidden;
+    z-index: 101;
+}
+.divWating
+{
+    position: absolute;
+    top: 70px;
+    left : 80px;
+    width: 650px;
+    visibility : hidden;
+    z-index: 102;
+}
+
+.divTitle
+{
+    font-family: Times New Roman;
+    font-size: 13pt;
+    font-weight: bold;
+    padding-right: 4px;
+}
+
+/*controls [textbox]*/
+.textboxXlarge
+{
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 677px;
+    height: 18px;
+    border: 1px solid #CCD0D6;
+    background-color: #FFFFFF;
+}
+
+.warningClass
+{
+    font-family: tahoma,verdana;
+    color : #A17643;
+    font-size:10pt;
+}
+/************************New Design********************************/
+.BodyContent{
+    border-radius: 8px;
+    box-shadow: 0 0 5px #000000;
+    display: inline-block;
+    margin-left: -2px;
+    padding: 10px 30px 5px 5px;
+    width: 859px;
+}
+.AboutSystem{
+    background: url('../../images/all-img.png') -373px -224px;
+    height: 111px;
+    margin-left: 786px;
+    margin-top: -17px;
+    position: absolute;
+    width: 110px;
+}
+.pannel_large_title {
+    font-family: "simplified Arabic", "traditional Arabic", "arabic Transparent";
+    font-size: 20px;
+    color: #d43a53;
+    font-weight: bold;
+    float: right;
+    text-align: right;
+    margin-right: 45px;
+    padding-right: 10px;
+}
+.homepage_paragraph {
+	color: #105B84;
+        direction: rtl;
+        float: right;
+        font-family: tahoma;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 25px;
+        margin: 0;
+        padding: 10px;
+        text-align:justify;
+}
+.QulImg{
+    background: url('../../images/qul-img.png') no-repeat;
+    height: 174px;
+    width: 244px;
+    margin-left: 37px;
+    margin-top: 225px;
+}
+.gbody{
+    margin-top: 0px;
+}
+.shadow{
+     background: url('../../images/header-bg.png') 0px -140px no-repeat;
+     display: block;
+     width: 948px;
+     /*float: right;*/
+     margin-bottom: -5px;
+     margin-left: -8px;
+     height: 31px;
+}

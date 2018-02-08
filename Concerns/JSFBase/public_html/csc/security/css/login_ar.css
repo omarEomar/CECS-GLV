@@ -1,0 +1,490 @@
+/*
+Item Name : 
+Author URI : http://themeforest.net/user/Keliah
+Version : 1.0
+*/
+
+/*
+
+TABLE OF CONTENTS
+
+01 RESET
+02 TYPOGRAPHY
+
+*/
+
+/*  _____________________________________________________________________________
+
+	01 RESET
+    _____________________________________________________________________________  */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+	{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+	direction: rtl;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0
+}
+
+body {
+	line-height: 1;
+	color: black;
+	background: url(${contextPath}/security/images/bg.jpg);
+	margin: 0px;
+}
+
+ol,ul {
+	list-style: none
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0
+}
+
+caption,th,td {
+	text-align: left;
+	font-weight: normal
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content: ""
+}
+
+blockquote,q {
+	quotes: "" ""
+}
+
+#loginContainer {
+	width: 960px;
+	margin: 0px auto;
+	border-radius: 0px;
+	text-align: center;
+}
+
+#content_login {
+	width: 490px;;
+	border: 1px solid #BFBFBF;
+	background-color: #FFF;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin: 50px auto;
+}
+
+/*  _____________________________________________________________________________
+
+	login CSS
+    _____________________________________________________________________________  */
+#footer {
+	position: relative;
+	bottom: 0px;
+	background: url(${contextPath}/security/images/v-sep.png) top center
+		no-repeat;
+	height: 80px;
+	clear: both;
+	top: 10px;
+	font-family: tahoma;
+}
+
+#footer a {
+	font-family: tahoma !important;
+	color: #7f887f;
+}
+
+.copyright {
+	float: left;
+	padding: 10px 50px;
+	font-size: 11px;
+	color: #7F887F;
+	font-family: tahoma;
+}
+
+.copyright a {
+	font-family: tahoma !important;
+	color: #bb7c02 !important;
+}
+
+.footerMenu {
+	float: right;
+	padding: 10px 50px;
+	font-size: 11px;
+	color: #7F887F;
+}
+
+#logo a:link,#logo a:visited {
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: 85px;
+	background: url(${contextPath}/security/images/logo.png) no-repeat 0 0;
+	width: 200px;
+}
+
+#logo a:hover {
+	display: block;
+	overflow: hidden;
+	height: 0px;
+	padding-top: -85px;
+	background: url(${contextPath}/security/images/logo.png) no-repeat 0
+		-85px
+}
+
+hr {
+	background-image:
+		url(${contextPath}/security/images/separator_login.jpg);
+	background-repeat: no-repeat;
+	height: 3px;
+	border: none;
+	clear: both;
+	margin: 1px 1px 1px 10px;
+}
+
+#content_login span {
+	-moz-transform: rotate(270deg);
+	color: #4E4E4E;
+	float: right;
+	font-family: Calibri, arial, verdana, "ms Sans Serif", "MS Serif";
+	font-size: 20px;
+	font-weight: bold;
+	height: 10px;
+	padding: 10px 5px;
+	right: -25px;
+	text-shadow: 0 0 1px #999999;
+	text-transform: uppercase;
+	margin-top: 10px;
+	margin-right: 10px;
+	white-space: nowrap;
+	width: 20px;
+}
+
+.main_login {
+	float: left;
+	height: 200px;
+	width: 410px;
+	background: url(${contextPath}/security/images/login-icon-bg.png)
+		no-repeat left #e9e9e9;
+	margin: 0px 20px;
+	padding-top: 30px;
+}
+
+h5 {
+	color: #64665D;
+	display: block;
+	font-family: tahoma;
+	font-size: 11px;
+	margin: 10px 0 5px;
+	width: 172px;
+}
+
+td {
+	height: 25px;
+	padding: 0 10px 0 30px;
+	text-align: right;
+	vertical-align: middle;
+}
+
+input,select {
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: #ABADB3 #E3E9EF #E3E9EF;
+	border-right: 1px solid #E3E9EF;
+	border-style: solid;
+	border-width: 1px;
+	color: #666666;
+	font-family: tahoma;
+	font-size: 11px;
+	height: 20px;
+	width: 210px;
+}
+
+input.checkbox {
+	vertical-align: middle;
+}
+
+select {
+	height: 23px;
+}
+
+.login-bt {
+	padding: 5px 55px 5px 25px;
+	color: #64665D;
+	font-family: tahoma;
+	font-size: 11px;
+	text-shadow: 2px 0 2px #999999;
+}
+
+input.form-submit {
+	width: 80px !important;
+	background: url(${contextPath}/security/images/add-button.jpg);
+	height: 21px !important;
+	border-color: #dfca74 !important;
+	border-style: solid !important;
+	border-width: 1px !important;
+	box-shadow: 1px 2px 2px #8C8C8C !important;
+	border-radius: 3px;
+	padding-bottom: 3px;
+	float: left;
+	margin: 3px 0px;
+	cursor: pointer;
+}
+
+.main_changepass {
+	float: left;
+	height: 220px;
+	width: 410px;
+	background: url(${contextPath}/security/images/changepass-icon-bg.png)
+		no-repeat left #e9e9e9;
+	margin: 0px 20px;
+	padding-top: 30px;
+}
+
+.main_choosegroup {
+	float: left;
+	height: 220px;
+	width: 410px;
+	background: url(${contextPath}/security/images/choosegroup-icon-bg.png)
+		no-repeat left #e9e9e9;
+	margin: 0px 20px;
+	padding-top: 30px;
+}
+
+#messageError {
+	width: 604px;
+	height: 179px;
+	background:
+		url(${contextPath}/security/images/message/ar/backgroung4message.png)
+		no-repeat;
+	margin: 150px auto;
+	vertical-align: middle;
+}
+
+#messageError .MessageIcon {
+	background:
+		url(${contextPath}/security/images/message/message_err_ico.png);
+	display: block;
+	width: 85px;
+	height: 85px;
+	float: left;
+	margin: 40px 20px;
+}
+
+#messageError .Message {
+	color: #4E4E4E;
+	float: left;
+	font-family: Calibri, arial, verdana, "ms Sans Serif", "MS Serif";
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px auto;
+	display: block;
+	margin: 70px 10px;
+	width: 50%;
+}
+
+#messageError .MessageReturnHome a {
+	color: #4E4E4E;
+	float: right;
+	font-family: Calibri, arial, verdana, "ms Sans Serif", "MS Serif";
+	font-size: 14px;
+	margin: 20px auto;
+	display: block;
+	margin: 140px 20px 15px 10px;
+	width: 120px;
+	height: 20px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#messageError .MessageReturnHome	a:hover {
+	color: #F60;
+	text-decoration: underline;
+}
+
+#messageInfo {
+	width: 604px;
+	height: 179px;
+	background:
+		url(${contextPath}/security/images/message/ar/backgroung4message.png)
+		no-repeat;
+	margin: 150px auto;
+	vertical-align: middle;
+}
+
+#messageInfo .MessageIcon {
+	background:
+		url(${contextPath}/security/images/message/message_info_ico.png);
+	display: block;
+	width: 85px;
+	height: 85px;
+	float: left;
+	margin: 40px 20px;
+}
+
+#messageInfo .Message {
+	color: #4E4E4E;
+	float: left;
+	font-family: Calibri, arial, verdana, "ms Sans Serif", "MS Serif";
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px auto;
+	display: block;
+	margin: 70px 10px;
+	width: 50%;
+}
+
+#messageInfo .MessageReturnHome a {
+	color: #4E4E4E;
+	float: right;
+	font-family: Calibri, arial, verdana, "ms Sans Serif", "MS Serif";
+	font-size: 14px;
+	margin: 20px auto;
+	display: block;
+	margin: 140px 20px 15px 10px;
+	width: 120px;
+	height: 20px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#messageInfo .MessageReturnHome	a:hover {
+	color: #F60;
+	text-decoration: underline;
+}
+
+#messageAccessDenied {
+	width: 604px;
+	height: 179px;
+	background:
+		url(${contextPath}/security/images/message/ar/backgroung4message_lock.png)
+		no-repeat;
+	margin: 150px auto;
+	vertical-align: middle;
+}
+
+#messageAccessDenied .MessageIcon {
+	background:
+		url(${contextPath}/security/images/message/message_lock_ico.png);
+	display: block;
+	width: 85px;
+	height: 85px;
+	float: left;
+	margin: 40px 20px;
+}
+
+#messageAccessDenied .Message {
+	color: #4E4E4E;
+	float: left;
+	font-family: Calibri, arial, verdana, "ms Sans Serif", "MS Serif";
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px auto;
+	display: block;
+	margin: 70px 10px;
+	width: 50%;
+}
+
+#messageAccessDenied .MessageReturnHome a {
+	color: #4E4E4E;
+	float: right;
+	font-family: Calibri, arial, verdana, "ms Sans Serif", "MS Serif";
+	font-size: 14px;
+	margin: 20px auto;
+	display: block;
+	margin: 140px 20px 15px 10px;
+	width: 120px;
+	height: 20px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#messageAccessDenied .MessageReturnHome	a:hover {
+	color: #F60;
+	text-decoration: underline;
+}
+
+#selectGroupPanel {
+	background-color: #FFF;
+	margin: 50px auto 20px auto;
+	position: relative;
+	width: 500px;
+	display: inline-block;
+	padding: 20px;
+}
+
+#selectGroupPanel .panelLogo {
+	background: url(${contextPath}/security/images/logo.png) no-repeat
+		scroll 0 0 transparent;
+	display: block;
+	float: none;
+	height: 51px;
+	margin: 0 20px;
+	width: 185px;
+}
+
+#selectGroupPanel .panelText {
+	background: url(${contextPath}/security/images/ar/text_changegroup.png)
+		no-repeat right 20px;
+	height: 160px;
+	width: 18px;
+	display: block;
+	float: right;
+	margin: 0 10px;
+}
+
+#selectGroupPanel .panelContents {
+	background: url(${contextPath}/security/images/choosegroup-icon-bg.png)
+		center left #E9E9E9 no-repeat;
+	display: block;
+	float: left;
+	margin: 20px 20px 10px 10px;
+	font-family: tahoma, Calibri, arial, verdana, "ms Sans Serif",
+		"MS Serif";
+	font-size: 11px;
+	width: 410px;
+	padding: 10px;
+}
+
+#selectGroupPanel .textfield,#selectGroupPanel .select {
+	background: url("${contextPath}/security/images/txt-bg.gif") no-repeat
+		scroll 0 0 transparent;
+	border: medium none;
+	display: block;
+	overflow: hidden;
+	padding: 3px 2px;
+	width: 175px;
+}
+
+#selectGroupPanel .panelFooter {
+	display: block;
+	font-family: tahoma, Calibri, arial, verdana, "ms Sans Serif",
+		"MS Serif";
+	color: #4a4a4a;
+	font-size: 11px;
+	text-align: right;
+}
+
+.error {
+	color: red;
+}
+
+#selectGroupPanel .textfield_dimmed,#selectGroupPanel .select_dimmed,#loginPanel .textfield_dimmed,#loginPanel .select_dimmed
+	{
+	background: url("${contextPath}/security/images/txt-bg-dimmed.gif")
+		no-repeat scroll 0 0 transparent;
+	border: medium none;
+	display: block;
+	overflow: hidden;
+	padding: 3px 2px;
+	width: 175px;
+}

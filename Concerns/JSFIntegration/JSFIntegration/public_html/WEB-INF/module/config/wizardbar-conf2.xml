@@ -1,0 +1,21 @@
+<wizards dir="#{shared_util.pageDirection}" notVisitedStyleClass="Setps-Next_button"  currentStyleClass="Step-current_button" visitedStyleClass="Step-finish_button"
+xmlns="http://xml.beshara.com/schema/wizardbar-conf" disabledStyleClass="sadasdas">
+  
+<!-- #########START######## GOV EMP DATA REVISION ###########SHEKA########## -->
+    <wizard backNavigation="NAN" id="GovEmpDataRevisionWizBarID" septsNavigationListener="#{govEmpMaintainBean.navigateSteps}" onCancel="#{govEmpMaintainBean.back}">
+        <step id="step1" label="#{resourcesBundle.Gov_emp_step1}" required="true"  navigation="govempfirststep"/>
+        <step id="step2" label="#{resourcesBundle.Gov_emp_step2}" navigation="govempsecondstep" disabled="#{!govEmpMaintainBean.enableTabs}"/>
+        <step id="step3" label="#{resourcesBundle.Gov_emp_step3}" navigation="govempthirdstep" disabled="#{!govEmpMaintainBean.enableTabs}"/>
+        <step id="step4" label="#{resourcesBundle.Gov_emp_step4}" navigation="govempforthstep" disabled="#{!govEmpMaintainBean.enableTabs}"/>
+        <step id="step5" label="#{resourcesBundle.Gov_emp_step5}" navigation="govempfifthstep" disabled="#{!govEmpMaintainBean.enableTabs}"/>
+        <step id="step6" label="#{resourcesBundle.Gov_emp_step6}" navigation="govempsixthstep" disabled="#{!govEmpMaintainBean.enableTabs}"/>
+        <step id="step7" label="#{resourcesBundle.Gov_emp_step7}" navigation="govempseventhstep" disabled="true"/>
+        <step id="step8" label="#{resourcesBundle.Gov_emp_step8}" navigation="govempeighthstep" disabled="true"/>
+        <navBar>    
+            <button id="BackButtonManyToMany" label="#{globalResources.back}" rendered="#{govEmpMaintainBean.preSelectedCivilId}" navType="step" styleClass="cssButtonSmall" navigation="cancel"/>
+        </navBar>
+    </wizard>
+<!-- #########END######## GOV EMP DATA REVISION ############SHEKA########### -->
+    
+    
+</wizards>

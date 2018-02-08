@@ -1,0 +1,43 @@
+body
+{
+   background-color: #E4E4E4;
+   scrollbar-face-color: #12518F;
+   scrollbar-darkshadow-color: #002952;
+   scrollbar-3dlight-color: #002952;
+   scrollbar-arrow-color: #001529;
+   scrollbar-highlight-color: #FFFFFF;
+   scrollbar-shadow-color: #002952;
+   scrollbar-track-color: #498AC8;
+   margin-top: 0px;
+   margin-right: 0px;
+   margin-bottom: 0px;
+   margin-right: 0px;
+   background-color: #E4E4E4;
+   overflow-x:hidden; 
+   overflow-y:auto; 
+}
+.gb
+{
+ background-color: #FFFFFF;  background-repeat: repeat-x}
+.gfooter
+{
+color: #FFFFFF; font-family: Tahoma; font-size: 8pt; font-weight: 600; 
+                       background-image: url('../../images/integration/gfoot.jpg');
+            
+               background-repeat: no-repeat}
+.gtopbox
+{
+background-image: url('../../images/integration/g-top.gif'); background-position-y: bottom}
+.gbottombox
+{
+background-image: url('../../images/integration/g-bottom.gif'); background-position-y: top}
+.gleftbox
+{
+background-image: url('../../images/integration/g-l.gif'); background-repeat: repeat-y}
+.grightbox
+{
+background-image: url('../../images/integration/g-r.gif'); background-repeat: repeat-y}
+.paddingbox
+{
+font-family: Tahoma; font-size: 8pt; color: #FFFFFF; padding-top: 10px; 
+               padding-bottom: 10px}
