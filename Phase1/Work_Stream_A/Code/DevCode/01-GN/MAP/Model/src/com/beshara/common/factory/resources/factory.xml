@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<factory>
+    <instances>
+        <!-- common instances -->
+        <instance interface="com.beshara.common.namingcontext.NamingContextManager"
+                  implementation="com.beshara.common.namingcontext.NamingContextManagerImpl" loadOnStartup="true"/>
+        <instance interface="com.beshara.common.dao.db.connection.DAODbConnectionManager"
+                  implementation="com.beshara.common.dao.db.connection.DAODbConnectionManagerImpl" loadOnStartup="true"
+                  configFile="res:com/beshara/common/factory/resources/dbConnections.xml"/>
+        <!-- deployment configuration -->
+        <instance interface="com.beshara.base.deploy.IRMIManager"
+                  implementation="com.beshara.base.deploy.WLRMIManager"/>
+        <instance interface="com.beshara.base.deploy.SessionBeanProvider"
+                  implementation="com.beshara.base.deploy.SessionBeanProviderImpl" loadOnStartup="true">
+            <params>
+                <param name="connection" value="deploy"/>
+                <!-- old 
+                <param name="earCode" value="2"/>
+                <param name="instanceCode" value="1"/>-->
+                <!-- new-->
+                <param name="earCode" value="33"/>
+                <param name="instanceCode" value="1"/> 
+                <param name="techLog" value="true"/>
+	        <param name="dataAudit" value="true"/>
+                <param name="dataFiltration" value="true"/>
+          </params>
+                
+        </instance>
+        <!-- configuration manager instance -->
+        <instance interface="com.beshara.base.config.ConfigManager"
+                  implementation="com.beshara.base.config.ConfigManagerImpl" loadOnStartup="true">
+            <params>
+                <param name="connection" value="deploy"/>
+            </params>
+        </instance>
+    </instances>
+</factory>

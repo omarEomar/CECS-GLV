@@ -1,0 +1,499 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jpr:project xmlns:jpr="http://xmlns.oracle.com/ide/project">
+   <hash n="component-versions">
+      <value n="oracle.adf.dt.migration.ProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdt.controller.jsf.addin.JSFProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdt.controller.migrate.TrinidadDatabindingsProjectMigrator" v="11.1.2.0.0"/>
+      <value n="oracle.adfdt.controller.struts.addin.db.ADFStrutsProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdt.controller.struts.addin.StrutsProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdtinternal.dvt.datapresdt.migration.DVTDataMapMigrator" v="11.1.1.1.0.3"/>
+      <value n="oracle.adfdtinternal.model.ide.security.wizard.FormPageMigrator" v="11.1.1.0.0"/>
+      <value n="oracle.adfdtinternal.model.ide.security.wizard.JpsFilterMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.adfdtinternal.model.portlet.migration.WebCenterProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdtinternal.view.common.migration.wizards.MigrationHelper" v="11.1.1.1.0.3"/>
+      <value n="oracle.adfdtinternal.view.faces.addin.ADFFacesLibraryMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdtinternal.view.rich.migration.ComponentIdNodeMigratorHelper" v="11.1.1.1.0.01"/>
+      <value n="oracle.adfdtinternal.view.rich.migration.LibraryVersionMigrator" v="11.1.1.1.0.1"/>
+      <value n="oracle.bm.commonIde.ProjectUpgrader" v="10.1.3.5.0"/>
+      <value n="oracle.ide.model.Project" v="10.1.3.5.0;11.1.2.0.0"/>
+      <value n="oracle.ide.model.ResourcePathsMigrator" v="10.1.3.5.0;11.1.1.1.0"/>
+      <value n="oracle.ideimpl.model.TechnologyScopeUpdateMigrator" v="11.1.2.0.0.4"/>
+      <value n="oracle.jbo.dt.jclient.migrator.JCProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jbo.dt.jdevx.deployment.JbdProjectMigrator" v="11.1.2.0.0"/>
+      <value n="oracle.jbo.dt.jdevx.ui.appnav.APProjectMigrator" v="10.1.3.5.0;11.1.1.0.1.5"/>
+      <value n="oracle.jbo.dt.migrate.ResourceBundlePathMigrator" v="11.1.1.0.1.5"/>
+      <value n="oracle.jbo.dt.migration.ServiceInterfaceMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdeveloper.dbmodeler.migration.ProjectMigratorHelper" v="10.1.3.5.0"/>
+      <value n="oracle.jdeveloper.ejb.EjbMigrator" v="10.1.3.5.0;11.1.1.1.0"/>
+      <value n="oracle.jdeveloper.library.ProjectLibraryMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdeveloper.model.OutputDirectoryMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdeveloper.offlinedb.migration.OfflineDBProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jdevimpl.deploy.DeploymentProfilesMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.deploy.jps.JpsDataMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.jsp.JsfLibraryMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jdevimpl.jsp.JspMigrator" v="10.1.3.1.0;11.1.1"/>
+      <value n="oracle.jdevimpl.offlinedb.migration.OfflineDBProjectMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.offlinedb.migration.OfflinePlSqlMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.resourcebundle.XliffAddin$XliffMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.runner.RunConfigurationsMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jdevimpl.webapp.jsp.libraries.JspLibraryMigrator" v="11.1.1.1.4"/>
+      <value n="oracle.jdevimpl.webapp.WebAppContentSetNodeMigratorHelper" v="11.1.1"/>
+      <value n="oracle.jdevimpl.webapp.WebAppProjectNodeMigratorHelper" v="11.1.2.0.0"/>
+      <value n="oracle.jdevimpl.webservices.rest.migration.RestPathMigrator" v="11.1.2.0.0"/>
+      <value n="oracle.jdevimpl.webservices.WebServicesMigratorHelper" v="10.1.3.5.0;11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.xml.wl.WeblogicMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.modeler.bmmigrate.management.Migration" v="11.1.1.1.0"/>
+      <value n="oracle.tip.tools.ide.pm.addin.PMProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.toplink.addin.migration.TopLinkProjectMigrator" v="10.1.3.1.0"/>
+      <value n="oracle.toplink.workbench.addin.migration.PersistenceProjectMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.toplink.workbench.addin.migration.TopLinkProjectMigrator" v="11.1.1.1.0"/>
+   </hash>
+   <list n="contentSets">
+      <string v="oracle.jdeveloper.model.PathsConfiguration/javaContentSet"/>
+      <string v="oracle.ide.model.ResourcePaths/resourcesContentSet"/>
+      <string v="oracle.jdeveloper.offlinedb.model.OfflineDBProjectSettings/offlineDBContentSet"/>
+      <string v="oracle.jdeveloper.model.J2eeSettings/webContentSet"/>
+      <string v="oracle.bm.commonIde.data.project.ModelerProjectSettings/modelersContentSet"/>
+      <string v="oracle.tip.tools.ide.pm.addin.PMProjectSettings/Integration_Content"/>
+      <string v="oracle.mds.internal.dt.ide.MDSLibraryCustCSProvider/mdsContentSet"/>
+      <string v="oracle.mds.internal.dt.ide.MDSADFLibVirtualNodeCSProvider/mdsLibVirtualNodeContentSet"/>
+      <string v="oracle.adfdtinternal.model.ide.settings.ADFMSettings/adfmContentSet"/>
+      <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
+   </list>
+   <value n="defaultPackage" v="com.beshara.csc.gn.map.business"/>
+   <hash n="ejbModuleContainer">
+      <list n="annotatedEjbBeanClassUrls">
+         <url path="src/com/beshara/csc/gn/map/business/deploy/DataSessionBean.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/deploy/MappedDataSessionBean.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/deploy/ObjectTypesSessionBean.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/deploy/SocietiesSessionBean.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/entity/DataEntity.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/entity/MappedDataEntity.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/entity/ObjectTypesEntity.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/entity/SocietiesEntity.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/facade/DataFacadeBean.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/facade/MappedDataFacadeBean.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/facade/ObjectTypesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/facade/SocietiesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/deploy/MapDataExceptionsSessionBean.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/entity/MapDataExceptionsEntity.java"/>
+         <url path="src/com/beshara/csc/gn/map/business/facade/MapDataExceptionsFacadeBean.java"/>
+      </list>
+      <value n="cmpProvider" v="EJB 3.0"/>
+      <value n="dbConnection" v="CSCDBConnection"/>
+      <hash n="ejb21IdToEjbNameMap">
+         <value n="3749a2b1-012d-1000-8001-c0a800040b3a" v="com.beshara.csc.gn.map.business.deploy.MapDataExceptionsSessionBean"/>
+         <value n="3749a2b1-012d-1000-8002-c0a800040b3a" v="com.beshara.csc.gn.map.business.entity.MapDataExceptionsEntity"/>
+         <value n="3749a2b1-012d-1000-8003-c0a800040b3a" v="com.beshara.csc.gn.map.business.facade.MapDataExceptionsFacadeBean"/>
+         <value n="d6d07e66-0115-1000-8001-c0a800128aa6" v="com.beshara.csc.gn.map.business.facade.DataFacadeBean"/>
+         <value n="d6d141a6-0115-1000-8002-c0a800128aa6" v="com.beshara.csc.gn.map.business.deploy.DataSessionBean"/>
+         <value n="d6f301e9-0115-1000-8003-c0a800128aa6" v="com.beshara.csc.gn.map.business.facade.SocietiesFacadeBean"/>
+         <value n="d6f31830-0115-1000-8004-c0a800128aa6" v="com.beshara.csc.gn.map.business.deploy.MappedDataSessionBean"/>
+         <value n="d6fe1fcc-0115-1000-8005-c0a800128aa6" v="com.beshara.csc.gn.map.business.facade.MappedDataFacadeBean"/>
+         <value n="d7006343-0115-1000-8001-c0a80012c463" v="com.beshara.csc.gn.map.business.deploy.ObjectTypesSessionBean"/>
+         <value n="d7006343-0115-1000-8002-c0a80012c463" v="com.beshara.csc.gn.map.business.deploy.SocietiesSessionBean"/>
+         <value n="d7006353-0115-1000-8003-c0a80012c463" v="com.beshara.csc.gn.map.business.entity.DataEntity"/>
+         <value n="d7006353-0115-1000-8004-c0a80012c463" v="com.beshara.csc.gn.map.business.entity.MappedDataEntity"/>
+         <value n="d7006363-0115-1000-8005-c0a80012c463" v="com.beshara.csc.gn.map.business.entity.ObjectTypesEntity"/>
+         <value n="d7006363-0115-1000-8006-c0a80012c463" v="com.beshara.csc.gn.map.business.entity.SocietiesEntity"/>
+         <value n="d7006363-0115-1000-8007-c0a80012c463" v="com.beshara.csc.gn.map.business.facade.ObjectTypesFacadeBean"/>
+      </hash>
+      <hash n="ejbIdToEjbNameMap">
+         <value n="3749a2b1-012d-1000-8001-c0a800040b3a" v="com.beshara.csc.gn.map.business.deploy.MapDataExceptionsSessionBean"/>
+         <value n="3749a2b1-012d-1000-8002-c0a800040b3a" v="com.beshara.csc.gn.map.business.entity.MapDataExceptionsEntity"/>
+         <value n="3749a2b1-012d-1000-8003-c0a800040b3a" v="com.beshara.csc.gn.map.business.facade.MapDataExceptionsFacadeBean"/>
+         <value n="d6d07e66-0115-1000-8001-c0a800128aa6" v="com.beshara.csc.gn.map.business.facade.DataFacadeBean"/>
+         <value n="d6d141a6-0115-1000-8002-c0a800128aa6" v="com.beshara.csc.gn.map.business.deploy.DataSessionBean"/>
+         <value n="d6f301e9-0115-1000-8003-c0a800128aa6" v="com.beshara.csc.gn.map.business.facade.SocietiesFacadeBean"/>
+         <value n="d6f31830-0115-1000-8004-c0a800128aa6" v="com.beshara.csc.gn.map.business.deploy.MappedDataSessionBean"/>
+         <value n="d6fe1fcc-0115-1000-8005-c0a800128aa6" v="com.beshara.csc.gn.map.business.facade.MappedDataFacadeBean"/>
+         <value n="d7006343-0115-1000-8001-c0a80012c463" v="com.beshara.csc.gn.map.business.deploy.ObjectTypesSessionBean"/>
+         <value n="d7006343-0115-1000-8002-c0a80012c463" v="com.beshara.csc.gn.map.business.deploy.SocietiesSessionBean"/>
+         <value n="d7006353-0115-1000-8003-c0a80012c463" v="com.beshara.csc.gn.map.business.entity.DataEntity"/>
+         <value n="d7006353-0115-1000-8004-c0a80012c463" v="com.beshara.csc.gn.map.business.entity.MappedDataEntity"/>
+         <value n="d7006363-0115-1000-8005-c0a80012c463" v="com.beshara.csc.gn.map.business.entity.ObjectTypesEntity"/>
+         <value n="d7006363-0115-1000-8006-c0a80012c463" v="com.beshara.csc.gn.map.business.entity.SocietiesEntity"/>
+         <value n="d7006363-0115-1000-8007-c0a80012c463" v="com.beshara.csc.gn.map.business.facade.ObjectTypesFacadeBean"/>
+      </hash>
+      <value n="ejbVersion" v="3.0"/>
+   </hash>
+   <hash n="oc4j-data-source-settings">
+      <value n="autoSyncOnRunOrDeploy" v="false"/>
+      <value n="createDataSources" v="false"/>
+      <value n="deleteDataSources" v="false"/>
+      <value n="updateDataSources" v="false"/>
+   </hash>
+   <hash n="oracle.bm.commonIde.data.project.ModelerProjectSettings">
+      <hash n="modelersContentSet">
+         <list n="url-path">
+            <url path="model/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.ide.model.DependencyConfiguration">
+      <list n="dependencyList"/>
+   </hash>
+   <hash n="oracle.ide.model.ResourcePaths">
+      <hash n="resourcesContentSet">
+         <list n="pattern-filters">
+            <string v="-build.xml"/>
+            <string v="-build.properties"/>
+            <string v="+*"/>
+         </list>
+         <list n="url-path">
+            <url path="."/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.ide.model.TechnologyScopeConfiguration">
+      <list n="technologyScope">
+         <string v="Database"/>
+         <string v="EJB"/>
+         <string v="Java"/>
+         <string v="Maven"/>
+         <string v="TopLink"/>
+         <string v="XML"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
+      <value n="internalEncoding" v="UTF-8"/>
+      <list n="Javac.commandline.optionlist">
+         <string v="-g"/>
+         <string v="-Xlint:all"/>
+         <string v="-Xlint:-cast"/>
+         <string v="-Xlint:-empty"/>
+         <string v="-Xlint:-fallthrough"/>
+         <string v="-Xlint:-path"/>
+         <string v="-Xlint:-processing"/>
+         <string v="-Xlint:-serial"/>
+         <string v="-Xlint:-unchecked"/>
+         <string v="-processor"/>
+         <string v="com.beshara.assets.codetools.processors.ProcessorsManager"/>
+      </list>
+      <value n="Javac.-processor" v="truecom.beshara.assets.codetools.processors.ProcessorsManager"/>
+      <value n="outOfProcess" v="true"/>
+   </hash>
+   <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
+      <hash n="profileDefinitions">
+         <hash n="map-app">
+            <hash n="archiveOptions">
+               <value n="compressed" v="true"/>
+               <value n="compressionLevel" v="9"/>
+               <value n="hasManifest" v="true"/>
+            </hash>
+            <value n="enterpriseAppName" v="map-app"/>
+            <hash n="fileGroups">
+               <list n="groups">
+                  <hash>
+                     <list n="contributors">
+                        <hash>
+                           <value n="type" v="2"/>
+                        </hash>
+                     </list>
+                     <value n="displayName" v="Project Output"/>
+                     <hash n="filters">
+                        <list n="rules">
+                           <hash>
+                              <value n="pattern" v="build.properties"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="build.xml"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="pom.xml"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="DefaultFilters" v=""/>
+                           </hash>
+                        </list>
+                     </hash>
+                     <value n="internalName" v="project-output"/>
+                     <value n="type" v="1"/>
+                  </hash>
+               </list>
+            </hash>
+            <url n="jarURL" path="deploy/map-app.jar"/>
+            <hash n="libraryDependencies">
+               <value n="IncludeLibrariesFromOtherContainers" v="true"/>
+            </hash>
+            <value n="platformType" v="WEBLOGIC"/>
+            <value n="platformVersion" v="10.3.0.0"/>
+            <value n="profileClass" v="oracle.jdeveloper.deploy.ejb.EjbProfile"/>
+            <value n="profileName" v="map-app"/>
+         </hash>
+         <hash n="map-proxy">
+            <hash n="archiveOptions">
+               <value n="hasManifest" v="false"/>
+            </hash>
+            <hash n="fileGroups">
+               <list n="groups">
+                  <hash>
+                     <list n="contributors">
+                        <hash>
+                           <value n="type" v="2"/>
+                        </hash>
+                     </list>
+                     <value n="displayName" v="Project Output"/>
+                     <hash n="filters">
+                        <list n="rules">
+                           <hash>
+                              <value n="pattern" v="build.properties"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="build.xml"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="pom.xml"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/**/integration/*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="META-INF/"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/facade/*EntityConv*.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/client/*ClientFactoryOld.*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/deploy/*SessionBean.*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/bo/*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/dao/*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/facade/*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/test/*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/*Test.*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/resources/*.*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="DefaultFilters" v=""/>
+                           </hash>
+                        </list>
+                     </hash>
+                     <value n="internalName" v="project-output"/>
+                     <value n="type" v="1"/>
+                  </hash>
+               </list>
+            </hash>
+            <url n="jarURL" path="deploy/map-proxy.jar"/>
+            <hash n="libraryDependencies">
+               <value n="IncludeLibrariesFromOtherContainers" v="true"/>
+            </hash>
+            <value n="profileClass" v="oracle.jdeveloper.deploy.jar.ArchiveProfile"/>
+            <value n="profileName" v="map-proxy"/>
+         </hash>
+      </hash>
+      <list n="profileList">
+         <string v="map-app"/>
+         <string v="map-proxy"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdeveloper.maven.compiler.MavenRunConfiguration">
+      <list n="availableGoalList">
+         <string v="clean"/>
+         <string v="compile"/>
+         <string v="deploy"/>
+         <string v="generate-resources"/>
+         <string v="generate-sources"/>
+         <string v="generate-test-resources"/>
+         <string v="generate-test-sources"/>
+         <string v="initialize"/>
+         <string v="integration-test"/>
+         <string v="post-clean"/>
+         <string v="post-integration-test"/>
+         <string v="post-site"/>
+         <string v="pre-clean"/>
+         <string v="pre-integration-test"/>
+         <string v="prepare-package"/>
+         <string v="pre-site"/>
+         <string v="process-classes"/>
+         <string v="process-resources"/>
+         <string v="process-sources"/>
+         <string v="process-test-classes"/>
+         <string v="process-test-resources"/>
+         <string v="process-test-sources"/>
+         <string v="site"/>
+         <string v="site-deploy"/>
+         <string v="test"/>
+         <string v="test-compile"/>
+         <string v="validate"/>
+         <string v="verify"/>
+      </list>
+      <value n="goalToRun" v="install"/>
+      <url n="pomfileURL" path="pom.xml"/>
+      <list n="selectedGoalList">
+         <string v="package"/>
+         <string v="install"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdeveloper.model.J2eeSettings">
+      <value n="j2eeWebAppName" v="map"/>
+      <value n="j2eeWebContextRoot" v="map"/>
+      <hash n="webContentSet">
+         <list n="pattern-filters">
+            <string v="-WEB-INF/temp/"/>
+            <string v="-WEB-INF/classes/"/>
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="public_html/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.model.PathsConfiguration">
+      <hash n="javaContentSet">
+         <list n="constituent-sets"/>
+         <list n="pattern-filters">
+            <string v="-com/beshara/csc/gn/map/presentation/"/>
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="src/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.offlinedb.model.OfflineDBProjectSettings">
+      <hash n="offlineDBContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="database/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.runner.RunConfigurations">
+      <hash n="runConfigurationDefinitions">
+         <hash n="Default">
+            <value n="custom" v="false"/>
+            <value n="name" v="Default"/>
+         </hash>
+         <hash n="EJB 3.0 Client">
+            <value n="allowInput" v="false"/>
+            <value n="clearLogBeforeRun" v="true"/>
+            <value n="compileBeforeRun" v="true"/>
+            <value n="connectionName"/>
+            <value n="custom" v="false"/>
+            <value n="ignoreCompilerErrors" v="false"/>
+            <value n="javaOptions" v="-javaagent:toplink/jlib/essentials-agent.jar"/>
+            <value n="logCommand" v="true"/>
+            <value n="logError" v="true"/>
+            <value n="logExit" v="true"/>
+            <value n="logOutput" v="true"/>
+            <value n="name" v="EJB 3.0 Client"/>
+            <hash n="oracle.jdevimpl.runner.debug.DebugConfiguration">
+               <value n="JPDADebugArguments" v="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=&lt;port>"/>
+               <value n="tracingExclude" v="java;javax;sun;sunw;com.sun;apple;com.apple;com.evermind;com.oracle;com.orionserver;EDU.oswego;oracle.as;oracle.core;oracle.dms;oracle.hooks;oracle.ide;oracle.ias;oracle.j2ee;oracle.jdbc;oracle.jdevimpl;oracle.jsp;oracle.oc4j;oracle.ojc;oracle.security;oracle.sql;oracle.webservices;oracle.xml;org.apache;org.omg;org.w3c;org.xml"/>
+               <value n="tracingInclude" v=""/>
+            </hash>
+            <value n="programArguments" v=""/>
+            <value n="remoteDebuggingProfiling" v="false"/>
+            <value n="runActiveFile" v="true"/>
+            <url n="runDirectoryURL" protocol="file" path="/jdevstudio10133/"/>
+            <value n="targetURL"/>
+            <value n="useProxy" v="true"/>
+            <value n="VMName" v="client"/>
+         </hash>
+      </hash>
+      <list n="runConfigurationList">
+         <string v="Default"/>
+         <string v="EJB 3.0 Client"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdevimpl.config.JProjectLibraries">
+      <list n="exportedReferences">
+         <hash>
+            <value n="id" v="EJB 3.0"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle JDBC"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="WebLogic 10.3 Remote-Client"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="TopLink"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" protocol="file" path="/Z:/JDevLibs/business/csc-business/Business-3.7.0.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
+      <hash n="internalDefinitions">
+         <list n="libraryDefinitions"/>
+      </hash>
+      <list n="libraryReferences">
+         <hash>
+            <value n="id" v="EJB 3.0"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle JDBC"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="WebLogic 10.3 Remote-Client"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="TopLink"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" protocol="file" path="/Z:/JDevLibs/business/csc-business/Business-3.7.0.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
+   </hash>
+   <hash n="oracle.jdevimpl.config.JProjectPaths">
+      <url n="outputDirectory" path="classes/"/>
+   </hash>
+   <hash n="oracle.tip.tools.ide.pm.addin.PMProjectSettings">
+      <hash n="Integration_Content">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+      </hash>
+   </hash>
+</jpr:project>

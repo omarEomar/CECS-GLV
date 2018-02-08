@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
+    <persistence-unit name="MAP">
+        <provider>com.beshara.base.dataauditing.PersistenceProvider</provider>
+        <jta-data-source>jdbc/CSCDBConnectionDS</jta-data-source>
+        <properties>
+            <property name="javax.persistence.jtaDataSource" value="jdbc/CSCDBConnectionDS"/>
+            <property name="toplink.target-server" value="com.beshara.base.transaction.WebLogicTransactionController"/>
+            <property name="toplink.cache.shared.default" value="false"/>
+            <!--property name="toplink.logging.level" value="FINE"/-->
+        </properties>
+    </persistence-unit>
+</persistence>
