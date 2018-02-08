@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsfSecurityHandler mode="all" technologyCode="1" 
+    pagesFolder="/security/" indexURL="/index.jsf"
+    webPageTypeCode="1" facetTypeCode="2" 
+    treesFolder="/WEB-INF/module/config/security/trees" accessTracingEnabled="false">
+    
+  <componentsTypesMappings>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlPanelGrid" typeCode="3"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlDataTable" typeCode="4"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlInputText" typeCode="5"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlForm" typeCode="6"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlOutputText" typeCode="7"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.column.HtmlSimpleColumn" typeCode="8"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlCommandButton" typeCode="9"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlGraphicImage" typeCode="10"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlPanelGroup" typeCode="11"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.tree2.HtmlTree" typeCode="12"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.sortheader.HtmlCommandSortHeader" typeCode="13"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.navmenu.jscookmenu.HtmlCommandJSCookMenu" typeCode="14"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlMessages" typeCode="15"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.div.Div" typeCode="16"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlOutputLabel" typeCode="17"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlSelectOneRadio" typeCode="18"/>
+    <componentTypeMapping typeName="javax.faces.component.UISelectItem" typeCode="19"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlSelectBooleanCheckbox" typeCode="20"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlInputHidden" typeCode="21"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlCommandButton" typeCode="22"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlOutputText" typeCode="23"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.datascroller.HtmlDataScroller" typeCode="24"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlCommandLink" typeCode="25"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.navmenu.UINavigationMenuItem" typeCode="26"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlPanelGroup" typeCode="27"/>    
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlPanelGrid" typeCode="28"/>    
+    <componentTypeMapping typeName="beshara.sf.jsfcomp.clientvalidators.lengthvalidator.LengthValidator" typeCode="29"/>    
+    <componentTypeMapping typeName="org.apache.myfaces.custom.calendar.HtmlInputCalendar" typeCode="30"/>    
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlSelectOneMenu" typeCode="31"/>    
+    <componentTypeMapping typeName="org.apache.myfaces.custom.selectitems.UISelectItems" typeCode="32"/>    
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlInputText" typeCode="33"/>    
+    <componentTypeMapping typeName="org.ajax4jsf.ajax.html.HtmlAjaxCommandButton" typeCode="34"/>    
+    <componentTypeMapping typeName="org.ajax4jsf.ajax.html.HtmlAjaxFunction" typeCode="35"/>    
+    <componentTypeMapping typeName="javax.faces.component.UISelectItems" typeCode="36"/>    
+    <componentTypeMapping typeName="org.apache.myfaces.custom.aliasbean.AliasBean" typeCode="37"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlOutputLabel" typeCode="38"/>
+    <componentTypeMapping typeName="com.beshara.common.web.jsf.operationbar.HtmlCommandButton" typeCode="50"/>
+    <componentTypeMapping typeName="com.beshara.common.web.jsf.operationbar.UINavigationMenuItem" typeCode="51"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlSelectOneMenu" typeCode="52"/>
+    <componentTypeMapping typeName="org.ajax4jsf.ajax.html.HtmlAjaxRegion" typeCode="53"/>    
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlInputTextarea" typeCode="54"/>    
+    <componentTypeMapping typeName="com.exadel.htmLib.components.UIBody" typeCode="55"/>    
+    <componentTypeMapping typeName="com.exadel.htmLib.components.UIHtml" typeCode="56"/>    
+    <componentTypeMapping typeName="com.exadel.htmLib.components.UITable" typeCode="57"/>    
+    <componentTypeMapping typeName="com.exadel.htmLib.components.UITr" typeCode="58"/>    
+    <componentTypeMapping typeName="com.exadel.htmLib.components.UITd" typeCode="59"/>    
+    <componentTypeMapping typeName="com.exadel.htmLib.components.UIDiv" typeCode="60"/>    
+  </componentsTypesMappings>
+  
+  <iterativeComponentsClasses>
+    <componentClass value="org.apache.myfaces.component.html.ext.HtmlDataTable"/>
+    <componentClass value="org.apache.myfaces.custom.tree2.HtmlTree"/>
+    <componentClass value="org.apache.myfaces.custom.navmenu.jscookmenu.HtmlCommandJSCookMenu"/>
+  </iterativeComponentsClasses>
+  
+<pages>   
+
+<page viewId="/map/module/jsps/objecttypes/list.jsp" devObject="12196" bsnObject="12327"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=64" devObject="23124" bsnObject="22971"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=66" devObject="23125" bsnObject="22972"/>
+<page viewId="/module/jsps/objecttypes/list.jsp" devObject="23117" bsnObject="22964"/>
+<page viewId="/module/jsps/societyrelations/list.jsp" devObject="23118" bsnObject="22965"/>
+<page viewId="/module/jsps/map/maplist.jsp?objectsent=-1" devObject="23119" bsnObject="22966"/>
+<page viewId="/module/jsps/society/list.jsp" devObject="23116" bsnObject="22963"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=57" devObject="23121" bsnObject="22968"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=58" devObject="23122" bsnObject="22969"/>
+<page viewId="/map/module/jsps/society/list.jsp" devObject="12195" bsnObject="12326"/>
+<page viewId="/map/module/jsps/societyrelations/list.jsp" devObject="12197" bsnObject="12328"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=62" devObject="23123" bsnObject="22970"/>
+<page viewId="/map/module/jsps/map/maplist.jsp?objectsent=-1" devObject="12198" bsnObject="12329"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=56" devObject="23120" bsnObject="22967"/>
+</pages>
+
+</jsfSecurityHandler>

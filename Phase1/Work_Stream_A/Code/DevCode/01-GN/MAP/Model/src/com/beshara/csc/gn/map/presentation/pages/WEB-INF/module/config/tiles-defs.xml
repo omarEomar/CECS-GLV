@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration//EN" "http://jakarta.apache.org/struts/dtds/tiles-config.dtd">
+<tiles-definitions>
+  <!-- we assume that our pages structure will contains only (title, header, content, footer) -->
+  <definition name="main.layout" path="/WEB-INF/app/tiles/enhanced_application_mainlayout.jsp">
+    <put name="content1" value="/WEB-INF/app/tiles/content1-1.jsp"></put>
+    <put name="search" value="/WEB-INF/app/tiles/content1.jsp"></put>
+    <put name="msg" value="/WEB-INF/app/tiles/msg.jsp"></put>
+    <put name="content" value="content2-1.jsp"></put>
+    <put name="title" value="module_div_title"></put>
+    <put name="titlepage" value="Title Page"></put>
+    <put name="titleAddDiv" value="module_div_title"></put>
+    <put name="titleEditDiv" value="module_div_title"></put>
+    <put name="titleDelDiv" value="DelAlert"></put>
+    <put name="titleDelConDiv" value="DelAlertCon"></put>
+    <put name="steps" value="/WEB-INF/app/tiles/tempstep.jsp"></put>
+    <put name="bar" value="/WEB-INF/app/tiles/tempbar.jsp"></put>
+    <put name="paging" value="/WEB-INF/app/tiles/temppaging.jsp"></put>
+    <put name="treeadd" value="/WEB-INF/app/tiles/treeadd.jsp"></put>
+    <put name="treeedit" value="/WEB-INF/app/tiles/treeedit.jsp"></put>
+    <put name="lookupadd" value="/WEB-INF/app/tiles/adddiv.jsp"></put>
+    <put name="lookupedit" value="/WEB-INF/app/tiles/editdiv.jsp"></put>
+    <put name="delalert" value="/WEB-INF/app/tiles/delalertdiv.jsp"></put>
+    <put name="delalerttree" value="/WEB-INF/app/tiles/treedelalertdiv.jsp"></put>
+    <put name="delconfirm" value="/WEB-INF/app/tiles/delconfirmdiv.jsp"></put>
+    <put name="treedivdetails" value="/WEB-INF/app/tiles/treedivdetails.jsp"></put>
+    <put name="showTreeDivDetails" value="false"></put>
+    <put name="showLookupAdd" value="false"></put>
+    <put name="showLookupEdit" value="flse"></put>
+    <put name="showDelAlert" value="false"></put>
+    <put name="showDelAlertTree" value="false"></put>
+    <put name="showDelConfirm" value="false"></put>
+    <put name="showTreeAdd" value="false"></put>
+    <put name="showTreeEdit" value="false"></put>
+    <put name="showSearch" value="false"></put>
+    <put name="showContent1" value="false"></put>
+    <put name="showsteps" value="false"></put>
+    <put name="showbar" value="false"></put>
+    <put name="showpaging" value="false"></put>
+    <put name="pageId" value=""></put>
+    <put name="wizardId" value=""></put>
+    <put name="divTreeDetails" value=""></put>
+    <put name="pageType" value=""></put>
+    <put name="showtreeContent" value="false"></put>
+    <put name="showdatatableContent" value="false"></put>
+    <put name="navigation" value=""></put>
+    <put name="showNavigation" value="false"></put>
+    <put name="masterdetaildiv" value="/WEB-INF/app/tiles/masterdetaildiv.jsp"></put>
+    <put name="showMasterDetail" value="false"></put>
+    <put name="commondata" value="/WEB-INF/app/tiles/commondata.jsp"></put>
+    <put name="showCommonData" value="false"></put>
+    <put name="manyToMany" value="false"></put>
+    <!--Tree Div Attributes -->
+    <put name="treediv" value="/WEB-INF/app/tiles/treediv.jsp"></put>
+    <put name="showTreediv" value="false"></put>
+    
+    
+  <put name="showCustomDiv1" value="false"></put>
+  <put name="customDiv1" value=""></put>
+  <put name="resourcesBundlePath" value="com.beshara.csc.gn.map.presentation.resources.map"></put>
+  <put name="wait" value="/WEB-INF/app/tiles/pleasewait.jsp"></put>
+  <put name="divwait" value="/WEB-INF/app/tiles/divwait.jsp"></put>
+  <put name="stylePath" value="/module/media/css/ar/Style.css"/>
+  <put name="jsPaht" value="/module/js/module.js"/>
+    <!-- -->
+  </definition>
+   
+  <definition name="homepage" path="/WEB-INF/app/tiles/home_template.jsp">
+      <put name="resourcesBundlePath"
+       value="com.beshara.csc.gn.map.presentation.resources.map"></put>
+ </definition>
+  <definition name="lookuplistpopup" extends="main.layout">
+    <put name="showdatatableContent" value="true"></put>
+    <put name="showSearch" value="true"></put>
+    <put name="showsteps" value="false"></put>
+    <put name="showContent1" value="false"></put>
+    <put name="showbar" value="true"></put>
+    <put name="showpaging" value="true"></put>
+    <put name="titlepage" value=""></put>
+    <put name="pageId" value=""></put>
+    <put name="searchAction" value=""></put>
+    <put name="searchType" value=""></put>
+    <put name="searchQuery" value=""></put>
+    <put name="showdatatableContent" value="true"></put>
+    <put name="pageType" value="0"></put>
+  </definition>
+  <definition name="lookuplistdiv" extends="main.layout">
+    <put name="showSearch" value="true"></put>
+    <put name="showsteps" value="false"></put>
+    <put name="showContent1" value="false"></put>
+    <put name="showbar" value="true"></put>
+    <put name="showpaging" value="true"></put>
+    <put name="searchQuery" value=""></put>
+    <put name="showLookupAdd" value="true"></put>
+    <put name="showLookupEdit" value="true"></put>
+    <put name="showDelAlert" value="true"></put>
+    <put name="showDelConfirm" value="true"></put>
+    <put name="titlepage" value=""></put>
+    <put name="pageId" value=""></put>
+    <put name="searchAction" value=""></put>
+    <put name="searchType" value=""></put>
+    <put name="showdatatableContent" value="true"></put>
+    <put name="pageType" value="0"></put>
+    <put name="content" value="/WEB-INF/app/tiles/lookuplist.jsp"></put>
+    <put name="showCommonData" value="true"></put>
+  </definition>
+  <definition name="manytomanylist" extends="main.layout">
+    <put name="showSearch" value="true"></put>
+    <put name="showsteps" value="false"></put>
+    <put name="showContent1" value="false"></put>
+    <put name="showbar" value="true"></put>
+    <put name="showpaging" value="true"></put>
+    <put name="showDelAlert" value="true"></put>
+    <put name="showDelConfirm" value="true"></put>
+    <put name="pageType" value="0"></put>
+    <put name="titlepage" value=""></put>
+    <put name="pageId" value=""></put>
+    <put name="showdatatableContent" value="true"></put>
+    <put name="search" value=""></put>
+  </definition>
+  <definition name="manytomanyadd" extends="main.layout">
+    <put name="showsteps" value="true"></put>
+    <put name="showContent1" value="true"></put>
+    <put name="titlepage" value=""></put>
+    <put name="wizardId" value=""></put>
+    <put name="showbar" value="false"></put>
+    <put name="showpaging" value="false"></put>
+    <put name="showSearch" value="false"></put>
+  </definition>
+  <definition name="mainpage" path="/WEB-INF/app/tiles/mainpage.jsp">
+    <put name="resourcesBundlePath" value="com.beshara.csc.gn.map.presentation.resources.map"></put>
+    <put name="stylePath" value="/module/media/css/ar/Style.css"/>
+      <put name="jsPaht" value="/module/js/module.js"/>
+    <put name="title" value="Main Page"></put>
+    <put name="header" value="/WEB-INF/app/tiles/header.jsp"></put>
+    <put name="footer" value="/WEB-INF/app/tiles/footer.jsp"></put>
+    <put name="tree" value="/WEB-INF/app/tiles/tree.jsp"></put>
+    <put name="loginHeader" value="/WEB-INF/app/tiles/loginHeader.jsp"></put>
+    <put name="body" value="/WEB-INF/app/tiles/body.jsp"></put>
+  </definition>
+  <definition name="errpage" extends="main.layout">
+    <put name="content1" value="/WEB-INF/app/tiles/errorpage_cnt1.jsp"></put>
+    <put name="titlepage" value="errorPageTitle"></put>
+ </definition>
+  <definition name="tree.page" extends="main.layout">
+    <put name="showSearch" value="true"></put>
+    <put name="showbar" value="true"></put>
+    <put name="showtreeContent" value="true"></put>
+    <put name="titlepage" value=""></put>
+    <put name="content" value="treelist.jsp"></put>
+    <put name="searchAction" value=""></put>
+    <put name="searchType" value=""></put>
+    <put name="searchQuery" value=""></put>
+    <put name="pageId" value=""></put>
+    <put name="showDelAlertTree" value="true"></put>
+    <put name="showTreeAdd" value="true"></put>
+    <put name="showTreeEdit" value="true"></put>
+    <put name="showTreeDivDetails" value="true"></put>
+    <put name="divTreeDetails" value="divTreeDetails"></put>
+    <put name="pageType" value="1"></put>
+    <put name="code" value=""></put>
+    <put name="name" value=""></put>
+    <put name="parent" value=""></put>
+    <put name="leaf" value=""></put>
+    <put name="showCommonData" value="true"></put>
+  </definition>
+  <definition name="addedit.page" extends="main.layout">
+    <put name="showContent1" value="true"></put>
+    <put name="titlepage" value=""></put>
+    <put name="pageId" value=""></put>
+    <put name="pageType" value="0"></put>
+    <put name="showCommonData" value="true"></put>
+  </definition>
+  <definition name="masterdetailpage" extends="main.layout">
+    <put name="showSearch" value="true"></put>
+    <put name="showsteps" value="false"></put>
+    <put name="showContent1" value="false"></put>
+    <put name="showbar" value="true"></put>
+    <put name="showpaging" value="true"></put>
+    <put name="titlepage" value=""></put>
+    <put name="pageId" value=""></put>
+    <put name="searchAction" value=""></put>
+    <put name="searchType" value=""></put>
+    <put name="searchQuery" value=""></put>
+    <put name="pageType" value="0"></put>
+    <put name="showMasterDetail" value="true"></put>
+    <put name="showCommonData" value="true"></put>
+  </definition>
+  <definition name="testpage" extends="main.layout">
+    <put name="pageId" value="jobspage"></put>
+  </definition>
+  <definition name="test1" extends="main.layout">
+    <put name="pageId" value="abilitypage"></put>
+    <put name="wizardId" value="sample"></put>
+  </definition>
+  <definition name="societylist.page" extends="lookuplistdiv">
+    <put name="titlepage" value="Society"></put>
+    <put name="titleAddDiv" value="society_add_new_society_title"></put>
+    <put name="titleEditDiv" value="society_update_title"></put>
+    <put name="searchAction" value="societyListBean.search"></put>
+    <put name="searchType" value="societyListBean.searchType"></put>
+    <put name="searchQuery" value="societyListBean.searchQuery"></put>
+    <put name="showsteps" value="false"></put>
+    <put name="pageId" value="societylistpage"></put>
+  </definition>
+  <definition name="societyAddListPage.page" extends="lookuplistdiv">
+    <put name="titlepage" value="societies_add_title"></put>
+    <put name="pageId" value="societyaddlistpage"></put>
+    <put name="content" value="/module/jsps/society/societyadd.jsp"></put>
+    <put name="integrationDiv1" value="/integration/org/jsps/ministry/searchministriesdiv.jsp"/> 
+  </definition>
+    <!-- ************************** start societies types by Abdelrhman 20-11-2013  *********************************-->
+    <definition name="societieslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="societies_title"/>
+        <put name="titleAddDiv" value="societies_add_title"/>
+        <put name="titleEditDiv" value="societies_edit_title"/>
+        <put name="searchAction" value="societiesListBean.search"/>
+        <put name="searchType" value="societiesListBean.searchType"/>
+        <put name="searchQuery" value="societiesListBean.searchQuery"/>
+        <put name="content" value="/module/jsps/society/list_cnt.jsp"></put>
+        <put name="content1" value="/module/jsps/society/list_cnt1.jsp"></put>
+    </definition>
+    <!-- ************************** End societies  by Abdelrhman 3-12-2013  *********************************-->
+    
+    <!-- ************************** Start objectTypes   by Abdelrhman 3-12-2013   *********************************-->
+    <definition name="objectTypesList.page" extends="lookuplistdiv">
+        <put name="titlepage" value="object_types_title"/>
+        <put name="titleAddDiv" value="object_types_add_title"/>
+        <put name="titleEditDiv" value="object_types_edit_title"/>
+        <put name="searchAction" value="objectTypesListBean.search"/>
+        <put name="searchType" value="objectTypesListBean.searchType"/>
+        <put name="searchQuery" value="objectTypesListBean.searchQuery"/>
+    </definition>
+    <!-- ************************** End of objectTypes   by Abdelrhman 3-12-2013   *********************************-->
+
+  <definition name="objecttypelist.page" extends="lookuplistdiv">
+    <put name="titlepage" value="Object Type"></put>
+    <put name="titleAddDiv" value="AddingObjectTypesPage"></put>
+    <put name="titleEditDiv" value="EditingObjectTypesPage"></put>
+    <put name="searchAction" value="objectTypeListBean.search"></put>
+    <put name="searchType" value="objectTypeListBean.searchType"></put>
+    <put name="searchQuery" value="objectTypeListBean.searchQuery"></put>
+    <put name="showsteps" value="false"></put>
+    <put name="pageId" value="objecttypelistpage"></put>
+  </definition>
+  <definition name="type.page" extends="main.layout">
+    <put name="pageId" value="typepage"></put>
+  </definition>
+  <definition name="mapped_data.page" extends="lookuplistdiv">
+    <put name="titlepage" value="module_div_title"></put>
+    <put name="showLookupAdd" value="true"></put>
+    <put name="titleAddDiv" value="anEmptyTitle"></put>
+    <put name="pageId" value=""></put>
+    <put name="showdatatableContent" value="false"></put>
+    <put name="showbar" value="false"></put>
+    <put name="showSearch" value="true"></put>
+    <put name="lookupadd" value="/module/jsps/map/mapped_lookup_div.jsp"></put>
+    <put name="delconfirm" value="/module/jsps/map/mapdelconfirmdiv.jsp"></put>
+    <put name="content1" value="/module/jsps/map/maplist_cnt1.jsp"></put>
+    <put name="showContent1" value="true"></put>
+    <put name="searchAction" value="mappedDataBean.search"></put>
+    <put name="searchType" value="mappedDataBean.searchType"></put>
+    <put name="searchQuery" value="mappedDataBean.searchQuery"></put>
+    <put name="showsteps" value="false"></put>
+    <put name="showpaging" value="false"></put>
+    <put name="showLookupEdit" value="false"></put>
+    <put name="showDelAlert" value="true"></put>
+    <put name="showDelConfirm" value="true"></put>
+    <put name="showTreediv" value="true"></put>
+     <put name="treediv" value="/module/jsps/map/mapTreeDiv.jsp"></put>
+    <put name="search" value="/module/jsps/map/searchDiv.jsp"></put>
+    <put name="lovDiv" value="/module/jsps/map/mapObjectTypeSearch.jsp"></put>
+  </definition>
+
+
+<definition name="societyRelation.page" extends="lookuplistdiv">
+    <put name="titlepage" value="module_div_title"></put>
+    <put name="showLookupAdd" value="true"></put>
+    <put name="titleAddDiv" value="anEmptyTitle"></put>
+    <put name="pageId" value=""></put>
+    <put name="showdatatableContent" value="false"></put>
+    <put name="showbar" value="false"></put>
+    <put name="showSearch" value="false"></put>
+    <put name="content1" value="/module/jsps/societyrelations/socrelationadd_cnt1.jsp"></put>
+    <put name="showContent1" value="true"></put>
+    <put name="showsteps" value="false"></put>
+    <put name="showpaging" value="false"></put>
+    <put name="showLookupEdit" value="false"></put>
+    <put name="showDelAlert" value="false"></put>
+    <put name="showDelConfirm" value="false"></put>
+    <put name="lovDiv" value="/module/jsps/societyrelations/objectTypeSearch.jsp"></put>
+  </definition>
+  <definition name="societyrelationslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="minRelation"/>
+        <put name="titleAddDiv" value="module_div_title"/>
+        <put name="content" value="/module/jsps/societyrelations/list_cnt.jsp"></put>
+        <put name="delalert" value="/module/jsps/societyrelations/delalertdiv.jsp"></put>
+        <put name="delconfirm" value="/module/jsps/societyrelations/delconfirmdiv.jsp"></put>
+        <!--put name="titleEditDiv" value="societies_edit_title"/>
+        <put name="searchAction" value="societiesListBean.search"/>
+        <put name="searchType" value="societiesListBean.searchType"/>
+        <put name="searchQuery" value="societiesListBean.searchQuery"/-->
+    </definition>
+    
+    <definition name="societyEditRelation.page" extends="lookuplistdiv">
+    <put name="pageId" value=""></put>
+    <put name="content1" value="/module/jsps/societyrelations/socrelationedit_cnt1.jsp"></put>
+    <put name="showContent1" value="true"></put>
+    <put name="lovDiv" value=""></put>
+    </definition>
+</tiles-definitions>

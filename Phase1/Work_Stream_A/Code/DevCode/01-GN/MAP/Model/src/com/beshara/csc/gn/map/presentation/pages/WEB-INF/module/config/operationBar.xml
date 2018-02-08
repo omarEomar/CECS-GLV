@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+OperationBar configuration sample
+@author       Ashraf Gaber, Waleed Badr
+@since        24/06/2008
+
+<operationBar selectionCount="" recordsCount="">
+     <definitions>
+        <definition name="" id="" separator="" ajax="" selection="" selectionCount="" 
+                     onclick="" action="" actionListener="" disabled="" rendered="" 
+                     value="" param="" immediate="" title="" binding=""
+                     ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete=""
+                     styleClass="" disabledStyleClass="" hoverStyleClass="" icon=""/>
+     </definitions>
+    <pages>
+        <page viewId="" beanName="" resourceName="" selectionCount="" recordsCount="" rendered="" buttonsRendered="" menuRendered="">
+            <buttons>
+                <button definition="" id="" separator="" ajax="" selection="" selectionCount="" 
+                 onclick="" action="" actionListener="" disabled="" rendered="" 
+                 value="" param="" immediate="" title="" binding=""
+                 ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete=""
+                 styleClass="" disabledStyleClass="" hoverStyleClass=""/>
+            </buttons>
+            <menu>
+                <menuItem definition="" id="" separator="" ajax="" selection="" selectionCount="" 
+                 onclick="" action="" actionListener="" disabled="" rendered="" 
+                 value="" param="" immediate="" title="" binding=""
+                 ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete=""
+                 icon="">
+                    <menuItems>
+                        <menuItem definition="" id="" separator="" ajax="" selection="" selectionCount="" 
+                         onclick="" action="" actionListener="" disabled="" rendered="" 
+                         binding="" immediate="" title="" value="" param=""
+                         ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete=""
+                         icon=""/>
+                    </menuItems>
+                <menuItem>
+            </menu>
+        </page>
+    </pages>
+</operationBar>
+
+separator: true/false*
+ajax     : true/false*
+selection: none*/single/multi
+
+* default value
+Note: The default paramName ="param" and its unmodifiable.
+-->
+<!-- 
+OperationBar configuration sample
+@author       Ashraf Gaber, Waleed Badr
+@since        04/06/2008
+
+<operationBar>
+   <pages>
+       <page viewId="" beanName="" resourceName="" recordsCount="" rendered="" buttonsRendered="" menuRendered="">
+           <buttons>
+               <button id="" separator="" ajax="" selection="" selectionCount="" action="" actionListener="" value="" 
+               styleClass="" disabledStyleClass="" disabled="" rendered="" binding="" immediate="" title="" onclick="" 
+               onmouseover="" onmouseout="" paramName="" paramValue="" ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete=""/>
+           </buttons>
+           <menu>
+               <menuItem id="" separator="" ajax="" selection="" selectionCount="" action="" actionListener="" value="" 
+               disabledStyleClass="" disabled="" rendered="" binding="" icon="" itemDescription="" itemLabel="" itemValue=""
+               ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete="">
+                   <menuItems>
+                       <menuItem id="" separator="" ajax="" selection="" selectionCount="" action="" actionListener="" value="" 
+                       disabledStyleClass="" disabled="" rendered="" binding="" icon="" itemDescription="" itemLabel="" itemValue=""
+                       ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete=""/>
+                   </menuItems>
+               <menuItem>
+           </menu>
+       </page>
+   </pages>
+</operationBar>
+
+separator: true/false*
+ajax     : true/false*
+selection: none*/single/multi
+
+* default value
+-->
+<operationBar applyMainMenuItemsCSSHack="true">
+     <pages>
+          <!--******************-->
+         
+          <page viewId="/module/jsps/society/societylist.jsp" recordsCount="#{$myBean$.listSize}" beanName="societyListBean" 
+          resourceName="globalResources" formId="myForm">
+               <buttons>
+                    <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled" action="#{$myBean$.preAdd}"
+                            ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();" ajax_reRender="divAddLookup"/>
+                    <button id="separator1" separator="true"/>
+                    <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true" styleClass="OB_edit" disabledStyleClass="OB_edit_disabled"
+                            action="#{$myBean$.showEditDiv}" ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv); settingFoucsAtDivEdit();" ajax_reRender="divEditLookup"/>
+                    <button id="deleteButton" selection="multi" selectionCount="#{$myBean$.selectedListSize}" styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                            onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert);setFocusOnlyOnElement('CancelButtonDelAlertDiv');return false;"/>
+                    <button id="separator2" separator="true"/>
+                    <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled" onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                    <button id="cancelSearchButton" styleClass="OB_cancleSearch" disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}" disabled="#{!$myBean$.searchMode}"/>                            
+               </buttons>
+               <menu>
+                    <menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                         <menuItems>
+                              <menuItem id="unCheck" value="#{$myResource$.operation_menu_uncheck}" action="#{$myBean$.unCheck}" selection="multi" selectionCount="#{$myBean$.selectedListSize}"/>
+                         </menuItems>
+                    </menuItem>
+                    <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                         <menuItems>
+                              <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                              <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                              <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                         </menuItems>
+                    </menuItem>
+                    <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                         <menuItems>
+                              <menuItem id="code_" value="#{$myResource$.Code}" actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize==0}"/>
+                              <menuItem id="name_" value="#{$myResource$.TableName}" actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize==0}"/>
+                         </menuItems>
+                    </menuItem>
+               </menu>
+          </page>
+          
+          
+        <page viewId="/module/jsps/society/list.jsp"
+              recordsCount="#{$myBean$.listSize}" beanName="societiesListBean"
+              resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton"  styleClass="OB_add"
+                        disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.goToAdd}"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single"
+                        selectionCount="#{$myBean$.selectedListSize}" styleClass="OB_edit"
+                        disabledStyleClass="OB_edit_disabled"
+                        action="#{$myBean$.showEditDiv}"/>
+                <button id="separator2" separator="true"/>
+                <button id="deleteButton" selection="multi" selectionCount="#{$myBean$.selectedListSize}" styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                            onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert);setFocusOnlyOnElement('CancelButtonDelAlertDiv');return false;"/>
+                <button id="separator3" separator="true"/>
+                <button id="searchButton" styleClass="OB_search"
+                        disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled"
+                        action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf"
+                                  value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print"
+                                  value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help"
+                                  value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                
+            </menu>
+        </page>
+        
+        <page viewId="/module/jsps/maindata/governorates/list.jsp"
+              recordsCount="#{$myBean$.listSize}" beanName="governoratesListBean"
+              resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add"
+                        disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single"
+                        selectionCount="#{$myBean$.selectedListSize}"
+                        ajax="true" styleClass="OB_edit"
+                        disabledStyleClass="OB_edit_disabled"
+                        action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search"
+                        disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled"
+                        action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf"
+                                  value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print"
+                                  value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help"
+                                  value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_"
+                                  value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        
+          
+          <page viewId="/module/jsps/objecttypes/objecttypelist.jsp" recordsCount="#{$myBean$.listSize}" beanName="objectTypeListBean" 
+          resourceName="globalResources" formId="myForm">
+               <buttons>
+                    <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled" action="#{$myBean$.preAdd}"
+                            ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();" ajax_reRender="divAddLookup"/>
+                    <button id="separator1" separator="true"/>
+                    <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true" styleClass="OB_edit" disabledStyleClass="OB_edit_disabled"
+                            action="#{$myBean$.showEditDiv}" ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv); settingFoucsAtDivEdit();" ajax_reRender="divEditLookup"/>
+                    <button id="deleteButton" selection="multi" selectionCount="#{$myBean$.selectedListSize}" styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                            onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert);setFocusOnlyOnElement('CancelButtonDelAlertDiv');return false;"/>
+                    <button id="separator2" separator="true"/>
+                    <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled" onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                    <button id="cancelSearchButton" styleClass="OB_cancleSearch" disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}" disabled="#{!$myBean$.searchMode}"/>                            
+               </buttons>
+               <menu>
+                    <menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                         <menuItems>
+                              <menuItem id="unCheck" value="#{$myResource$.operation_menu_uncheck}" action="#{$myBean$.unCheck}" selection="multi" selectionCount="#{$myBean$.selectedListSize}"/>
+                         </menuItems>
+                    </menuItem>
+                    <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                         <menuItems>
+                              <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                              <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                              <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                         </menuItems>
+                    </menuItem>
+                    <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                         <menuItems>
+                              <menuItem id="code_" value="#{$myResource$.Code}" actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize==0}"/>
+                              <menuItem id="name_" value="#{$myResource$.TableName}" actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize==0}"/>
+                         </menuItems>
+                    </menuItem>
+               </menu>
+          </page>
+          
+         
+        <page viewId="/module/jsps/objecttypes/list.jsp"
+              recordsCount="#{$myBean$.listSize}" beanName="objectTypesListBean"
+              resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add"
+                        disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single"
+                        selectionCount="#{$myBean$.selectedListSize}"
+                        ajax="true" styleClass="OB_edit"
+                        disabledStyleClass="OB_edit_disabled"
+                        action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="deleteButton" selection="multi" selectionCount="#{$myBean$.selectedListSize}" styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                            onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert);setFocusOnlyOnElement('CancelButtonDelAlertDiv');return false;"/>
+              <button id="separator3" separator="true"/>
+                <button id="searchButton" styleClass="OB_search"
+                        disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled"
+                        action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf"
+                                  value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print"
+                                  value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help"
+                                  value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_"
+                                  value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        
+        <page viewId="/module/jsps/societyrelations/list.jsp" recordsCount="#{$myBean$.listSize}" beanName="listBean" resourceName="globalResources"
+         formId="myForm" >
+               <buttons>
+                    <button id="addButton"  styleClass="OB_add" disabledStyleClass="OB_add_disabled" action="#{$myBean$.goToAdd}"/>
+                     <button id="separator1" separator="true"/>
+                     <button id="editButton" selection="single"
+                        selectionCount="#{$myBean$.selectedListSize}"
+                        styleClass="OB_edit"
+                        disabledStyleClass="OB_edit_disabled"
+                        action="#{$myBean$.goToEdit}"/>
+                        <button id="separator2" separator="true"/>
+                        <button id="deleteButton" selection="multi" selectionCount="#{$myBean$.selectedListSize}" styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                            onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert);setFocusOnlyOnElement('CancelButtonDelAlertDiv');return false;"/>
+                    
+               </buttons>
+               <menu>
+                    
+                    
+                    <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                         <menuItems>
+                              <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                              <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                              <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                         </menuItems>
+                    </menuItem>
+                    <!--menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                         <menuItems>
+                              <menuItem id="code_" value="#{$myResource$.Code}" actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize==0}"/>
+                              <menuItem id="name_" value="#{$myResource$.TableName}" actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize==0}"/>
+                         </menuItems>
+                    </menuItem-->
+               </menu>
+          </page>
+          
+     </pages>
+</operationBar>

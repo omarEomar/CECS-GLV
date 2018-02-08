@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resourceManager stateHolder="JSFSessionStateHolder" defaultLocale="ar">
+    <bundles>
+        <bundle key="BaseExceptions" path="com.beshara.common.resources.exceptions"/>
+        <bundle key="DAOExceptions" path="com.beshara.common.dao.resources.exceptions"/>
+        <bundle key="SecurityCoreExceptions" path="com.beshara.sec.business.resources.exceptions"/>
+        <bundle key="SSOExceptions" path="com.beshara.sso.resources.exceptions"/>
+        <bundle key="SSOCoreExceptions" path="com.beshara.sso.server.resources.exceptions"/>
+        <bundle key="SSOWebUtilsExceptions" path="com.beshara.sso.web.resources.exceptions"/>
+        <bundle key="SecurityEngineExceptions" path="com.beshara.sec.engine.resources.exceptions"/>
+        <bundle key="JSFSecurityHandlerExceptions" path="com.beshara.sec.web.jsf.handler.resources.exceptions"/>
+        <bundle key="SecurityEngineExtExceptions" path="com.beshara.csc.sec.engine.resources.exceptions"/>
+    </bundles>
+</resourceManager>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+<faces-config xmlns="http://java.sun.com/JSF/Configuration">
+    <application/>
+    <managed-bean>
+        <managed-bean-name>Login</managed-bean-name>
+        <managed-bean-class>com.beshara.jsfbase.csc.backingbean.security.LoginBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>LoginRequest</managed-bean-name>
+        <managed-bean-class>com.beshara.sec.web.jsf.bean.LoginRequestBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>LoginMinistry</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.sec.web.jsf.bean.LoginMinistryBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>    
+    <managed-bean>
+        <managed-bean-name>ModuleMenu</managed-bean-name>
+        <managed-bean-class>com.beshara.sec.web.jsf.bean.ModuleMenuBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        <managed-property>
+            <property-name>target</property-name>
+            <property-class>java.lang.String</property-class>
+            <value>body</value>
+        </managed-property>
+        <managed-property>
+            <property-name>enabled</property-name>
+            <property-class>java.lang.Boolean</property-class>
+			<!--{TODO} set this to true -->
+            <value>true</value>
+        </managed-property>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>LogoutBean</managed-bean-name>
+        <managed-bean-class>com.beshara.sec.web.jsf.bean.LogoutBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>  
+	<lifecycle>
+		<phase-listener>com.beshara.sec.web.jsf.handler.JSFSecurityPhaseListener</phase-listener>
+		<phase-listener>com.beshara.sec.web.jsf.handler.BuildTreePhaseLisetener</phase-listener>
+	</lifecycle>
+</faces-config>

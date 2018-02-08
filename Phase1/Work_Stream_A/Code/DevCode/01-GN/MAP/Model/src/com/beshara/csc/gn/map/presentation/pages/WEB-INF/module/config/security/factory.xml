@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<factory>
+    <instances>
+        <!-- common instances -->
+        <instance interface="com.beshara.common.namingcontext.NamingContextManager"
+                  implementation="com.beshara.common.namingcontext.NamingContextManagerImpl" loadOnStartup="true"/>
+        <instance interface="com.beshara.common.dao.db.connection.DAODbConnectionManager"
+                  implementation="com.beshara.common.dao.db.connection.DAODbConnectionManagerImpl" loadOnStartup="true"
+                  configFile="/WEB-INF/module/config/security/dbConnections.xml"/>
+        <!-- deployment configuration -->
+        <instance interface="com.beshara.base.deploy.IRMIManager"
+                  implementation="com.beshara.base.deploy.WLRMIManager"/>
+        <instance interface="com.beshara.base.deploy.SessionBeanProvider"
+                  implementation="com.beshara.base.deploy.SessionBeanProviderImpl" loadOnStartup="true">
+            <params>
+                <param name="connection" value="deploy"/>
+                <!-- {TODO} comment the following parameter in the deployment on test server -->
+                <param name="lookupMode" value="local"/>
+                <!-- old 
+                <param name="earCode" value="2"/>
+                <param name="instanceCode" value="1"/>-->
+                <!-- new-->
+                <param name="earCode" value="34"/>
+                <param name="instanceCode" value="7"/> 
+                <param name="techLog" value="false"/>
+	        <param name="dataAudit" value="false"/>
+                <param name="dataFiltration" value="true"/>
+            </params>
+        </instance>
+        <!-- configuration manager instance -->
+        <instance interface="com.beshara.base.config.ConfigManager"
+                  implementation="com.beshara.base.config.ConfigManagerImpl" loadOnStartup="true">
+            <params>
+                <param name="connection" value="deploy"/>
+            </params>
+        </instance>
+        <!-- security configuration -->
+        <instance interface="com.beshara.common.web.context.IWebContextFactory"
+                  implementation="com.beshara.common.web.jsf.context.JSFWebContextFactory" loadOnStartup="true"/>
+        <instance interface="com.beshara.common.resources.ResourceManager"
+                  implementation="com.beshara.common.resources.ResourceManagerImpl" loadOnStartup="true"
+                  configFile="/WEB-INF/module/config/security/resources.xml"/>
+        <instance name="ThreadStateHolder" interface="com.beshara.common.stateholder.StateHolder"
+                  implementation="com.beshara.common.stateholder.ThreadStateHolder" loadOnStartup="true"/>
+        <instance name="JSFSessionStateHolder" interface="com.beshara.common.stateholder.StateHolder"
+                  implementation="com.beshara.common.web.jsf.shared.JSFSessionStateHolder" loadOnStartup="true"/>
+       <instance name="WebContextSessionStateHolder" interface="com.beshara.common.stateholder.StateHolder" 
+                  implementation="com.beshara.common.web.context.WebContextSessionStateHolder" loadOnStartup="true"/> 
+        <instance interface="com.beshara.common.dao.db.entity.DAODbEntityManager"
+                  implementation="com.beshara.common.dao.db.entity.DAODbEntityManagerImpl" loadOnStartup="true"
+                  configFile="/WEB-INF/module/config/security/entity.xml"/>
+        <instance interface="com.beshara.common.dao.DAOManager" implementation="com.beshara.common.dao.DAOManagerImpl"
+                  loadOnStartup="true" configFile="/WEB-INF/module/config/security/dao.xml"/>
+        <instance interface="com.beshara.sso.server.ISSOServer" implementation="com.beshara.sso.server.SSOServerImpl"/>
+        <instance interface="com.beshara.sso.ISSOClient" implementation="com.beshara.sso.server.test.SSOClientImpl"/>
+        <instance interface="com.beshara.sso.server.ISSOConfiguration"
+                  implementation="com.beshara.sso.server.SSOConfigurationImpl"/>
+        <instance interface="com.beshara.sso.ISSOAuthenticationProvider"
+                  implementation="com.beshara.sec.sso.SSOAuthenticationProviderImpl"/>
+        <instance name="HTTP" interface="com.beshara.sso.ISSOClientSessionKiller"
+                  implementation="com.beshara.sso.server.test.SSOHttpClientSessionKiller"/>
+        <instance interface="com.beshara.sec.engine.SecurityEngine"
+                  implementation="com.beshara.csc.sec.engine.SecurityEngineExtImpl" loadOnStartup="true"
+                  configFile="/WEB-INF/module/config/security/security.xml"/>
+        <instance name="JSFSecurityHandler" interface="com.beshara.sec.engine.SecurityHandler"
+                  implementation="com.beshara.csc.sec.web.jsf.handler.JSFSecurityHandlerExt" loadOnStartup="true"
+                  configFile="/WEB-INF/module/config/security/jsfSecurityHandler.xml"/>
+        <instance interface="com.beshara.csc.flm.flm.business.FileManager"
+                  implementation="com.beshara.csc.flm.flm.business.filesysimpl.FileSysFileManager">
+            <params>
+                <param name="module" value="map"/>
+            </params>
+        </instance>
+        <!-- SecurityInfoHolder used in business & presentation -->
+        <instance interface="com.beshara.base.security.SecurityInfoHolder"
+                  implementation="com.beshara.base.security.SecurityInfoHolderImpl" loadOnStartup="true">
+            <params>
+                <param name="stateHolder" value="WebContextSessionStateHolder"/>
+                <param name="key" value="com.beshara.security.info"/>
+            </params>
+        </instance>
+        <!-- SecurityInfoHandler that fills the security info into the SecurityInfoHolder -->
+        <instance name="SecurityInfoHandler" interface="com.beshara.sec.engine.SecurityHandler"
+                  implementation="com.beshara.csc.sec.handler.CSCSecurityInfoHandler" loadOnStartup="true"/>
+        <instance interface="com.beshara.common.web.jsf.operationbar.OperationBarManager"
+                  implementation="com.beshara.common.web.jsf.operationbar.OperationBarManagerImpl" loadOnStartup="true"
+                  configFile="/WEB-INF/module/config/operationbar.xml"/>
+        <instance interface="com.beshara.common.web.jsf.operationbar.serializer.OperationBarSerializerManager"
+                  implementation="com.beshara.common.web.jsf.operationbar.serializer.OperationBarSerializerManagerImpl"
+                  loadOnStartup="true">
+            <params>
+                <param name="generateXmlFile" value="true"/>
+                <param name="bundle" value="com.beshara.csc.gn.map.presentation.resources.map"/>
+                <param name="filePath" value="C:\operationbar"/>
+            </params>
+        </instance>
+
+        <!-- web filters -->
+        <instance name="EncodingFilter" interface="com.beshara.common.web.filter.WebFilter"
+                  implementation="com.beshara.common.web.shared.EncodingWebFilter" loadOnStartup="true">
+            <params>
+                <param name="encoding" value="UTF-8"/>
+            </params>
+        </instance>
+        <instance name="DAOFilter" interface="com.beshara.common.web.filter.WebFilter"
+                  implementation="com.beshara.common.web.shared.DAOWebFilter" loadOnStartup="true"/>
+       <instance interface="com.beshara.common.requestinfo.CurrentRequestInfoHandler"        
+                  implementation="com.beshara.common.web.context.WCCurrentRequestInfoHandler"/>
+      <instance name="TechLogFilter" interface="com.beshara.common.web.filter.WebFilter"               
+                  implementation="com.beshara.jsfbase.csc.util.techlog.TechLogFilter" loadOnStartup="true"/>
+    <!-- Reports Instance-->
+                  <!-- report manager instance -->
+        <instance interface="com.beshara.reports.utils.ReportManager"
+                  implementation="com.beshara.reports.utils.ReportManagerImpl" loadOnStartup="true">
+            <params>
+                <param name="connection" value="deploy"/>
+                <param name="module" value="40"/>
+            </params>
+        </instance>
+    </instances>
+</factory>
