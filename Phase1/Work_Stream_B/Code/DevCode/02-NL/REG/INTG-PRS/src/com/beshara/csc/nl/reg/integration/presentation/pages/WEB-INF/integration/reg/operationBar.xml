@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- sample menu items -->
+<operationBar applyMainMenuItemsCSSHack="true">
+    <menuItem id="joinDecision" value="#{regIntgResources.joinDecision}" selection="single"
+              selectionCount="#{$myBean$.selectedListSize}" action="#{jdHelperBeanName.openJoinDiv}" ajax="true"
+              ajax_reRender="javaScriptCallerOutputText,divMsg,customDiv1"
+              ajax_oncomplete="javascript:changeVisibilityMsg();"/>
+    <menuItem id="viewDecisionDetails" value="#{regIntgResources.viewDecisionDetails}" selection="single"
+              selectionCount="#{$myBean$.selectedListSize}" action="#{jdHelperBeanName.viewDecisionDetails}" ajax="true"
+              ajax_reRender="javaScriptCallerOutputText,divMsg,decIntgHiddenValues"/>
+    <menuItem id="viewRelatedDecisions" value="#{regIntgResources.viewRelatedDecisions}" selection="single"
+              selectionCount="#{$myBean$.selectedListSize}" action="#{jdHelperBeanName.viewRelatedDecisions}"
+              ajax="true" ajax_reRender="javaScriptCallerOutputText,divMsg,customDiv1"
+              ajax_oncomplete="javascript:changeVisibilityMsg();"/>
+    <!-- ###################START################## Strat of Decisions Section ###################SHEKA################# -->
+    <page viewId="/integration/reg/jsps/decision/decisionemployeesmaintain.jsp"
+          recordsCount="#{$myBean$.currentListSize}" beanName="decisionEmployeesMaintainBean"
+          resourceName="globalResources">
+        <menu>
+            <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                <menuItems>
+                    <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                    <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                    <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                </menuItems>
+            </menuItem>
+        </menu>
+    </page>
+    <page viewId="/integration/reg/jsps/decision/decisionreferencesmaintain.jsp"
+          recordsCount="#{$myBean$.currentListSize}" beanName="decisionReferencesMaintainBean"
+          resourceName="globalResources">
+        <menu>
+            <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                <menuItems>
+                    <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                    <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                    <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                </menuItems>
+            </menuItem>
+        </menu>
+    </page>
+    <page viewId="/integration/reg/jsps/decision/materials/mainMaintain.jsp" recordsCount="#{$myBean$.currentListSize}"
+          beanName="decisionMaterialsMaintainBean" resourceName="globalResources">
+        <menu>
+            <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                <menuItems>
+                    <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                    <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                    <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                </menuItems>
+            </menuItem>
+        </menu>
+    </page>
+</operationBar>
+<!-- ###################END################### End of Decision Section ######################SHEKA################## -->

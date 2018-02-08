@@ -1,0 +1,6 @@
+
+    <managed-bean>
+        <managed-bean-name>empListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.hr.emp.integration.presentation.backingbean.emplist.EmpListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>

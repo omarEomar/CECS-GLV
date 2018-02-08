@@ -1,0 +1,16 @@
+<!-- ###################START################## Strat of Decisions Section ###################SHEKA################# -->
+    <wizard configurationId="decisionadd">
+        <step order="1" mapKey="decisionadd" status="0" navigateStatus="1" bundle="com.beshara.csc.nl.reg.integration.presentation.resources.wizardbar" 
+                bundleKey="decisionadd_adddecision" controlType="0" action="decisionMaintainBean.navigate" navigationCase="decisionmaindata" 
+                stepBeanName="decisionMainDataMaintainBean" mandatory="true" jsValidation="return vaildateIssuanceYearWithDecitionDate();"/>
+        <step order="2" mapKey="employeesadd" status="0" navigateStatus="0" bundle="com.beshara.csc.nl.reg.integration.presentation.resources.wizardbar" 
+                bundleKey="decisionadd_addemployee" controlType="0" action="decisionMaintainBean.navigate" navigationCase="decisionemployeesmaintain" 
+                stepBeanName="decisionEmployeesMaintainBean" mandatory="true"/>    
+        <step order="3" mapKey="referencesadd" status="0" navigateStatus="0" bundle="com.beshara.csc.nl.reg.integration.presentation.resources.wizardbar" 
+                bundleKey="decisionadd_addreference" controlType="0" action="decisionMaintainBean.navigate" navigationCase="decisionreferencesmaintain" 
+                stepBeanName="decisionReferencesMaintainBean" mandatory="true"/>
+        <step order="4" mapKey="decMaterialsKey" status="0" navigateStatus="0" bundle="com.beshara.csc.nl.reg.integration.presentation.resources.wizardbar" 
+                bundleKey="decisionadd_materials" controlType="0" action="decisionMaintainBean.navigate" navigationCase="decMaterialsMaintain" 
+                stepBeanName="decisionMaterialsMaintainBean"/>
+    </wizard>
+<!-- ###################START################## End of Decisions Section #####################SHEKA################# -->

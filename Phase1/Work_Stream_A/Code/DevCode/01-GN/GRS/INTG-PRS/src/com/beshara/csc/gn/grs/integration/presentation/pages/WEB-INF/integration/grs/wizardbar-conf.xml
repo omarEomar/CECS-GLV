@@ -1,0 +1,10 @@
+<!-- ###################START################## Strat of Condition Section ###################SHEKA################# -->
+    <wizard configurationId="conditionId">
+        <step order="1" mapKey="conditionmantian" status="0" navigateStatus="1" bundle="com.beshara.csc.gn.grs.integration.presentation.resources.wizardbar" 
+                bundleKey="conditionBaseName" controlType="0" action="conditionsMaintainBean.navigate" navigationCase="condition_Main_Data" 
+                stepBeanName="conditionsBaseLineBeanFirst" mandatory="true"/>
+        <step order="2" mapKey="conditionbaseLines" status="0" navigateStatus="1" bundle="com.beshara.csc.gn.grs.integration.presentation.resources.wizardbar" 
+                bundleKey="conditionBaseLine" controlType="0" action="conditionsMaintainBean.navigate" navigationCase="conditionLine_Maintain_Details" 
+                stepBeanName="conditionLineDetailBean"/>
+    </wizard>
+<!-- ###################END################## Strat of Condition Section ####################SHEKA################## -->

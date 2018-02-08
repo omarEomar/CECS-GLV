@@ -1,0 +1,32 @@
+<tiles-definitions>
+        <put name="customDiv1" value="/integration/reg/jsps/joindec/decisiondiv.jsp"></put>
+
+<!-- ###################START################## Strat of Decisions Section ###################SHEKA################# -->
+    <definition name="decisionadd.page" extends="manytomanymaintain">
+        <put name="wizardId" value="decisionadd"></put>
+        <put name="stylePath" value="/integration/reg/media/css/ar/Style.css"></put>
+        <put name="jsPaht" value="/integration/reg/js/integration.js"></put>
+        <put name="content1" value="/integration/reg/jsps/decision/content1.jsp"></put>
+        <put name="navigation" value="/integration/reg/jsps/decision/navigation.jsp"></put>
+        <put name="resourcesBundlePath" value="com.beshara.csc.nl.reg.integration.presentation.resources.integration"></put>
+    </definition>
+    <definition name="decisionmaindatamaintain.page" extends="decisionadd.page">
+        <put name="content1" value="/integration/reg/jsps/decision/decisionmaindatamaintaincontent1.jsp"></put>
+    </definition>
+    <definition name="decisionreferencesmaintain.page" extends="decisionadd.page">
+        <put name="titlepage" value="decision_refernce"></put>
+        <put name="pageId" value="decisionreferencesmaintainpage"></put>
+        <put name="content" value="/integration/reg/jsps/decision/adddecisionreferencecontent.jsp"></put>
+    </definition>
+    <definition name="decisionemployeesmaintain.page" extends="decisionadd.page">
+        <put name="titlepage" value="decision employees"></put>
+        <put name="pageId" value="decisionemployeesmaintainpage"></put>
+        <put name="content" value="/integration/reg/jsps/decision/decisionemployeesmaintaincontent.jsp"></put>
+    </definition>
+    <definition name="decMaterialsMaintain.page" extends="decisionadd.page">
+        <put name="pageId" value="decisionSubjectsmaintainpage"></put>
+        <put name="content" value="/integration/reg/jsps/decision/materials/content.jsp"></put>
+    </definition>
+</tiles-definitions>
+<!-- ###################START################## End of Decisions Section #####################SHEKA################# -->
+   

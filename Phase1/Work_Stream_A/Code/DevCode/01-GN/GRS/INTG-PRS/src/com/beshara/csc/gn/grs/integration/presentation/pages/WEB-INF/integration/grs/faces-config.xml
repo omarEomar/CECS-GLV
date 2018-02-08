@@ -1,0 +1,7 @@
+<!-- ###################START################## Strat of Condition Section ###################SHEKA################# -->
+    <managed-bean>
+        <managed-bean-name>conditionDetailsBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.gn.grs.integration.presentation.backingbean.conditions.ConditionDetailsBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+<!-- ###################END#################### End of Condition Section ####################SHEKA################## -->
