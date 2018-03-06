@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+<faces-config xmlns="http://java.sun.com/JSF/Configuration">
+    <application>
+        <message-bundle>com.beshara.csc.inf.presentation.resources.inf</message-bundle>
+    </application>
+    <!-- start prepartion for use-case09 list bean -->
+    <managed-bean>
+        <managed-bean-name>countriesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.countrycities.CountriesListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- End prepartion for use-case09 list bean -->
+    <!-- start prepartion for use-case05 list bean -->
+    <managed-bean>
+        <managed-bean-name>groupCountriesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.groupcountries.GroupCountriesListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- End prepartion for use-case05 list bean -->
+    <!-- start prepartion for use-case09 list bean -->
+    <managed-bean>
+        <managed-bean-name>citiesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.countrycities.CitiesListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- End prepartion for use-case09 list bean -->
+    <managed-bean>
+        <managed-bean-name>reasdondataListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.reasondata.ReasonDataList</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** start gendertypes   by Nora 25-02-2009  *********************************-->
+    <managed-bean>
+        <managed-bean-name>genderTypesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.gendertypes.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>dmlStatmentTypesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.dmlstatmenttypes.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>kwStreetZoneLinkBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.kwtmap.KwStreetZoneLinkBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>kwMapListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.kwtmap.kwtMapListBean1</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>systemSettingBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.systemsetting.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>kwtCitizensResidentBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.kwtcitizensresident.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>approvalMakersBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.approvalmakers.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>newspaperBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.newspaper.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>orcaleErrorsBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.orcaleerrors.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** start Object Types   by i.Omar 20-11-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>objectTypesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.objecttypes.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** start societies   by Abdelrhman 20-11-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>societiesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.societies.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** start governorates   by Abdelrhman 28-10-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>governoratesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.governorates.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** End governorates   by Abdelrhman 28-10-2013  *********************************-->
+    <!-- ************************** start specialcasetypes   by Abdelrhman 31-10-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>specialCaseTypesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.specialcasetypes.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** End specialcasetypes   by Abdelrhman 31-10-2009  *********************************-->
+    <!--  ************************** start buildingOwnerTypes   by Abdelrhman 30-10-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>buildingOwnerTypesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.buildingownertypes.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!--  ************************** End buildingOwnerTypes   by Abdelrhman 30-10-2013  *********************************-->
+    <!-- ************************** Start Languages   by Omar 23-10-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>languagesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.languages.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** End Languages   by Omar 23-10-2013  *********************************-->
+    <!-- ************************** Start WeekDays   by A.Elmasry 24-10-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>weekDaysListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.weekdays.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** End WeekDays  by A.Elmasry 24-10-2013  *********************************-->
+    <!-- ************************** start handicapStatus   by Nora 25-02-2009  *********************************-->
+    <managed-bean>
+        <managed-bean-name>handicapStatusListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.handicapstatus.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** End handicapStatus   by Nora 25-02-2009  *********************************-->
+    <!-- ************************** start maritalstatus   by Nora 25-02-2009  *********************************-->
+    <managed-bean>
+        <managed-bean-name>maritalStatusListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.maritalstatus.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** End maritalstatus   by Nora 25-02-2009  *********************************-->
+    <!-- ************************** start maritalstatusmasfem   by Omar 29-10-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>maritalStatusMasFemListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.maritalstatusmasfem.MaritalStatusMasFemListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** end maritalstatusmasfem   by Omar 29-10-2013  *********************************-->
+    <!-- ************************** start months   by i.Omar 30-10-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>monthsBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.months.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** start currencies   by i.Omar 30-10-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>currenciesBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.currencies.CurrenciesBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** end currencies   by i.Omar 30-10-2013  *********************************-->
+    <!-- ************************** start currencies   by i.Omar 30-10-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>holidayTypesBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.holidaytypes.HolidayTypesBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** start Military Status   by i.Omar 30-10-2013  *********************************-->
+    <!-- ************************** start currencies  *********************************-->
+    <managed-bean>
+        <managed-bean-name>kwStreetsBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.kwstreets.KWStreetsBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** start Military Status   by i.Omar 30-10-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>militaryStatusBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.militarystatus.MilitaryStatusBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** end Military Status   by i.Omar 30-10-2013  *********************************-->
+    <!-- ************************** start 006_INF_GroupsCat,UC_007_INF_CountryCat   by Nora 26-02-2009  *********************************-->
+    <managed-bean>
+        <managed-bean-name>groupCategoryListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.groupscategories.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>countryGroupListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.countrygroup.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** start Blood groups 10/2013*********************************-->
+    <managed-bean>
+        <managed-bean-name>bloodGroupsListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.bloodgroups.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** endBlood groups  by Nora 26-02-2009  *********************************-->
+    <!-- ************************** Start OperationTypes   by A.Elmasry 28-10-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>operationTypesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.operationtypes.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** End OperationTypes by A.Elmasry 28-10-2013  *********************************-->
+    <!-- ************************** start years groups  by islam 24-10-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>yearsBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.yearsandfinancialyears.YearsBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** end years groups  by islam 24-10-2013  *********************************-->
+    <!-- ************************** start Banks groups  by islam 28-11-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>banksBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.banks.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** end Banks groups  by islam 28-11-2013  *********************************-->
+    <!-- ************************** start religions   by A.Elmasry 30-10-2013  ********************************>
+     <managed-bean>
+          <managed-bean-name>religionsListBean</managed-bean-name>
+          <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.religions.ListBean</managed-bean-class>
+          <managed-bean-scope>request</managed-bean-scope>
+     </managed-bean>
+ < ************************** end religions   by A.Elmasry 30-10-2013  *********************************-->
+    <!-- ************************** start DecisionMakerTpyes   by A.Elmasry 30-10-2013  ********************************-->
+    <managed-bean>
+        <managed-bean-name>decisionmakerListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.decisionmakertypes.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** end DecisionMakerTpyes   by A.Elmasry 30-10-2013  *********************************-->
+    <!-- ************************** start ResidentTpye   by A.Elmasry 31-10-2013  ********************************-->
+    <managed-bean>
+        <managed-bean-name>residentTypeListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.residenttype.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** end ResidentTpye   by A.Elmasry 31-10-2013  *********************************-->
+    <!-- ************************** Start trxStatus   by A.Elmasry 20-11-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>trxStatusListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.trxstatus.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>gradeTypesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.gradetypes.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** End trxStatus   by A.Elmasry 20-11-2013  *********************************-->
+    <!-- ************************** Start Religions   by A.Elmasry 21-11-2013  *********************************-->
+    <managed-bean>
+        <managed-bean-name>religionsListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.religions.ListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** End Religions   by A.Elmasry 21-11-2013  *********************************-->
+    <!-- ************************** Start Religions   by m.gamal 7-7-2014  *********************************-->
+    <managed-bean>
+        <managed-bean-name>officialVacListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.officialvac.OfficialVacListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>addExperinceIntegrationBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.addExperince.addExperinceIntegrationBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>addExperinceIntegrationPage</from-outcome>
+            <to-view-id>/module/inf/jsps/maindata/addExperince/addExperinceList.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <!-- ************************** End Religions   by m.gamal 7-7-2014  *********************************-->
+    <managed-bean>
+        <managed-bean-name>workDataListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.gn.inf.integration.presentation.backingbean.kwtworkdata.WorkDataListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** start config  use-case09  by Nora 3-03-2009  *********************************-->
+    
+     <!-- ************************** start countries integration   by I.Omar 21-01-2016  *********************************-->
+    <managed-bean>
+        <managed-bean-name>countriesIntegrationBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.gn.inf.integration.presentation.backingbean.countries.CountriesIntegrationBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ************************** end countries integration   by I.Omar 21-01-2016  *********************************-->
+    
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>Cities_Page</from-outcome>
+            <to-view-id>/module/jsps/maindata/countrycities/citieslist.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Counrty_Page</from-outcome>
+            <to-view-id>/module/jsps/maindata/countrycities/countrylist.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>reasondata</from-outcome>
+            <to-view-id>/module/jsps/maindata/reasonData/reasonDatalList.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <!-- ************************** End config  use-case09  by Nora 3-03-2009  *********************************-->
+    <managed-bean>
+        <managed-bean-name>ReportsFrameBean</managed-bean-name>
+        <managed-bean-class>com.beshara.reports.presentation.backingbean.ReportsIFrameBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>ReportsBean</managed-bean-name>
+        <managed-bean-class>com.beshara.reports.presentation.backingbean.ReportsUrlsBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>    
+    
+    <!-- ************************** bnk integration part by a.agamy  *********************************-->
+    <managed-bean>
+        <managed-bean-name>banksListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.nl.bnk.integration.presentation.backingbean.banks.BanksListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>        
+
+    <managed-bean>
+        <managed-bean-name>branchesListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.nl.bnk.integration.presentation.backingbean.bankBranches.BranchesListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+	<managed-bean>
+        <managed-bean-name>newBranchListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.nl.bnk.integration.presentation.backingbean.bankBranches.NewBranchListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>           
+
+    <managed-bean>
+        <managed-bean-name>branchDetailsListBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.nl.bnk.integration.presentation.backingbean.bankBranches.bankBranchDetails.BranchDetailsListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>  
+	<navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>ShowBranchesList</from-outcome>
+            <to-view-id>/integration/bnk/jsps/bankBranches/listBranches.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>	
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>BackToBanks</from-outcome>
+            <to-view-id>/integration/bnk/jsps/banks/listBanks.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>        
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>ShowBranchDetailsList</from-outcome>
+            <to-view-id>/integration/bnk/jsps/bankBranches/bankBranchDetails/listBranchDetails.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>    
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>AddNewBranch</from-outcome>
+            <to-view-id>/integration/bnk/jsps/bankBranches/listNewBranch.jsp</to-view-id>
+        </navigation-case>
+         <navigation-case>
+            <from-outcome>editNewBranch</from-outcome>
+            <to-view-id>/integration/bnk/jsps/bankBranches/listNewBranch.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>  
+     <!-- ************************** end bnk integration part *********************************-->
+        <managed-bean>
+                <managed-bean-name>infHolidaysListBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.infholidays.HolidaysListBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean> 
+        <managed-bean>
+                <managed-bean-name>documentTypesListBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.documenttypes.DocumentTypesListBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean> 
+        <managed-bean>
+            <managed-bean-name>educationLevelsVacations</managed-bean-name>
+            <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.educationLevelsVacations.EducationLevelsVacations</managed-bean-class>
+            <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+
+        <managed-bean>
+                <managed-bean-name>identificationTypesListBean</managed-bean-name>
+                <managed-bean-class>com.beshara.csc.inf.presentation.backingbean.maindata.identificationtypes.IdentificationTypesListBean</managed-bean-class>
+                <managed-bean-scope>request</managed-bean-scope>
+        </managed-bean>
+        
+        <!-- Add Attachments Integration -->
+    <managed-bean>
+        <managed-bean-name>fileAttachmentsIntegrationBean</managed-bean-name>
+        <managed-bean-class>com.beshara.csc.gn.inf.integration.presentation.backingbean.fileAttachments.FileAttachmentsIntegrationBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>addFileAttachments</from-outcome>
+            <to-view-id>/integration/inf/jsps/fileAttachments/fileAttachments_list.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>identificationTypesPage</from-outcome>
+            <to-view-id>/module/jsps/maindata/identificationtypes/identificationtypeslist.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+</faces-config>
+
+
+
+
+

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsfSecurityHandler mode="all" technologyCode="1" 
+    pagesFolder="/security/" indexURL="/index.jsf"
+    webPageTypeCode="1" facetTypeCode="2" 
+    treesFolder="/WEB-INF/module/config/security/trees" accessTracingEnabled="false">
+    
+  <componentsTypesMappings>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlPanelGrid" typeCode="3"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlDataTable" typeCode="4"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlInputText" typeCode="5"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlForm" typeCode="6"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlOutputText" typeCode="7"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.column.HtmlSimpleColumn" typeCode="8"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlCommandButton" typeCode="9"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlGraphicImage" typeCode="10"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlPanelGroup" typeCode="11"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.tree2.HtmlTree" typeCode="12"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.sortheader.HtmlCommandSortHeader" typeCode="13"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.navmenu.jscookmenu.HtmlCommandJSCookMenu" typeCode="14"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlMessages" typeCode="15"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.div.Div" typeCode="16"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlOutputLabel" typeCode="17"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlSelectOneRadio" typeCode="18"/>
+    <componentTypeMapping typeName="javax.faces.component.UISelectItem" typeCode="19"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlSelectBooleanCheckbox" typeCode="20"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlInputHidden" typeCode="21"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlCommandButton" typeCode="22"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlOutputText" typeCode="23"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.datascroller.HtmlDataScroller" typeCode="24"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlCommandLink" typeCode="25"/>
+    <componentTypeMapping typeName="org.apache.myfaces.custom.navmenu.UINavigationMenuItem" typeCode="26"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlPanelGroup" typeCode="27"/>    
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlPanelGrid" typeCode="28"/>    
+    <componentTypeMapping typeName="beshara.sf.jsfcomp.clientvalidators.lengthvalidator.LengthValidator" typeCode="29"/>    
+    <componentTypeMapping typeName="org.apache.myfaces.custom.calendar.HtmlInputCalendar" typeCode="30"/>    
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlSelectOneMenu" typeCode="31"/>    
+    <componentTypeMapping typeName="org.apache.myfaces.custom.selectitems.UISelectItems" typeCode="32"/>    
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlInputText" typeCode="33"/>    
+    <componentTypeMapping typeName="org.ajax4jsf.ajax.html.HtmlAjaxCommandButton" typeCode="34"/>    
+    <componentTypeMapping typeName="org.ajax4jsf.ajax.html.HtmlAjaxFunction" typeCode="35"/>    
+    <componentTypeMapping typeName="javax.faces.component.UISelectItems" typeCode="36"/>    
+    <componentTypeMapping typeName="org.apache.myfaces.custom.aliasbean.AliasBean" typeCode="37"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlOutputLabel" typeCode="38"/>
+    <componentTypeMapping typeName="com.beshara.common.web.jsf.operationbar.HtmlCommandButton" typeCode="50"/>
+    <componentTypeMapping typeName="com.beshara.common.web.jsf.operationbar.UINavigationMenuItem" typeCode="51"/>
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlSelectOneMenu" typeCode="52"/>
+    <componentTypeMapping typeName="org.ajax4jsf.ajax.html.HtmlAjaxRegion" typeCode="53"/>    
+    <componentTypeMapping typeName="javax.faces.component.html.HtmlInputTextarea" typeCode="54"/>    
+    <componentTypeMapping typeName="com.exadel.htmLib.components.UIBody" typeCode="55"/>    
+    <componentTypeMapping typeName="com.exadel.htmLib.components.UIHtml" typeCode="56"/>    
+    <componentTypeMapping typeName="com.exadel.htmLib.components.UITable" typeCode="57"/>    
+    <componentTypeMapping typeName="com.exadel.htmLib.components.UITr" typeCode="58"/>    
+    <componentTypeMapping typeName="com.exadel.htmLib.components.UITd" typeCode="59"/>    
+    <componentTypeMapping typeName="com.exadel.htmLib.components.UIDiv" typeCode="60"/>    
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlInputTextarea" typeCode="65"/>
+    <componentTypeMapping typeName="org.apache.myfaces.component.html.ext.HtmlCommandLink" typeCode="66"/>
+  </componentsTypesMappings>
+  
+  <iterativeComponentsClasses>
+    <componentClass value="org.apache.myfaces.component.html.ext.HtmlDataTable"/>
+    <componentClass value="org.apache.myfaces.custom.tree2.HtmlTree"/>
+    <componentClass value="org.apache.myfaces.custom.navmenu.jscookmenu.HtmlCommandJSCookMenu"/>
+  </iterativeComponentsClasses>
+  
+  <pages>   
+<page viewId="/module/jsps/maindata/countrycities/countrylist.jsp" devObject="12302" bsnObject="12433"/>
+<page viewId="/module/jsps/maindata/currencies/list.jsp" devObject="12306" bsnObject="12437"/>
+<page viewId="/module/jsps/maindata/decisionmakertypes/list.jsp" devObject="12308" bsnObject="12439"/>
+<page viewId="/module/jsps/maindata/weekdays/list.jsp" devObject="12312" bsnObject="12443"/>
+<page viewId="/module/jsps/maindata/dmlstatmenttype/list.jsp" devObject="12317" bsnObject="12448"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=40" devObject="23024" bsnObject="22871"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=43" devObject="23027" bsnObject="22874"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=54" devObject="23038" bsnObject="22885"/>
+<page viewId="/module/jsps/maindata/gendertypes/list.jsp" devObject="12288" bsnObject="12419"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=42" devObject="23026" bsnObject="22873"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=39" devObject="23023" bsnObject="22870"/>
+<page viewId="/module/jsps/maindata/militarystatus/list.jsp" devObject="12296" bsnObject="12427"/>
+<page viewId="/module/jsps/maindata/holidaytypes/list.jsp" devObject="12310" bsnObject="12441"/>
+<page viewId="/module/jsps/maindata/trxstatus/list.jsp" devObject="12316" bsnObject="12447"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=41" devObject="23025" bsnObject="22872"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=45" devObject="23029" bsnObject="22876"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=48" devObject="23031" bsnObject="22878"/>
+<page viewId="/module/jsps/maindata/maritalstatus/list.jsp" devObject="12291" bsnObject="12422"/>
+<page viewId="/module/jsps/maindata/religions/list.jsp" devObject="12292" bsnObject="12423"/>
+<page viewId="/module/jsps/maindata/languages/list.jsp" devObject="12293" bsnObject="12424"/>
+<page viewId="/module/jsps/maindata/newspaper/list.jsp" devObject="12294" bsnObject="12425"/>
+<page viewId="/module/jsps/maindata/residenttype/list.jsp" devObject="12295" bsnObject="12426"/>
+<page viewId="/module/jsps/maindata/approvalmakers/list.jsp" devObject="12309" bsnObject="12440"/>
+<page viewId="/module/jsps/maindata/months/list.jsp" devObject="12313" bsnObject="12444"/>
+<page viewId="/module/jsps/maindata/systemsetting/list.jsp" devObject="12315" bsnObject="12446"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=47" devObject="23032" bsnObject="22879"/>
+<page viewId="/module/jsps/maindata/handicapstatus/list.jsp" devObject="12290" bsnObject="12421"/>
+<page viewId="/module/jsps/maindata/specialcasetypes/list.jsp" devObject="12297" bsnObject="12428"/>
+<page viewId="/module/jsps/maindata/gradetypes/list.jsp" devObject="12298" bsnObject="12429"/>
+<page viewId="/module/jsps/maindata/groupscategories/list.jsp" devObject="12299" bsnObject="12430"/>
+<page viewId="/module/jsps/maindata/buildingownertypes/list.jsp" devObject="12305" bsnObject="12436"/>
+<page viewId="/module/jsps/maindata/officialvac/list.jsp" devObject="12311" bsnObject="12442"/>
+<page viewId="/module/jsps/maindata/yearsandfinancialyears/list.jsp" devObject="12314" bsnObject="12445"/>
+<page viewId="/module/jsps/maindata/documenttypes/documenttypeslist.jsf" devObject="24102" bsnObject="23949"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=53" devObject="23037" bsnObject="22884"/>
+<page viewId="/module/jsps/maindata/groupcountries/groupcountrieslist.jsp" devObject="12301" bsnObject="12432"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=46" devObject="23030" bsnObject="22877"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=50" devObject="23034" bsnObject="22881"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=51" devObject="23035" bsnObject="22882"/>
+<page viewId="/module/jsps/maindata/countrygroup/list.jsp" devObject="12300" bsnObject="12431"/>
+<page viewId="/module/jsps/maindata/kwstreets/list.jsp" devObject="12304" bsnObject="12435"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=44" devObject="23028" bsnObject="22875"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=49" devObject="23033" bsnObject="22880"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=38" devObject="23022" bsnObject="22869"/>
+<page viewId="/module/jsps/maindata/bloodgroups/list.jsp" devObject="12289" bsnObject="12420"/>
+<page viewId="/module/jsps/maindata/kwmap/kwmaplist.jsp" devObject="12303" bsnObject="12434"/>
+<page viewId="/integration/bnk/jsps/banks/listBanks.jsp" devObject="12307" bsnObject="12438"/>
+<page viewId="NoTarget,/module/jsps/reports/reportsFrame.jsp?rep=52" devObject="23036" bsnObject="22883"/>
+<page viewId="/module/jsps/maindata/infholidays/infholidayslist.jsp" devObject="24384" bsnObject="24150"/>
+<page viewId="/module/jsps/maindata/educationlevelsvacations/list.jsp" devObject="24437" bsnObject="24203"/>
+<page viewId="/module/jsps/maindata/mismisidntificationtypes/mismisidntificationtypeslist.jsp" devObject="32199" bsnObject="32411"/>
+</pages>
+
+</jsfSecurityHandler>

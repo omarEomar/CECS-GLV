@@ -1,0 +1,1417 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jpr:project xmlns:jpr="http://xmlns.oracle.com/ide/project">
+   <hash n="component-versions">
+      <value n="oracle.adf.dt.migration.ProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdt.controller.common.migrator.ProjectMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.adfdt.controller.jsf.addin.JSFProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdt.controller.jsf2.diagram.migrate.JsfNodeMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.adfdt.controller.migrate.TrinidadDatabindingsProjectMigrator" v="11.1.2.0.0"/>
+      <value n="oracle.adfdt.controller.struts.addin.db.ADFStrutsProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdt.controller.struts.addin.StrutsProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdtinternal.dvt.datapresdt.migration.DVTDataMapMigrator" v="11.1.1.1.0.3"/>
+      <value n="oracle.adfdtinternal.model.ide.security.wizard.FormPageMigrator" v="11.1.1.0.0"/>
+      <value n="oracle.adfdtinternal.model.ide.security.wizard.JpsFilterMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.adfdtinternal.model.portlet.migration.WebCenterProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdtinternal.view.common.migration.wizards.MigrationHelper" v="11.1.1.1.0.3"/>
+      <value n="oracle.adfdtinternal.view.faces.addin.ADFFacesLibraryMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdtinternal.view.rich.migration.ComponentIdNodeMigratorHelper" v="11.1.1.1.0.01"/>
+      <value n="oracle.adfdtinternal.view.rich.migration.LibraryVersionMigrator" v="11.1.1.1.0.1"/>
+      <value n="oracle.bm.commonIde.ProjectUpgrader" v="10.1.3.5.0"/>
+      <value n="oracle.ide.model.Project" v="10.1.3.5.0;11.1.2.0.0"/>
+      <value n="oracle.ide.model.ResourcePathsMigrator" v="10.1.3.5.0;11.1.1.1.0"/>
+      <value n="oracle.ideimpl.model.TechnologyScopeUpdateMigrator" v="11.1.2.0.0.4"/>
+      <value n="oracle.jbo.dt.jclient.migrator.JCProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jbo.dt.jdevx.deployment.JbdProjectMigrator" v="11.1.2.0.0"/>
+      <value n="oracle.jbo.dt.jdevx.ui.appnav.APProjectMigrator" v="10.1.3.5.0;11.1.1.0.1.5"/>
+      <value n="oracle.jbo.dt.migrate.ResourceBundlePathMigrator" v="11.1.1.0.1.5"/>
+      <value n="oracle.jbo.dt.migration.ServiceInterfaceMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdeveloper.dbmodeler.migration.ProjectMigratorHelper" v="10.1.3.5.0"/>
+      <value n="oracle.jdeveloper.ejb.EjbMigrator" v="10.1.3.5.0;11.1.1.1.0"/>
+      <value n="oracle.jdeveloper.library.ProjectLibraryMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdeveloper.model.OutputDirectoryMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdeveloper.offlinedb.migration.OfflineDBProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jdevimpl.deploy.DeploymentProfilesMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.deploy.jps.JpsDataMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.jsp.JsfLibraryMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jdevimpl.jsp.JspMigrator" v="10.1.3.1.0;11.1.1"/>
+      <value n="oracle.jdevimpl.offlinedb.migration.OfflineDBProjectMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.offlinedb.migration.OfflinePlSqlMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.resourcebundle.XliffAddin$XliffMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.runner.RunConfigurationsMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jdevimpl.webapp.jsp.libraries.JspLibraryMigrator" v="11.1.1.1.4"/>
+      <value n="oracle.jdevimpl.webapp.WebAppContentSetNodeMigratorHelper" v="11.1.1"/>
+      <value n="oracle.jdevimpl.webapp.WebAppProjectNodeMigratorHelper" v="11.1.2.0.0"/>
+      <value n="oracle.jdevimpl.webservices.rest.migration.RestPathMigrator" v="11.1.2.0.0"/>
+      <value n="oracle.jdevimpl.webservices.WebServicesMigratorHelper" v="10.1.3.5.0;11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.xml.wl.WeblogicMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.modeler.bmmigrate.management.Migration" v="11.1.1.1.0"/>
+      <value n="oracle.tip.tools.ide.pm.addin.PMProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.toplink.addin.migration.TopLinkProjectMigrator" v="10.1.3.1.0"/>
+      <value n="oracle.toplink.workbench.addin.migration.PersistenceProjectMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.toplink.workbench.addin.migration.TopLinkProjectMigrator" v="11.1.1.1.0"/>
+   </hash>
+   <list n="contentSets">
+      <string v="oracle.jdeveloper.model.PathsConfiguration/javaContentSet"/>
+      <string v="oracle.ide.model.ResourcePaths/resourcesContentSet"/>
+      <string v="oracle.jdeveloper.offlinedb.model.OfflineDBProjectSettings/offlineDBContentSet"/>
+      <string v="oracle.jdeveloper.model.J2eeSettings/webContentSet"/>
+      <string v="oracle.bm.commonIde.data.project.ModelerProjectSettings/modelersContentSet"/>
+      <string v="oracle.tip.tools.ide.pm.addin.PMProjectSettings/Integration_Content"/>
+      <string v="oracle.mds.internal.dt.ide.MDSLibraryCustCSProvider/mdsContentSet"/>
+      <string v="oracle.mds.internal.dt.ide.MDSADFLibVirtualNodeCSProvider/mdsLibVirtualNodeContentSet"/>
+      <string v="oracle.adfdtinternal.model.ide.settings.ADFMSettings/adfmContentSet"/>
+      <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
+   </list>
+   <value n="defaultPackage" v="com.beshara.csc.gn.inf.business"/>
+   <hash n="ejbModuleContainer">
+      <list n="annotatedEjbBeanClassUrls">
+         <url path="src/com/beshara/csc/inf/business/deploy/ApprovalMakersSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/BankBranchesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/BanksSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/BloodGroupsSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/BuildingOwnerTypesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/CountriesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/CountryCitiesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/CountryGroupsSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/CurrenciesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/DecisionMakerTypesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/DmlStatmentTypesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/FieldTypesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/FieldsSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/GenderCountrySessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/GenderMaritalSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/GenderReligionSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/GenderTypesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/GroupCountriesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/HandicapStatusCMTSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/HandicapStatusSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/HolidayTypesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/HolidaysSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/InfCitizensPassportsSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/InfCitizensResidentsDataSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/InfReasonDataSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/InfReasonTypesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/KwMapSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/KwStreetsSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/KwtCitizensResidentsCMTSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/KwtCitizensResidentsSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/KwtWorkDataSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/LanguagesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/MapTypesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/MaritalStatusSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/MilitaryStatusSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/NewspapersSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/OracleErrorsSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/PersonDataChangesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/PersonParameterValuesBkSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/PersonParameterValuesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/PersonQualificationsCMTSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/PersonQualificationsSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/PersonsInformationSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/RelatedFieldsSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/ReligionsSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/ResidentTypeSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/SeekerLanguageSkillsSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/SpecialCaseTypesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/StreetZonesSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/SystemSettingsSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/TrxStatusSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/WeekDaysSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/deploy/YearsSessionBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/ApprovalMakersEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/BankBranchesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/BanksEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/BloodGroupsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/BuildingOwnerTypesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/CountriesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/CountryCitiesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/CountryGroupsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/CurrenciesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/DecisionMakerTypesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/DmlStatmentTypesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/FieldTypesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/FieldsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/GenderCountryEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/GenderMaritalEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/GenderReligionEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/GenderTypesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/GroupCountriesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/HandicapStatusEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/HolidayTypesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/HolidaysEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/InfCitizensPassportsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/InfCitizensResidentsDataEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/InfPersonQualificationsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/KwMapEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/KwStreetsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/KwtCitizensResidentsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/KwtWorkDataEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/LanguagesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/MapTypesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/MaritalStatusEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/MilitaryStatusEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/NewspapersEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/OracleErrorsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/PersonDataChangesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/PersonParameterValuesBkEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/PersonParameterValuesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/PersonQualificationsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/PersonsInformationEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/RelatedFieldsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/ReligionsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/ResidentTypeEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/SeekerLanguageSkillsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/SpecialCaseTypesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/StreetZonesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/SystemSettingsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/TrxStatusEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/WeekDaysEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/YearsEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/emp/InfReasonDataEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/entity/emp/InfReasonTypesEntity.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/ApprovalMakersFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/BankBranchesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/BanksFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/BloodGroupsFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/BuildingOwnerTypesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/CountriesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/CountryCitiesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/CountryGroupsFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/CurrenciesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/DecisionMakerTypesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/DmlStatmentTypesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/FieldTypesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/FieldsFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/GenderCountryFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/GenderMaritalFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/GenderReligionFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/GenderTypesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/GroupCountriesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/HandicapStatusFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/HolidayTypesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/HolidaysFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/InfCitizensPassportsFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/InfCitizensResidentsDataFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/InfReasonDataFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/InfReasonTypesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/KwMapFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/KwStreetsFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/KwtCitizensResidentsFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/KwtWorkDataFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/LanguagesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/MapTypesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/MaritalStatusFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/MilitaryStatusFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/NewspapersFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/OracleErrorsFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/PersonDataChangesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/PersonParameterValuesBkFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/PersonParameterValuesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/PersonQualificationsFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/PersonsInformationFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/RelatedFieldsFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/ReligionsFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/ResidentTypeFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/SeekerLanguageSkillsFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/SpecialCaseTypesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/StreetZonesFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/SystemSettingsFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/TrxStatusFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/WeekDaysFacadeBean.java"/>
+         <url path="src/com/beshara/csc/inf/business/facade/YearsFacadeBean.java"/>
+      </list>
+      <value n="cmpProvider" v="EJB 3.0"/>
+      <hash n="ejb21IdToEjbNameMap">
+         <value n="7f93b841-012c-1000-8001-c0a80019662a" v="com.beshara.csc.inf.business.facade.WeekDaysFacadeBean"/>
+         <value n="7f93c698-012c-1000-8002-c0a80019662a" v="com.beshara.csc.inf.business.deploy.ApprovalMakersSessionBean"/>
+         <value n="7f93c698-012c-1000-8003-c0a80019662a" v="com.beshara.csc.inf.business.deploy.BankBranchesSessionBean"/>
+         <value n="7f93c698-012c-1000-8004-c0a80019662a" v="com.beshara.csc.inf.business.deploy.BanksSessionBean"/>
+         <value n="7f93c698-012c-1000-8005-c0a80019662a" v="com.beshara.csc.inf.business.deploy.BloodGroupsSessionBean"/>
+         <value n="7f93c6a8-012c-1000-8006-c0a80019662a" v="com.beshara.csc.inf.business.deploy.BuildingOwnerTypesSessionBean"/>
+         <value n="7f93c6a8-012c-1000-8007-c0a80019662a" v="com.beshara.csc.inf.business.deploy.CountriesSessionBean"/>
+         <value n="7f93c6a8-012c-1000-8008-c0a80019662a" v="com.beshara.csc.inf.business.deploy.CountryCitiesSessionBean"/>
+         <value n="7f93c6a8-012c-1000-8009-c0a80019662a" v="com.beshara.csc.inf.business.deploy.CountryGroupsSessionBean"/>
+         <value n="7f93c6a8-012c-1000-800a-c0a80019662a" v="com.beshara.csc.inf.business.deploy.CurrenciesSessionBean"/>
+         <value n="7f93c6b8-012c-1000-800b-c0a80019662a" v="com.beshara.csc.inf.business.deploy.DecisionMakerTypesSessionBean"/>
+         <value n="7f93c6b8-012c-1000-800c-c0a80019662a" v="com.beshara.csc.inf.business.deploy.DmlStatmentTypesSessionBean"/>
+         <value n="7f93c6b8-012c-1000-800d-c0a80019662a" v="com.beshara.csc.inf.business.deploy.FieldTypesSessionBean"/>
+         <value n="7f93c6b8-012c-1000-800e-c0a80019662a" v="com.beshara.csc.inf.business.deploy.FieldsSessionBean"/>
+         <value n="7f93c6b8-012c-1000-800f-c0a80019662a" v="com.beshara.csc.inf.business.deploy.GenderCountrySessionBean"/>
+         <value n="7f93c6c7-012c-1000-8010-c0a80019662a" v="com.beshara.csc.inf.business.deploy.GenderMaritalSessionBean"/>
+         <value n="7f93c6c7-012c-1000-8011-c0a80019662a" v="com.beshara.csc.inf.business.deploy.GenderReligionSessionBean"/>
+         <value n="7f93c6c7-012c-1000-8012-c0a80019662a" v="com.beshara.csc.inf.business.deploy.GenderTypesSessionBean"/>
+         <value n="7f93c6c7-012c-1000-8013-c0a80019662a" v="com.beshara.csc.inf.business.deploy.GroupCountriesSessionBean"/>
+         <value n="7f93c6c7-012c-1000-8014-c0a80019662a" v="com.beshara.csc.inf.business.deploy.HandicapStatusCMTSessionBean"/>
+         <value n="7f93c6c7-012c-1000-8015-c0a80019662a" v="com.beshara.csc.inf.business.deploy.HandicapStatusSessionBean"/>
+         <value n="7f93c6d7-012c-1000-8016-c0a80019662a" v="com.beshara.csc.inf.business.deploy.HolidayTypesSessionBean"/>
+         <value n="7f93c6d7-012c-1000-8017-c0a80019662a" v="com.beshara.csc.inf.business.deploy.HolidaysSessionBean"/>
+         <value n="7f93c6d7-012c-1000-8018-c0a80019662a" v="com.beshara.csc.inf.business.deploy.InfCitizensPassportsSessionBean"/>
+         <value n="7f93c6d7-012c-1000-8019-c0a80019662a" v="com.beshara.csc.inf.business.deploy.InfCitizensResidentsDataSessionBean"/>
+         <value n="7f93c6d7-012c-1000-801a-c0a80019662a" v="com.beshara.csc.inf.business.deploy.InfReasonDataSessionBean"/>
+         <value n="7f93c6e7-012c-1000-801b-c0a80019662a" v="com.beshara.csc.inf.business.deploy.InfReasonTypesSessionBean"/>
+         <value n="7f93c6e7-012c-1000-801c-c0a80019662a" v="com.beshara.csc.inf.business.deploy.KwMapSessionBean"/>
+         <value n="7f93c6e7-012c-1000-801d-c0a80019662a" v="com.beshara.csc.inf.business.deploy.KwStreetsSessionBean"/>
+         <value n="7f93c6e7-012c-1000-801e-c0a80019662a" v="com.beshara.csc.inf.business.deploy.KwtCitizensResidentsCMTSessionBean"/>
+         <value n="7f93c6e7-012c-1000-801f-c0a80019662a" v="com.beshara.csc.inf.business.deploy.KwtCitizensResidentsSessionBean"/>
+         <value n="7f93c6f6-012c-1000-8020-c0a80019662a" v="com.beshara.csc.inf.business.deploy.KwtWorkDataSessionBean"/>
+         <value n="7f93c6f6-012c-1000-8021-c0a80019662a" v="com.beshara.csc.inf.business.deploy.LanguagesSessionBean"/>
+         <value n="7f93c6f6-012c-1000-8022-c0a80019662a" v="com.beshara.csc.inf.business.deploy.MapTypesSessionBean"/>
+         <value n="7f93c6f6-012c-1000-8023-c0a80019662a" v="com.beshara.csc.inf.business.deploy.MaritalStatusSessionBean"/>
+         <value n="7f93c6f6-012c-1000-8024-c0a80019662a" v="com.beshara.csc.inf.business.deploy.MilitaryStatusSessionBean"/>
+         <value n="7f93c706-012c-1000-8025-c0a80019662a" v="com.beshara.csc.inf.business.deploy.NewspapersSessionBean"/>
+         <value n="7f93c706-012c-1000-8026-c0a80019662a" v="com.beshara.csc.inf.business.deploy.OracleErrorsSessionBean"/>
+         <value n="7f93c706-012c-1000-8027-c0a80019662a" v="com.beshara.csc.inf.business.deploy.PersonDataChangesSessionBean"/>
+         <value n="7f93c706-012c-1000-8028-c0a80019662a" v="com.beshara.csc.inf.business.deploy.PersonParameterValuesBkSessionBean"/>
+         <value n="7f93c706-012c-1000-8029-c0a80019662a" v="com.beshara.csc.inf.business.deploy.PersonParameterValuesSessionBean"/>
+         <value n="7f93c715-012c-1000-802a-c0a80019662a" v="com.beshara.csc.inf.business.deploy.PersonQualificationsCMTSessionBean"/>
+         <value n="7f93c715-012c-1000-802b-c0a80019662a" v="com.beshara.csc.inf.business.deploy.PersonQualificationsSessionBean"/>
+         <value n="7f93c715-012c-1000-802c-c0a80019662a" v="com.beshara.csc.inf.business.deploy.PersonsInformationSessionBean"/>
+         <value n="7f93c715-012c-1000-802d-c0a80019662a" v="com.beshara.csc.inf.business.deploy.RelatedFieldsSessionBean"/>
+         <value n="7f93c725-012c-1000-802e-c0a80019662a" v="com.beshara.csc.inf.business.deploy.ReligionsSessionBean"/>
+         <value n="7f93c725-012c-1000-802f-c0a80019662a" v="com.beshara.csc.inf.business.deploy.ResidentTypeSessionBean"/>
+         <value n="7f93c725-012c-1000-8030-c0a80019662a" v="com.beshara.csc.inf.business.deploy.SeekerLanguageSkillsSessionBean"/>
+         <value n="7f93c725-012c-1000-8031-c0a80019662a" v="com.beshara.csc.inf.business.deploy.SpecialCaseTypesSessionBean"/>
+         <value n="7f93c735-012c-1000-8032-c0a80019662a" v="com.beshara.csc.inf.business.deploy.StreetZonesSessionBean"/>
+         <value n="7f93c735-012c-1000-8033-c0a80019662a" v="com.beshara.csc.inf.business.deploy.SystemSettingsSessionBean"/>
+         <value n="7f93c735-012c-1000-8034-c0a80019662a" v="com.beshara.csc.inf.business.deploy.TrxStatusSessionBean"/>
+         <value n="7f93c735-012c-1000-8035-c0a80019662a" v="com.beshara.csc.inf.business.deploy.WeekDaysSessionBean"/>
+         <value n="7f93c735-012c-1000-8036-c0a80019662a" v="com.beshara.csc.inf.business.deploy.YearsSessionBean"/>
+         <value n="7f93c744-012c-1000-8037-c0a80019662a" v="com.beshara.csc.inf.business.entity.ApprovalMakersEntity"/>
+         <value n="7f93c744-012c-1000-8038-c0a80019662a" v="com.beshara.csc.inf.business.entity.BankBranchesEntity"/>
+         <value n="7f93c744-012c-1000-8039-c0a80019662a" v="com.beshara.csc.inf.business.entity.BanksEntity"/>
+         <value n="7f93c744-012c-1000-803a-c0a80019662a" v="com.beshara.csc.inf.business.entity.BloodGroupsEntity"/>
+         <value n="7f93c744-012c-1000-803b-c0a80019662a" v="com.beshara.csc.inf.business.entity.BuildingOwnerTypesEntity"/>
+         <value n="7f93c744-012c-1000-803c-c0a80019662a" v="com.beshara.csc.inf.business.entity.CountriesEntity"/>
+         <value n="7f93c754-012c-1000-803d-c0a80019662a" v="com.beshara.csc.inf.business.entity.CountryCitiesEntity"/>
+         <value n="7f93c754-012c-1000-803e-c0a80019662a" v="com.beshara.csc.inf.business.entity.CountryGroupsEntity"/>
+         <value n="7f93c754-012c-1000-803f-c0a80019662a" v="com.beshara.csc.inf.business.entity.CurrenciesEntity"/>
+         <value n="7f93c754-012c-1000-8040-c0a80019662a" v="com.beshara.csc.inf.business.entity.DecisionMakerTypesEntity"/>
+         <value n="7f93c754-012c-1000-8041-c0a80019662a" v="com.beshara.csc.inf.business.entity.DmlStatmentTypesEntity"/>
+         <value n="7f93c754-012c-1000-8042-c0a80019662a" v="com.beshara.csc.inf.business.entity.FieldTypesEntity"/>
+         <value n="7f93c754-012c-1000-8043-c0a80019662a" v="com.beshara.csc.inf.business.entity.FieldsEntity"/>
+         <value n="7f93c764-012c-1000-8044-c0a80019662a" v="com.beshara.csc.inf.business.entity.GenderCountryEntity"/>
+         <value n="7f93c764-012c-1000-8045-c0a80019662a" v="com.beshara.csc.inf.business.entity.GenderMaritalEntity"/>
+         <value n="7f93c764-012c-1000-8046-c0a80019662a" v="com.beshara.csc.inf.business.entity.GenderReligionEntity"/>
+         <value n="7f93c764-012c-1000-8047-c0a80019662a" v="com.beshara.csc.inf.business.entity.GenderTypesEntity"/>
+         <value n="7f93c764-012c-1000-8048-c0a80019662a" v="com.beshara.csc.inf.business.entity.GroupCountriesEntity"/>
+         <value n="7f93c773-012c-1000-8049-c0a80019662a" v="com.beshara.csc.inf.business.entity.HandicapStatusEntity"/>
+         <value n="7f93c773-012c-1000-804a-c0a80019662a" v="com.beshara.csc.inf.business.entity.HolidayTypesEntity"/>
+         <value n="7f93c773-012c-1000-804b-c0a80019662a" v="com.beshara.csc.inf.business.entity.HolidaysEntity"/>
+         <value n="7f93c773-012c-1000-804c-c0a80019662a" v="com.beshara.csc.inf.business.entity.InfCitizensPassportsEntity"/>
+         <value n="7f93c773-012c-1000-804d-c0a80019662a" v="com.beshara.csc.inf.business.entity.InfCitizensResidentsDataEntity"/>
+         <value n="7f93c783-012c-1000-804e-c0a80019662a" v="com.beshara.csc.inf.business.entity.InfPersonQualificationsEntity"/>
+         <value n="7f93c783-012c-1000-804f-c0a80019662a" v="com.beshara.csc.inf.business.entity.KwMapEntity"/>
+         <value n="7f93c783-012c-1000-8050-c0a80019662a" v="com.beshara.csc.inf.business.entity.KwStreetsEntity"/>
+         <value n="7f93c783-012c-1000-8051-c0a80019662a" v="com.beshara.csc.inf.business.entity.KwtCitizensResidentsEntity"/>
+         <value n="7f93c792-012c-1000-8052-c0a80019662a" v="com.beshara.csc.inf.business.entity.KwtWorkDataEntity"/>
+         <value n="7f93c792-012c-1000-8053-c0a80019662a" v="com.beshara.csc.inf.business.entity.LanguagesEntity"/>
+         <value n="7f93c792-012c-1000-8054-c0a80019662a" v="com.beshara.csc.inf.business.entity.MapTypesEntity"/>
+         <value n="7f93c792-012c-1000-8055-c0a80019662a" v="com.beshara.csc.inf.business.entity.MaritalStatusEntity"/>
+         <value n="7f93c792-012c-1000-8056-c0a80019662a" v="com.beshara.csc.inf.business.entity.MilitaryStatusEntity"/>
+         <value n="7f93c792-012c-1000-8057-c0a80019662a" v="com.beshara.csc.inf.business.entity.NewspapersEntity"/>
+         <value n="7f93c7a2-012c-1000-8058-c0a80019662a" v="com.beshara.csc.inf.business.entity.OracleErrorsEntity"/>
+         <value n="7f93c7a2-012c-1000-8059-c0a80019662a" v="com.beshara.csc.inf.business.entity.PersonDataChangesEntity"/>
+         <value n="7f93c7a2-012c-1000-805a-c0a80019662a" v="com.beshara.csc.inf.business.entity.PersonParameterValuesBkEntity"/>
+         <value n="7f93c7a2-012c-1000-805b-c0a80019662a" v="com.beshara.csc.inf.business.entity.PersonParameterValuesEntity"/>
+         <value n="7f93c7a2-012c-1000-805c-c0a80019662a" v="com.beshara.csc.inf.business.entity.PersonQualificationsEntity"/>
+         <value n="7f93c7a2-012c-1000-805d-c0a80019662a" v="com.beshara.csc.inf.business.entity.PersonsInformationEntity"/>
+         <value n="7f93c7b2-012c-1000-805e-c0a80019662a" v="com.beshara.csc.inf.business.entity.RelatedFieldsEntity"/>
+         <value n="7f93c7b2-012c-1000-805f-c0a80019662a" v="com.beshara.csc.inf.business.entity.ReligionsEntity"/>
+         <value n="7f93c7b2-012c-1000-8060-c0a80019662a" v="com.beshara.csc.inf.business.entity.ResidentTypeEntity"/>
+         <value n="7f93c7b2-012c-1000-8061-c0a80019662a" v="com.beshara.csc.inf.business.entity.SeekerLanguageSkillsEntity"/>
+         <value n="7f93c7c1-012c-1000-8062-c0a80019662a" v="com.beshara.csc.inf.business.entity.SpecialCaseTypesEntity"/>
+         <value n="7f93c7d1-012c-1000-8063-c0a80019662a" v="com.beshara.csc.inf.business.entity.StreetZonesEntity"/>
+         <value n="7f93c7d1-012c-1000-8064-c0a80019662a" v="com.beshara.csc.inf.business.entity.SystemSettingsEntity"/>
+         <value n="7f93c7d1-012c-1000-8065-c0a80019662a" v="com.beshara.csc.inf.business.entity.TrxStatusEntity"/>
+         <value n="7f93c7d1-012c-1000-8066-c0a80019662a" v="com.beshara.csc.inf.business.entity.WeekDaysEntity"/>
+         <value n="7f93c7d1-012c-1000-8067-c0a80019662a" v="com.beshara.csc.inf.business.entity.YearsEntity"/>
+         <value n="7f93c7d1-012c-1000-8068-c0a80019662a" v="com.beshara.csc.inf.business.entity.emp.InfReasonDataEntity"/>
+         <value n="7f93c7d1-012c-1000-8069-c0a80019662a" v="com.beshara.csc.inf.business.entity.emp.InfReasonTypesEntity"/>
+         <value n="7f93c7e1-012c-1000-806a-c0a80019662a" v="com.beshara.csc.inf.business.facade.ApprovalMakersFacadeBean"/>
+         <value n="7f93c7e1-012c-1000-806b-c0a80019662a" v="com.beshara.csc.inf.business.facade.BankBranchesFacadeBean"/>
+         <value n="7f93c7e1-012c-1000-806c-c0a80019662a" v="com.beshara.csc.inf.business.facade.BanksFacadeBean"/>
+         <value n="7f93c7e1-012c-1000-806d-c0a80019662a" v="com.beshara.csc.inf.business.facade.BloodGroupsFacadeBean"/>
+         <value n="7f93c7e1-012c-1000-806e-c0a80019662a" v="com.beshara.csc.inf.business.facade.BuildingOwnerTypesFacadeBean"/>
+         <value n="7f93c7e1-012c-1000-806f-c0a80019662a" v="com.beshara.csc.inf.business.facade.CountriesFacadeBean"/>
+         <value n="7f93c7e1-012c-1000-8070-c0a80019662a" v="com.beshara.csc.inf.business.facade.CountryCitiesFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8071-c0a80019662a" v="com.beshara.csc.inf.business.facade.CountryGroupsFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8072-c0a80019662a" v="com.beshara.csc.inf.business.facade.CurrenciesFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8073-c0a80019662a" v="com.beshara.csc.inf.business.facade.DecisionMakerTypesFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8074-c0a80019662a" v="com.beshara.csc.inf.business.facade.DmlStatmentTypesFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8075-c0a80019662a" v="com.beshara.csc.inf.business.facade.FieldTypesFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8076-c0a80019662a" v="com.beshara.csc.inf.business.facade.FieldsFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8077-c0a80019662a" v="com.beshara.csc.inf.business.facade.GenderCountryFacadeBean"/>
+         <value n="7f93c800-012c-1000-8078-c0a80019662a" v="com.beshara.csc.inf.business.facade.GenderMaritalFacadeBean"/>
+         <value n="7f93c800-012c-1000-8079-c0a80019662a" v="com.beshara.csc.inf.business.facade.GenderReligionFacadeBean"/>
+         <value n="7f93c800-012c-1000-807a-c0a80019662a" v="com.beshara.csc.inf.business.facade.GenderTypesFacadeBean"/>
+         <value n="7f93c800-012c-1000-807b-c0a80019662a" v="com.beshara.csc.inf.business.facade.GroupCountriesFacadeBean"/>
+         <value n="7f93c800-012c-1000-807c-c0a80019662a" v="com.beshara.csc.inf.business.facade.HandicapStatusFacadeBean"/>
+         <value n="7f93c800-012c-1000-807d-c0a80019662a" v="com.beshara.csc.inf.business.facade.HolidayTypesFacadeBean"/>
+         <value n="7f93c800-012c-1000-807e-c0a80019662a" v="com.beshara.csc.inf.business.facade.HolidaysFacadeBean"/>
+         <value n="7f93c80f-012c-1000-807f-c0a80019662a" v="com.beshara.csc.inf.business.facade.InfCitizensPassportsFacadeBean"/>
+         <value n="7f93c80f-012c-1000-8080-c0a80019662a" v="com.beshara.csc.inf.business.facade.InfCitizensResidentsDataFacadeBean"/>
+         <value n="7f93c80f-012c-1000-8081-c0a80019662a" v="com.beshara.csc.inf.business.facade.InfReasonDataFacadeBean"/>
+         <value n="7f93c80f-012c-1000-8082-c0a80019662a" v="com.beshara.csc.inf.business.facade.InfReasonTypesFacadeBean"/>
+         <value n="7f93c81f-012c-1000-8083-c0a80019662a" v="com.beshara.csc.inf.business.facade.KwMapFacadeBean"/>
+         <value n="7f93c82f-012c-1000-8084-c0a80019662a" v="com.beshara.csc.inf.business.facade.KwStreetsFacadeBean"/>
+         <value n="7f93c82f-012c-1000-8085-c0a80019662a" v="com.beshara.csc.inf.business.facade.KwtCitizensResidentsFacadeBean"/>
+         <value n="7f93c82f-012c-1000-8086-c0a80019662a" v="com.beshara.csc.inf.business.facade.KwtWorkDataFacadeBean"/>
+         <value n="7f93c82f-012c-1000-8087-c0a80019662a" v="com.beshara.csc.inf.business.facade.LanguagesFacadeBean"/>
+         <value n="7f93c82f-012c-1000-8088-c0a80019662a" v="com.beshara.csc.inf.business.facade.MapTypesFacadeBean"/>
+         <value n="7f93c83e-012c-1000-8089-c0a80019662a" v="com.beshara.csc.inf.business.facade.MaritalStatusFacadeBean"/>
+         <value n="7f93c83e-012c-1000-808a-c0a80019662a" v="com.beshara.csc.inf.business.facade.MilitaryStatusFacadeBean"/>
+         <value n="7f93c83e-012c-1000-808b-c0a80019662a" v="com.beshara.csc.inf.business.facade.NewspapersFacadeBean"/>
+         <value n="7f93c83e-012c-1000-808c-c0a80019662a" v="com.beshara.csc.inf.business.facade.OracleErrorsFacadeBean"/>
+         <value n="7f93c83e-012c-1000-808d-c0a80019662a" v="com.beshara.csc.inf.business.facade.PersonDataChangesFacadeBean"/>
+         <value n="7f93c83e-012c-1000-808e-c0a80019662a" v="com.beshara.csc.inf.business.facade.PersonParameterValuesBkFacadeBean"/>
+         <value n="7f93c83e-012c-1000-808f-c0a80019662a" v="com.beshara.csc.inf.business.facade.PersonParameterValuesFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8090-c0a80019662a" v="com.beshara.csc.inf.business.facade.PersonQualificationsFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8091-c0a80019662a" v="com.beshara.csc.inf.business.facade.PersonsInformationFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8092-c0a80019662a" v="com.beshara.csc.inf.business.facade.RelatedFieldsFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8093-c0a80019662a" v="com.beshara.csc.inf.business.facade.ReligionsFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8094-c0a80019662a" v="com.beshara.csc.inf.business.facade.ResidentTypeFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8095-c0a80019662a" v="com.beshara.csc.inf.business.facade.SeekerLanguageSkillsFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8096-c0a80019662a" v="com.beshara.csc.inf.business.facade.SpecialCaseTypesFacadeBean"/>
+         <value n="7f93c85e-012c-1000-8097-c0a80019662a" v="com.beshara.csc.inf.business.facade.StreetZonesFacadeBean"/>
+         <value n="7f93c85e-012c-1000-8098-c0a80019662a" v="com.beshara.csc.inf.business.facade.SystemSettingsFacadeBean"/>
+         <value n="7f93c85e-012c-1000-8099-c0a80019662a" v="com.beshara.csc.inf.business.facade.TrxStatusFacadeBean"/>
+         <value n="7f93c85e-012c-1000-809a-c0a80019662a" v="com.beshara.csc.inf.business.facade.YearsFacadeBean"/>
+      </hash>
+      <hash n="ejbIdToEjbNameMap">
+         <value n="7f93b841-012c-1000-8001-c0a80019662a" v="com.beshara.csc.inf.business.facade.WeekDaysFacadeBean"/>
+         <value n="7f93c698-012c-1000-8002-c0a80019662a" v="com.beshara.csc.inf.business.deploy.ApprovalMakersSessionBean"/>
+         <value n="7f93c698-012c-1000-8003-c0a80019662a" v="com.beshara.csc.inf.business.deploy.BankBranchesSessionBean"/>
+         <value n="7f93c698-012c-1000-8004-c0a80019662a" v="com.beshara.csc.inf.business.deploy.BanksSessionBean"/>
+         <value n="7f93c698-012c-1000-8005-c0a80019662a" v="com.beshara.csc.inf.business.deploy.BloodGroupsSessionBean"/>
+         <value n="7f93c6a8-012c-1000-8006-c0a80019662a" v="com.beshara.csc.inf.business.deploy.BuildingOwnerTypesSessionBean"/>
+         <value n="7f93c6a8-012c-1000-8007-c0a80019662a" v="com.beshara.csc.inf.business.deploy.CountriesSessionBean"/>
+         <value n="7f93c6a8-012c-1000-8008-c0a80019662a" v="com.beshara.csc.inf.business.deploy.CountryCitiesSessionBean"/>
+         <value n="7f93c6a8-012c-1000-8009-c0a80019662a" v="com.beshara.csc.inf.business.deploy.CountryGroupsSessionBean"/>
+         <value n="7f93c6a8-012c-1000-800a-c0a80019662a" v="com.beshara.csc.inf.business.deploy.CurrenciesSessionBean"/>
+         <value n="7f93c6b8-012c-1000-800b-c0a80019662a" v="com.beshara.csc.inf.business.deploy.DecisionMakerTypesSessionBean"/>
+         <value n="7f93c6b8-012c-1000-800c-c0a80019662a" v="com.beshara.csc.inf.business.deploy.DmlStatmentTypesSessionBean"/>
+         <value n="7f93c6b8-012c-1000-800d-c0a80019662a" v="com.beshara.csc.inf.business.deploy.FieldTypesSessionBean"/>
+         <value n="7f93c6b8-012c-1000-800e-c0a80019662a" v="com.beshara.csc.inf.business.deploy.FieldsSessionBean"/>
+         <value n="7f93c6b8-012c-1000-800f-c0a80019662a" v="com.beshara.csc.inf.business.deploy.GenderCountrySessionBean"/>
+         <value n="7f93c6c7-012c-1000-8010-c0a80019662a" v="com.beshara.csc.inf.business.deploy.GenderMaritalSessionBean"/>
+         <value n="7f93c6c7-012c-1000-8011-c0a80019662a" v="com.beshara.csc.inf.business.deploy.GenderReligionSessionBean"/>
+         <value n="7f93c6c7-012c-1000-8012-c0a80019662a" v="com.beshara.csc.inf.business.deploy.GenderTypesSessionBean"/>
+         <value n="7f93c6c7-012c-1000-8013-c0a80019662a" v="com.beshara.csc.inf.business.deploy.GroupCountriesSessionBean"/>
+         <value n="7f93c6c7-012c-1000-8014-c0a80019662a" v="com.beshara.csc.inf.business.deploy.HandicapStatusCMTSessionBean"/>
+         <value n="7f93c6c7-012c-1000-8015-c0a80019662a" v="com.beshara.csc.inf.business.deploy.HandicapStatusSessionBean"/>
+         <value n="7f93c6d7-012c-1000-8016-c0a80019662a" v="com.beshara.csc.inf.business.deploy.HolidayTypesSessionBean"/>
+         <value n="7f93c6d7-012c-1000-8017-c0a80019662a" v="com.beshara.csc.inf.business.deploy.HolidaysSessionBean"/>
+         <value n="7f93c6d7-012c-1000-8018-c0a80019662a" v="com.beshara.csc.inf.business.deploy.InfCitizensPassportsSessionBean"/>
+         <value n="7f93c6d7-012c-1000-8019-c0a80019662a" v="com.beshara.csc.inf.business.deploy.InfCitizensResidentsDataSessionBean"/>
+         <value n="7f93c6d7-012c-1000-801a-c0a80019662a" v="com.beshara.csc.inf.business.deploy.InfReasonDataSessionBean"/>
+         <value n="7f93c6e7-012c-1000-801b-c0a80019662a" v="com.beshara.csc.inf.business.deploy.InfReasonTypesSessionBean"/>
+         <value n="7f93c6e7-012c-1000-801c-c0a80019662a" v="com.beshara.csc.inf.business.deploy.KwMapSessionBean"/>
+         <value n="7f93c6e7-012c-1000-801d-c0a80019662a" v="com.beshara.csc.inf.business.deploy.KwStreetsSessionBean"/>
+         <value n="7f93c6e7-012c-1000-801e-c0a80019662a" v="com.beshara.csc.inf.business.deploy.KwtCitizensResidentsCMTSessionBean"/>
+         <value n="7f93c6e7-012c-1000-801f-c0a80019662a" v="com.beshara.csc.inf.business.deploy.KwtCitizensResidentsSessionBean"/>
+         <value n="7f93c6f6-012c-1000-8020-c0a80019662a" v="com.beshara.csc.inf.business.deploy.KwtWorkDataSessionBean"/>
+         <value n="7f93c6f6-012c-1000-8021-c0a80019662a" v="com.beshara.csc.inf.business.deploy.LanguagesSessionBean"/>
+         <value n="7f93c6f6-012c-1000-8022-c0a80019662a" v="com.beshara.csc.inf.business.deploy.MapTypesSessionBean"/>
+         <value n="7f93c6f6-012c-1000-8023-c0a80019662a" v="com.beshara.csc.inf.business.deploy.MaritalStatusSessionBean"/>
+         <value n="7f93c6f6-012c-1000-8024-c0a80019662a" v="com.beshara.csc.inf.business.deploy.MilitaryStatusSessionBean"/>
+         <value n="7f93c706-012c-1000-8025-c0a80019662a" v="com.beshara.csc.inf.business.deploy.NewspapersSessionBean"/>
+         <value n="7f93c706-012c-1000-8026-c0a80019662a" v="com.beshara.csc.inf.business.deploy.OracleErrorsSessionBean"/>
+         <value n="7f93c706-012c-1000-8027-c0a80019662a" v="com.beshara.csc.inf.business.deploy.PersonDataChangesSessionBean"/>
+         <value n="7f93c706-012c-1000-8028-c0a80019662a" v="com.beshara.csc.inf.business.deploy.PersonParameterValuesBkSessionBean"/>
+         <value n="7f93c706-012c-1000-8029-c0a80019662a" v="com.beshara.csc.inf.business.deploy.PersonParameterValuesSessionBean"/>
+         <value n="7f93c715-012c-1000-802a-c0a80019662a" v="com.beshara.csc.inf.business.deploy.PersonQualificationsCMTSessionBean"/>
+         <value n="7f93c715-012c-1000-802b-c0a80019662a" v="com.beshara.csc.inf.business.deploy.PersonQualificationsSessionBean"/>
+         <value n="7f93c715-012c-1000-802c-c0a80019662a" v="com.beshara.csc.inf.business.deploy.PersonsInformationSessionBean"/>
+         <value n="7f93c715-012c-1000-802d-c0a80019662a" v="com.beshara.csc.inf.business.deploy.RelatedFieldsSessionBean"/>
+         <value n="7f93c725-012c-1000-802e-c0a80019662a" v="com.beshara.csc.inf.business.deploy.ReligionsSessionBean"/>
+         <value n="7f93c725-012c-1000-802f-c0a80019662a" v="com.beshara.csc.inf.business.deploy.ResidentTypeSessionBean"/>
+         <value n="7f93c725-012c-1000-8030-c0a80019662a" v="com.beshara.csc.inf.business.deploy.SeekerLanguageSkillsSessionBean"/>
+         <value n="7f93c725-012c-1000-8031-c0a80019662a" v="com.beshara.csc.inf.business.deploy.SpecialCaseTypesSessionBean"/>
+         <value n="7f93c735-012c-1000-8032-c0a80019662a" v="com.beshara.csc.inf.business.deploy.StreetZonesSessionBean"/>
+         <value n="7f93c735-012c-1000-8033-c0a80019662a" v="com.beshara.csc.inf.business.deploy.SystemSettingsSessionBean"/>
+         <value n="7f93c735-012c-1000-8034-c0a80019662a" v="com.beshara.csc.inf.business.deploy.TrxStatusSessionBean"/>
+         <value n="7f93c735-012c-1000-8035-c0a80019662a" v="com.beshara.csc.inf.business.deploy.WeekDaysSessionBean"/>
+         <value n="7f93c735-012c-1000-8036-c0a80019662a" v="com.beshara.csc.inf.business.deploy.YearsSessionBean"/>
+         <value n="7f93c744-012c-1000-8037-c0a80019662a" v="com.beshara.csc.inf.business.entity.ApprovalMakersEntity"/>
+         <value n="7f93c744-012c-1000-8038-c0a80019662a" v="com.beshara.csc.inf.business.entity.BankBranchesEntity"/>
+         <value n="7f93c744-012c-1000-8039-c0a80019662a" v="com.beshara.csc.inf.business.entity.BanksEntity"/>
+         <value n="7f93c744-012c-1000-803a-c0a80019662a" v="com.beshara.csc.inf.business.entity.BloodGroupsEntity"/>
+         <value n="7f93c744-012c-1000-803b-c0a80019662a" v="com.beshara.csc.inf.business.entity.BuildingOwnerTypesEntity"/>
+         <value n="7f93c744-012c-1000-803c-c0a80019662a" v="com.beshara.csc.inf.business.entity.CountriesEntity"/>
+         <value n="7f93c754-012c-1000-803d-c0a80019662a" v="com.beshara.csc.inf.business.entity.CountryCitiesEntity"/>
+         <value n="7f93c754-012c-1000-803e-c0a80019662a" v="com.beshara.csc.inf.business.entity.CountryGroupsEntity"/>
+         <value n="7f93c754-012c-1000-803f-c0a80019662a" v="com.beshara.csc.inf.business.entity.CurrenciesEntity"/>
+         <value n="7f93c754-012c-1000-8040-c0a80019662a" v="com.beshara.csc.inf.business.entity.DecisionMakerTypesEntity"/>
+         <value n="7f93c754-012c-1000-8041-c0a80019662a" v="com.beshara.csc.inf.business.entity.DmlStatmentTypesEntity"/>
+         <value n="7f93c754-012c-1000-8042-c0a80019662a" v="com.beshara.csc.inf.business.entity.FieldTypesEntity"/>
+         <value n="7f93c754-012c-1000-8043-c0a80019662a" v="com.beshara.csc.inf.business.entity.FieldsEntity"/>
+         <value n="7f93c764-012c-1000-8044-c0a80019662a" v="com.beshara.csc.inf.business.entity.GenderCountryEntity"/>
+         <value n="7f93c764-012c-1000-8045-c0a80019662a" v="com.beshara.csc.inf.business.entity.GenderMaritalEntity"/>
+         <value n="7f93c764-012c-1000-8046-c0a80019662a" v="com.beshara.csc.inf.business.entity.GenderReligionEntity"/>
+         <value n="7f93c764-012c-1000-8047-c0a80019662a" v="com.beshara.csc.inf.business.entity.GenderTypesEntity"/>
+         <value n="7f93c764-012c-1000-8048-c0a80019662a" v="com.beshara.csc.inf.business.entity.GroupCountriesEntity"/>
+         <value n="7f93c773-012c-1000-8049-c0a80019662a" v="com.beshara.csc.inf.business.entity.HandicapStatusEntity"/>
+         <value n="7f93c773-012c-1000-804a-c0a80019662a" v="com.beshara.csc.inf.business.entity.HolidayTypesEntity"/>
+         <value n="7f93c773-012c-1000-804b-c0a80019662a" v="com.beshara.csc.inf.business.entity.HolidaysEntity"/>
+         <value n="7f93c773-012c-1000-804c-c0a80019662a" v="com.beshara.csc.inf.business.entity.InfCitizensPassportsEntity"/>
+         <value n="7f93c773-012c-1000-804d-c0a80019662a" v="com.beshara.csc.inf.business.entity.InfCitizensResidentsDataEntity"/>
+         <value n="7f93c783-012c-1000-804e-c0a80019662a" v="com.beshara.csc.inf.business.entity.InfPersonQualificationsEntity"/>
+         <value n="7f93c783-012c-1000-804f-c0a80019662a" v="com.beshara.csc.inf.business.entity.KwMapEntity"/>
+         <value n="7f93c783-012c-1000-8050-c0a80019662a" v="com.beshara.csc.inf.business.entity.KwStreetsEntity"/>
+         <value n="7f93c783-012c-1000-8051-c0a80019662a" v="com.beshara.csc.inf.business.entity.KwtCitizensResidentsEntity"/>
+         <value n="7f93c792-012c-1000-8052-c0a80019662a" v="com.beshara.csc.inf.business.entity.KwtWorkDataEntity"/>
+         <value n="7f93c792-012c-1000-8053-c0a80019662a" v="com.beshara.csc.inf.business.entity.LanguagesEntity"/>
+         <value n="7f93c792-012c-1000-8054-c0a80019662a" v="com.beshara.csc.inf.business.entity.MapTypesEntity"/>
+         <value n="7f93c792-012c-1000-8055-c0a80019662a" v="com.beshara.csc.inf.business.entity.MaritalStatusEntity"/>
+         <value n="7f93c792-012c-1000-8056-c0a80019662a" v="com.beshara.csc.inf.business.entity.MilitaryStatusEntity"/>
+         <value n="7f93c792-012c-1000-8057-c0a80019662a" v="com.beshara.csc.inf.business.entity.NewspapersEntity"/>
+         <value n="7f93c7a2-012c-1000-8058-c0a80019662a" v="com.beshara.csc.inf.business.entity.OracleErrorsEntity"/>
+         <value n="7f93c7a2-012c-1000-8059-c0a80019662a" v="com.beshara.csc.inf.business.entity.PersonDataChangesEntity"/>
+         <value n="7f93c7a2-012c-1000-805a-c0a80019662a" v="com.beshara.csc.inf.business.entity.PersonParameterValuesBkEntity"/>
+         <value n="7f93c7a2-012c-1000-805b-c0a80019662a" v="com.beshara.csc.inf.business.entity.PersonParameterValuesEntity"/>
+         <value n="7f93c7a2-012c-1000-805c-c0a80019662a" v="com.beshara.csc.inf.business.entity.PersonQualificationsEntity"/>
+         <value n="7f93c7a2-012c-1000-805d-c0a80019662a" v="com.beshara.csc.inf.business.entity.PersonsInformationEntity"/>
+         <value n="7f93c7b2-012c-1000-805e-c0a80019662a" v="com.beshara.csc.inf.business.entity.RelatedFieldsEntity"/>
+         <value n="7f93c7b2-012c-1000-805f-c0a80019662a" v="com.beshara.csc.inf.business.entity.ReligionsEntity"/>
+         <value n="7f93c7b2-012c-1000-8060-c0a80019662a" v="com.beshara.csc.inf.business.entity.ResidentTypeEntity"/>
+         <value n="7f93c7b2-012c-1000-8061-c0a80019662a" v="com.beshara.csc.inf.business.entity.SeekerLanguageSkillsEntity"/>
+         <value n="7f93c7c1-012c-1000-8062-c0a80019662a" v="com.beshara.csc.inf.business.entity.SpecialCaseTypesEntity"/>
+         <value n="7f93c7d1-012c-1000-8063-c0a80019662a" v="com.beshara.csc.inf.business.entity.StreetZonesEntity"/>
+         <value n="7f93c7d1-012c-1000-8064-c0a80019662a" v="com.beshara.csc.inf.business.entity.SystemSettingsEntity"/>
+         <value n="7f93c7d1-012c-1000-8065-c0a80019662a" v="com.beshara.csc.inf.business.entity.TrxStatusEntity"/>
+         <value n="7f93c7d1-012c-1000-8066-c0a80019662a" v="com.beshara.csc.inf.business.entity.WeekDaysEntity"/>
+         <value n="7f93c7d1-012c-1000-8067-c0a80019662a" v="com.beshara.csc.inf.business.entity.YearsEntity"/>
+         <value n="7f93c7d1-012c-1000-8068-c0a80019662a" v="com.beshara.csc.inf.business.entity.emp.InfReasonDataEntity"/>
+         <value n="7f93c7d1-012c-1000-8069-c0a80019662a" v="com.beshara.csc.inf.business.entity.emp.InfReasonTypesEntity"/>
+         <value n="7f93c7e1-012c-1000-806a-c0a80019662a" v="com.beshara.csc.inf.business.facade.ApprovalMakersFacadeBean"/>
+         <value n="7f93c7e1-012c-1000-806b-c0a80019662a" v="com.beshara.csc.inf.business.facade.BankBranchesFacadeBean"/>
+         <value n="7f93c7e1-012c-1000-806c-c0a80019662a" v="com.beshara.csc.inf.business.facade.BanksFacadeBean"/>
+         <value n="7f93c7e1-012c-1000-806d-c0a80019662a" v="com.beshara.csc.inf.business.facade.BloodGroupsFacadeBean"/>
+         <value n="7f93c7e1-012c-1000-806e-c0a80019662a" v="com.beshara.csc.inf.business.facade.BuildingOwnerTypesFacadeBean"/>
+         <value n="7f93c7e1-012c-1000-806f-c0a80019662a" v="com.beshara.csc.inf.business.facade.CountriesFacadeBean"/>
+         <value n="7f93c7e1-012c-1000-8070-c0a80019662a" v="com.beshara.csc.inf.business.facade.CountryCitiesFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8071-c0a80019662a" v="com.beshara.csc.inf.business.facade.CountryGroupsFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8072-c0a80019662a" v="com.beshara.csc.inf.business.facade.CurrenciesFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8073-c0a80019662a" v="com.beshara.csc.inf.business.facade.DecisionMakerTypesFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8074-c0a80019662a" v="com.beshara.csc.inf.business.facade.DmlStatmentTypesFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8075-c0a80019662a" v="com.beshara.csc.inf.business.facade.FieldTypesFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8076-c0a80019662a" v="com.beshara.csc.inf.business.facade.FieldsFacadeBean"/>
+         <value n="7f93c7f0-012c-1000-8077-c0a80019662a" v="com.beshara.csc.inf.business.facade.GenderCountryFacadeBean"/>
+         <value n="7f93c800-012c-1000-8078-c0a80019662a" v="com.beshara.csc.inf.business.facade.GenderMaritalFacadeBean"/>
+         <value n="7f93c800-012c-1000-8079-c0a80019662a" v="com.beshara.csc.inf.business.facade.GenderReligionFacadeBean"/>
+         <value n="7f93c800-012c-1000-807a-c0a80019662a" v="com.beshara.csc.inf.business.facade.GenderTypesFacadeBean"/>
+         <value n="7f93c800-012c-1000-807b-c0a80019662a" v="com.beshara.csc.inf.business.facade.GroupCountriesFacadeBean"/>
+         <value n="7f93c800-012c-1000-807c-c0a80019662a" v="com.beshara.csc.inf.business.facade.HandicapStatusFacadeBean"/>
+         <value n="7f93c800-012c-1000-807d-c0a80019662a" v="com.beshara.csc.inf.business.facade.HolidayTypesFacadeBean"/>
+         <value n="7f93c800-012c-1000-807e-c0a80019662a" v="com.beshara.csc.inf.business.facade.HolidaysFacadeBean"/>
+         <value n="7f93c80f-012c-1000-807f-c0a80019662a" v="com.beshara.csc.inf.business.facade.InfCitizensPassportsFacadeBean"/>
+         <value n="7f93c80f-012c-1000-8080-c0a80019662a" v="com.beshara.csc.inf.business.facade.InfCitizensResidentsDataFacadeBean"/>
+         <value n="7f93c80f-012c-1000-8081-c0a80019662a" v="com.beshara.csc.inf.business.facade.InfReasonDataFacadeBean"/>
+         <value n="7f93c80f-012c-1000-8082-c0a80019662a" v="com.beshara.csc.inf.business.facade.InfReasonTypesFacadeBean"/>
+         <value n="7f93c81f-012c-1000-8083-c0a80019662a" v="com.beshara.csc.inf.business.facade.KwMapFacadeBean"/>
+         <value n="7f93c82f-012c-1000-8084-c0a80019662a" v="com.beshara.csc.inf.business.facade.KwStreetsFacadeBean"/>
+         <value n="7f93c82f-012c-1000-8085-c0a80019662a" v="com.beshara.csc.inf.business.facade.KwtCitizensResidentsFacadeBean"/>
+         <value n="7f93c82f-012c-1000-8086-c0a80019662a" v="com.beshara.csc.inf.business.facade.KwtWorkDataFacadeBean"/>
+         <value n="7f93c82f-012c-1000-8087-c0a80019662a" v="com.beshara.csc.inf.business.facade.LanguagesFacadeBean"/>
+         <value n="7f93c82f-012c-1000-8088-c0a80019662a" v="com.beshara.csc.inf.business.facade.MapTypesFacadeBean"/>
+         <value n="7f93c83e-012c-1000-8089-c0a80019662a" v="com.beshara.csc.inf.business.facade.MaritalStatusFacadeBean"/>
+         <value n="7f93c83e-012c-1000-808a-c0a80019662a" v="com.beshara.csc.inf.business.facade.MilitaryStatusFacadeBean"/>
+         <value n="7f93c83e-012c-1000-808b-c0a80019662a" v="com.beshara.csc.inf.business.facade.NewspapersFacadeBean"/>
+         <value n="7f93c83e-012c-1000-808c-c0a80019662a" v="com.beshara.csc.inf.business.facade.OracleErrorsFacadeBean"/>
+         <value n="7f93c83e-012c-1000-808d-c0a80019662a" v="com.beshara.csc.inf.business.facade.PersonDataChangesFacadeBean"/>
+         <value n="7f93c83e-012c-1000-808e-c0a80019662a" v="com.beshara.csc.inf.business.facade.PersonParameterValuesBkFacadeBean"/>
+         <value n="7f93c83e-012c-1000-808f-c0a80019662a" v="com.beshara.csc.inf.business.facade.PersonParameterValuesFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8090-c0a80019662a" v="com.beshara.csc.inf.business.facade.PersonQualificationsFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8091-c0a80019662a" v="com.beshara.csc.inf.business.facade.PersonsInformationFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8092-c0a80019662a" v="com.beshara.csc.inf.business.facade.RelatedFieldsFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8093-c0a80019662a" v="com.beshara.csc.inf.business.facade.ReligionsFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8094-c0a80019662a" v="com.beshara.csc.inf.business.facade.ResidentTypeFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8095-c0a80019662a" v="com.beshara.csc.inf.business.facade.SeekerLanguageSkillsFacadeBean"/>
+         <value n="7f93c84e-012c-1000-8096-c0a80019662a" v="com.beshara.csc.inf.business.facade.SpecialCaseTypesFacadeBean"/>
+         <value n="7f93c85e-012c-1000-8097-c0a80019662a" v="com.beshara.csc.inf.business.facade.StreetZonesFacadeBean"/>
+         <value n="7f93c85e-012c-1000-8098-c0a80019662a" v="com.beshara.csc.inf.business.facade.SystemSettingsFacadeBean"/>
+         <value n="7f93c85e-012c-1000-8099-c0a80019662a" v="com.beshara.csc.inf.business.facade.TrxStatusFacadeBean"/>
+         <value n="7f93c85e-012c-1000-809a-c0a80019662a" v="com.beshara.csc.inf.business.facade.YearsFacadeBean"/>
+      </hash>
+      <value n="ejbVersion" v="3.0"/>
+      <list n="toplinkJpaClientUrls">
+         <url path="src/com/beshara/csc/gn/inf/business/BloodGroupsFacadeClient.java"/>
+         <url path="src/com/beshara/csc/gn/inf/business/EservicesDocumentTestClient.java"/>
+      </list>
+      <url n="weblogicEjbJarNodeURL" path="src/META-INF/weblogic-ejb-jar.xml"/>
+   </hash>
+   <hash n="oc4j-data-source-settings">
+      <value n="autoSyncOnRunOrDeploy" v="false"/>
+      <value n="createDataSources" v="false"/>
+      <value n="deleteDataSources" v="false"/>
+      <value n="updateDataSources" v="false"/>
+   </hash>
+   <hash n="oracle.bm.commonIde.data.project.ModelerProjectSettings">
+      <hash n="modelersContentSet">
+         <list n="url-path">
+            <url path="model/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.ide.model.DependencyConfiguration">
+      <list n="dependencyList"/>
+   </hash>
+   <hash n="oracle.ide.model.ResourcePaths">
+      <hash n="resourcesContentSet">
+         <list n="constituent-sets">
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+infra.deploy"/>
+               </list>
+               <list n="url-path">
+                  <url protocol="file" path="/Z:/lib/"/>
+               </list>
+            </hash>
+            <hash>
+               <list n="pattern-filters"/>
+               <list n="url-path">
+                  <url path="Javadoc/"/>
+               </list>
+            </hash>
+            <hash>
+               <list n="pattern-filters">
+                  <string v="-Javadoc/index.html"/>
+                  <string v="+*"/>
+               </list>
+               <list n="url-path">
+                  <url path="."/>
+               </list>
+            </hash>
+         </list>
+         <list n="url-path"/>
+      </hash>
+   </hash>
+   <hash n="oracle.ide.model.TechnologyScopeConfiguration">
+      <list n="technologyScope">
+         <string v="Ant"/>
+         <string v="Database"/>
+         <string v="EJB"/>
+         <string v="ExtensionDT"/>
+         <string v="JAVASCRIPT"/>
+         <string v="Java"/>
+         <string v="General"/>
+         <string v="JSP"/>
+         <string v="HTML"/>
+         <string v="JSF"/>
+         <string v="Maven"/>
+         <string v="TopLink"/>
+         <string v="XML"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
+      <value n="internalEncoding" v="UTF-8"/>
+      <list n="Javac.commandline.optionlist">
+         <string v="-g"/>
+         <string v="-Xlint:all"/>
+         <string v="-Xlint:-cast"/>
+         <string v="-Xlint:-empty"/>
+         <string v="-Xlint:-fallthrough"/>
+         <string v="-Xlint:-path"/>
+         <string v="-Xlint:-processing"/>
+         <string v="-Xlint:-serial"/>
+         <string v="-Xlint:-unchecked"/>
+         <string v="-processor"/>
+         <string v="com.beshara.assets.codetools.processors.ProcessorsManager"/>
+      </list>
+      <value n="Javac.-processor" v="truecom.beshara.assets.codetools.processors.ProcessorsManager"/>
+      <value n="outOfProcess" v="true"/>
+   </hash>
+   <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
+      <hash n="profileDefinitions">
+         <hash n="inf-app">
+            <hash n="archiveOptions">
+               <value n="compressed" v="true"/>
+               <value n="compressionLevel" v="9"/>
+               <value n="hasManifest" v="true"/>
+            </hash>
+            <value n="enterpriseAppName" v="inf-app"/>
+            <hash n="fileGroups">
+               <list n="groups">
+                  <hash>
+                     <list n="contributors">
+                        <hash>
+                           <value n="type" v="2"/>
+                        </hash>
+                     </list>
+                     <value n="displayName" v="Project Output"/>
+                     <hash n="filters">
+                        <list n="rules">
+                           <hash>
+                              <value n="pattern" v="build.properties"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="build.xml"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="pom.xml"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="DefaultFilters" v=""/>
+                           </hash>
+                        </list>
+                     </hash>
+                     <value n="internalName" v="project-output"/>
+                     <value n="type" v="1"/>
+                  </hash>
+               </list>
+            </hash>
+            <url n="jarURL" path="deploy/inf-app.jar"/>
+            <hash n="libraryDependencies">
+               <value n="IncludeLibrariesFromOtherContainers" v="true"/>
+            </hash>
+            <value n="platformType" v="WEBLOGIC"/>
+            <value n="platformVersion" v="10.3.0.0"/>
+            <value n="profileClass" v="oracle.jdeveloper.deploy.ejb.EjbProfile"/>
+            <value n="profileName" v="inf-app"/>
+         </hash>
+         <hash n="inf-proxy">
+            <hash n="archiveOptions">
+               <value n="hasManifest" v="false"/>
+            </hash>
+            <hash n="fileGroups">
+               <list n="groups">
+                  <hash>
+                     <list n="contributors">
+                        <hash>
+                           <value n="type" v="2"/>
+                        </hash>
+                     </list>
+                     <value n="displayName" v="Project Output"/>
+                     <hash n="filters">
+                        <list n="rules">
+                           <hash>
+                              <value n="pattern" v="build.properties"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="build.xml"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="pom.xml"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/**/integration/*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="META-INF/"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/facade/*EntityConv*.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/client/*ClientFactoryOld.*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/deploy/*SessionBean.*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/bo/*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v=" **/dao/*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/facade/*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/test/*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/*Test.*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**/resources/*.*"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="DefaultFilters" v=""/>
+                           </hash>
+                        </list>
+                     </hash>
+                     <value n="internalName" v="project-output"/>
+                     <value n="type" v="1"/>
+                  </hash>
+               </list>
+            </hash>
+            <url n="jarURL" path="deploy/inf-proxy.jar"/>
+            <hash n="libraryDependencies">
+               <value n="IncludeLibrariesFromOtherContainers" v="true"/>
+            </hash>
+            <value n="profileClass" v="oracle.jdeveloper.deploy.jar.ArchiveProfile"/>
+            <value n="profileName" v="inf-proxy"/>
+         </hash>
+         <hash n="inf-proxy-esv">
+            <hash n="archiveOptions">
+               <value n="hasManifest" v="true"/>
+            </hash>
+            <hash n="fileGroups">
+               <list n="groups">
+                  <hash>
+                     <list n="contributors">
+                        <hash>
+                           <value n="type" v="2"/>
+                        </hash>
+                        <hash>
+                           <value n="type" v="7"/>
+                        </hash>
+                     </list>
+                     <value n="displayName" v="Project Output"/>
+                     <hash n="filters">
+                        <list n="rules">
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/eservicesdocument/dto/EservicesDocumentDTO.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/smartinfo/SmartInfoEServieceClient.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/smartinfo/ISmartInfoEServiece.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/registration/IRegistrationEServiece.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/registration/RegistrationEServieceClient.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/registration/dto/UserDTOMapper.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/registration/dto/UserDTOEservice.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/infmap/InfMapEserviceClient.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/infmap/IInfMapEservice.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/infmap/dto/InfMapDTO.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/infkwcitizen/IKwtCitizensResidentsEservice.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/infkwcitizen/KwtCitizensResidentsEserviceClient.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/infkwcitizen/dto/KwtCitizensResidentsMapper.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/infkwcitizen/dto/KwtCitizensResidentsEserviceDTO.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/eservicesdocument/IEservicesDocument.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/csc/inf/business/integration/eservices/eservicesdocument/EservicesDocumentClient.class"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="com/beshara/"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="META-INF/weblogic-ejb-jar.xml"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="META-INF/persistence.xml"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="DefaultFilters" v=""/>
+                           </hash>
+                        </list>
+                     </hash>
+                     <value n="internalName" v="project-output"/>
+                     <value n="type" v="1"/>
+                  </hash>
+               </list>
+            </hash>
+            <url n="jarURL" path="deploy/inf-proxy-esv.jar"/>
+            <hash n="libraryDependencies">
+               <value n="IncludeLibrariesFromOtherContainers" v="true"/>
+            </hash>
+            <value n="profileClass" v="oracle.jdeveloper.deploy.jar.ArchiveProfile"/>
+            <value n="profileName" v="inf-proxy-esv"/>
+         </hash>
+      </hash>
+      <list n="profileList">
+         <string v="inf-app"/>
+         <string v="inf-proxy"/>
+         <string v="inf-proxy-esv"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdeveloper.javadoc.JProjectJavadoc">
+      <value n="generateAuthor" v="true"/>
+      <value n="generateVersion" v="true"/>
+      <url n="outputDirectory" path="../Javadoc/"/>
+      <value n="scope" v="-private"/>
+   </hash>
+   <hash n="oracle.jdeveloper.maven.compiler.MavenRunConfiguration">
+      <list n="availableGoalList">
+         <string v="deploy"/>
+         <string v="generate-resources"/>
+         <string v="generate-sources"/>
+         <string v="generate-test-resources"/>
+         <string v="generate-test-sources"/>
+         <string v="initialize"/>
+         <string v="integration-test"/>
+         <string v="post-clean"/>
+         <string v="post-integration-test"/>
+         <string v="post-site"/>
+         <string v="pre-clean"/>
+         <string v="pre-integration-test"/>
+         <string v="prepare-package"/>
+         <string v="pre-site"/>
+         <string v="process-classes"/>
+         <string v="process-resources"/>
+         <string v="process-sources"/>
+         <string v="process-test-classes"/>
+         <string v="process-test-resources"/>
+         <string v="process-test-sources"/>
+         <string v="site"/>
+         <string v="site-deploy"/>
+         <string v="test"/>
+         <string v="test-compile"/>
+         <string v="validate"/>
+         <string v="verify"/>
+      </list>
+      <value n="goalToRun" v="install"/>
+      <url n="pomfileURL" path="pom.xml"/>
+      <list n="selectedGoalList">
+         <string v="package"/>
+         <string v="clean"/>
+         <string v="compile"/>
+         <string v="install"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdeveloper.model.J2eeSettings">
+      <value n="j2eeWebAppName" v="inf"/>
+      <value n="j2eeWebContextRoot" v="inf"/>
+      <hash n="webContentSet">
+         <list n="pattern-filters">
+            <string v="-WEB-INF/temp/"/>
+            <string v="-WEB-INF/classes/"/>
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="public_html/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.model.PathsConfiguration">
+      <hash n="javaContentSet">
+         <list n="constituent-sets"/>
+         <list n="pattern-filters">
+            <string v="-com/beshara/csc/inf/presentation/"/>
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="src/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.offlinedb.model.OfflineDBProjectSettings">
+      <hash n="offlineDBContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="database/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.runner.RunConfigurations">
+      <hash n="runConfigurationDefinitions">
+         <hash n="Default">
+            <value n="custom" v="false"/>
+            <value n="name" v="Default"/>
+         </hash>
+      </hash>
+      <list n="runConfigurationList">
+         <string v="Default"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdevimpl.config.JProjectLibraries">
+      <list n="exportedReferences">
+         <hash>
+            <value n="id" v="EJB 3.0"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle JDBC"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="WebLogic 10.3 Remote-Client"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Crs-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Qul-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Map-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Job-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Org-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Emp-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Req-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Reg-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Mis-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Sec-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Aud-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Grs-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Bgt-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Trn-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Sal2-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Prm-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Grs-intg-bus.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Reg-intg-bus.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Paci-wsproxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Flm-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="TopLink"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Bnk-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="HumanTaskValidationCallback.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="EmpValidationCallback.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" protocol="file" path="/Z:/JDevLibs/business/csc-business/Business-3.7.0.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
+      <hash n="internalDefinitions">
+         <list n="libraryDefinitions">
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/crs/crs-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Crs-proxy.jar"/>
+               <value n="id" v="Crs-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/ntl/qul-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Qul-proxy.jar"/>
+               <value n="id" v="Qul-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/map/map-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Map-proxy.jar"/>
+               <value n="id" v="Map-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/ntl/job-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Job-proxy.jar"/>
+               <value n="id" v="Job-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/ntl/org-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Org-proxy.jar"/>
+               <value n="id" v="Org-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/hrm/emp-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Emp-proxy.jar"/>
+               <value n="id" v="Emp-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/req/req-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Req-proxy.jar"/>
+               <value n="id" v="Req-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/reg/reg-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Reg-proxy.jar"/>
+               <value n="id" v="Reg-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/hrm/mis-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Mis-proxy.jar"/>
+               <value n="id" v="Mis-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/bsc/sec-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Sec-proxy.jar"/>
+               <value n="id" v="Sec-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/aud/aud-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Aud-proxy.jar"/>
+               <value n="id" v="Aud-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/integration/grs-intg-bus.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Grs-intg-bus.jar"/>
+               <value n="id" v="Grs-intg-bus.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/grs/grs-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Grs-proxy.jar"/>
+               <value n="id" v="Grs-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/prl/bgt-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Bgt-proxy.jar"/>
+               <value n="id" v="Bgt-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/trn/trn-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Trn-proxy.jar"/>
+               <value n="id" v="Trn-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/prl/sal2-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Sal2-proxy.jar"/>
+               <value n="id" v="Sal2-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/hrm/prm-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Prm-proxy.jar"/>
+               <value n="id" v="Prm-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/integration/reg-intg-bus.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Reg-intg-bus.jar"/>
+               <value n="id" v="Reg-intg-bus.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/paci-wsproxy/paci-wsproxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Paci-wsproxy.jar"/>
+               <value n="id" v="Paci-wsproxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/flm/flm-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Flm-proxy.jar"/>
+               <value n="id" v="Flm-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/csc/business/proxy/ntl/bnk-proxy.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Bnk-proxy.jar"/>
+               <value n="id" v="Bnk-proxy.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/esrv/business/bpel/base/HumanTaskValidationCallback.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="HumanTaskValidationCallback.jar"/>
+               <value n="id" v="HumanTaskValidationCallback.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/Z:/lib/beshara/esrv/business/bpel/integration/hr/emp/EmpValidationCallback.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="EmpValidationCallback.jar"/>
+               <value n="id" v="EmpValidationCallback.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+         </list>
+      </hash>
+      <list n="libraryReferences">
+         <hash>
+            <value n="id" v="EJB 3.0"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle JDBC"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="WebLogic 10.3 Remote-Client"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Crs-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Qul-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Map-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Job-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Org-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Emp-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Req-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Reg-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Mis-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Sec-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Aud-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Grs-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Bgt-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Trn-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Sal2-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Prm-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Grs-intg-bus.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Reg-intg-bus.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Paci-wsproxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Flm-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="TopLink"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Bnk-proxy.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="HumanTaskValidationCallback.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="EmpValidationCallback.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" protocol="file" path="/Z:/JDevLibs/business/csc-business/Business-3.7.0.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
+   </hash>
+   <hash n="oracle.jdevimpl.config.JProjectPaths">
+      <url n="outputDirectory" path="classes/"/>
+   </hash>
+   <hash n="oracle.jdevimpl.webapp.jsp.libraries.model.ProjectTagLibraries">
+      <list n="tag-libraries"/>
+   </hash>
+   <hash n="oracle.tip.tools.ide.pm.addin.PMProjectSettings">
+      <hash n="Integration_Content">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+      </hash>
+   </hash>
+</jpr:project>

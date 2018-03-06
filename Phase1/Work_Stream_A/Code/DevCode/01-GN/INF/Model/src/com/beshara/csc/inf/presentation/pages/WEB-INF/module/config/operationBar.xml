@@ -1,0 +1,2091 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+OperationBar configuration sample
+@author       Ashraf Gaber, Waleed Badr
+@since        24/06/2008
+
+<operationBar selectionCount="" recordsCount="">
+     <definitions>
+        <definition name="" id="" separator="" ajax="" selection="" selectionCount="" 
+                     onclick="" action="" actionListener="" disabled="" rendered="" 
+                     value="" param="" immediate="" title="" binding=""
+                     ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete=""
+                     styleClass="" disabledStyleClass="" hoverStyleClass="" icon=""/>
+     </definitions>
+    <pages>
+        <page viewId="" beanName="" resourceName="" selectionCount="" recordsCount="" rendered="" buttonsRendered="" menuRendered="">
+            <buttons>
+                <button definition="" id="" separator="" ajax="" selection="" selectionCount="" 
+                 onclick="" action="" actionListener="" disabled="" rendered="" 
+                 value="" param="" immediate="" title="" binding=""
+                 ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete=""
+                 styleClass="" disabledStyleClass="" hoverStyleClass=""/>
+            </buttons>
+            <menu>
+                <menuItem definition="" id="" separator="" ajax="" selection="" selectionCount="" 
+                 onclick="" action="" actionListener="" disabled="" rendered="" 
+                 value="" param="" immediate="" title="" binding=""
+                 ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete=""
+                 icon="">
+                    <menuItems>
+                        <menuItem definition="" id="" separator="" ajax="" selection="" selectionCount="" 
+                         onclick="" action="" actionListener="" disabled="" rendered="" 
+                         binding="" immediate="" title="" value="" param=""
+                         ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete=""
+                         icon=""/>
+                    </menuItems>
+                <menuItem>
+            </menu>
+        </page>
+    </pages>
+</operationBar>
+
+separator: true/false*
+ajax     : true/false*
+selection: none*/single/multi
+
+* default value
+Note: The default paramName ="param" and its unmodifiable.
+-->
+<!-- 
+OperationBar configuration sample
+@author       Ashraf Gaber, Waleed Badr
+@since        04/06/2008
+
+<operationBar>
+   <pages>
+       <page viewId="" beanName="" resourceName="" recordsCount="" rendered="" buttonsRendered="" menuRendered="">
+           <buttons>
+               <button id="" separator="" ajax="" selection="" selectionCount="" action="" actionListener="" value="" 
+               styleClass="" disabledStyleClass="" disabled="" rendered="" binding="" immediate="" title="" onclick="" 
+               onmouseover="" onmouseout="" paramName="" paramValue="" ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete=""/>
+           </buttons>
+           <menu>
+               <menuItem id="" separator="" ajax="" selection="" selectionCount="" action="" actionListener="" value="" 
+               disabledStyleClass="" disabled="" rendered="" binding="" icon="" itemDescription="" itemLabel="" itemValue=""
+               ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete="">
+                   <menuItems>
+                       <menuItem id="" separator="" ajax="" selection="" selectionCount="" action="" actionListener="" value="" 
+                       disabledStyleClass="" disabled="" rendered="" binding="" icon="" itemDescription="" itemLabel="" itemValue=""
+                       ajax_ajaxSingle="" ajax_reRender="" ajax_oncomplete=""/>
+                   </menuItems>
+               <menuItem>
+           </menu>
+       </page>
+   </pages>
+</operationBar>
+
+separator: true/false*
+ajax     : true/false*
+selection: none*/single/multi
+
+* default value
+-->
+<operationBar applyMainMenuItemsCSSHack="true">
+    <pages>
+        <page viewId="/module/jsps/maindata/gendertypes/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="genderTypesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/dmlstatmenttype/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="dmlStatmentTypesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <!--button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup" disabled="#{!$myBean$.addEnabled}"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup" disabled="#{!$myBean$.editEnabled}"/>
+                <button id="separator2" separator="true"/-->
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/societies/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="societiesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/governorates/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="governoratesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/languages/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="languagesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/buildingownertypes/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="buildingOwnerTypesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/specialcasetypes/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="specialCaseTypesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/weekdays/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="weekDaysListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <!--
+                <button id="addButton" ajax="true" styleClass="OB_add"
+                        disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"
+                        disabled="#{!$myBean$.addEnabled}"/>
+                        
+                        
+                     
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single"
+                        selectionCount="#{$myBean$.selectedListSize}"
+                        ajax="true" styleClass="OB_edit"
+                        disabledStyleClass="OB_edit_disabled"
+                        action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"
+                        disabled="#{!$myBean$.editEnabled}"/>
+                           -->
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/objecttypes/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="objectTypesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/militarystatus/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="militaryStatusBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/operationtypes/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="operationTypesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/handicapstatus/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="handicapStatusListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"
+                        disabled="#{($myBean$.selectedDTOS[0].auditStatus==2)}"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <!--<menuItem id="operationMenu" value="#{$myResource$.operations_menu}" >
+                    <menuItems>
+                    <menuItem id="post" value="#{integrationBundle.post}" selection="single" selectionCount="#{$myBean$.selectedListSize}"  action="#{$myBean$.postRecord}" disabled="#{!($myBean$.selectedDTOS[0].auditStatus==1)}" />
+                    </menuItems>
+            </menuItem>-->
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <!--menuItem id="handicapRatio_" value="#{resourcesBundle.INF_HandicapStatusDTO_handicapRatio}"
+                                  actionListener="#{$myBean$.sortDataTable}"/-->
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/decisionmakertypes/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="decisionmakerListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/residenttype/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="residentTypeListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/maritalstatusmasfem/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="maritalStatusMasFemListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                    <menuItems>
+                        <menuItem id="post" value="#{resourcesBundle.post}" selection="single"
+                                  selectionCount="#{$myBean$.selectedListSize}" action="#{$myBean$.postRecord}"
+                                  disabled="#{!($myBean$.selectedDTOS[0].auditStatus==1)}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="marstatusMasName_" value="#{resourcesBundle.marital_status_mas_name}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="marstatusFemName_" value="#{resourcesBundle.marital_status_fem_name}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/currencies/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="currenciesBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <!--<menuItem id="operationMenu" value="#{$myResource$.operations_menu}" >
+                    <menuItems>
+                    <menuItem id="post" value="#{resourcesBundle.post}" selection="single" selectionCount="#{$myBean$.selectedListSize}"  action="#{$myBean$.postRecord}" disabled="#{!($myBean$.selectedDTOS[0].auditStatus==1)}" />
+                    </menuItems>
+            </menuItem>-->
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="currencyName_" value="#{resourcesBundle.currency_name}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="currencyAbrv1_" value="#{resourcesBundle.currency_abrv}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="currencyAbrv2_" value="#{resourcesBundle.currency_abrv2}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/holidaytypes/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="holidayTypesBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <!--<menuItem id="operationMenu" value="#{$myResource$.operations_menu}" >
+                    <menuItems>
+                    <menuItem id="post" value="#{resourcesBundle.post}" selection="single" selectionCount="#{$myBean$.selectedListSize}"  action="#{$myBean$.postRecord}" disabled="#{!($myBean$.selectedDTOS[0].auditStatus==1)}" />
+                    </menuItems>
+            </menuItem>-->
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{resourcesBundle.holtype_Name}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="holtypeDays_" value="#{resourcesBundle.holtypeDays}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/kwstreets/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="kwStreetsBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <!--<menuItem id="operationMenu" value="#{$myResource$.operations_menu}" >
+                    <menuItems>
+                    <menuItem id="post" value="#{resourcesBundle.kwStreets_related_to_map}" selection="single" selectionCount="#{$myBean$.selectedListSize}"   />
+                    </menuItems>
+            </menuItem>-->
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{resourcesBundle.kwStreets_Name}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <!--<menuItem id="holtypeDays_"
+                                  value="#{resourcesBundle.holtypeDays}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>-->
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/maritalstatus/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="maritalStatusListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="scriptPanelGroup,divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="scriptPanelGroup,divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <!--<menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                    <menuItems>
+                        <menuItem id="mar_status_gender" value="#{resourcesBundle.marStatusWithGender}"
+                                  selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                                  action="#{$myBean$.preLinkage}"
+                                  ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.customDiv1);settingFoucsAtLinkDiv();"
+                                  ajax_reRender="linkLookupForm"/>
+                        <menuItem id="marital_status_gender_edit" value="#{resourcesBundle.link_marital_type_edit}"
+                                  selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                                  action="#{$myBean$.preLinkEdit}"
+                                  ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.customDiv2);settingFoucsAtEditLinkDiv();"
+                                  ajax_reRender="divLinkLookupEdit"/>
+                    </menuItems>
+                </menuItem>-->
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="mar_status_gender_view" value="#{resourcesBundle.marStatusWithGenderView}"
+                                  selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                                  action="#{$myBean$.openLovDiv}"
+                                  ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.divLov);"
+                                  ajax_reRender="lov_dataT_data_panel,lovLinkStatusPanel"/>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <!-- start prepartion for use-case09 countries List -->
+        <page viewId="/module/jsps/maindata/countrycities/countrylist.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="countriesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);setFocusOnlyOnElement('Name');"
+                        ajax_reRender="scriptPanelGroup,divAddLookup,OperationBar"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);setFocusOnlyOnElement('NameEdit');"
+                        ajax_reRender="scriptPanelGroup,divEditLookup,OperationBar"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                    <menuItems>
+                        <menuItem id="go_related_cites" value="#{resourcesBundle.cities}" selection="single"
+                                  selectionCount="#{$myBean$.selectedListSize}" action="#{$myBean$.viewDetails}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="show_country_details" value="#{resourcesBundle.show_country_details}"
+                                  selection="single" selectionCount="#{$myBean$.selectedListSize}"
+                                  action="#{$myBean$.showEditDiv}" ajax="true"
+                                  ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.customDiv1);"
+                                  ajax_reRender="detailsLinkPanel"/>
+                        <menuItem id="show_related_cities" value="#{resourcesBundle.related_cities}" selection="single"
+                                  selectionCount="#{$myBean$.selectedListSize}" action="#{$myBean$.showCountryDetails}"
+                                  ajax="true"
+                                  ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.masterDetailDiv);"
+                                  ajax_reRender="DivMasterDetail"/>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code-cntryCode_" value="#{resourcesBundle.INF_CountriesDTO_code_key}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{resourcesBundle.INF_CountriesDTO_name}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="x_" value="#{resourcesBundle.INF_CountriesDTO_countryCitiesDTOList}"
+                                  onclick="javascript:return doClick('sort_x', false)"/>
+                        <menuItem id="languagesDTO-name_" value="#{resourcesBundle.INF_CountriesDTO_languagesDTO_name}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="currenciesDTO-name_"
+                                  value="#{resourcesBundle.INF_CountriesDTO_currenciesDTO_name}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <!-- End prepartion for use-case09 countries List -->
+        <!-- start prepartion for use-case09 cities List -->
+        <page viewId="/module/jsps/maindata/countrycities/citieslist.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="citiesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);setFocusOnlyOnElement('Name');"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);setFocusOnlyOnElement('NameEdit');"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"/>
+                <button id="deleteButton" selection="multi" selectionCount="#{$myBean$.selectedListSize}"
+                        styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert);setFocusOnlyOnElement('CancelButtonDelAlertDiv');return false;"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+                <button id="separator3" separator="true"/>
+                <button id="backButton" styleClass="OB_back" disabledStyleClass="OB_back_disabled"
+                        action="#{$myBean$.back}"/>
+            </buttons>
+            <menu>
+                <menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                    <menuItems>
+                        <menuItem id="unCheck" value="#{$myResource$.operation_menu_uncheck}"
+                                  action="#{$myBean$.unCheck}" selection="multi"
+                                  selectionCount="#{$myBean$.selectedListSize}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code-cntrycityCode_" value="#{resourcesBundle.INF_CountryCitiesDTO_Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{resourcesBundle.INF_CountryCitiesDTO_Name}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="longitude_" value="#{resourcesBundle.INF_CountryCitiesDTO_longitude}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="latitude_" value="#{resourcesBundle.INF_CountryCitiesDTO_latitude}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <!-- End prepartion for use-case09 cities List -->
+        <!-- start prepartion for use-case05   -->
+        <page viewId="/module/jsps/maindata/groupcountries/groupcountrieslist.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="groupCountriesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        disabled="#{$myBean$.selectedCountry==$myBean$.virtualLongValue}"
+                        action="#{$myBean$.openLovDiv}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.divLov); setFocusOnlyOnElement('lov_searchText');"
+                        ajax_reRender="lovCountriesPanel"/>
+                <button id="separator1" separator="true"/>
+                <button id="deleteButton" selection="multi" selectionCount="#{$myBean$.selectedListSize}"
+                        styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert);settingFoucsAtDivDelete();return false;"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search"
+                        disabled="#{$myBean$.selectedCountry==$myBean$.virtualLongValue}"
+                        disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                    <menuItems>
+                        <menuItem id="unCheck" value="#{$myResource$.operation_menu_uncheck}"
+                                  action="#{$myBean$.unCheck}" selection="multi"
+                                  selectionCount="#{$myBean$.selectedListSize}"/>
+                        <!--menuItem id="male_nationality" value="#{resourcesBundle.male_nationality}"
+                                  ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupEditDiv);setFocusOnlyOnElement('NameEdit');"
+                                  ajax="true" action="#{$myBean$.showMaleEditDiv}" selection="single"
+                                  selectionCount="#{$myBean$.selectedListSize}" ajax_reRender="divEditLookup"/>
+                        <menuItem id="fmale_nationality" value="#{resourcesBundle.fmale_nationality}"
+                                  ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupEditDiv);setFocusOnlyOnElement('NameEdit');"
+                                  ajax="true" action="#{$myBean$.showFemaleEditDiv}" selection="single"
+                                  selectionCount="#{$myBean$.selectedListSize}" ajax_reRender="divEditLookup"/-->
+                    </menuItems>
+                </menuItem>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code-cntryCode_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="countriesDTO-name_" value="#{resourcesBundle.cntryName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="captial_" value="#{resourcesBundle.INF_CountriesDTO_countryCitiesDTOList}"
+                                  onclick="javascript:return doClick('sort_captial', false)"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <!-- End prepartion for use-case05 -->
+        <page viewId="/module/jsps/maindata/groupscategories/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="groupCategoryListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/months/list.jsp" recordsCount="#{$myBean$.listSize}" beanName="monthsBean"
+              resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/countrygroup/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="countryGroupListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}" disabled="#{$myBean$.selectedCatCode==$myBean$.virtualLongValue}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search"
+                        disabled="#{$myBean$.selectedCatCode==$myBean$.virtualLongValue}"
+                        disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/yearsandfinancialyears/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="yearsBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" ajax="true" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        action="#{$myBean$.ShowDivSearch}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.divSearch);settingFoucsAtDivSearch();"
+                        ajax_reRender="divSearch,scriptPanelGroup"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="yearName_" value="#{resourcesBundle.year_name}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="startDate_" value="#{resourcesBundle.start_date}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="endDate_" value="#{resourcesBundle.end_date}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="budgetStartDate_" value="#{resourcesBundle.budget_start_date}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="budgetEndDate_" value="#{resourcesBundle.budget_end_date}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/banks/list.jsp" recordsCount="#{$myBean$.listSize}" beanName="banksBean"
+              resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <!--menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                    <menuItems>
+                        <menuItem id="bankBranches" value="#{resourcesBundle.bank_branches}"/>
+                    </menuItems>
+                </menuItem-->
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="branches" value="#{resourcesBundle.bank_branches}" selection="single"
+                                  selectionCount="#{$myBean$.selectedListSize}"
+                                  action="#{$myBean$.getRelatedBranches}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/reasonData/reasonDatalList.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="reasdondataListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"
+                        disabled="#{$myBean$.pageDTO.restypeCode == -100 || $myBean$.pageDTO.restypeCode==null}"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="deleteButton" selection="multi" selectionCount="#{$myBean$.selectedListSize}"
+                        styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert);settingFoucsAtDivDelete();return false;"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"
+                        disabled="#{ $myBean$.listSize == 0}"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                    <menuItems>
+                        <menuItem id="unCheck" value="#{$myResource$.operation_menu_uncheck}"
+                                  action="#{$myBean$.unCheck}" selection="multi"
+                                  selectionCount="#{$myBean$.selectedListSize}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <!--  islam 
+                         
+                              <menuItem id="Code" value="#{$myResource$.Code}" onclick="doOrderOnTable('codeColumn');return false;"/>
+                              <menuItem id="TableName" value="#{$myResource$.TableName}" onclick="doOrderOnTable('nameColumn');return false;"/>
+                          -->
+                        <menuItem id="code-resdatSerial_" value="#{$myResource$.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="name_" value="#{$myResource$.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/bloodgroups/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="bloodGroupsListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/trxstatus/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="trxStatusListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <!-- <button id="addButton" ajax="true" styleClass="OB_add"
+                        disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single"
+                        selectionCount="#{$myBean$.selectedListSize}"
+                        ajax="true" styleClass="OB_edit"
+                        disabledStyleClass="OB_edit_disabled"
+                        action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="separator2" separator="true"/>-->
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/religions/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="religionsListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="religions_gender_view" value="#{resourcesBundle.genderReligionView}"
+                                  selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                                  action="#{$myBean$.openLovDiv}"
+                                  ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.divLov);"
+                                  ajax_reRender="lov_dataT_data_panel,lovLinkPanel"/>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{globalResources.TableName}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/systemsetting/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="systemSettingBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="syssettingName_" value="#{resourcesBundle.system_setting_name}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="syssettingValue_" value="#{resourcesBundle.system_setting_amount}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/kwmap/kwmaplist.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="kwMapListBean" resourceName="globalResources" formId="treeform">
+            <buttons>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled" ajax="true"
+                        ajax_reRender="lovDivOkTBtn,lovDiv_btnsPnlGrd,lov_dataT_data_panel,lov_paging_panel,lov_searchPanel,lov_searchRadioBtn"
+                        action="#{$myBean$.showSearchListOfValuesDiv}"
+                        ajax_oncomplete="javascript:divTreeDetails.style.visibility='hidden';changeVisibilityDiv(window.blocker,window.divLov);settingFoucsAtSearchDiv();"/>
+                <!--button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+               onclick="javascript:divTreeDetails.style.visibility='hidden';changeVisibilityDiv(window.blocker,window.divSearch); settingFoucsAtDivSearch(); return false;"/-->
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearchTree}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                    <menuItems>
+                        <menuItem id="streetZones" value="#{resourcesBundle.unSelectedStreetZones}" selection="single"
+                                  selectionCount="#{$myBean$.selectionNo}" ajax="true"
+                                  action="#{$myBean$.getUnRelatedStreets}"
+                                  ajax_oncomplete="javascript:divTreeDetails.style.visibility='hidden';changeVisibilityDiv(window.blocker,window.customDiv1);"
+                                  ajax_reRender="divLinkLookup"/>
+                        <menuItem id="selectedStreetZones" value="#{resourcesBundle.selectedStreetZones}"
+                                  selection="single" selectionCount="#{$myBean$.selectionNo}" ajax="true"
+                                  action="#{$myBean$.getRelatedStreets}"
+                                  ajax_oncomplete="javascript:divTreeDetails.style.visibility='hidden';changeVisibilityDiv(window.blocker,window.customDiv1);"
+                                  ajax_reRender="divLinkLookup"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/kwtcitizensresident/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="kwtCitizensResidentBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <!--<button id="addButton" ajax="true" styleClass="OB_add"
+                        disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single"
+                        selectionCount="#{$myBean$.selectedListSize}"
+                        ajax="true" styleClass="OB_edit"
+                        disabledStyleClass="OB_edit_disabled"
+                        action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"/>
+                <button id="separator2" separator="true"/>-->
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="main_info" value="#{resourcesBundle.kwt_citizen_main_info}"/>
+                        <menuItem id="kwt_citizen_extra_info" value="#{resourcesBundle.kwt_citizen_extra_info}"/>
+                        <menuItem id="kwt_citizen_paasport" value="#{resourcesBundle.kwt_citizen_paasport}"/>
+                        <!--<menuItem id="kwt_citizen_data"
+                                  value="#{resourcesBundle.kwt_citizen_data}"/>-->
+                        <!-- <menuItem id="kwt_citizen_paasport_citizen"
+                                  value="#{resourcesBundle.kwt_citizen_paasport_citizen}"/>-->
+                        <menuItem id="kwt_citizen_old_postions" value="#{resourcesBundle.kwt_citizen_old_postions}"/>
+                        <menuItem id="kwt_citizen_spec" value="#{resourcesBundle.kwt_citizen_spec}"/>
+                        <menuItem id="kwt_citizen_skills" value="#{resourcesBundle.kwt_citizen_skills}"/>
+                        <menuItem id="kwt_citizen_lang" value="#{resourcesBundle.kwt_citizen_lang}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{resourcesBundle.kwt_citizen_code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="name_" value="#{resourcesBundle.kwt_citizen_name}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="birthDate_" value="#{resourcesBundle.kwt_citizen_BD}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="mltstatusCode_" value="#{resourcesBundle.kwt_citizen_mar_status}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="nationality_" value="#{resourcesBundle.kwt_citizen_nat}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="restypeCode_" value="#{resourcesBundle.kwt_citizen_mild_status}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/approvalmakers/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="approvalMakersBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="aprmakerName_" value="#{resourcesBundle.approval_makers_name_add}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="dynamicFlag_" value="#{resourcesBundle.approval_makers_status}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/newspaper/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="newspaperBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="paperName_" value="#{resourcesBundle.news_paper_name}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="paperLocation_" value="#{resourcesBundle.news_paper_location}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/module/jsps/maindata/orcaleerrors/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="orcaleErrorsBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="errAMsg_" value="#{resourcesBundle.orcale_errors_err_a_msg}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="errEMsg_" value="#{resourcesBundle.orcale_errors_err_e_msg}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <!-- M.abdelsabour -->
+        <page viewId="/module/jsps/maindata/gradetypes/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="gradeTypesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup,scriptPanelGroup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup" disabled="#{$myBean$.selectedRadio == ''}"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                    <menuItems>
+                        <menuItem id="dgreeDetails" value="#{resourcesBundle.add_grades}" selection="single"
+                                  selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                                  action="#{$myBean$.addGradeDetails}"
+                                  ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.customDiv1);settingFoucsAtAddGradeDiv();"
+                                  ajax_reRender="divLinkLookup,scriptPanelGroup"
+                                  disabled="#{$myBean$.gradeTypeValType != 2}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="view_menu_help" value="#{resourcesBundle.view_grades}" selection="single"
+                                  selectionCount="#{$myBean$.selectedListSize}" action="#{$myBean$.showGradeDetails}"
+                                  disabled="#{$myBean$.gradeTypeValType != 2}"/>
+                    </menuItems>
+                </menuItem>
+                <!--
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf"
+                                  value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print"
+                                  value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help"
+                                  value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{globalResources.Code}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="errAMsg_"
+                                  value="#{resourcesBundle.orcale_errors_err_a_msg}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="errEMsg_"
+                                  value="#{resourcesBundle.orcale_errors_err_e_msg}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+                -->
+            </menu>
+        </page>
+        <!-- -->
+        <!-- ************************** start official vac list  Page by M.gamal 8-07-2014  *********************************-->
+        <page viewId="/module/jsps/maindata/officialvac/list.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="officialVacListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" styleClass="OB_add" disabled="#{!$myBean$.yearSelected}"
+                        disabledStyleClass="OB_add_disabled" action="#{$myBean$.preAddOfficialVac}"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled"
+                        action="#{$myBean$.preEditOfficialVac}"/>
+                <!--button id="deleteButton" selection="multi" selectionCount="#{$myBean$.selectedListSize}" styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                            onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert);return false;"/-->
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" ajax="true" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        disabled="#{!$myBean$.yearSelected}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.divSearch);setFocusAtYearListSearch();if(document.getElementById('outPutMsg') != null)document.getElementById('outPutMsg').innerText = '';return false;"
+                        ajax_reRender="searchPnl,scriptpanel,firstDayToCompare3,endDayToCompare3"
+                        action="#{$myBean$.preSearch}"/>
+                <!--button id="searchButton" disabled="#{!$myBean$.yearSelected}" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);setFocusAtYearListSearch();return false;" onblur="setFocusAtYearListList();"/-->
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <!--<menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                         <menuItems>
+                              <menuItem id="unCheck" value="#{$myResource$.operation_menu_uncheck}" action="#{$myBean$.unCheck}" selection="multi" selectionCount="#{$myBean$.selectedListSize}"/>
+                               <menuItem id="add_regulation" value="#{resourcesBundle.add_regulation}" action="#{$myBean$.goToRegulation}" selection="single" selectionCount="#{$myBean$.selectedListSize}"/>
+                              <menuItem id="make_regulation" value="#{resourcesBundle.make_regulation}" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"  ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.masterDetailDiv);return false;" action="#{$myBean$.openJoinRegualationDiv}"/>
+                         </menuItems>
+                    </menuItem>-->
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                        <!--<menuItem id="view_menu_reg" value="#{$myResource$.view_menu_reg}" selection="single"
+                                        selectionCount="#{$myBean$.selectedListSize}"
+                                        action="#{$myBean$.viewAvailableReg}"/>
+                              <menuItem id="view_menu_related_regs"  value="#{$myResource$.VIEW_RELATED_REGULATIONS}"
+                                     selection="single" selectionCount="#{$myBean$.selectedListSize}" action="#{$myBean$.viewRelatedRegualations}"/>-->
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="holidayTypesDTO-name_" value="#{resourcesBundle.officailVacType}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="fromDate_" value="#{resourcesBundle.fromDate}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="untilDate_" value="#{resourcesBundle.untilDate}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="status_" value="#{resourcesBundle.officialVac_status}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <!-- ************************** end official vac list  Page by M.gamal 8-07-2014  *********************************-->
+        <!-- ************************** bnk integration part by a.agamy  *********************************-->
+        <page viewId="/integration/bnk/jsps/banks/listBanks.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="banksListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <!--<button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>-->
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,divEditLookupForAttendans"/>
+                <!--<button id="separator2" separator="true"/>
+                <button id="deleteButton" selection="single" selectionCount="#{$myBean$.selectedListSize}"
+                        styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert);settingFoucsAtDivDelete();return false;"/>-->
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="branches" value="#{resourcesBundle.bank_branches}"
+                                  disabled="#{$myBean$.selectedListSize == 0}" action="#{$myBean$.ShowBranches}"/>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{$myResource$.Code}" actionListener="#{$myBean$.sortDataTable}"
+                                  disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="name_" value="#{integrationBundle.bank_name}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="email_" value="#{integrationBundle.bank_email}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/integration/bnk/jsps/bankBranches/bankBranchDetails/listBranchDetails.jsp"
+              recordsCount="#{$myBean$.listSize}" beanName="branchDetailsListBean" resourceName="globalResources"
+              formId="myForm">
+            <buttons>
+                <!--button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/-->
+                <button id="bankBackButton" styleClass="OB_back" disabledStyleClass="OB_back_disabled"
+                        action="#{$myBean$.backToBankBranches}"/>
+                <!--<button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>-->
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <!--menuItem id="branchesDetails" value="#{integrationBundle.bank_branches_details}" disabled="#{$myBean$.selectedListSize == 0}"
+                                        action="#{$myBean$.ShowBranchDetails}" /-->
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code-civilId_" value="#{integrationBundle.CivilID}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="name_" value="#{integrationBundle.contactName}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="directPhones_" value="#{integrationBundle.branch_Tel}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="fax_" value="#{integrationBundle.branch_Fax}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="mobileNo_" value="#{integrationBundle.contactMobile}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="email_" value="#{integrationBundle.branch_email}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="gender_" value="#{integrationBundle.Type}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/integration/bnk/jsps/bankBranches/listBranches.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="branchesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.AddBranch}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.editBranch}"/>
+                <button id="separator2" separator="true"/>
+                <button id="deleteButton" selection="single" selectionCount="#{$myBean$.selectedListSize}"
+                        styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert);settingFoucsAtDivDelete();return false;"/>
+                <button id="separator3" separator="true"/>
+                <button id="bankBackButton" styleClass="OB_back" disabledStyleClass="OB_back_disabled"
+                        action="#{$myBean$.backToBanks}"/>
+                <!--<button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch);return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>-->
+            </buttons>
+            <menu>
+                <menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                    <menuItems>
+                        <menuItem id="suspend_branch" value="#{integrationBundle.suspendBranch}"
+                                  action="#{$myBean$.suspend}"
+                                  disabled="#{$myBean$.selectedListSize==0 || !$myBean$.valid}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="branchesDetails" value="#{integrationBundle.bank_branches_details}"
+                                  disabled="#{$myBean$.selectedListSize == 0}" action="#{$myBean$.ShowBranchDetails}"/>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="code_" value="#{$myResource$.Code}" actionListener="#{$myBean$.sortDataTable}"
+                                  disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="name_" value="#{integrationBundle.branch_Name}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="email_" value="#{integrationBundle.bank_email}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="phonesNo_" value="#{integrationBundle.branch_Tel}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="faxNo_" value="#{integrationBundle.branch_Fax}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <page viewId="/integration/bnk/jsps/bankBranches/listNewBranch.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="newBranchListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="bankBackButton" styleClass="OB_back" disabledStyleClass="OB_back_disabled"
+                        action="#{$myBean$.backToBranches}"/>
+            </buttons>
+            <menu>
+                <menuItem id="viewMenu" value="#{$myResource$.view_menu}">
+                    <menuItems>
+                        <menuItem id="pdf" value="#{$myResource$.view_menu_pdf}"/>
+                        <menuItem id="print" value="#{$myResource$.view_menu_print}"/>
+                        <menuItem id="view_menu_help" value="#{$myResource$.view_menu_help}"/>
+                    </menuItems>
+                </menuItem>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="civilId_" value="#{integrationBundle.CivilID}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="name_" value="#{integrationBundle.contactName}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="directPhones_" value="#{integrationBundle.branch_Tel}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="fax_" value="#{integrationBundle.branch_Fax}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="mobileNo_" value="#{integrationBundle.contactMobile}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="email_" value="#{integrationBundle.branch_email}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                        <menuItem id="gender_" value="#{integrationBundle.Type}"
+                                  actionListener="#{$myBean$.sortDataTable}" disabled="#{$myBean$.listSize == 0}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        <!-- ************************** bnk integration part  *********************************-->
+        <page viewId="/module/jsps/maindata/documenttypes/documenttypeslist.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="documentTypesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();return false;"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <button id="deleteButton" selection="multi" selectionCount="#{$myBean$.selectedListSize}"
+                        styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert); document.getElementById('CancelButtonDelAlertDiv').focus(); return false;"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch); settingFoucsAtDivSearch(); return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+        </page>
+        <page viewId="/module/jsps/maindata/infholidays/infholidayslist.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="infHolidaysListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}" disabled="#{!$myBean$.enableAddButton}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();return false;"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}" disabled="#{$myBean$.selectedDTOS[0] == null}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                <!--<button id="deleteButton" selection="multi" selectionCount="#{$myBean$.selectedListSize}"
+                        styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert); document.getElementById('CancelButtonDelAlertDiv').focus(); return false;"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled" ajax="true"
+                        action="#{$myBean$.openSearchDiv}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.divSearch); settingFoucsAtDivSearch(); return false;"
+                        ajax_reRender="searchArea"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>-->
+            </buttons>
+        </page>
+        <page viewId="/module/jsps/maindata/educationlevelsvacations/list.jsp" recordsCount="#{$myBean$.listSize}"
+             formId="myForm" beanName="educationLevelsVacations" resourceName="resourcesBundle">
+            <buttons>
+                <button id="addButton" styleClass="OB_add" disabledStyleClass="OB_add_disabled" ajax="true"
+                        ajax_reRender="divAddLookup,scriptPanel,divAdds" action="#{$myBean$.preAdd}"
+                        disabled="#{!pageBeanName.displayButtonDisabled}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);document.getElementById('add_periodDesc').focus();return false;"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup,scriptPanelGroup"/>
+            </buttons>
+            <menu>
+                <menuItem id="orderMenu" value="#{$myResource$.order_menu}">
+                    <menuItems>
+                        <menuItem id="serial_" value="#{resourcesBundle.serial}" disabled="#{$myBean$.listSize==0}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="yearCode_" value="#{resourcesBundle.year}" disabled="#{$myBean$.listSize==0}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="bgtProgramsDTO-name_" value="#{resourcesBundle.bgtProgram}"
+                                  disabled="#{$myBean$.listSize==0}" actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="periodDesc_" value="#{resourcesBundle.periodDesc}"
+                                  disabled="#{$myBean$.listSize==0}" actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="fromDate_" value="#{resourcesBundle.validFromDate}"
+                                  disabled="#{$myBean$.listSize==0}" actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="untilDate_" value="#{resourcesBundle.validUntilDate}"
+                                  disabled="#{$myBean$.listSize==0}" actionListener="#{$myBean$.sortDataTable}"/>
+                        <menuItem id="status_" value="#{resourcesBundle.status}" disabled="#{$myBean$.listSize==0}"
+                                  actionListener="#{$myBean$.sortDataTable}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        
+        <page viewId="/module/jsps/maindata/mismisidntificationtypes/mismisidntificationtypeslist.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="misMisIdntificationTypesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();return false;"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                
+                <button id="deleteButton" selection="multi" selectionCount="#{$myBean$.selectedListSize}"
+                        styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert); document.getElementById('CancelButtonDelAlertDiv').focus(); return false;"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch); settingFoucsAtDivSearch(); return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            
+        </page>
+        
+        <page viewId="/module/jsps/maindata/identificationtypes/identificationtypeslist.jsp" recordsCount="#{$myBean$.listSize}"
+              beanName="identificationTypesListBean" resourceName="globalResources" formId="myForm">
+            <buttons>
+                <button id="addButton" ajax="true" styleClass="OB_add" disabledStyleClass="OB_add_disabled"
+                        action="#{$myBean$.preAdd}"
+                        ajax_oncomplete="javascript:changeVisibilityDiv(window.blocker,window.lookupAddDiv);settingFoucsAtDivAdd();return false;"
+                        ajax_reRender="divAddLookup"/>
+                <button id="separator1" separator="true"/>
+                <button id="editButton" selection="single" selectionCount="#{$myBean$.selectedListSize}" ajax="true"
+                        styleClass="OB_edit" disabledStyleClass="OB_edit_disabled" action="#{$myBean$.showEditDiv}"
+                        ajax_oncomplete="changeVisibilityDiv(window.blocker,window.lookupEditDiv);settingFoucsAtDivEdit();"
+                        ajax_reRender="divEditLookup"/>
+                
+                <button id="deleteButton" selection="multi" selectionCount="#{$myBean$.selectedListSize}"
+                        styleClass="OB_delete" disabledStyleClass="OB_delete_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.delAlert); document.getElementById('CancelButtonDelAlertDiv').focus(); return false;"/>
+                <button id="separator2" separator="true"/>
+                <button id="searchButton" styleClass="OB_search" disabledStyleClass="OB_search_disabled"
+                        onclick="javascript:changeVisibilityDiv(window.blocker,window.divSearch); settingFoucsAtDivSearch(); return false;"/>
+                <button id="cancelSearchButton" styleClass="OB_cancleSearch"
+                        disabledStyleClass="OB_cancleSearch_disabled" action="#{$myBean$.cancelSearch}"
+                        disabled="#{!$myBean$.searchMode}"/>
+            </buttons>
+            <menu>
+                <menuItem id="operationMenu" value="#{$myResource$.operations_menu}">
+                    <menuItems>
+                            <menuItem id="addAttachment" value="#{resourcesBundle.attachments}"
+                                              action="#{$myBean$.addIntegrationAttachment}" selection="single"
+                                              selectionCount="#{$myBean$.selectedListSize}"/>
+                    </menuItems>
+                </menuItem>
+            </menu>
+        </page>
+        
+        <!-- Attachments Integration Page -->
+        <page viewId="/integration/inf/jsps/fileAttachments/fileAttachments_list.jsp" recordsCount="#{$myBean$.listSize}"
+              formId="myForm" beanName="fileAttachmentsIntegrationBean" resourceName="globalResources">
+            <buttons>
+                <button id="backButton" styleClass="OB_back" disabledStyleClass="OB_back_disabled"
+                        action="#{$myBean$.back}"/>
+            </buttons>
+        </page>
+
+    </pages>
+</operationBar>

@@ -1,0 +1,417 @@
+/*controls [inputText]
+.textboxmedium
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 200px; height: 18px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+               
+.textboxsmall
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 120px; height: 18px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}
+               
+.textboxsmall2
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 80px; height: 18px; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}*/
+               
+
+input.textboxsmall[disabled="disabled"] {
+    width: 120px;
+}               
+/*controls [dataTable header]*/
+.standardTable_Header
+{
+border-bottom:1px solid #FFFFFF; color: #FFFFFF; font-family: Tahoma; font-size: 8pt; font-weight: 600; 
+               height: 24; background-color: #094079; background-image: 
+               url('../../images/gheadgrid.jpg'); background-repeat: repeat-x; border-left-width:1px; border-right-width:1px; border-top-width:1px;text-decoration:none}
+/*controls [label inform messages]*/
+/*.msg
+{
+font-family: Tahoma; font-size: 8pt; color: #EB8E3B; font-weight: 600; padding-top:4px; padding-bottom:4px; border: 0; width: 300px; height: 25px;text-align: center;vertical-align: middle;}*/
+/*controls [label error messages]
+.errMsg
+{
+font-family: Tahoma; font-size: 8pt; color: Red;  padding-top:0px; padding-bottom:0px;border: 0; height: 0px;text-align: center;vertical-align: middle;}*/
+/*controls [text label]*/
+
+/*controls [not used]*/
+/*
+.number
+{
+font-family: Tahoma; font-size: 8pt; color: #800000; font-weight: 600; padding-bottom:4px}*/
+/*controls [not used]
+.DropdownboxMedium   
+{
+color: #000000; font-family: Tahoma; font-size: 8pt; width: 200; height: 18; 
+               border: 1px solid #CCD0D6; background-color: #FFFFFF}*/
+/*controls []*/
+.col1
+{
+   width: 130px;
+   vertical-align: top;
+}
+/*controls []*/
+.col2
+{  
+   vertical-align: top;
+}
+/*controls []*/
+.divSearch
+{
+    position:absolute;top:70px;width:650px;visibility:hidden;
+    z-index:100;
+}
+.JSCookMenuDisabled
+{
+    color: #B9852E;
+}
+/*controls []*/
+.JSCookMenuEnabled
+{
+    color: #002245;
+}
+
+
+/*controls []*/
+.divMainContentMany
+{
+    height:148px;
+
+}
+/*controls []*/
+/* This class moved to app\media\css\ar\Style.css */
+/*
+.divMainContent
+{
+    height:250px;;
+    overflow-y:auto;
+}
+*/
+/*controls []*/
+.divContent1Fixed
+{
+    width:100%;
+    height:240px;
+    overflow:auto;
+}
+/*controls []*/
+.divContent1Dynamic
+{
+    width:100%;
+}
+
+.divCondition{
+    position:absolute;top:10px;left:80px;width:650px;visibility:hidden;
+    z-index:100;
+}
+.divCustomTreeEdit
+{
+    height: 170px; width: 600px; overflow-Y: auto;direction: rtl;   
+}
+/* the promotion div payroll step 3 */
+.divpromotion
+{
+    position:absolute;top:70px;left:80px;width:900px;height:600px;visibility:hidden;
+    z-index:100;
+}
+/*controls []*/
+.dataTableManyToMany{
+    height: 50px; width: 100%; overflow: auto;direction: rtl;
+}
+.Column1{
+    width: 10%
+}
+.Column2{
+    width: 40%;
+}
+.rowTop{
+    vertical-align: top;
+}
+.rowheight{
+   height: 6px;
+}
+
+/*overrided for the first step in rewards use csase*/
+.delDivScrollRewardType {
+    height: 80px; width: 450px; overflow: auto;direction: rtl;
+}
+
+.divContent1FixedRewardType
+{
+    width:100%;
+    height:100px;
+    overflow:auto;
+}
+
+.divMainContentManyRewardType
+{
+    height:80px;
+
+}
+.EditDivEOSExecute
+{
+    position:absolute;top:45px;left:80px;width:650px;visibility:hidden;
+    z-index:100;
+}
+
+.divMainContentRequest
+{
+    height:252px;;
+    overflow-y:auto;
+}
+
+.textarealarge_request_add_notes_inTextArea_Add
+{
+    color: #000000; 
+    font-family: Tahoma;
+    font-size: 8pt;
+    width: 100%;
+    height: 100px; 
+    border: 1px solid #CCD0D6; 
+    background-color: #FFFFFF;
+    overflow: auto;
+}
+/* start Style class for tabs || Added by Khalid Mohie*/
+td.activeTab {
+    background-image: url('../../images/tabs/tabs_active.gif');
+    font-family: "simplified Arabic", "traditional Arabic", "arabic Transparent";
+    font-size:16px;
+    background-repeat: repeat-x;
+    color: #3070AD;
+    height: 24px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-top-color: #FFFFFF;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+td.inactiveTab {
+   background-image: url('../../images/tabs/tabs_active.gif');
+    font-family: "simplified Arabic", "traditional Arabic", "arabic Transparent";
+    font-size:16px;
+    background-repeat: repeat-x;
+    color: #3070AD;
+    height: 24px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-style: solid; 
+    border-left-style: solid;
+    border-top-color: #FFFFFF;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+}
+/* End Style class for tabs || Added by Khalid Mohie*/
+
+/*style class for DataTable of Lov Div || Added by Khalid Mohie*/
+.lovDivScroll {
+    height: 100px; width: 450px; overflow: auto;direction: rtl;
+}
+.centerCol{
+    text-align: center;
+    width: 100%;
+}
+/*added by nora for hr-700 issue 19
+*/
+.request_content1
+{
+    width:100%;
+    height:300px;
+    overflow-y:auto
+}
+.infGrpCountryCnt{
+    height: 275px; width: 100%; overflow: auto;direction: rtl;
+}
+.customLovDiv
+{
+    position:absolute;
+    z-index:100;
+}
+.infGrpCountryCnt2{
+    height: 250px; width: 100%; overflow: auto;direction: rtl;
+}
+.customDivMainContentMany
+{
+   height:268px;
+   overflow-y:auto;
+
+}
+/**********************************************************TreeDivs****************************************************/
+.divDetails{
+    border: 0 solid #2779b2;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #000000;
+    left: 50px;
+    position: absolute;
+    top: 115px;
+    visibility: hidden;
+    width: 450px;
+}
+.divDetailsHead{
+    background: linear-gradient(#ffffff, #2779b2) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: block;
+    height: 35px;
+    margin-right: 0;
+    margin-top: 0;
+    position: absolute;
+    width: 470px;
+}
+#treeViewAndEditDiv{
+    display: block;
+    margin-top: 35px;
+    margin-right: 10px;
+}
+.divDetailsHead input[type="image"]{
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#treeViewAndEditDiv td{
+    padding: 2px;
+}
+#divTreeDetails.divDetails {
+    width: 515px;
+}
+.popup_body_contents span#treeAddDiv{text-align:right;} 
+#divTreeDetails.divDetails .popup_body_contents{text-align:right;} 
+
+
+#divTreeDetails.divDetails .divDetailsHead{
+    width:515px;
+    }
+
+.divDetailsHead input[type="image"]{
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+fieldset{
+    border: 0px;
+    margin-top: 8px;
+    margin: 0px;
+    padding: 0px;
+    }
+legend{
+    background: url('../../../../app/media/images/op_arrow.jpg') right no-repeat ;
+    height: 25px;
+     padding-right: 15px;
+    }
+
+.divCol1{
+    padding-right: 5px;
+    width: 65px;
+    }
+.divCol1_inf{
+    padding-right: 5px;
+    width: 49px;
+    }
+.divCol1_inf2 {
+    padding-right: 5px;
+    width: 55px;
+}
+.divCol2 img[onclick="f_5Fend_5FdateCalendarVar._popUpCalendar(this,document.getElementById('f_end_date'),'yyyy/MM/dd')"], 
+.divCol2 img[onclick="f_5Fstart_5FfromCalendarVar._popUpCalendar(this,document.getElementById('f_start_from'),'yyyy/MM/dd')"],
+.divCol2 img[onclick="f_5FstartFromCalendarVar._popUpCalendar(this,document.getElementById('f_startFrom'),'yyyy/MM/dd')"],
+.divCol2 img[onclick="f_5FendDateCalendarVar._popUpCalendar(this,document.getElementById('f_endDate'),'yyyy/MM/dd')"]
+{
+    background: url('../../images/cal.gif') !important;
+    height: 16px !important;
+    width: 16px !important;
+    margin-right: -18px;
+    margin-top: 3px;
+    position: absolute;
+    }
+.ContainerTitle{
+    min-width: 155px;
+    width: auto;
+    }
+/*#showdatatableContent_showContent1_content #dataT_data_panel {
+    display: block;
+    height: 293px;
+    overflow: auto;
+}*/
+.countryDTbl{
+    height: 315px !important;
+    }
+
+
+.noResMsg{
+    color: #2FB0E3;
+    font-size: 14px;
+    padding-right: 0;
+    background: none;
+    font-family: arial;
+    font-size: 18px;
+    font-weight: bold;
+    resize: none;
+    padding-top: 13px;
+    padding-bottom:4px;
+    border: 0;
+    width: 300px;
+    height: 120px;
+    text-align:center;
+    vertical-align: middle;
+    margin: 10px auto !important;
+    }
+.QulImg{
+    background: url('../../images/homepage/inf_icon.png') no-repeat !important;
+    height: 174px !important;
+    width: 244px !important;
+    margin-left: 37px !important;
+    margin-top: 250px !important;
+}
+.TreeLevel1{
+    color: #083866;
+    margin-top: 20px;
+}
+.TreeLevel2{
+    color: cornflowerblue;
+}
+.TreeLevel3{
+    color: red;
+}
+.TreeLevel1,
+.TreeLevel2,
+.TreeLevel3{
+    display: inline;
+    font-family: tahoma;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+.tree-from-date,
+.tree-until-date,
+.tree-duration-date
+{
+    display: inline;
+    font-family: tahoma;
+    font-size: 12px;
+    font-weight: normal;
+    margin-right: 40px;
+    text-decoration: none;
+}
+.tree-until-date{
+    display: inline-block;
+    width: 125px;
+}
+.tree-description{
+    display: inline-flex;
+    width: 200px;
+}

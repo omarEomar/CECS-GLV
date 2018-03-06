@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration//EN" "http://jakarta.apache.org/struts/dtds/tiles-config.dtd">
+<tiles-definitions>
+    <!-- we assume that our pages structure will contains only (title, header, content, footer) -->
+    <definition name="main.layout" path="/WEB-INF/app/tiles/enhanced_application_mainlayout.jsp">
+        <put name="content1" value="/WEB-INF/app/tiles/content1-1.jsp"/>
+        <put name="search" value="/WEB-INF/app/tiles/content1.jsp"/>
+        <put name="msg" value="/WEB-INF/app/tiles/msg.jsp"/>
+        <put name="content" value="content2-1.jsp"/>
+        <put name="title" value="module_div_title"/>
+        <put name="titlepage" value="Title Page"/>
+        <put name="titleAddDiv" value="Add"/>
+        <put name="titleEditDiv" value="Edit"/>
+        <put name="titleDelDiv" value="DelAlert"/>
+        <put name="deletealerttree" value="deletealerttree"/>
+        <put name="titleDelConDiv" value="DelAlertCon"/>
+        <put name="steps" value="/WEB-INF/app/tiles/tempstep.jsp"/>
+        <put name="bar" value="/WEB-INF/app/tiles/tempbar.jsp"/>
+        <put name="paging" value="/WEB-INF/app/tiles/temppaging.jsp"/>
+        <put name="treeadd" value="/WEB-INF/app/tiles/treeadd.jsp"/>
+        <put name="treeedit" value="/WEB-INF/app/tiles/treeedit.jsp"/>
+        <put name="lookupadd" value="/WEB-INF/app/tiles/adddiv.jsp"/>
+        <put name="lookupedit" value="/WEB-INF/app/tiles/editdiv.jsp"/>
+        <put name="delalert" value="/WEB-INF/app/tiles/delalertdiv.jsp"/>
+        <put name="delalerttree" value="/WEB-INF/app/tiles/treedelalertdiv.jsp"/>
+        <put name="delconfirm" value="/WEB-INF/app/tiles/delconfirmdiv.jsp"/>
+        <put name="treedivdetails" value="/WEB-INF/app/tiles/treedivdetails.jsp"/>
+        <put name="showTreeDivDetails" value="false"/>
+        <put name="showLookupAdd" value="false"/>
+        <put name="showLookupEdit" value="flse"/>
+        <put name="showDelAlert" value="false"/>
+        <put name="showDelAlertTree" value="false"/>
+        <put name="showDelConfirm" value="false"/>
+        <put name="showTreeAdd" value="false"/>
+        <put name="showTreeEdit" value="false"/>
+        <put name="showSearch" value="false"/>
+        <put name="showContent1" value="false"/>
+        <put name="showsteps" value="false"/>
+        <put name="showbar" value="false"/>
+        <put name="showpaging" value="false"/>
+        <put name="showCompletedConfirmDiv" value="false"/>
+        <put name="completedConfirmDivTile" value="/WEB-INF/app/tiles/completedConfirmDiv.jsp"/>
+        <put name="pageId" value=""/>
+        <put name="wizardId" value=""/>
+        <put name="divTreeDetails" value=""/>
+        <put name="pageType" value=""/>
+        <put name="showtreeContent" value="false"/>
+        <put name="showdatatableContent" value="false"/>
+        <put name="navigation" value=""/>
+        <put name="showNavigation" value="false"/>
+        <put name="masterdetaildiv" value="/WEB-INF/app/tiles/masterdetaildiv.jsp"/>
+        <put name="showMasterDetail" value="false"/>
+        <put name="commondata" value="/WEB-INF/app/tiles/commondata.jsp"/>
+        <put name="showCommonData" value="false"/>
+        <put name="manyToMany" value="false"/>
+        <!--Tree Div Attributes -->
+        <put name="treediv" value="/WEB-INF/app/tiles/treediv.jsp"/>
+        <put name="showTreediv" value="false"/>
+        <!-- -->
+        <put name="resourcesBundlePath" value="com.beshara.csc.inf.presentation.resources.inf"/>
+        <put name="wait" value="/WEB-INF/app/tiles/pleasewait.jsp"/>
+        <put name="divwait" value="/WEB-INF/app/tiles/divwait.jsp"/>
+        <put name="showCustomDiv1" value="false"/>
+        <put name="customDiv1" value=""/>
+        <put name="stylePath" value="/module/media/css/ar/Style.css"/>
+        <put name="jsPaht" value="/module/js/module.js"/>
+        <put name="lovDiv" value="/WEB-INF/app/tiles/lovdiv.jsp"/>
+        <put name="titleLovDiv" value="lov"/>
+        <put name="lovEmp" value="/WEB-INF/app/tiles/emplovdiv.jsp"/>
+    </definition>
+    <definition name="homepage" path="/WEB-INF/app/tiles/home_template.jsp">
+        <put name="resourcesBundlePath" value="com.beshara.csc.inf.presentation.resources.inf"/>
+    </definition>
+    <definition name="mainpage" path="/WEB-INF/app/tiles/mainpage.jsp">
+        <put name="title" value="Main Page"/>
+        <put name="header" value="/WEB-INF/app/tiles/header.jsp"/>
+        <put name="loginHeader" value="/WEB-INF/app/tiles/loginHeader.jsp"/>
+        <put name="footer" value="/WEB-INF/app/tiles/footer.jsp"/>
+        <put name="tree" value="/WEB-INF/app/tiles/tree.jsp"/>
+        <put name="loginHeader" value="/WEB-INF/app/tiles/loginHeader.jsp"/>
+        <put name="body" value="/WEB-INF/app/tiles/body.jsp"/>
+        <put name="resourcesBundlePath" value="com.beshara.csc.inf.presentation.resources.inf"/>
+    </definition>
+    <definition name="errpage" extends="main.layout">
+        <put name="content1" value="/WEB-INF/app/tiles/errorpage_cnt1.jsp"/>
+        <put name="titlepage" value="errorPageTitle"/>
+    </definition>
+    <definition name="lookuplistdiv" extends="main.layout">
+        <!--put name="showdatatableContent" value="true"></put>
+  <put name="showSearch" value="true"></put>
+  <put name="showsteps" value="false"></put>
+  <put name="showContent1" value="false"></put>
+  <put name="showbar" value="true"></put>
+  <put name="showpaging" value="true"></put>
+  <put name="showLookupAdd" value="true"></put>
+  <put name="showLookupEdit" value="true"></put>
+  <put name="showDelAlert" value="true"></put>
+  <put name="showDelConfirm" value="true"></put>
+  <put name="showdatatableContent" value="true"></put>
+  <put name="showCommonData" value="true"></put-->
+        <put name="titlepage" value=""/>
+        <put name="searchQuery" value=""/>
+        <put name="pageId" value=""/>
+        <put name="searchAction" value=""/>
+        <put name="searchType" value=""/>
+        <put name="pageType" value="0"/>
+        <put name="content" value="/WEB-INF/app/tiles/lookuplist.jsp"/>
+    </definition>
+    <definition name="addedit.page" extends="main.layout">
+        <put name="showContent1" value="true"/>
+        <put name="titlepage" value=""/>
+        <put name="pageId" value=""/>
+        <put name="pageType" value=""/>
+        <put name="showCommonData" value="true"/>
+    </definition>
+    <definition name="tree.page" extends="main.layout">
+        <put name="showSearch" value="true"/>
+        <put name="showbar" value="true"/>
+        <put name="showtreeContent" value="true"/>
+        <put name="titlepage" value=""/>
+        <put name="content" value="treelist.jsp"/>
+        <put name="searchAction" value=""/>
+        <put name="searchType" value=""/>
+        <put name="searchQuery" value=""/>
+        <put name="pageId" value=""/>
+        <put name="showDelAlertTree" value="true"/>
+        <put name="showTreeAdd" value="true"/>
+        <put name="showTreeEdit" value="true"/>
+        <put name="showTreeDivDetails" value="true"/>
+        <put name="divTreeDetails" value="divTreeDetails"/>
+        <put name="pageType" value="1"/>
+        <put name="code" value=""/>
+        <put name="name" value=""/>
+        <put name="parent" value=""/>
+        <put name="leaf" value=""/>
+        <put name="showDelConfirm" value="true"/>
+        <put name="showCommonData" value="true"/>
+    </definition>
+    <definition name="manytomanylist" extends="main.layout">
+        <put name="showSearch" value="false"/>
+        <put name="showsteps" value="false"/>
+        <put name="showContent1" value="false"/>
+        <put name="showbar" value="true"/>
+        <put name="showpaging" value="true"/>
+        <put name="showDelAlert" value="true"/>
+        <put name="showDelConfirm" value="true"/>
+        <put name="pageType" value="0"/>
+        <put name="titlepage" value=""/>
+        <put name="pageId" value=""/>
+        <put name="showdatatableContent" value="true"/>
+        <put name="search" value=""/>
+        <put name="showCommonData" value="true"/>
+    </definition>
+    <definition name="manytomanymaintain" extends="main.layout">
+        <put name="lookupadd" value="/WEB-INF/app/tiles/manytomany/adddiv.jsp"/>
+        <put name="search" value="/WEB-INF/app/tiles/manytomany/content1.jsp"/>
+        <put name="delalert" value="/WEB-INF/app/tiles/manytomany/delalertdiv.jsp"/>
+        <put name="delconfirm" value="/WEB-INF/app/tiles/manytomany/delconfirmdiv.jsp"/>
+        <put name="bar" value="/WEB-INF/app/tiles/manytomany/tempbar.jsp"/>
+        <put name="paging" value="/WEB-INF/app/tiles/manytomany/temppaging.jsp"/>
+        <put name="content1" value="/WEB-INF/app/tiles/manytomany/content1-1.jsp"/>
+        <put name="navigation" value="/WEB-INF/app/tiles/manytomany/navigation.jsp"/>
+        <put name="commondata" value="/WEB-INF/app/tiles/manytomany/commondata.jsp"/>
+        <put name="lovDiv" value="/WEB-INF/app/tiles/manytomany/lovdiv.jsp"/>
+        <put name="showCommonData" value="true"/>
+        <put name="showNavigation" value="true"/>
+        <put name="showLookupAdd" value="true"/>
+        <put name="showLookupEdit" value="false"/>
+        <put name="showDelAlert" value="true"/>
+        <put name="showDelConfirm" value="true"/>
+        <put name="titlepage" value=""/>
+        <put name="showsteps" value="true"/>
+        <put name="showsearch" value="true"/>
+        <put name="wizardId" value=""/>
+        <put name="showContent1" value="true"/>
+        <put name="showbar" value="true"/>
+        <put name="pageId" value=""/>
+        <put name="showdatatableContent" value="true"/>
+        <put name="showpaging" value="true"/>
+        <put name="showSearch" value="true"/>
+        <put name="pageType" value="0"/>
+        <put name="manyToMany" value="true"/>
+    </definition>
+    <definition name="masterdetailpage" extends="main.layout">
+        <put name="titleAddDiv" value="Add_Div_Minor_Title"/>
+        <put name="titleEditDiv" value="Edit_Div_Minor_Title"/>
+        <put name="showSearch" value="true"/>
+        <put name="showsteps" value="false"/>
+        <put name="showContent1" value="false"/>
+        <put name="showbar" value="true"/>
+        <put name="showpaging" value="true"/>
+        <put name="titlepage" value=""/>
+        <put name="pageId" value=""/>
+        <put name="searchAction" value=""/>
+        <put name="searchType" value=""/>
+        <put name="searchQuery" value=""/>
+        <put name="pageType" value="0"/>
+        <put name="showMasterDetail" value="true"/>
+        <put name="showCommonData" value="true"/>
+    </definition>
+    <!-- ************************** start gendertypes   by Nora 25-02-2009  *********************************-->
+    <definition name="gendertypeslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="gender_types_title"/>
+        <put name="titleAddDiv" value="gender_types_add_title"/>
+        <put name="titleEditDiv" value="gender_types_edit_title"/>
+        <put name="searchAction" value="genderTypesListBean.search"/>
+        <put name="searchType" value="genderTypesListBean.searchType"/>
+        <put name="searchQuery" value="genderTypesListBean.searchQuery"/>
+    </definition>
+    <!-- ************************** start objectTypes   by i.Omar 20-11-2013  *********************************-->
+    <definition name="objectTypesList.page" extends="lookuplistdiv">
+        <put name="titlepage" value="object_types_title"/>
+        <put name="titleAddDiv" value="object_types_add_title"/>
+        <put name="titleEditDiv" value="object_types_edit_title"/>
+        <put name="searchAction" value="objectTypesListBean.search"/>
+        <put name="searchType" value="objectTypesListBean.searchType"/>
+        <put name="searchQuery" value="objectTypesListBean.searchQuery"/>
+    </definition>
+    <!-- ************************** start building owner types by Abdelrhman 30-10-2013  *********************************-->
+    <definition name="buildingownertypeslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="building_owner_types_title"/>
+        <put name="titleAddDiv" value="building_owner_types_add_title"/>
+        <put name="titleEditDiv" value="building_owner_types_edit_title"/>
+        <put name="searchAction" value="buildingOwnerTypesListBean.search"/>
+        <put name="searchType" value="buildingOwnerTypesListBean.searchType"/>
+        <put name="searchQuery" value="buildingOwnerTypesListBean.searchQuery"/>
+    </definition>
+    <!-- ************************** start governorates by Abdelrhman 28-10-2013  *********************************-->
+    <definition name="governorateslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="governorates_title"/>
+        <put name="titleAddDiv" value="governorates_add_title"/>
+        <put name="titleEditDiv" value="governorates_edit_title"/>
+        <put name="searchAction" value="governoratesListBean.search"/>
+        <put name="searchType" value="governoratesListBean.searchType"/>
+        <put name="searchQuery" value="governoratesListBean.searchQuery"/>
+    </definition>
+    <!-- ************************** Start specialcasetypes   by Abdelrhman 31-10-2013  *********************************-->
+    <definition name="specialcasetypeslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="special_case_types_title"/>
+        <put name="titleAddDiv" value="special_case_types_add_title"/>
+        <put name="titleEditDiv" value="special_case_types_edit_title"/>
+        <put name="searchAction" value="specialCaseTypesListBean.search"/>
+        <put name="searchType" value="specialCaseTypesListBean.searchType"/>
+        <put name="searchQuery" value="specialCaseTypesListBean.searchQuery"/>
+    </definition>
+    <!-- ************************** End specialcasetypes   by Abdelrhman 31-10-2013  *********************************-->
+    <!-- ************************** start societies types by Abdelrhman 20-11-2013  *********************************-->
+    <definition name="societieslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="societies_title"/>
+        <put name="titleAddDiv" value="societies_add_title"/>
+        <put name="titleEditDiv" value="societies_edit_title"/>
+        <put name="searchAction" value="societiesListBean.search"/>
+        <put name="searchType" value="societiesListBean.searchType"/>
+        <put name="searchQuery" value="societiesListBean.searchQuery"/>
+        <!-- ************************** End societies  by Abdelrhman 20-11-2013  *********************************-->
+    </definition>
+    <definition name="reasdonDataList.page" extends="lookuplistdiv">
+        <put name="titleAddDiv" value="ReasonDataPage"/>
+        <put name="titleEditDiv" value="EditReasonDataPage"/>
+        <put name="titlepage" value="ListingReasonDataPage"/>
+        <put name="pageId" value="extradatatypeslist"/>
+        <put name="searchAction" value="reasdondataListBean.search"/>
+        <put name="searchType" value="reasdondataListBean.searchType"/>
+        <put name="searchQuery" value="reasdondataListBean.searchQuery"/>
+        <put name="content1" value="/module/jsps/maindata/reasonData/reasonDatalist_cnt1.jsp"/>
+        <put name="content" value="/module/jsps/maindata/reasonData/reasonDatalist_Cnt.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/reasonData/editReasondiv.jsp"/>
+        <put name="delalert" value="/module/jsps/maindata/reasonData/delalertdiv.jsp"/>
+    </definition>
+    <definition name="handicapstatuslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="handicap_status_title"/>
+        <put name="titleAddDiv" value="handicap_status_add_title"/>
+        <put name="titleEditDiv" value="handicap_status_edit_title"/>
+        <put name="searchAction" value="handicapStatusListBean.search"/>
+        <put name="searchType" value="handicapStatusListBean.searchType"/>
+        <put name="searchQuery" value="handicapStatusListBean.searchQuery"/>
+        <put name="content" value="/module/jsps/maindata/handicapstatus/list_cnt.jsp"/>
+        <put name="lookupadd" value="/module/jsps/maindata/handicapstatus/adddiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/handicapstatus/editdiv.jsp"/>
+    </definition>
+    <definition name="maritalstatuslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="marital_status_title"/>
+        <put name="titleAddDiv" value="marital_status_add_title"/>
+        <put name="titleEditDiv" value="marital_status_edit_title"/>
+        <put name="searchAction" value="maritalStatusListBean.search"/>
+        <put name="searchType" value="maritalStatusListBean.searchType"/>
+        <put name="searchQuery" value="maritalStatusListBean.searchQuery"/>
+        <!--<put name="customDiv1" value="/module/jsps/maindata/maritalstatus/linkdiv.jsp"/>
+        <put name="customDiv2" value="/module/jsps/maindata/maritalstatus/editlinkdiv.jsp"></put>-->
+        <put name="lovDiv" value="/module/jsps/maindata/maritalstatus/lovdiv.jsp"></put>
+        <put name="lookupadd" value="/module/jsps/maindata/maritalstatus/adddiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/maritalstatus/editdiv.jsp"/>
+    </definition>
+    <definition name="maritalstatusmasfemlist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="marital_status_masfem_title"/>
+        <put name="titleAddDiv" value="marital_status_masfem_add_title"/>
+        <put name="titleEditDiv" value="marital_status_masfem_edit_title"/>
+        <put name="searchAction" value="maritalStatusMasFemListBean.search"/>
+        <put name="searchType" value="maritalStatusMasFemListBean.searchType"/>
+        <put name="searchQuery" value="maritalStatusMasFemListBean.searchQuery"/>
+        <put name="content" value="/module/jsps/maindata/maritalstatusmasfem/list_cnt.jsp"/>
+        <put name="lookupadd" value="/module/jsps/maindata/maritalstatusmasfem/adddiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/maritalstatusmasfem/editdiv.jsp"/>
+    </definition>
+    <!-- ************************** start Currencies   by i.Omar 30-10-2013  *********************************-->
+    <definition name="currencies.page" extends="lookuplistdiv">
+        <put name="titlepage" value="currencies_page_title"/>
+        <put name="titleAddDiv" value="currencies_add_title"/>
+        <put name="titleEditDiv" value="currencies_edit_title"/>
+        <put name="searchAction" value="currenciesBean.search"/>
+        <put name="searchType" value="currenciesBean.searchType"/>
+        <put name="searchQuery" value="currenciesBean.searchQuery"/>
+        <put name="content" value="/module/jsps/maindata/currencies/list_cnt.jsp"/>
+        <put name="lookupadd" value="/module/jsps/maindata/currencies/adddiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/currencies/editdiv.jsp"/>
+    </definition>
+    <!-- ************************** end Currencies   by i.Omar 30-10-2013  *********************************-->
+    <!-- ************************** start Holiday Types   *********************************-->
+    <definition name="holidaytypes.page" extends="lookuplistdiv">
+        <put name="titlepage" value="holidaytypes_page_title"/>
+        <put name="titleAddDiv" value="holidaytypes_add_title"/>
+        <put name="titleEditDiv" value="holidaytypes_edit_title"/>
+        <put name="searchAction" value="holidayTypesBean.search"/>
+        <put name="searchType" value="holidayTypesBean.searchType"/>
+        <put name="searchQuery" value="holidayTypesBean.searchQuery"/>
+        <put name="content" value="/module/jsps/maindata/holidaytypes/list_cnt.jsp"/>
+        <put name="lookupadd" value="/module/jsps/maindata/holidaytypes/adddiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/holidaytypes/editdiv.jsp"/>
+    </definition>
+    <!-- ************************** end Holiday Types  *********************************-->
+    <!-- ************************** start kwstreets   *********************************-->
+    <definition name="kwStreets.page" extends="lookuplistdiv">
+        <put name="titlepage" value="kwStreets_page_title"/>
+        <put name="titleAddDiv" value="kwStreets_add_title"/>
+        <put name="titleEditDiv" value="kwStreets_edit_title"/>
+        <put name="searchAction" value="kwStreetsBean.search"/>
+        <put name="searchType" value="kwStreetsBean.searchType"/>
+        <put name="searchQuery" value="kwStreetsBean.searchQuery"/>
+        <put name="content" value="/module/jsps/maindata/kwstreets/list_cnt.jsp"/>
+        <put name="lookupadd" value="/module/jsps/maindata/kwstreets/adddiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/kwstreets/editdiv.jsp"/>
+    </definition>
+    <!-- ************************** end Holiday Types  *********************************-->
+    <!-- ************************** Start decisionMakerTypes   by A.Elamsry 30-10-2013  *********************************-->
+    <definition name="decisionmakerlist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="decision_maker_types_title"/>
+        <put name="titleAddDiv" value="decision_maker_types_add_title"/>
+        <put name="titleEditDiv" value="decision_maker_types_edit_title"/>
+        <put name="searchAction" value="decisionmakerListBean.search"/>
+        <put name="searchType" value="decisionmakerListBean.searchType"/>
+        <put name="searchQuery" value="decisionmakerListBean.searchQuery"/>
+    </definition>
+    <!-- ************************** EnddecisionMakerTypes   by A.Elamsry 30-10-2013  *********************************-->
+    <!-- ************************** Start residentType   by A.Elamsry 31-10-2013  *********************************-->
+    <definition name="residentlist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="resident_type_title"/>
+        <put name="titleAddDiv" value="resident_type_add_title"/>
+        <put name="titleEditDiv" value="resident_type_edit_title"/>
+        <put name="searchAction" value="residentTypeListBean.search"/>
+        <put name="searchType" value="residentTypeListBean.searchType"/>
+        <put name="searchQuery" value="residentTypeListBean.searchQuery"/>
+    </definition>
+    <!-- ************************** End  residentType   by A.Elamsry 31-10-2013   *********************************-->
+    <!-- ************************** start gendertypes   by Nora 25-02-2009  *********************************-->
+    <!-- start prepartion for use-case05  tiles-def -->
+    <definition name="groupcountrieslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="Country_Title"/>
+        <put name="titleAddDiv" value="Add_Div_Country_Title"/>
+        <put name="titleEditDiv" value="nationality_name"/>
+        <put name="titleLovDiv" value="Add_Div_Country_Title"/>
+        <put name="searchAction" value="groupCountriesListBean.search"/>
+        <put name="searchType" value="groupCountriesListBean.searchType"/>
+        <put name="searchQuery" value="groupCountriesListBean.searchQuery"/>
+        <put name="lookupedit" value="/module/jsps/maindata/groupcountries/nationalitydiv.jsp"/>
+        <put name="content" value="/module/jsps/maindata/groupcountries/list_cnt.jsp"/>
+        <put name="content1" value="/module/jsps/maindata/groupcountries/list_cnt1.jsp"/>
+        <put name="delalert" value="/module/jsps/maindata/groupcountries/delalertdiv.jsp"/>
+        <put name="delconfirm" value="/module/jsps/maindata/groupcountries/delconfirmdiv.jsp"/>
+        <put name="lovDiv" value="/module/jsps/maindata/groupcountries/lovdiv.jsp"/>
+    </definition>
+    <!-- End prepartion for use-case05 tiles-def -->
+    <!-- start prepartion for use-case09 master tiles-def -->
+    <definition name="countrylist.page" extends="masterdetailpage">
+        <put name="titleAddDiv" value="Add_Div_Country_Title"/>
+        <put name="titleEditDiv" value="Edit_Div_Country_Title"/>
+        <put name="titlepage" value="Country__Cities_Title"/>
+        <put name="searchAction" value="countriesListBean.search"/>
+        <put name="searchType" value="countriesListBean.searchType"/>
+        <put name="searchQuery" value="countriesListBean.searchQuery"/>
+        <put name="content" value="/module/jsps/maindata/countrycities/countrylist_cnt.jsp"/>
+        <put name="lookupadd" value="/module/jsps/maindata/countrycities/addcountrydiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/countrycities/editcountrydiv.jsp"/>
+        <put name="masterdetaildiv" value="/module/jsps/maindata/countrycities/countrydetaildiv.jsp"/>
+        <put name="customDiv1" value="/module/jsps/maindata/countrycities/countryDetails.jsp"></put>
+    </definition>
+    <!-- End prepartion for use-case09 tiles-def -->
+    <!-- start prepartion for use-case09 details tiles-def -->
+    <definition name="citieslist.page" extends="masterdetailpage">
+        <put name="titleAddDiv" value="city_add_title"/>
+        <put name="titleEditDiv" value="city_edit_title"/>
+        <put name="titlepage" value="cities"/>
+        <put name="searchAction" value="citiesListBean.search"/>
+        <put name="searchType" value="citiesListBean.searchType"/>
+        <put name="searchQuery" value="citiesListBean.searchQuery"/>
+        <put name="content1" value="/module/jsps/maindata/countrycities/citieslist_cnt1.jsp"/>
+        <put name="content" value="/module/jsps/maindata/countrycities/cititieslist_cnt.jsp"/>
+        <put name="lookupadd" value="/module/jsps/maindata/countrycities/addcitydiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/countrycities/editcitydiv.jsp"/>
+    </definition>
+    <!-- End prepartion for use-case09 tiles-def -->
+    <!-- ************************** start 006_INF_GroupsCat,UC_007_INF_CountryCat   by Nora 26-02-2009  *********************************-->
+    <definition name="groupcategorylist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="group_category_list_title"/>
+        <put name="titleAddDiv" value="group_category_add_title"/>
+        <put name="titleEditDiv" value="group_category_edit_title"/>
+        <put name="searchAction" value="groupCategoryListBean.search"/>
+        <put name="searchType" value="groupCategoryListBean.searchType"/>
+        <put name="searchQuery" value="groupCategoryListBean.searchQuery"/>
+    </definition>
+    <definition name="countrygrouplist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="country_group_list_title"/>
+        <put name="titleAddDiv" value="country_group_add_title"/>
+        <put name="titleEditDiv" value="country_group_edit_title"/>
+        <put name="pageId" value="minorspecspage"/>
+        <put name="searchAction" value="countryGroupListBean.search"/>
+        <put name="searchType" value="countryGroupListBean.searchType"/>
+        <put name="searchQuery" value="countryGroupListBean.searchQuery"/>
+        <put name="content1" value="/module/jsps/maindata/countrygroup/list_cnt1.jsp"/>
+    </definition>
+    <!-- ************************** End 006_INF_GroupsCat,UC_007_INF_CountryCat   by Nora 26-02-2009  *********************************-->
+    <!-- ************************** Start Languages   by Omar 23-10-2013  *********************************-->
+    <definition name="languageslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="languages_title"/>
+        <put name="titleAddDiv" value="languages_add_title"/>
+        <put name="titleEditDiv" value="languages_edit_title"/>
+        <put name="searchAction" value="languagesListBean.search"/>
+        <put name="searchType" value="languagesListBean.searchType"/>
+        <put name="searchQuery" value="languagesListBean.searchQuery"/>
+    </definition>
+    <!-- ************************** End Languages   by Omar 23-10-2013  *********************************-->
+    <!-- ************************** Start MilitaryStatus   by i.Omar 30-10-2013  *********************************-->
+    <definition name="militaryStatus.page" extends="lookuplistdiv">
+        <put name="titlepage" value="military_status_title"/>
+        <put name="titleAddDiv" value="military_status_add_title"/>
+        <put name="titleEditDiv" value="military_status_edit_title"/>
+        <put name="searchAction" value="militaryStatusBean.search"/>
+        <put name="searchType" value="militaryStatusBean.searchType"/>
+        <put name="searchQuery" value="militaryStatusBean.searchQuery"/>
+    </definition>
+    <!-- ************************** End MilitaryStatus   by i.Omar 30-10-2013  *********************************-->
+    <!-- ************************** Start weekDays   by A.Elmasry 24-10-2013  *********************************-->
+    <definition name="weekdayslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="week_days_title"/>
+        <put name="titleAddDiv" value="week_days_add_title"/>
+        <put name="titleEditDiv" value="week_days_edit_title"/>
+        <put name="searchAction" value="weekDaysListBean.search"/>
+        <put name="searchType" value="weekDaysListBean.searchType"/>
+        <put name="searchQuery" value="weekDaysListBean.searchQuery"/>
+    </definition>
+    <!-- ************************** End weekDays   by A.Elmasry 24-10-2013   *********************************-->
+    <definition name="bloodgroupslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="blood_groups_title"/>
+        <put name="titleAddDiv" value="blood_groups_add_title"/>
+        <put name="titleEditDiv" value="blood_groups_edit_title"/>
+        <put name="searchAction" value="bloodGroupsListBean.search"/>
+        <put name="searchType" value="bloodGroupsListBean.searchType"/>
+        <put name="searchQuery" value="bloodGroupsListBean.searchQuery"/>
+    </definition>
+    <definition name="dmlStatmentTypesListBean.page" extends="lookuplistdiv">
+        <put name="titlepage" value="dml_statment_types_title"></put>
+        <put name="titleAddDiv" value="dml_statment_types_add_title"></put>
+        <put name="titleEditDiv" value="dml_statment_types_edit_title"></put>
+        <put name="searchAction" value="dmlStatmentTypesListBean.search"></put>
+        <put name="searchType" value="dmlStatmentTypesListBean.searchType"></put>
+        <put name="searchQuery" value="dmlStatmentTypesListBean.searchQuery"></put>
+    </definition>
+    <definition name="systemSettingBean.page" extends="lookuplistdiv">
+        <put name="titlepage" value="system_setting_page_title"></put>
+        <put name="titleAddDiv" value="system_setting_add_title"></put>
+        <put name="titleEditDiv" value="system_setting_edit_title"></put>
+        <put name="searchAction" value="systemSettingBean.search"></put>
+        <put name="searchType" value="systemSettingBean.searchType"></put>
+        <put name="searchQuery" value="systemSettingBean.searchQuery"></put>
+        <put name="content" value="/module/jsps/maindata/systemsetting/list_cnt.jsp"></put>
+        <put name="lookupadd" value="/module/jsps/maindata/systemsetting/adddiv.jsp"></put>
+        <put name="lookupedit" value="/module/jsps/maindata/systemsetting/editdiv.jsp"></put>
+    </definition>
+    <definition name="kwtCitizensResidentBean.page" extends="lookuplistdiv">
+        <put name="titlepage" value="kwt_citizen_page_title"></put>
+        <put name="titleAddDiv" value="kwt_citizen_add_title"></put>
+        <put name="titleEditDiv" value="kwt_citizen_edit_title"></put>
+        <put name="searchAction" value="kwtCitizensResidentBean.search"></put>
+        <put name="searchType" value="kwtCitizensResidentBean.searchType"></put>
+        <put name="searchQuery" value="kwtCitizensResidentBean.searchQuery"></put>
+        <put name="content" value="/module/jsps/maindata/kwtcitizensresident/list_cnt.jsp"></put>
+        <put name="search" value="/module/jsps/maindata/kwtcitizensresident/list_searchdiv.jsp"></put>
+    </definition>
+    <definition name="approvalMakersBean.page" extends="lookuplistdiv">
+        <put name="titlepage" value="approval_makers_page_title"></put>
+        <put name="titleAddDiv" value="approval_makers_add_title"></put>
+        <put name="titleEditDiv" value="approval_makers_edit_title"></put>
+        <put name="searchAction" value="approvalMakersBean.search"></put>
+        <put name="searchType" value="approvalMakersBean.searchType"></put>
+        <put name="searchQuery" value="approvalMakersBean.searchQuery"></put>
+        <put name="lookupadd" value="/module/jsps/maindata/approvalmakers/adddiv.jsp"></put>
+        <put name="lookupedit" value="/module/jsps/maindata/approvalmakers/editdiv.jsp"></put>
+        <put name="content1" value="/module/jsps/maindata/approvalmakers/a.jsp"></put>
+    </definition>
+    <definition name="newspaperBean.page" extends="lookuplistdiv">
+        <put name="titlepage" value="news_paper_page_title"></put>
+        <put name="titleAddDiv" value="news_paper_add_title"></put>
+        <put name="titleEditDiv" value="news_paper_edit_title"></put>
+        <put name="searchAction" value="newspaperBean.search"></put>
+        <put name="searchType" value="newspaperBean.searchType"></put>
+        <put name="searchQuery" value="newspaperBean.searchQuery"></put>
+        <put name="content" value="/module/jsps/maindata/newspaper/list_cnt.jsp"></put>
+        <put name="lookupadd" value="/module/jsps/maindata/newspaper/adddiv.jsp"></put>
+        <put name="lookupedit" value="/module/jsps/maindata/newspaper/editdiv.jsp"></put>
+    </definition>
+    <definition name="orcaleErrorsBean.page" extends="lookuplistdiv">
+        <put name="titlepage" value="orcale_errors_page_title"></put>
+        <put name="titleAddDiv" value="orcale_errors_add_title"></put>
+        <put name="titleEditDiv" value="orcale_errors_edit_title"></put>
+        <put name="searchAction" value="orcaleErrorsBean.search"></put>
+        <put name="searchType" value="orcaleErrorsBean.searchType"></put>
+        <put name="searchQuery" value="orcaleErrorsBean.searchQuery"></put>
+        <put name="content" value="/module/jsps/maindata/orcaleerrors/list_cnt.jsp"></put>
+        <put name="lookupadd" value="/module/jsps/maindata/orcaleerrors/adddiv.jsp"></put>
+        <put name="lookupedit" value="/module/jsps/maindata/orcaleerrors/editdiv.jsp"></put>
+    </definition>
+    <definition name="kwMapListBean.page" extends="tree.page">
+        <put name="titlepage" value="kw_map_page_title"></put>
+        <put name="titleAddDiv" value="kw_map_add_title"></put>
+        <put name="titleEditDiv" value="kw_map_edit_title"></put>
+        <put name="titleDelDiv" value="kw_map_del"></put>
+        <put name="searchAction" value="kwMapListBean.searchTree"></put>
+        <put name="searchType" value="kwMapListBean.searchType"></put>
+        <put name="searchQuery" value="kwMapListBean.searchQuery"></put>
+        <put name="code" value="mapCode"></put>
+        <put name="name" value="mapName"></put>
+        <put name="parent" value="parentMapCode"></put>
+        <put name="leaf" value="treeLevel"></put>
+        <put name="treedivdetails" value="/module/jsps/maindata/kwmap/treedivdetailsLocal.jsp"></put>
+        <put name="treeadd" value="/module/jsps/maindata/kwmap/treeAdd.jsp"></put>
+        <put name="customDiv1" value="/module/jsps/maindata/kwmap/unSelctedStreetZones.jsp"></put>
+        <put name="lovDiv" value="/module/jsps/maindata/kwmap/searchMap.jsp"/>
+        <!--put name="customDiv2" value="/module/jsps/maindata/kwmap/selectedStreetZone.jsp"></put-->
+        <!--
+   <put name="content" value="/module/jsps/maindata/kwmap/kwMapListTree.jsp"></put>
+  <put name="lovDiv" value="/module/jsps/maindata/kwmap/lovDiv.jsp"></put>
+  <put name="customDiv2" value="/module/jsps/maindata/kwmap/confirmUpdatesNameDiv.jsp"></put>
+   <put name="delalerttree" value="/module/jsps/maindata/kwmap/kwMapAlertDiv.jsp"></put>
+  <put name="treedivdetails" value="/module/jsps/maindata/kwmap/kwMapDiv.jsp"></put>
+  -->
+    </definition>
+    <!-- ************************** start Years and Financial years   by i.Omar 24-11-2013  *********************************-->
+    <definition name="years.page" extends="lookuplistdiv">
+        <put name="titlepage" value="years_title"></put>
+        <put name="titleAddDiv" value="years_add_title"></put>
+        <put name="titleEditDiv" value="years_edit_title"></put>
+        <put name="searchAction" value=""></put>
+        <put name="searchType" value=""></put>
+        <put name="searchQuery" value=""></put>
+        <put name="content" value="/module/jsps/maindata/yearsandfinancialyears/list_cnt.jsp"></put>
+        <put name="lookupadd" value="/module/jsps/maindata/yearsandfinancialyears/adddiv.jsp"></put>
+        <put name="lookupedit" value="/module/jsps/maindata/yearsandfinancialyears/editdiv.jsp"></put>
+        <put name="search" value="/module/jsps/maindata/yearsandfinancialyears/searchDiv.jsp"></put>
+    </definition>
+    <!-- ************************** end  Years and Financial years   by i.Omar 24-11-2013 *********************************-->
+    <!-- ************************** start Banks  by i.Omar 28-11-2013  *********************************-->
+    <definition name="banks.page" extends="lookuplistdiv">
+        <put name="titlepage" value="banks_title"></put>
+        <put name="titleAddDiv" value="banks_add_title"></put>
+        <put name="titleEditDiv" value="banks_edit_title"></put>
+        <put name="searchAction" value="banksBean.search"></put>
+        <put name="searchType" value="banksBean.searchType"></put>
+        <put name="searchQuery" value="banksBean.searchQuery"></put>
+        <put name="content" value="/module/jsps/maindata/banks/list_cnt.jsp"></put>
+        <put name="lookupadd" value="/module/jsps/maindata/banks/adddiv.jsp"></put>
+        <put name="lookupedit" value="/module/jsps/maindata/banks/editdiv.jsp"></put>
+        <put name="customDiv1" value="/module/jsps/maindata/banks/bankBranches.jsp"></put>
+    </definition>
+    <!-- ************************** end  Banks by i.Omar 28-11-2013 *********************************-->
+    <definition name="months.page" extends="lookuplistdiv">
+        <put name="titlepage" value="months_title"/>
+        <put name="titleAddDiv" value="month_add_title"/>
+        <put name="titleEditDiv" value="month_edit_title"/>
+        <put name="searchAction" value="monthsBean.search"/>
+        <put name="searchType" value="monthsBean.searchType"/>
+        <put name="searchQuery" value="monthsBean.searchQuery"/>
+    </definition>
+    <!-- ************************** Start operationTypes   by A.Elmasry 28-10-2013  *********************************-->
+    <definition name="operationtypeslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="operation_types_title"/>
+        <put name="titleAddDiv" value="operation_types_add_title"/>
+        <put name="titleEditDiv" value="operation_types_edit_title"/>
+        <put name="searchAction" value="operationTypesListBean.search"/>
+        <put name="searchType" value="operationTypesListBean.searchType"/>
+        <put name="searchQuery" value="operationTypesListBean.searchQuery"/>
+    </definition>
+    <!-- ************************** End operationTypes   by A.Elmasry 28-10-2013   *********************************-->
+    <!-- ************************** Start trxStatus   by A.Elmasry 20-11-2013  *********************************-->
+    <definition name="trxstatuslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="trx_status_title"></put>
+        <put name="titleAddDiv" value="trx_status_add_title"></put>
+        <put name="titleEditDiv" value="trx_status_edit_title"></put>
+        <put name="searchAction" value="trxStatusListBean.search"></put>
+        <put name="searchType" value="trxStatusListBean.searchType"></put>
+        <put name="searchQuery" value="trxStatusListBean.searchQuery"></put>
+    </definition>
+    <!-- ************************** End trxStatus   by A.Elmasry 20-11-2013   *********************************-->
+    <!-- ************************** Start Religions   by A.Elmasry 21-11-2013  *********************************-->
+    <definition name="religionslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="religions_title"></put>
+        <put name="titleAddDiv" value="religions_add_title"></put>
+        <put name="titleEditDiv" value="religions_edit_title"></put>
+        <put name="searchAction" value="religionsListBean.search"></put>
+        <put name="searchType" value="religionsListBean.searchType"></put>
+        <put name="searchQuery" value="religionsListBean.searchQuery"></put>
+        <put name="lookupadd" value="/module/jsps/maindata/religions/adddiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/religions/editdiv.jsp"/>
+        <!--put name="customDiv1" value="/module/jsps/maindata/religions/linkdiv.jsp"></put-->
+        <!--put name="customDiv2" value="/module/jsps/maindata/religions/editlinkdiv.jsp"></put-->
+        <put name="lovDiv" value="/module/jsps/maindata/religions/lovdiv.jsp"></put>
+    </definition>
+    <!-- ************************** End Religions   by A.Elmasry 21-11-2013   *********************************-->
+    <!-- ************************** start Statment Types    *********************************-->
+    <definition name="dmlStatmentTypesListBean.page" extends="lookuplistdiv">
+        <put name="titlepage" value="dml_statment_types_title"/>
+        <put name="titleAddDiv" value="dml_statment_types_add_title"/>
+        <put name="titleEditDiv" value="dml_statment_types_edit_title"/>
+        <put name="searchAction" value="dmlStatmentTypesListBean.search"/>
+        <put name="searchType" value="dmlStatmentTypesListBean.searchType"/>
+        <put name="searchQuery" value="dmlStatmentTypesListBean.searchQuery"/>
+    </definition>
+    <definition name="systemSettingBean.page" extends="lookuplistdiv">
+        <put name="titlepage" value="system_setting_page_title"/>
+        <put name="titleAddDiv" value="system_setting_add_title"/>
+        <put name="titleEditDiv" value="system_setting_edit_title"/>
+        <put name="searchAction" value="systemSettingBean.search"/>
+        <put name="searchType" value="systemSettingBean.searchType"/>
+        <put name="searchQuery" value="systemSettingBean.searchQuery"/>
+        <put name="content" value="/module/jsps/maindata/systemsetting/list_cnt.jsp"/>
+        <put name="lookupadd" value="/module/jsps/maindata/systemsetting/adddiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/systemsetting/editdiv.jsp"/>
+    </definition>
+    <definition name="approvalMakersBean.page" extends="lookuplistdiv">
+        <put name="titleAddDiv" value="approval_makers_add_title"/>
+        <put name="titlepage" value="approval_page_title"/>
+        <put name="searchAction" value="approvalMakersBean.search"/>
+        <put name="titleEditDiv" value="approval_makers_edit_title"/>
+        <put name="searchType" value="approvalMakersBean.searchType"/>
+        <put name="searchQuery" value="approvalMakersBean.searchQuery"/>
+        <put name="content" value="/module/jsps/maindata/approvalmakers/list_cnt.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/approvalmakers/editdiv.jsp"/>
+        <put name="lookupadd" value="/module/jsps/maindata/approvalmakers/adddiv.jsp"/>
+    </definition>
+    <definition name="newspaperBean.page" extends="lookuplistdiv">
+        <put name="titlepage" value="news_paper_page_title"/>
+        <put name="titleAddDiv" value="news_paper_add_title"/>
+        <put name="titleEditDiv" value="news_paper_edit_title"/>
+        <put name="searchAction" value="newspaperBean.search"/>
+        <put name="searchType" value="newspaperBean.searchType"/>
+        <put name="searchQuery" value="newspaperBean.searchQuery"/>
+        <put name="content" value="/module/jsps/maindata/newspaper/list_cnt.jsp"/>
+        <put name="lookupadd" value="/module/jsps/maindata/newspaper/adddiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/newspaper/editdiv.jsp"/>
+    </definition>
+    <definition name="orcaleErrorsBean.page" extends="lookuplistdiv">
+        <put name="titlepage" value="orcale_errors_page_title"/>
+        <put name="titleAddDiv" value="orcale_errors_add_title"/>
+        <put name="titleEditDiv" value="orcale_errors_edit_title"/>
+        <put name="searchAction" value="orcaleErrorsBean.search"/>
+        <put name="searchType" value="orcaleErrorsBean.searchType"/>
+        <put name="searchQuery" value="orcaleErrorsBean.searchQuery"/>
+        <put name="content" value="/module/jsps/maindata/orcaleerrors/list_cnt.jsp"/>
+        <put name="lookupadd" value="/module/jsps/maindata/orcaleerrors/adddiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/orcaleerrors/editdiv.jsp"/>
+    </definition>
+    <definition name="gradeTypes.page" extends="lookuplistdiv">
+        <put name="titlepage" value="grade_types"/>
+        <put name="titleAddDiv" value="grade_add_title"/>
+        <put name="titleEditDiv" value="grade_edit_title"/>
+        <put name="searchAction" value="gradeTypesListBean.search"/>
+        <put name="searchType" value="gradeTypesListBean.searchType"/>
+        <put name="searchQuery" value="gradeTypesListBean.searchQuery"/>
+        <!-- -->
+        <put name="content" value="/module/jsps/maindata/gradetypes/list_cnt.jsp"/>
+        <put name="lookupadd" value="/module/jsps/maindata/gradetypes/adddiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/gradetypes/editdiv.jsp"/>
+        <put name="customDiv1" value="/module/jsps/maindata/gradetypes/adddegreediv.jsp"/>
+        <put name="customDiv2" value="/module/jsps/maindata/gradetypes/viewGradesdiv.jsp"/>
+    </definition>
+    <definition name="officialvaclist.page" extends="lookuplistdiv">
+        <put name="resourcesBundlePath" value="com.beshara.csc.hr.inf.presentation.resources.inf"></put>
+        <put name="titlepage" value="officialVac_listTitle"></put>
+        <put name="content1" value="/module/jsps/maindata/officialvac/list_cnt1.jsp"></put>
+        <put name="content" value="/module/jsps/maindata/officialvac/list_cnt.jsp"></put>
+        <put name="lookupadd" value="/module/jsps/maindata/officialvac/adddiv.jsp"></put>
+        <put name="search" value="/module/jsps/maindata/officialvac/searchdiv.jsp"></put>
+        <put name="delalert" value="/module/jsps/maindata/officialvac/delalertdiv.jsp"></put>
+        <put name="delconfirm" value="/module/jsps/maindata/officialvac/delconfirmdiv.jsp"></put>
+        <put name="masterdetaildiv" value="/module/jsps/reg/regjoindiv.jsp"></put>
+    </definition>
+    <definition name="workDataList.page" extends="tree.page">
+        <put name="content" value="/integration/inf/jsps/workCenterData/workData_cnt.jsp"></put>
+        <put name="content1" value="/integration/inf/jsps/workCenterData/workData_cnt1.jsp"></put>
+        <put name="resourcesBundlePath"
+             value="com.beshara.csc.gn.inf.integration.presentation.resources.infintegration"></put>
+    </definition>
+    <definition name="addExperinceIntegration.page" extends="lookuplistdiv">
+        <put name="titlepage" value="add_experience_title"></put>
+        <put name="showLookupAdd" value="true"></put>
+        <put name="titleAddDiv" value="add_job_div"></put>
+        <put name="content1" value="/module/inf/jsps/maindata/addExperince/addExperince_cnt1.jsp"></put>
+        <put name="integrationDiv1" value="/integration/org/jsps/ministry/searchministriesdiv.jsp"/>
+        <put name="customDiv1" value="/integration/job/jsps/search/searchdiv.jsp"/>
+        <put name="integrationDiv2" value="/integration/org/jsps/workcenters/workCenterSearchDiv.jsp"/>
+        <put name="lovDiv" value="/WEB-INF/app/tiles/lovdiv.jsp"></put>
+    </definition>
+    <!-- ************************** bnk integration part by a.agamy  *********************************-->
+    <definition name="banks.page" extends="lookuplistdiv">
+        <put name="titlepage" value="banks_title"/>
+        <put name="titleAddDiv" value="banks_add_title"/>
+        <put name="titleEditDiv" value="banks_edit_title"/>
+        <put name="searchAction" value="banksListBean.search"/>
+        <put name="searchType" value="banksListBean.searchType"/>
+        <put name="searchQuery" value="banksListBean.searchQuery"/>
+        <put name="content" value="/integration/bnk/jsps/banks/banks_cnt.jsp"></put>
+        <put name="lookupadd" value="/integration/bnk/jsps/banks/bankAddDiv.jsp"></put>
+        <put name="lookupedit" value="/integration/bnk/jsps/banks/bankEditDiv.jsp"></put>
+    </definition>
+    <definition name="branches.page" extends="lookuplistdiv">
+        <put name="titlepage" value="branches_title"/>
+        <put name="titleAddDiv" value="branches_add_title"/>
+        <put name="titleEditDiv" value="branches_edit_title"/>
+        <put name="searchAction" value="branchesListBean.search"/>
+        <put name="searchType" value="branchesListBean.searchType"/>
+        <put name="searchQuery" value="branchesListBean.searchQuery"/>
+        <put name="content" value="/integration/bnk/jsps/bankBranches/branches_cnt.jsp"></put>
+        <put name="content1" value="/integration/bnk/jsps/bankBranches/branches_cn1.jsp"></put>
+        <put name="delalert" value="/integration/bnk/jsps/bankBranches/delalertdiv2.jsp"></put>
+        <put name="delconfirm" value="/integration/bnk/jsps/bankBranches/delconfirmdiv2.jsp"></put>
+    </definition>
+    <definition name="newBranch.page" extends="lookuplistdiv">
+        <put name="titlepage" value="branches_add_title"/>
+        <put name="searchAction" value="branchesListBean.search"/>
+        <put name="searchType" value="branchesListBean.searchType"/>
+        <put name="searchQuery" value="branchesListBean.searchQuery"/>
+        <put name="content" value="/integration/bnk/jsps/bankBranches/newBranch_cnt.jsp"></put>
+        <put name="content1" value="/integration/bnk/jsps/bankBranches/newBranch_cnt1.jsp"></put>
+        <put name="customDiv1" value="/integration/bnk/jsps/bankBranches/bankBranchDetails/coordinatorAddDiv.jsp"></put>
+        <put name="delalert" value="/integration/bnk/jsps/bankBranches/delalertdiv.jsp"></put>
+        <put name="delconfirm" value="/integration/bnk/jsps/bankBranches/delconfirmdiv.jsp"></put>
+    </definition>
+    <definition name="branchDetails.page" extends="lookuplistdiv">
+        <put name="titlepage" value="branchDetails_title"/>
+        <put name="titleAddDiv" value="bank_coordinator_add_title"/>
+        <put name="titleEditDiv" value="bank_coordinator_edit_title"/>
+        <put name="searchAction" value="branchDetailsListBean.search"/>
+        <put name="searchType" value="branchDetailsListBean.searchType"/>
+        <put name="searchQuery" value="branchDetailsListBean.searchQuery"/>
+        <put name="content" value="/integration/bnk/jsps/bankBranches/bankBranchDetails/branch_details_cnt.jsp"></put>
+        <put name="content1" value="/integration/bnk/jsps/bankBranches/bankBranchDetails/branch_details_cnt1.jsp"></put>
+        <!--<put name="lookupadd" value="/integration/bnk/jsps/bankBranches/branchesAddDiv.jsp"></put>-->
+    </definition>
+    <!-- ************************** bnk integration part  *********************************-->
+    <definition name="documentTypesList.page" extends="lookuplistdiv">
+        <put name="titlepage" value="doctypes_title_list"/>
+        <put name="titleAddDiv" value="doctypes_title_add"/>
+        <put name="titleEditDiv" value="doctypes_title_edit"/>
+        <put name="searchAction" value="documentTypesListBean.search"/>
+        <put name="searchType" value="documentTypesListBean.searchType"/>
+        <put name="searchQuery" value="documentTypesListBean.searchQuery"/>
+    </definition>
+    <definition name="infholidayslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="infholidays_title_list"/>
+        <put name="titleAddDiv" value="infholidays_title_add"/>
+        <put name="titleEditDiv" value="infholidays_title_edit"/>
+        <put name="search" value="/module/jsps/maindata/infholidays/searchdiv.jsp"/>
+        <put name="content1" value="/module/jsps/maindata/infholidays/list_cnt1.jsp"/>
+        <put name="content" value="/module/jsps/maindata/infholidays/list_cnt.jsp"/>
+        <put name="lookupadd" value="/module/jsps/maindata/infholidays/adddiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/infholidays/editdiv.jsp"/>
+    </definition>
+    <definition name="educationLevelsVacations.page" extends="lookuplistdiv">
+        <put name="titlepage" value="educationLevelsVacationsTitle"></put>
+        <put name="titleAddDiv" value="specialPeriodAdd"/>
+        <put name="titleEditDiv" value="specialPeriodEdit"/>
+        <put name="searchAction" value="educationLevelsVacations.search"></put>
+        <put name="searchType" value="educationLevelsVacations.searchType"></put>
+        <put name="searchQuery" value="educationLevelsVacations.searchQuery"></put>
+        <put name="content" value="/module/jsps/maindata/educationlevelsvacations/list_cnt.jsp"></put>
+        <put name="content1" value="/module/jsps/maindata/educationlevelsvacations/list_cnt1.jsp"></put>
+        <put name="lookupadd" value="/module/jsps/maindata/educationlevelsvacations/adddiv.jsp"/>
+        <put name="lookupedit" value="/module/jsps/maindata/educationlevelsvacations/editdiv.jsp"/>
+    </definition>
+
+    <definition name="mismisidntificationtypeslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="mismisidntificationtypes_title_list"/>
+        <put name="titleAddDiv" value="mismisidntificationtypes_title_add"/>
+        <put name="titleEditDiv" value="mismisidntificationtypes_title_edit"/>
+        <put name="searchAction" value="misMisIdntificationTypesListBean.search"/>
+        <put name="searchType" value="misMisIdntificationTypesListBean.searchType"/>
+        <put name="searchQuery" value="misMisIdntificationTypesListBean.searchQuery"/>
+    </definition>
+    
+   <definition name="identificationtypeslist.page" extends="lookuplistdiv">
+        <put name="titlepage" value="identificationtypes_title_list"/>
+        <put name="titleAddDiv" value="identificationtypes_title_add"/>
+        <put name="titleEditDiv" value="identificationtypes_title_edit"/>
+        <put name="searchAction" value="identificationTypesListBean.search"/>
+        <put name="searchType" value="identificationTypesListBean.searchType"/>
+        <put name="searchQuery" value="identificationTypesListBean.searchQuery"/>
+        <put name="content" value="/module/jsps/shared/fomuntilnotes/fromuntildate-lookuplist.jsp"/>
+        <put name="lookupadd" value="/module/jsps/shared/fomuntilnotes/fromuntildate-adddiv.jsp"/>        
+        <put name="lookupedit" value="/module/jsps/shared/fomuntilnotes/fromuntildate-editdiv.jsp"/>
+                      
+
+    </definition>
+    
+    <definition name="attachmentsIntegration.page" extends="lookuplistdiv">
+        <put name="titlepage" value="attachment_title"></put>
+        <put name="content1" value="/integration/inf/jsps/fileAttachments/fileAttachments_cnt1.jsp"></put>
+        <put name="content" value="/integration/inf/jsps/fileAttachments/fileAttachments_cnt.jsp"></put>
+    </definition>
+    
+</tiles-definitions>
+
+
+
+
+
+ 

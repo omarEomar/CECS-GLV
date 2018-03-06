@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<daoManager stateHolder="ThreadStateHolder">
+    <exceptionWrappers>
+        <exceptionWrapper name="oracleExceptionWrapper" implementation="com.beshara.common.dao.db.DAODbExceptionWrapper"
+                          configFile="res:com/beshara/common/dao/db/config/ora/errors.xml"/>
+    </exceptionWrappers>
+    <contexts>
+        <context name="sso" implementation="com.beshara.common.dao.db.DAODbContext"
+                 exceptionWrapper="oracleExceptionWrapper">
+            <params>
+                <param name="connectionName" value="sso"/>
+            </params>
+            <objects>
+                <object interface="com.beshara.sso.server.dao.IAttrGroupDAO"
+                        implementation="com.beshara.sso.server.dao.ora.AttrGroupDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.IAttributeDAO"
+                        implementation="com.beshara.sso.server.dao.ora.AttributeDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.IBannedDeviceAttrDAO"
+                        implementation="com.beshara.sso.server.dao.ora.BannedDeviceAttrDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.IBannedUserDAO"
+                        implementation="com.beshara.sso.server.dao.ora.BannedUserDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.IInvTrialAttrDAO"
+                        implementation="com.beshara.sso.server.dao.ora.InvTrialAttrDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.IInvTrialDAO"
+                        implementation="com.beshara.sso.server.dao.ora.InvTrialDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.IKillReasonDAO"
+                        implementation="com.beshara.sso.server.dao.ora.KillReasonDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.ILoginTrialAttrDAO"
+                        implementation="com.beshara.sso.server.dao.ora.LoginTrialAttrDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.ILoginTrialDAO"
+                        implementation="com.beshara.sso.server.dao.ora.LoginTrialDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.IParamDAO"
+                        implementation="com.beshara.sso.server.dao.ora.ParamDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.IRequestAttrDAO"
+                        implementation="com.beshara.sso.server.dao.ora.RequestAttrDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.IRequestDAO"
+                        implementation="com.beshara.sso.server.dao.ora.RequestDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.IClientDAO"
+                        implementation="com.beshara.sso.server.dao.ora.ClientDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.ISessionAttrDAO"
+                        implementation="com.beshara.sso.server.dao.ora.SessionAttrDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.ISessionDAO"
+                        implementation="com.beshara.sso.server.dao.ora.SessionDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.IClientTypeDAO"
+                        implementation="com.beshara.sso.server.dao.ora.ClientTypeDAOImpl"/>
+                <object interface="com.beshara.sso.server.dao.IViolationDAO"
+                        implementation="com.beshara.sso.server.dao.ora.ViolationDAOImpl"/>
+                <object interface="com.beshara.csc.sec.business.dao.DfUserDAO"
+                        implementation="com.beshara.csc.sec.business.dao.ora.DfUserDAOImpl"/> 
+            </objects>
+        </context>
+        <context name="sec-sso" implementation="com.beshara.common.dao.db.DAODbContext"
+                 exceptionWrapper="oracleExceptionWrapper">
+            <params>
+                <param name="connectionName" value="security"/>
+            </params>
+            <objects>
+                <object interface="com.beshara.sec.sso.dao.IUserDAO"
+                        implementation="com.beshara.sec.sso.dao.ora.UserDAOImpl"/>
+            </objects>
+        </context>
+        <context name="security" implementation="com.beshara.common.dao.db.DAODbContext"
+                 exceptionWrapper="oracleExceptionWrapper">
+            <params>
+                <param name="connectionName" value="security"/>
+            </params>
+            <objects>
+                <object interface="com.beshara.sec.business.dao.ApplicationDAO"
+                        implementation="com.beshara.sec.business.dao.ora.ApplicationDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.BsnObjectDAO"
+                        implementation="com.beshara.sec.business.dao.ora.BsnObjectDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.BsnObjectPropertyDAO"
+                        implementation="com.beshara.sec.business.dao.ora.BsnObjectPropertyDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.DevObjectContainedTypeDAO"
+                        implementation="com.beshara.sec.business.dao.ora.DevObjectContainedTypeDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.DevObjectDAO"
+                        implementation="com.beshara.sec.business.dao.ora.DevObjectDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.DevObjectTypeDAO"
+                        implementation="com.beshara.sec.business.dao.ora.DevObjectTypeDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.DevObjectTypePropertyDAO"
+                        implementation="com.beshara.sec.business.dao.ora.DevObjectTypePropertyDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.DevTechnologyDAO"
+                        implementation="com.beshara.sec.business.dao.ora.DevTechnologyDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.GroupDAO"
+                        implementation="com.beshara.sec.business.dao.ora.GroupDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.GroupFunctionDAO"
+                        implementation="com.beshara.sec.business.dao.ora.GroupFunctionDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.GroupGrantedMachineDAO"
+                        implementation="com.beshara.sec.business.dao.ora.GroupGrantedMachineDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.LockReasonDAO"
+                        implementation="com.beshara.sec.business.dao.ora.LockReasonDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.MachineDAO"
+                        implementation="com.beshara.sec.business.dao.ora.MachineDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.ModuleDAO"
+                        implementation="com.beshara.sec.business.dao.ora.ModuleDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.ModuleMenuItemDAO"
+                        implementation="com.beshara.sec.business.dao.ora.ModuleMenuItemDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.UserDAO"
+                        implementation="com.beshara.sec.business.dao.ora.UserDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.UserGroupDAO"
+                        implementation="com.beshara.sec.business.dao.ora.UserGroupDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.UserRevokedFunctionDAO"
+                        implementation="com.beshara.sec.business.dao.ora.UserRevokedFunctionDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.AccessLogDAO"
+                        implementation="com.beshara.sec.business.dao.ora.AccessLogDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.DataExceptionDAO"
+                        implementation="com.beshara.sec.business.dao.ora.DataExceptionDAOImpl"/>                        
+                <object interface="com.beshara.csc.sec.business.dao.GroupWorkCenterDAO"
+                        implementation="com.beshara.csc.sec.business.dao.ora.GroupWorkCenterDAOImpl"/>
+                <object interface="com.beshara.csc.sec.business.dao.CategoryDAO"
+                        implementation="com.beshara.csc.sec.business.dao.ora.CategoryDAOImpl"/>
+                <object interface="com.beshara.csc.sec.business.dao.MinistryDAO"
+                        implementation="com.beshara.csc.sec.business.dao.ora.MinistryDAOImpl"/>
+                <object interface="com.beshara.csc.sec.business.dao.WorkCenterDAO"
+                        implementation="com.beshara.csc.sec.business.dao.ora.WorkCenterDAOImpl"/>
+                <object interface="com.beshara.csc.sec.business.dao.MinistryModuleDAO"
+                        implementation="com.beshara.csc.sec.business.dao.ora.MinistryModuleDAOImpl"/>
+                <object interface="com.beshara.csc.sec.business.dao.CitizenDAO"
+                        implementation="com.beshara.csc.sec.business.dao.ora.CitizenDAOImpl"/>
+                <object interface="com.beshara.sec.business.dao.NotificationDAO"
+                        implementation="com.beshara.sec.business.dao.ora.NotificationDAOImpl"/> 
+            </objects>
+        </context>
+    </contexts>
+</daoManager>

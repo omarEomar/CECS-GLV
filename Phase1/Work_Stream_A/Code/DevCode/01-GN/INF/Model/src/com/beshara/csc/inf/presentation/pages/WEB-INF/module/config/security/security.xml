@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--{TODO} set enforceSecurity="true" -->
+<security stateHolder="WebContextSessionStateHolder" ssoSessionTimeout="30" application="1" mainModule="417" module="10"
+          enforceSecurity="false" moduleDTO="com.beshara.csc.sec.engine.dto.ModuleDTO">
+    <handlers>
+        <handler name="SecurityInfoHandler" callOnHandleRequest="false"/>
+        <handler name="JSFSecurityHandler"/>
+    </handlers>
+</security>

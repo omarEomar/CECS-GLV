@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<connectionManager>
+  <connections>
+    <connection name="deploy" method="dataSource" dataSourceUrl="jdbc/DPLY"/>
+    <connection name="security" method="dataSource" dataSourceUrl="jdbc/SECR"/>
+    <connection name="sso" method="dataSource" dataSourceUrl="jdbc/BGSSO"/>
+  </connections>
+</connectionManager>

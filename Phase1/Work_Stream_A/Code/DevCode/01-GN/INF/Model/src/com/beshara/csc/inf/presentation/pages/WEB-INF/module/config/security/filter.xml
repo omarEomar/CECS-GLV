@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<filterManager>
+ <startFilters>
+  <filter name="TechLogFilter"/>
+  <filter name="EncodingFilter"/>
+ </startFilters>
+ <endFilters>
+  <filter name="DAOFilter"/>
+  <filter name="TechLogFilter"/>
+ </endFilters>
+</filterManager>

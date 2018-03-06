@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence  http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
+    <persistence-unit name="BSC">
+        <provider>com.beshara.base.dataauditing.PersistenceProvider</provider>
+        <jta-data-source>jdbc/CSCDBConnectionDS</jta-data-source>
+        <!--jar-file>lib/crs-proxy.jar</jar-file>
+        <jar-file>lib/qul-proxy.jar</jar-file>
+        <jar-file>lib/map-proxy.jar</jar-file>
+        <jar-file>lib/job-proxy.jar</jar-file>
+        <jar-file>lib/org-proxy.jar</jar-file>
+        <jar-file>lib/emp-proxy.jar</jar-file>
+        <jar-file>lib/req-proxy.jar</jar-file>
+        <jar-file>lib/reg-proxy.jar</jar-file>
+        <jar-file>lib/mis-proxy.jar</jar-file-->
+        <jar-file>lib/sec-proxy.jar</jar-file>
+        <!--jar-file>lib/aud-proxy.jar </jar-file>
+        <jar-file>lib/grs-proxy.jar </jar-file>
+        <jar-file>lib/bgt-proxy.jar </jar-file>
+        <jar-file>lib/trn-proxy.jar </jar-file>
+        <jar-file>lib/sal2-proxy.jar </jar-file>
+        <jar-file>lib/prm-proxy.jar </jar-file-->
+        <properties>
+            <property name="javax.persistence.jtaDataSource" value="jdbc/CSCDBConnectionDS"/>
+            <property name="toplink.target-server" value="com.beshara.base.transaction.WebLogicTransactionController"/>
+            <property name="toplink.cache.shared.default" value="false"/>
+            <!--property name="toplink.logging.level" value="FINE"/-->
+        </properties>
+    </persistence-unit>
+</persistence>

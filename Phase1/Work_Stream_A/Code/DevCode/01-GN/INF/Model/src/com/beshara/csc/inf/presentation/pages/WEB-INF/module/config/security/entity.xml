@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entityManager>
+    <entities>
+        <entity type="com.beshara.sec.business.entity.Application">
+            <fields>
+                <field name="APPLICATION_CODE" alias="APP_CODE" propertyType="java.lang.Long" propertyName="code"/>
+                <field name="APPLICATION_NAME" alias="APP_NAME" propertyType="java.lang.String" propertyName="name"/>
+                <field name="APPLICATION_ABRV" alias="APP_ABRV" propertyType="java.lang.String"
+                       propertyName="abbreviation"/>
+                <field name="APPLICATION_OWNER" alias="APP_OWNER" propertyType="java.lang.String" propertyName="owner"/>
+                <field name="U_DEV" alias="APP_UDEV" propertyType="java.lang.Long" propertyName="underDevelopment"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.Module">
+            <fields>
+                <field name="APPMODULE_CODE" alias="MOD_CODE" propertyType="java.lang.Long" propertyName="code"/>
+                <field name="APPMODULE_NAME" alias="MOD_NAME" propertyType="java.lang.String" propertyName="name"/>
+                <field name="APPMODULE_ABRV" alias="MOD_ABRV" propertyType="java.lang.String"
+                       propertyName="abbreviation"/>
+                <field name="APPLICATION_CODE" alias="MOD_APP_CODE" propertyType="java.lang.Long"
+                       propertyName="applicationCode"/>
+                <field name="PARENT_APPMODULE_CODE" alias="MOD_PARENT_CODE" propertyType="java.lang.Long"
+                       propertyName="parentCode"/>
+                <field name="U_DEV" alias="APP_UDEV" propertyType="java.lang.Long" propertyName="underDevelopment"/>
+                <field name="APPMODULE_ORDER" alias="MOD_ORDER" propertyType="java.lang.Long" propertyName="index"/>
+                <field name="FIRST_PARENT" alias="MOD_FRIST_CODE" propertyType="java.lang.Long"
+                       propertyName="firstParentCode"/>
+                <field name="LEAF_FLAG" alias="MOD_LEAF_FLAG" propertyType="java.lang.Long" propertyName="leaf"/>
+                <field name="MAIN_PAGE" alias="MOD_MAIN_PAGE" propertyType="java.lang.String" propertyName="mainPage"/>
+                <field name="MODULE_DIST_TYPE" alias="MOD_DIST_TYPE" propertyType="java.lang.String"
+                       propertyName="distType"/>
+                <field name="TECHNOLOGY_CODE" alias="MOD_TECH_CODE" propertyType="java.lang.Long"
+                       propertyName="technologyCode"/>
+                <field name="TREE_LEVEL" alias="MOD_TREE_LEVEL" propertyType="java.lang.Long" propertyName="treeLevel"/>
+                <field name="VIEW_FLAG" alias="MOD_VIEW_FLAG" propertyType="java.lang.Long" propertyName="viewFlag"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.ModuleMenuItem">
+            <fields>
+                <field name="MNUITEM_CODE" alias="MNUITEM_CODE" propertyType="java.lang.Long" propertyName="code"/>
+                <field name="PARENT_MNUITEM" alias="MNUITEM_PRNT_ITEM" propertyType="java.lang.Long"
+                       propertyName="parentCode"/>
+                <field name="APPMODULE_CODE" alias="MNUITEM_APPMOD_CODE" propertyType="java.lang.Long"
+                       propertyName="moduleCode"/>
+                <field name="BSNOBJECT_CODE" alias="MNUITEM_BSNOBJ_CODE" propertyType="java.lang.Long"
+                       propertyName="bsnObjectCode"/>
+                <field name="MNUITEM_NAME" alias="MNUITEM_NAME" propertyType="java.lang.String" propertyName="name"/>
+                <field name="MNUITEM_INDEX" alias="MNUITEM_INDEX" propertyType="java.lang.Long" propertyName="index"/>
+                <field name="MNUITEM_URL" alias="MNUITEM_URL" propertyType="java.lang.String" propertyName="url"/>
+                <field name="MAIN_MNUITEM" alias="MNUITEM_MAIN_ITEM" propertyType="java.lang.Long"
+                       propertyName="mainItem"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.BsnObject">
+            <fields>
+                <field name="BSNOBJECT_CODE" alias="BSNOBJ_CODE" propertyType="java.lang.Long" propertyName="code"/>
+                <field name="BSNOBJECT_NAME" alias="BSNOBJ_NAME" propertyType="java.lang.String" propertyName="name"/>
+                <field name="PARENT_BSNOBJECT" alias="BSNOBJ_PARENT_CODE" propertyType="java.lang.Long"
+                       propertyName="parentCode"/>
+                <field name="MODOBJECT_CODE" alias="BSNOBJ_DEV_OBJ_CODE" propertyType="java.lang.Long"
+                       propertyName="devObjectCode"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.Group">
+            <fields>
+                <field name="GROUP_CODE" alias="GRP_CODE" propertyType="java.lang.Long" propertyName="code"/>
+                <field name="GROUP_NAME" alias="GRP_NAME" propertyType="java.lang.String" propertyName="name"/>
+                <field name="VIEW_ALL" alias="GRP_VIEWALL" propertyType="java.lang.Long" propertyName="viewAll"/>
+                <field name="PARENT_GROUP" alias="GRP_PARENT" propertyType="java.lang.Long" propertyName="parentCode"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.User">
+            <fields>
+                <field name="USER_CODE" alias="USR_CODE" propertyType="java.lang.Long" propertyName="code"/>
+                <field name="USER_NAME" alias="USR_NAME" propertyType="java.lang.String" propertyName="userName"/>
+                <field name="PASSWORDEXPIREDATE" alias="USR_PWD_EXP_DATE" propertyType="java.sql.Date"
+                       propertyName="passwordExpiryDate"/>
+                <field name="LOCKED" alias="USR_LOCKED" propertyType="java.lang.Long" propertyName="locked"/>
+                <field name="DB_USER" alias="USR_DB_USR" propertyType="java.lang.String" propertyName="dbUser"/>
+                <field name="CIVIL_ID" alias="USR_CIVIL_NO" propertyType="java.lang.Long" propertyName="civilNo"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.UserGroup">
+            <fields>
+                <field name="USER_CODE" alias="GRPUSR_USR_CODE" propertyType="java.lang.Long" propertyName="userCode"/>
+                <field name="GROUP_CODE" alias="GRPUSR_GRP_CODE" propertyType="java.lang.Long"
+                       propertyName="groupCode"/>
+                <field name="ADMIN" alias="GRPUSR_ADMIN_LEVEL" propertyType="java.lang.Long" propertyName="adminLevel"/>
+                <field name="LOCKED" alias="GRPUSR_LOCKED" propertyType="java.lang.Long" propertyName="locked"/>
+                <field name="LOCKREASON_CODE" alias="GRPUSR_LREASON_CODE" propertyType="java.lang.Long"
+                       propertyName="lockReasonCode"/>
+                <field name="LOCKEDBY_USER" alias="GRPUSR_LUSR_CODE" propertyType="java.lang.Long"
+                       propertyName="lockedByUserCode"/>
+                <field name="LOCKEDBY_GROUP" alias="GRPUSR_LGRP_CODE" propertyType="java.lang.Long"
+                       propertyName="lockedByGroupCode"/>
+                <field name="PRIORITY" alias="GRPUSR_PRIORITY" propertyType="java.lang.String" propertyName="priority"/>
+                <field name="ENFORCE_ATTENDANCE" alias="GRPUSR_ENFORCE_ATTENDANCE" propertyType="java.lang.Long"
+                       propertyName="enforceAttendance"/>
+                <field name="USEINVACATIONS" alias="GRPUSR_USEINVACATIONS" propertyType="java.lang.Long"
+                       propertyName="useInVacations"/>
+                <field name="USEOUTSIDEWORKHOURS" alias="GRPUSR_USEOUTSIDEWORKHOURS" propertyType="java.lang.Long"
+                       propertyName="useOutsideWorkHours"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.GroupFunction">
+            <fields>
+                <field name="GRPFUNCTION_SERIAL" alias="GRPFNC_SERIAL" propertyType="java.lang.Long"
+                       propertyName="serial"/>
+                <field name="GROUP_CODE" alias="GRPFNC_GRP_CODE" propertyType="java.lang.Long"
+                       propertyName="groupCode"/>
+                <field name="APPLICATION_CODE" alias="GRPFNC_G_APP_CODE" propertyType="java.lang.Long"
+                       propertyName="grantedApplicationCode"/>
+                <field name="APPMODULE_CODE" alias="GRPFNC_G_MOD_CODE" propertyType="java.lang.Long"
+                       propertyName="grantedModuleCode"/>
+                <field name="BSNOBJECT_GRANTEDFORM" alias="GRPFNC_G_OBJ_CODE" propertyType="java.lang.Long"
+                       propertyName="grantedObjectCode"/>
+                <field name="BSNOBJECT_RVKDOBJECT" alias="GRPFNC_R_SUB_OBJ_CODE" propertyType="java.lang.Long"
+                       propertyName="revokedSubObjectCode"/>
+                <field name="ASSIGNER_USER" alias="GRPFNC_ASR_USR_CODE" propertyType="java.lang.Long"
+                       propertyName="assignerUserCode"/>
+                <field name="ASSIGNER_GROUP" alias="GRPFNC_ASR_GRP_CODE" propertyType="java.lang.Long"
+                       propertyName="assignerGroupCode"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.UserRevokedFunction">
+            <fields>
+                <field name="GRPFUNCTION_SERIAL" alias="USRFNC_FNC_SERIAL" propertyType="java.lang.Long"
+                       propertyName="functionSerial"/>
+                <field name="GRPFUNCTIONGROUP_CODE" alias="USRFNC_FNC_GRP_CODE" propertyType="java.lang.Long"
+                       propertyName="functionGroupCode"/>
+                <field name="USERGRPGROUP_CODE" alias="USRFNC_USR_GRP_CODE" propertyType="java.lang.Long"
+                       propertyName="userGroupCode"/>
+                <field name="USER_CODE" alias="USRFNC_USR_CODE" propertyType="java.lang.Long" propertyName="userCode"/>
+                <field name="ASSIGNER_USER" alias="USRFNC_ASR_USR_CODE" propertyType="java.lang.Long"
+                       propertyName="assignerUserCode"/>
+                <field name="ASSIGNER_GROUP" alias="USRFNC_ASR_GRP_CODE" propertyType="java.lang.Long"
+                       propertyName="assignerGroupCode"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.Machine">
+            <fields>
+                <field name="MACHINE_CODE" alias="MCHN_CODE" propertyType="java.lang.Long" propertyName="code"/>
+                <field name="MACHINE_DESC" alias="MCHN_DESC" propertyType="java.lang.String"
+                       propertyName="description"/>
+                <field name="MACHINE_IP" alias="MCHN_IP" propertyType="java.lang.String" propertyName="ip"/>
+                <field name="MACHINE_MACADDRESS" alias="MCHN_MAC_ADRS" propertyType="java.lang.String"
+                       propertyName="macAddress"/>
+                <field name="MACHINE_NAME" alias="MCHN_NAME" propertyType="java.lang.String" propertyName="name"/>
+                <field name="MIN_CODE" alias="MCHN_MINS_CODE" propertyType="java.lang.Long"
+                       propertyName="ministryCode"/>
+                <field name="WORKCENTER_CODE" alias="MCHN_CNTR_CODE" propertyType="java.lang.Long"
+                       propertyName="workCenterCode"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.GroupGrantedMachine">
+            <fields>
+                <field name="GROUP_CODE" alias="GRPMCHN_GRP_CODE" propertyType="java.lang.Long"
+                       propertyName="groupCode"/>
+                <field name="machineCode" alias="GRPMCHN_MCHN_CODE" propertyType="java.lang.Long"
+                       propertyName="machineCode"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.DevTechnology">
+            <fields>
+                <field name="TECHNOLOGY_CODE" alias="DEVTECH_TECHNOLOGY_CODE" propertyType="java.lang.Long"
+                       propertyName="code"/>
+                <field name="TECHNOLOGY_NAME" alias="DEVTECH_TECHNOLOGY_NAME" propertyType="java.lang.String"
+                       propertyName="name"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.DevObjectType">
+            <fields>
+                <field name="MODOBJTYPE_CODE" alias="DEVOBJTYP_MODOBJTYPE_CODE" propertyType="java.lang.Long"
+                       propertyName="code"/>
+                <field name="MODOBJTYPE_NAME" alias="DEVOBJTYP_MODOBJTYPE_NAME" propertyType="java.lang.String"
+                       propertyName="name"/>
+                <field name="ROOT" alias="DEVOBJTYP_ROOT" propertyType="java.lang.Long" propertyName="root"/>
+                <field name="TECHNOLOGY_CODE" alias="DEVOBJTYP_TECHNOLOGY_CODE" propertyType="java.lang.Long"
+                       propertyName="technologyCode"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.DevObjectTypeProperty">
+            <fields>
+                <field name="DEVTYPEPROPERTY_CODE" alias="DOTP_DEVTYPEPROPERTY_CODE" propertyType="java.lang.Long"
+                       propertyName="code"/>
+                <field name="DEVTYPEPROPERTY_NAME" alias="DOTP_DEVTYPEPROPERTY_NAME" propertyType="java.lang.String"
+                       propertyName="name"/>
+                <field name="MODOBJTYPE_CODE" alias="DOTP_MODOBJTYPE_CODE" propertyType="java.lang.Long"
+                       propertyName="objectTypeCode"/>
+                <field name="GRANTEDDEFAULT_VALUE" alias="DOTP_GRANTEDDEFAULT_VALUE" propertyType="java.lang.String"
+                       propertyName="grantedDefaultValue"/>
+                <field name="RVKDDEFAULT_VALUE" alias="DOTP_RVKDDEFAULT_VALUE" propertyType="java.lang.String"
+                       propertyName="revokedDefaultValue"/>
+                <field name="GUI_PROP" alias="DOTP_GUI_PROP" propertyType="java.lang.Long" propertyName="guiProperty"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.DevObject">
+            <fields>
+                <field name="MODOBJECT_CODE" alias="DEVOBJ_MODOBJECT_CODE" propertyType="java.lang.Long"
+                       propertyName="code"/>
+                <field name="MODOBJECT_NAME" alias="DEVOBJ_MODOBJECT_ID" propertyType="java.lang.String"
+                       propertyName="id"/>
+                <field name="MODOBJTYPE_CODE" alias="DEVOBJ_MODOBJTYPE_CODE" propertyType="java.lang.Long"
+                       propertyName="objectTypeCode"/>
+                <field name="PARENT_MODOBJECT" alias="DEVOBJ_PARENT_MODOBJECT" propertyType="java.lang.Long"
+                       propertyName="parentCode"/>
+                <field name="APPMODULE_CODE" alias="DEVOBJ_APPMODULE_CODE" propertyType="java.lang.Long"
+                       propertyName="moduleCode"/>
+                <field name="U_DEV" alias="DEVOBJ_U_DEV" propertyType="java.lang.Long" propertyName="underDevelopment"/>
+                <field name="DATABASE_OBJECT" alias="DEVOBJ_DATABASE_OBJECT" propertyType="java.lang.String"
+                       propertyName="dbObjectCode"/>
+                <field name="MODOBJECT_PAGE" alias="DEVOBJ_MODOBJECT_PAGE" propertyType="java.lang.String"
+                       propertyName="page"/>
+                <field name="MODOBJECT_PROMPT" alias="DEVOBJ_BSNOBJECT_NAME" propertyType="java.lang.String"
+                       propertyName="defaultBsnName"/>
+                <field name="TREE_LEVEL" alias="DEVOBJ_TREE_LEVEL" propertyType="java.lang.Long"
+                       propertyName="treeLevel"/>
+                <field name="LEAF_FLAG" alias="DEVOBJ_LEAF_FLAG" propertyType="java.lang.Long" propertyName="leaf"/>
+                <field name="FIRST_PARENT" alias="DEVOBJ_FIRST_PARENT" propertyType="java.lang.Long"
+                       propertyName="firstParentCode"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.BsnObjectProperty">
+            <fields>
+                <field name="BSNOBJECT_CODE" alias="BOP_BSNOBJECT_CODE" propertyType="java.lang.Long"
+                       propertyName="objectCode"/>
+                <field name="DEVTYPEPROPERTY_CODE" alias="BOP_DEVTYPEPROPERTY_CODE" propertyType="java.lang.Long"
+                       propertyName="propertyCode"/>
+                <field name="GRANTEDPROPERTY_VALUE" alias="BOP_GRANTEDPROPERTY_VALUE" propertyType="java.lang.String"
+                       propertyName="grantedValue"/>
+                <field name="RVKDPROPERTY_VALUE" alias="BOP_RVKDPROPERTY_VALUE" propertyType="java.lang.String"
+                       propertyName="revokedValue"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.DevObjectContainedType">
+            <fields>
+                <field name="CHILD_MODOBJTYPE" alias="CT_CHILD_MODOBJTYPE" propertyType="java.lang.Long"
+                       propertyName="childObjectTypeCode"/>
+                <field name="PARENT_MODOBJTYPE" alias="CT_PARENT_MODOBJTYPE" propertyType="java.lang.Long"
+                       propertyName="parentObjectTypeCode"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.csc.sec.business.entity.Category">
+            <fields>
+                <field name="CAT_CODE" alias="CAT_CODE" propertyType="java.lang.Long" propertyName="code"/>
+                <field name="CAT_NAME" alias="CAT_NAME" propertyType="java.lang.String" propertyName="name"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.csc.sec.business.entity.Ministry">
+            <fields>
+                <field name="MIN_CODE" alias="MIN_CODE" propertyType="java.lang.Long" propertyName="code"/>
+                <field name="MIN_NAME" alias="MIN_NAME" propertyType="java.lang.String" propertyName="name"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.csc.sec.business.entity.WorkCenter">
+            <fields>
+                <field name="WRK_CODE" alias="WRK_CODE" propertyType="java.lang.String" propertyName="code"/>
+                <field name="MIN_CODE" alias="WRK_MIN_CODE" propertyType="java.lang.Long" propertyName="ministryCode"/>
+                <field name="WRK_NAME" alias="WRK_NAME" propertyType="java.lang.String" propertyName="name"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.csc.sec.business.entity.MinistryModule">
+            <fields>
+                <field name="MIN_CODE" alias="MIN_MOD_MIN_CODE" propertyType="java.lang.Long"
+                       propertyName="ministryCode"/>
+                <field name="APPMODULE_CODE" alias="MIN_MOD_MOD_CODE" propertyType="java.lang.Long"
+                       propertyName="moduleCode"/>
+                <field name="MINMOD_URL" alias="MIN_MOD_URL" propertyType="java.lang.String" propertyName="url"/>
+                <field name="MINMOD_ENABLED" alias="MIN_MOD_ENABLED" propertyType="java.lang.Long"
+                       propertyName="enabled"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.csc.sec.business.entity.Citizen">
+            <fields>
+                <field name="CIVIL_ID" alias="CVL_CODE" propertyType="java.lang.Long" propertyName="code"/>
+                <field name="FIRST_NAME" alias="CVL_FIRST_NAME" propertyType="java.lang.String"
+                       propertyName="firstName"/>
+                <field name="SECOND_NAME" alias="CVL_SECOND_NAME" propertyType="java.lang.String"
+                       propertyName="secondName"/>
+                <field name="THIRD_NAME" alias="CVL_THIRD_NAME" propertyType="java.lang.String"
+                       propertyName="thirdName"/>
+                <field name="LAST_NAME" alias="CVL_LAST_NAME" propertyType="java.lang.String" propertyName="lastName"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.business.entity.AccessLogEntry">
+            <fields>
+                <field name="ID" alias="AL_ID" propertyType="java.lang.String" propertyName="id"/>
+                <field name="USER_CODE" alias="AL_USR_CODE" propertyType="java.lang.Long" propertyName="userCode"/>
+                <field name="GROUP_CODE" alias="AL_GRP_CODE" propertyType="java.lang.Long" propertyName="groupCode"/>
+                <field name="SESSION_ID" alias="AL_SSN_ID" propertyType="java.lang.String" propertyName="sessionId"/>
+                <field name="BSNOBJECT_CODE" alias="AL_BSN_CODE" propertyType="java.lang.Long"
+                       propertyName="bsnObjectCode"/>
+                <field name="DENIED" alias="AL_DND" propertyType="boolean" propertyName="denied"/>
+                <field name="TIME" alias="AL_TIME" propertyType="java.sql.Timestamp" propertyName="time"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.AttrGroup">
+            <fields>
+                <field name="ATTR_GRP_ID" alias="ATTR_GRP_ID" propertyType="int" propertyName="id"/>
+                <field name="ATTR_GRP_DESC" alias="ATTR_GRP_DSC" propertyType="java.lang.String" propertyName="desc"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.AttrScope">
+            <fields>
+                <field name="ATTR_SCP_ID" alias="ATTR_SCP_ID" propertyType="int" propertyName="id"/>
+                <field name="ATTR_SCP_DESC" alias="ATTR_SCP_DSC" propertyType="java.lang.String" propertyName="desc"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.Attribute">
+            <fields>
+                <field name="ATTR_NAME" alias="ATTR_NAME" propertyType="java.lang.String" propertyName="name"/>
+                <field name="ATTR_DESC" alias="ATTR_DSC" propertyType="java.lang.String" propertyName="desc"/>
+                <field name="ATTR_GRP_ID" alias="ATTR_GRP_ID" propertyType="int" propertyName="groupId"/>
+                <field name="ATTR_SCP_ID" alias="ATTR_SCP_ID" propertyType="int" propertyName="scopeId"/>
+                <field name="IS_SHARED" alias="IS_SHRD" propertyType="boolean" propertyName="shared"/>
+                <field name="IS_IGNORED" alias="IS_IGNRD" propertyType="boolean" propertyName="ignored"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.Method">
+            <fields>
+                <field name="MTD_ID" alias="MTD_ID" propertyType="int" propertyName="id"/>
+                <field name="MTD_DESC" alias="MTD_DSC" propertyType="java.lang.String" propertyName="desc"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.AttrMethod">
+            <fields>
+                <field name="ATTR_NAME" alias="ATTR_NAME" propertyType="java.lang.String" propertyName="attrName"/>
+                <field name="MTD_ID" alias="MTD_ID" propertyType="int" propertyName="methodId"/>
+                <field name="IS_REQUIRED" alias="IS_RQRD" propertyType="boolean" propertyName="required"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.BannedDeviceAttr">
+            <fields>
+                <field name="VLT_ID" alias="VLT_ID" propertyType="java.lang.String" propertyName="violationId"/>
+                <field name="ATTR_NAME" alias="ATTR_NAME" propertyType="java.lang.String" propertyName="attrName"/>
+                <field name="ATTR_VALUE" alias="ATTR_VAL" propertyType="java.lang.String" propertyName="attrValue"/>
+                <field name="RSLV_TIME" alias="RSLV_TIME" propertyType="java.sql.Timestamp" propertyName="resolveTime"/>
+                <field name="RSLV_USER_NAME" alias="RSLV_USR_NAME" propertyType="java.lang.String"
+                       propertyName="resolveUserName"/>
+                <field name="RSLV_NOTES" alias="RSLV_NOTS" propertyType="java.lang.String" propertyName="resolveNotes"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.BannedUser">
+            <fields>
+                <field name="VLT_ID" alias="VLT_ID" propertyType="java.lang.String" propertyName="violationId"/>
+                <field name="USER_NAME" alias="USR_NAME" propertyType="java.lang.String" propertyName="userName"/>
+                <field name="RSLV_TIME" alias="RSLV_TIME" propertyType="java.sql.Timestamp" propertyName="resolveTime"/>
+                <field name="RSLV_USER_NAME" alias="RSLV_USR_NAME" propertyType="java.lang.String"
+                       propertyName="resolveUserName"/>
+                <field name="RSLV_NOTES" alias="RSLV_NOTS" propertyType="java.lang.String" propertyName="resolveNotes"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.InvReason">
+            <fields>
+                <field name="INV_RSN_ID" alias="INV_RSN_ID" propertyType="int" propertyName="id"/>
+                <field name="INV_RSN_DESC" alias="INV_RSN_DSC" propertyType="java.lang.String" propertyName="desc"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.InvTrialAttr">
+            <fields>
+                <field name="INV_TRL_ID" alias="INV_TRL_ID" propertyType="java.lang.String" propertyName="trialId"/>
+                <field name="ATTR_NAME" alias="ATTR_NAME" propertyType="java.lang.String" propertyName="attrName"/>
+                <field name="ATTR_VALUE" alias="ATTR_VAL" propertyType="java.lang.String" propertyName="attrValue"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.InvTrial">
+            <fields>
+                <field name="INV_TRL_ID" alias="INV_TRL_ID" propertyType="java.lang.String" propertyName="id"/>
+                <field name="MTD_ID" alias="MTD_ID" propertyType="int" propertyName="methodId"/>
+                <field name="INV_TRL_CONTENT" alias="INV_TRL_CNTNT" propertyType="java.lang.String"
+                       propertyName="content"/>
+                <field name="INV_RSN_ID" alias="INV_RSN_ID" propertyType="int" propertyName="reasonId"/>
+                <field name="TIME" alias="TIME" propertyType="java.sql.Timestamp" propertyName="time"/>
+                <field name="REQ_ID" alias="REQ_ID" propertyType="java.lang.String" propertyName="requestId"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.KillReason">
+            <fields>
+                <field name="KIL_RSN_ID" alias="KL_RSN_ID" propertyType="int" propertyName="id"/>
+                <field name="KIL_RSN_DESC" alias="KL_RSN_DSC" propertyType="java.lang.String" propertyName="desc"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.LoginTrialAttr">
+            <fields>
+                <field name="REQ_ID" alias="REQ_ID" propertyType="java.lang.String" propertyName="requestId"/>
+                <field name="TRL_NUM" alias="TRL_NUM" propertyType="int" propertyName="trialNumber"/>
+                <field name="ATTR_NAME" alias="ATTR_NAME" propertyType="java.lang.String" propertyName="attrName"/>
+                <field name="ATTR_VALUE" alias="ATTR_VAL" propertyType="java.lang.String" propertyName="attrValue"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.LoginTrial">
+            <fields>
+                <field name="REQ_ID" alias="REQ_ID" propertyType="java.lang.String" propertyName="requestId"/>
+                <field name="TRL_NUM" alias="TRL_NUM" propertyType="int" propertyName="trialNumber"/>
+                <field name="TIME" alias="TIME" propertyType="java.sql.Timestamp" propertyName="time"/>
+                <field name="USER_NAME" alias="USR_NAME" propertyType="java.lang.String" propertyName="userName"/>
+                <field name="INV_RSN_ID" alias="INV_RSN_ID" propertyType="java.lang.Integer" propertyName="reasonId"/>
+                <field name="INV_TRL_ID" alias="INV_TRL_ID" propertyType="java.lang.String" propertyName="invTrialId"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.Param">
+            <fields>
+                <field name="PRM_NAME" alias="PRM_NAM" propertyType="java.lang.String" propertyName="name"/>
+                <field name="PRM_VALUE" alias="PRM_VALUE" propertyType="java.lang.String" propertyName="value"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.RequestAttr">
+            <fields>
+                <field name="REQ_ID" alias="REQ_ID" propertyType="java.lang.String" propertyName="requestId"/>
+                <field name="ATTR_NAME" alias="ATTR_NAME" propertyType="java.lang.String" propertyName="attrName"/>
+                <field name="ATTR_VALUE" alias="ATTR_VAL" propertyType="java.lang.String" propertyName="attrValue"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.Request">
+            <fields>
+                <field name="REQ_ID" alias="REQ_ID" propertyType="java.lang.String" propertyName="id"/>
+                <field name="REQ_TKN" alias="REQ_TKN" propertyType="java.lang.String" propertyName="token"/>
+                <field name="CLNT_ID" alias="CLNT_ID" propertyType="java.lang.String" propertyName="clientId"/>
+                <field name="CLNT_SSN_ID" alias="CLNT_SSN_ID" propertyType="java.lang.String"
+                       propertyName="clientSessionId"/>
+                <field name="CLNT_RET_URL" alias="CLNT_RET_URL" propertyType="java.lang.String"
+                       propertyName="clientReturnUrl"/>
+                <field name="SECRET" alias="SCRT" propertyType="java.lang.String" propertyName="secret"/>
+                <field name="SECRET_SALT" alias="SCRT_SLT" propertyType="java.lang.String" propertyName="secretSalt"/>
+                <field name="CREATION_TIME" alias="CRTN_TIME" propertyType="java.sql.Timestamp"
+                       propertyName="creationTime"/>
+                <field name="PLANNED_EXPIRY_TIME" alias="PLND_EXPR_TIME" propertyType="java.sql.Timestamp"
+                       propertyName="plannedExpiryTime"/>
+                <field name="ACTUAL_EXPIRY_TIME" alias="ACTL_EXP_TME" propertyType="java.sql.Timestamp"
+                       propertyName="actualExpiryTime"/>
+                <field name="SSN_ID" alias="SSSN_ID" propertyType="java.lang.String" propertyName="sessionId"/>
+                <field name="VERIFICATION_CODE" alias="VRF_CODE" propertyType="java.lang.String"
+                       propertyName="verificationCode"/>
+                <field name="ACCESS_TKN" alias="ACCESS_TKN" propertyType="java.lang.String" propertyName="accessToken"/>
+                <field name="REFRESH_TKN" alias="REFRESH_TKN" propertyType="java.lang.String"
+                       propertyName="refreshToken"/>
+                <field name="KIL_USER_NAME" alias="KL_USR_NAME" propertyType="java.lang.String"
+                       propertyName="killUserName"/>
+                <field name="KIL_RSN_ID" alias="KL_RSN_ID" propertyType="java.lang.Integer"
+                       propertyName="killReasonId"/>
+                <field name="KIL_NOTES" alias="KL_NTS" propertyType="java.lang.String" propertyName="killNotes"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.Client">
+            <fields>
+                <field name="CLNT_ID" alias="CLNT_ID" propertyType="java.lang.String" propertyName="id"/>
+                <field name="CLNT_KEY" alias="CLNT_KEY" propertyType="java.lang.String" propertyName="key"/>
+                <field name="CLNT_PASSWORD" alias="CLNT_PASS" propertyType="java.lang.String" propertyName="password"/>
+                <field name="CLNT_DESC" alias="CLNT_DSC" propertyType="java.lang.String" propertyName="desc"/>
+                <field name="CLNT_TYP_ID" alias="CLNT_TYP_ID" propertyType="java.lang.String" propertyName="typeId"/>
+                <field name="IS_LOCKED" alias="IS_LCKD" propertyType="boolean" propertyName="locked"/>
+                <field name="CREATION_TIME" alias="CRTN_TIME" propertyType="java.sql.Timestamp"
+                       propertyName="creationTime"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.SessionAttr">
+            <fields>
+                <field name="SSN_ID" alias="SSN_ID" propertyType="java.lang.String" propertyName="sessionId"/>
+                <field name="ATTR_NAME" alias="ATTR_NAME" propertyType="java.lang.String" propertyName="attrName"/>
+                <field name="ATTR_VALUE" alias="ATTR_VAL" propertyType="java.lang.String" propertyName="attrValue"/>
+                <field name="CREATION_TIME" alias="CRTN_TIME" propertyType="java.sql.Timestamp"
+                       propertyName="creationTime"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.Session">
+            <fields>
+                <field name="SSN_ID" alias="SSN_ID" propertyType="java.lang.String" propertyName="id"/>
+                <field name="USER_NAME" alias="USR_NAME" propertyType="java.lang.String" propertyName="userName"/>
+                <field name="LOGIN_TIME" alias="LGN_TIME" propertyType="java.sql.Timestamp" propertyName="loginTime"/>
+                <field name="LAST_ACCESS_TIME" alias="LST_ACS_TIME" propertyType="java.sql.Timestamp"
+                       propertyName="lastAccessTime"/>
+                <field name="PLANNED_EXPIRY_TIME" alias="PLND_EXPR_TIME" propertyType="java.sql.Timestamp"
+                       propertyName="plannedExpiryTime"/>
+                <field name="ACTUAL_EXPIRY_TIME" alias="ACTL_EXPR_TIME" propertyType="java.sql.Timestamp"
+                       propertyName="actualExpiryTime"/>
+                <field name="KIL_USER_NAME" alias="KL_USR_NAME" propertyType="java.lang.String"
+                       propertyName="killUserName"/>
+                <field name="KIL_RSN_ID" alias="KL_RSN_ID" propertyType="java.lang.Integer"
+                       propertyName="killReasonId"/>
+                <field name="KIL_NOTES" alias="KL_NTS" propertyType="java.lang.String" propertyName="killNotes"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.ClientType">
+            <fields>
+                <field name="CLNT_TYP_ID" alias="CLNT_TYP_ID" propertyType="java.lang.String" propertyName="id"/>
+                <field name="CLNT_TYP_DESC" alias="CLNT_TYP_DSC" propertyType="java.lang.String" propertyName="desc"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sso.server.entity.Violation">
+            <fields>
+                <field name="VLT_ID" alias="VLT_ID" propertyType="java.lang.String" propertyName="id"/>
+                <field name="REQ_ID" alias="REQ_ID" propertyType="java.lang.String" propertyName="requestId"/>
+                <field name="INV_TRL_ID" alias="INV_TRL_ID" propertyType="java.lang.String" propertyName="invTrialId"/>
+                <field name="IS_FOR_DEVICE" alias="FOR_DVC" propertyType="boolean" propertyName="forDevice"/>
+                <field name="IS_RESOLVED" alias="IS_RSLVD" propertyType="boolean" propertyName="resolved"/>
+                <field name="TIME" alias="TIME" propertyType="java.sql.Timestamp" propertyName="time"/>
+            </fields>
+        </entity>
+        <entity type="com.beshara.sec.sso.entity.User">
+            <fields>
+                <field name="USER_CODE" alias="USR_CODE" propertyType="int" propertyName="code"/>
+                <field name="USER_NAME" alias="USR_NAME" propertyType="java.lang.String" propertyName="name"/>
+                <field name="USER_PASSWORD" alias="USR_PASS" propertyType="java.lang.String" propertyName="password"/>
+                <field name="LOCKED" alias="LCKD" propertyType="boolean" propertyName="locked"/>
+                <field name="PASSWORDEXPIREDATE" alias="PASS_EXP_DATE" propertyType="java.sql.Date"
+                       propertyName="passwordExpireDate"/>
+            </fields>
+        </entity>
+        
+        <entity type="com.beshara.sec.business.entity.Notification">
+            <fields>
+                <field name="ID" alias="NTF_CODE" propertyType="java.lang.Long" 
+                       propertyName="code"/>
+                <field name="TYPE" alias="NTF_TYPE" propertyType="java.lang.Long"
+                       propertyName="type"/>
+                <field name="BRIEF_MSG" alias="NTF_BR_MSG" propertyType="java.lang.String"
+                       propertyName="briefMsg"/>
+                <field name="DETAILED_MSG" alias="NTF_GE_MSG" propertyType="java.lang.String" 
+                       propertyName="detailedMsg"/>
+                <field name="FROM_TIME" alias="NTF_FR_TIME" propertyType="java.sql.Timestamp"
+                       propertyName="fromTime"/>
+                <field name="TO_TIME" alias="NTF_TO_TIME" propertyType="java.sql.Timestamp" 
+                       propertyName="toTime"/>
+                <field name="COUNT_DOWN" alias="NTF_COUNT_DOWN" propertyType="Boolean"
+                       propertyName="countDown"/>
+                <field name="FOR_ALL" alias="NTF_FOR_ALL" propertyType="Boolean" 
+                       propertyName="forAll"/>
+                <field name="CREATED_BY" alias="CREATED_BY" propertyType="java.lang.Long" 
+                       propertyName="createdBy"/>
+            </fields>
+        </entity>
+    </entities>
+</entityManager>
